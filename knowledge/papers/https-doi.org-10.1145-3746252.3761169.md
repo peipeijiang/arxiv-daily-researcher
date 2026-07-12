@@ -30,7 +30,7 @@ Sequential recommendation (SR) aims to capture users' dynamic interests and sequ
 ## Code
 
 - [Applied-Machine-Learning-Lab/MME-SID](https://github.com/Applied-Machine-Learning-Lab/MME-SID) - official (100 confidence), 30 stars
-- [sisinflab/IR-RS-with-LLM-survey](https://github.com/sisinflab/IR-RS-with-LLM-survey) - official (80 confidence), 0 stars
+- [sisinflab/IR-RS-with-LLM-survey](https://github.com/sisinflab/IR-RS-with-LLM-survey) - likely (69 confidence), 0 stars
 
 ## Deep Analysis
 

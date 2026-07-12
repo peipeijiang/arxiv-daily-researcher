@@ -29,4 +29,4 @@ tags: ["paper", "recommender-systems", "Recommender Systems and Techniques", "To
 
 ## Code
 
-- [sisinflab/IR-RS-with-LLM-survey](https://github.com/sisinflab/IR-RS-with-LLM-survey) - official (80 confidence), 0 stars
+- [sisinflab/IR-RS-with-LLM-survey](https://github.com/sisinflab/IR-RS-with-LLM-survey) - likely (69 confidence), 0 stars
