@@ -278,6 +278,7 @@ class OpenAlexSource(BasePaperSource):
                     "id,doi,title,authorships,abstract_inverted_index,publication_date,"
                     "primary_location,open_access,locations,best_oa_location,ids,"
                     "cited_by_count,type,topics"
+                    ",referenced_works,related_works"
                 ),
             }
             params.update(self._base_params())
@@ -380,6 +381,14 @@ class OpenAlexSource(BasePaperSource):
             cited_by_count=int(item.get("cited_by_count") or 0),
             publication_type=primary_location.get("raw_type") or item.get("type"),
             topics=topics,
+            referenced_works=[
+                value.replace("https://openalex.org/", "")
+                for value in item.get("referenced_works", [])[:100]
+            ],
+            related_works=[
+                value.replace("https://openalex.org/", "")
+                for value in item.get("related_works", [])[:20]
+            ],
         )
 
     def lookup_by_dois(self, dois: List[str]) -> Dict[str, PaperMetadata]:
@@ -395,6 +404,7 @@ class OpenAlexSource(BasePaperSource):
             "id,doi,title,authorships,abstract_inverted_index,publication_date,"
             "primary_location,open_access,locations,best_oa_location,ids,"
             "cited_by_count,type,topics"
+            ",referenced_works,related_works"
         )
         for start in range(0, len(clean_dois), 50):
             chunk = clean_dois[start : start + 50]

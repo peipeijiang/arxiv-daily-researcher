@@ -17,6 +17,9 @@ jobs:
   research:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    permissions:
+      contents: write
+      issues: read
 
     steps:
       - name: Checkout repository
@@ -84,10 +87,27 @@ jobs:
                    data/history data/keywords data/run \
                    data/reference_pdfs data/downloaded_pdfs logs
 
+      - name: Synchronize paper feedback
+        run: python scripts/sync_feedback.py
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+
       - name: Run research pipeline
         run: python main.py
         env:
           PYTHONUNBUFFERED: "1"
+          GITHUB_TOKEN: ${{ github.token }}
+          FEEDBACK_REPO_URL: ${{ github.server_url }}/${{ github.repository }}
+
+      - name: Commit research knowledge
+        if: success()
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add knowledge/
+          git diff --cached --quiet || git commit -m "chore: update research knowledge"
+          git push
 
       - name: Upload reports as artifacts
         if: always()

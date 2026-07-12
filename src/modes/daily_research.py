@@ -31,6 +31,8 @@ from agents import KeywordAgent, AnalysisAgent
 from sources import SearchAgent, PaperMetadata, ArxivFetchError
 from report.daily import Reporter
 from notifications import NotifierAgent, RunResult
+from enrichers import GitHubCodeEnricher
+from library import FeedbackStore, ResearchLibrary
 
 logger = setup_logger("DailyResearch")
 
@@ -44,6 +46,7 @@ def _score_single_paper(
     cache_lock,
     keyword_tracker,
     search_agent,
+    feedback_store,
 ):
     """
     对单篇论文进行评分和翻译（供并发调用）。
@@ -57,6 +60,7 @@ def _score_single_paper(
         abstract=paper.abstract,
         keywords_dict=all_keywords,
     )
+    feedback_store.apply(paper.paper_id, score_response)
 
     abstract_cn = ""
     if paper.abstract and paper.abstract.strip():
@@ -265,6 +269,8 @@ class DailyResearchPipeline:
             logger.info(">>> 阶段4: 对所有论文进行加权评分...")
 
             analysis_agent = AnalysisAgent()
+            feedback_store = FeedbackStore()
+            github_enricher = GitHubCodeEnricher()
             scored_papers_by_source: Dict[str, List[Dict[str, Any]]] = {}
 
             keyword_tracker = None
@@ -282,6 +288,7 @@ class DailyResearchPipeline:
             logger.debug("翻译缓存已启用")
 
             for source, papers in papers_by_source.items():
+                papers = [paper for paper in papers if not feedback_store.is_ignored(paper.paper_id)]
                 if not papers:
                     continue
 
@@ -307,6 +314,7 @@ class DailyResearchPipeline:
                                     cache_lock,
                                     keyword_tracker,
                                     search_agent,
+                                    feedback_store,
                                 ): paper
                                 for paper in papers
                             }
@@ -335,6 +343,7 @@ class DailyResearchPipeline:
                                 cache_lock,
                                 keyword_tracker,
                                 search_agent,
+                                feedback_store,
                             )
                             scored_papers.append(result)
                             pbar.update(1)
@@ -343,6 +352,18 @@ class DailyResearchPipeline:
 
                 qualified_count = sum(1 for p in scored_papers if p["score_response"].is_qualified)
                 logger.info(f"    [{source}] 评分完成: {qualified_count}/{len(papers)} 篇及格")
+
+            qualified_rows = [
+                row
+                for rows in scored_papers_by_source.values()
+                for row in rows
+                if row["score_response"].is_qualified
+            ]
+            if qualified_rows:
+                logger.info(f">>> 阶段4.5: 为 {len(qualified_rows)} 篇及格论文检索 GitHub 代码...")
+                for row in qualified_rows:
+                    paper = row["paper_metadata"]
+                    paper.code_repositories = github_enricher.find(paper.title)
 
             if translation_cache:
                 cache_savings = total_papers_count - len(translation_cache)
@@ -459,6 +480,9 @@ class DailyResearchPipeline:
                         f"    [{source}] 深度分析完成: {len(qualified_papers_with_analysis)}/{len(papers_with_pdf)} 篇成功"
                     )
 
+            persisted = ResearchLibrary().persist(scored_papers_by_source, analyses_by_source)
+            logger.info(f">>> 长期知识库已更新: {persisted} 篇论文")
+
             # ==================== 阶段6: 生成分数据源报告 ====================
             logger.info(">>> 阶段6: 生成分数据源研究报告...")
 
@@ -531,6 +555,7 @@ class DailyResearchPipeline:
                     all_scored_flat.append(
                         {
                             "title": p["title"],
+                            "paper_id": p["paper_id"],
                             "score": p["score_response"].total_score,
                             "source": source,
                             "tldr": p["score_response"].tldr,

@@ -245,6 +245,8 @@ class SearchAgent:
             paper.arxiv_id = match.arxiv_id
             paper.arxiv_url = match.arxiv_url
             paper.publication_type = match.publication_type or paper.publication_type
+            paper.referenced_works = match.referenced_works
+            paper.related_works = match.related_works
             enriched += 1
         logger.info(f">>> DBLP → OpenAlex 元数据增强: {enriched}/{len(papers)} 篇")
         return papers
@@ -288,6 +290,8 @@ class SearchAgent:
             existing.semantic_scholar_id = paper.semantic_scholar_id
             existing.semantic_scholar_url = paper.semantic_scholar_url
             existing.influential_citation_count = paper.influential_citation_count
+            existing.referenced_works = paper.referenced_works
+            existing.related_works = paper.related_works
             existing.pdf_url = existing.pdf_url or paper.pdf_url
             merged += 1
 

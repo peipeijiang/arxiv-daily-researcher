@@ -17,6 +17,7 @@
 import json
 import html
 import logging
+import os
 import smtplib
 import hashlib
 import hmac
@@ -374,6 +375,21 @@ class NotifierAgent:
     # 运行结果通知
     # ------------------------------------------------------------------
 
+    @staticmethod
+    def _feedback_links(paper: Dict[str, Any]) -> str:
+        repo_url = os.getenv("FEEDBACK_REPO_URL", "").rstrip("/")
+        paper_id = paper.get("paper_id", "")
+        if not repo_url or not paper_id:
+            return ""
+        body = f"Paper: {paper.get('title', '')}\nID: {paper_id}\nURL: {paper.get('url', '')}"
+        links = []
+        for action, label in (("LIKE", "喜欢"), ("IGNORE", "忽略")):
+            query = urllib.parse.urlencode(
+                {"labels": "paper-feedback", "title": f"[{action}] {paper_id}", "body": body}
+            )
+            links.append(f"[{label}]({repo_url}/issues/new?{query})")
+        return " | ".join(links)
+
     def notify(self, result: RunResult) -> None:
         """格式化并发送运行结果通知到所有已配置的渠道"""
         if not self.notifiers:
@@ -544,6 +560,9 @@ class NotifierAgent:
                 top_lines.append(f'> <font color="comment">Score: {score:.1f} | {tldr}</font>')
                 if url:
                     top_lines.append(f"> [查看原文]({url})")
+                feedback = self._feedback_links(p)
+                if feedback:
+                    top_lines.append(f"> {feedback}")
         top_papers = "\n".join(top_lines)
 
         if template:
@@ -605,6 +624,9 @@ class NotifierAgent:
                 top_lines.append(f'> <font color="comment">Score: {score:.1f} | {tldr}</font>')
                 if url:
                     top_lines.append(f"> [查看原文]({url})")
+                feedback = self._feedback_links(p)
+                if feedback:
+                    top_lines.append(f"> {feedback}")
         top_papers = "\n".join(top_lines)
 
         if template:

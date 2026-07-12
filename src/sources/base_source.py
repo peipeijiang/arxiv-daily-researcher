@@ -46,6 +46,9 @@ class PaperMetadata:
     semantic_scholar_id: Optional[str] = None  # Semantic Scholar Paper ID
     semantic_scholar_url: Optional[str] = None  # Semantic Scholar 论文页
     influential_citation_count: int = 0  # Semantic Scholar 高影响力引用数
+    code_repositories: List[Dict[str, Any]] = field(default_factory=list)
+    referenced_works: List[str] = field(default_factory=list)
+    related_works: List[str] = field(default_factory=list)
 
     def has_pdf_access(self) -> bool:
         """是否可以下载PDF进行深度分析"""
@@ -92,6 +95,9 @@ class PaperMetadata:
             "semantic_scholar_id": self.semantic_scholar_id,
             "semantic_scholar_url": self.semantic_scholar_url,
             "influential_citation_count": self.influential_citation_count,
+            "code_repositories": self.code_repositories,
+            "referenced_works": self.referenced_works,
+            "related_works": self.related_works,
         }
 
 
