@@ -205,7 +205,7 @@
   // PDF Parser Configuration
   // ==================================================
   "pdf_parser": {
-    "mode": "pymupdf",
+    "mode": "mineru",
     "mineru_model_version": "vlm",
     "poll_interval": 3,
     "poll_timeout": 300
