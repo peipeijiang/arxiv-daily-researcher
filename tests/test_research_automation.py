@@ -23,6 +23,38 @@ from notifications.notifier import NotifierAgent, WebhookNotifier
 
 
 class ResearchAutomationTests(unittest.TestCase):
+    def test_wechat_paper_card_uses_deep_analysis(self):
+        agent = NotifierAgent.__new__(NotifierAgent)
+        with unittest.mock.patch.dict(
+            os.environ, {"FEEDBACK_REPO_URL": "https://github.com/o/r"}
+        ):
+            card = agent._format_wechat_paper_card(
+                {
+                    "paper_id": "arxiv:1",
+                    "title": "An English Paper",
+                    "source": "arxiv",
+                    "score": 88,
+                    "url": "https://arxiv.org/abs/1",
+                    "tldr": "short",
+                    "analysis": {
+                        "_analysis_basis": "full_text",
+                        "chinese_title": "一篇论文",
+                        "summary": "完整核心结论",
+                        "methodology": "完整方法",
+                        "key_results": ["关键结果"],
+                        "limitations": ["主要局限"],
+                    },
+                    "code_repositories": [],
+                },
+                1,
+                5,
+            )
+        self.assertIn("全文深读", card)
+        self.assertIn("完整方法", card)
+        self.assertIn("关键结果", card)
+        self.assertIn("主要局限", card)
+        self.assertLessEqual(len(card.encode("utf-8")), 4000)
+
     def test_unpaywall_returns_repository_pdf_with_provenance(self):
         resolver = OpenAccessResolver(email="researcher@example.com")
         response = Mock()

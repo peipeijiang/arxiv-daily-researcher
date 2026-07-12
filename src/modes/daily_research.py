@@ -574,8 +574,14 @@ class DailyResearchPipeline:
             logger.info("✅ 任务完成！")
 
             all_scored_flat = []
+            notification_analysis = {
+                item["paper_id"]: item.get("analysis")
+                for items in analyses_by_source.values()
+                for item in items
+            }
             for source, scored_papers in scored_papers_by_source.items():
                 for p in scored_papers:
+                    metadata = p["paper_metadata"]
                     all_scored_flat.append(
                         {
                             "title": p["title"],
@@ -584,6 +590,11 @@ class DailyResearchPipeline:
                             "source": source,
                             "tldr": p["score_response"].tldr,
                             "url": p["url"],
+                            "analysis": notification_analysis.get(p["paper_id"]),
+                            "code_repositories": metadata.code_repositories,
+                            "arxiv_id": metadata.arxiv_id,
+                            "arxiv_url": metadata.arxiv_url,
+                            "fulltext_provenance": metadata.fulltext_provenance,
                         }
                     )
             all_scored_flat.sort(key=lambda x: x["score"], reverse=True)

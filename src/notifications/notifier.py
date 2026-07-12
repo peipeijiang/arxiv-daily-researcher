@@ -18,6 +18,7 @@ import json
 import html
 import logging
 import os
+import re
 import smtplib
 import hashlib
 import hmac
@@ -423,6 +424,22 @@ class NotifierAgent:
         for notifier in self.notifiers:
             try:
                 platform = self._platform_for_notifier(notifier)
+                if platform == "wechat_work" and result.success:
+                    notifier.send(subject, self._format_wechat_overview(result), attachments)
+                    for index, paper in enumerate(result.top_papers, 1):
+                        try:
+                            notifier.send(
+                                subject,
+                                self._format_wechat_paper_card(
+                                    paper, index, len(result.top_papers)
+                                ),
+                            )
+                            time.sleep(0.35)
+                        except Exception as exc:
+                            logger.warning(
+                                f"企业微信论文卡片发送失败 ({paper.get('paper_id')}): {exc}"
+                            )
+                    continue
                 body = self._format_body_for_platform(result, platform)
                 if isinstance(notifier, EmailNotifier) and html_body:
                     notifier.send(subject, body, attachments, html_body=html_body)
@@ -430,6 +447,95 @@ class NotifierAgent:
                     notifier.send(subject, body, attachments)
             except Exception as e:
                 logger.warning(f"通知发送失败 ({type(notifier).__name__}): {e}")
+
+    @staticmethod
+    def _brief(value: Any, limit: int) -> str:
+        if isinstance(value, list):
+            value = value[0] if value else ""
+        value = " ".join(str(value or "").split())
+        return value[:limit] + ("…" if len(value) > limit else "")
+
+    def _format_wechat_overview(self, result: RunResult) -> str:
+        source_lines = []
+        for source in sorted(result.papers_by_source):
+            source_lines.append(
+                f"> `{source.upper()}` 抓取 **{result.papers_by_source[source]}** | "
+                f"及格 **{result.qualified_by_source.get(source, 0)}** | "
+                f"分析 **{result.analyzed_by_source.get(source, 0)}**"
+            )
+        token_line = ""
+        total_tokens = (result.token_usage or {}).get("total")
+        if total_tokens:
+            token_line = f"\n> Token：{total_tokens:,}"
+        return (
+            f"## 推荐系统每日研究\n"
+            f"<font color=\"info\">运行成功</font> · {result.run_timestamp}\n\n"
+            f"> 抓取 **{result.total_papers_fetched}** 篇 · 及格 **{result.total_qualified}** 篇 · "
+            f"深度分析 **{result.total_analyzed}** 篇{token_line}\n\n"
+            + "\n".join(source_lines)
+            + f"\n\n随后发送 Top {len(result.top_papers)} 单篇研究卡片。"
+        )
+
+    def _format_wechat_paper_card(
+        self, paper: Dict[str, Any], index: int, total: int
+    ) -> str:
+        analysis = paper.get("analysis") or {}
+        basis = analysis.get("_analysis_basis")
+        if basis == "full_text":
+            level = "全文深读"
+        elif basis == "abstract":
+            level = "摘要分析"
+        else:
+            level = "摘要速览" if not analysis else "深度分析"
+
+        title = analysis.get("chinese_title") or paper.get("title", "")
+        original_title = paper.get("title", "")
+        summary = self._brief(analysis.get("summary") or paper.get("tldr"), 220)
+        methodology = self._brief(analysis.get("methodology"), 170)
+        results = self._brief(analysis.get("key_results"), 170)
+        limitations = self._brief(analysis.get("limitations"), 100)
+
+        details = []
+        if methodology:
+            details.append(f"**方法**\n> {methodology}")
+        if results:
+            details.append(f"**关键结果**\n> {results}")
+        if limitations:
+            details.append(f"**主要局限**\n> {limitations}")
+
+        code_line = ""
+        repositories = paper.get("code_repositories") or []
+        if repositories:
+            repo = repositories[0]
+            code_line = (
+                f"\n\n**代码**\n> [{repo.get('full_name')}]({repo.get('url')}) · "
+                f"{repo.get('classification')} · 置信度 {repo.get('confidence')}"
+            )
+        elif analysis:
+            code_line = "\n\n**代码**\n> 尚未发现可信的论文实现仓库"
+
+        repo_url = os.getenv("FEEDBACK_REPO_URL", "").rstrip("/")
+        paper_id = paper.get("paper_id", "")
+        slug = re.sub(r"[^a-zA-Z0-9._-]+", "-", paper_id).strip("-")[:140]
+        report_link = (
+            f"[深度报告]({repo_url}/blob/main/knowledge/papers/{slug}.md)" if repo_url else ""
+        )
+        original_link = f"[查看原文]({paper.get('url')})" if paper.get("url") else ""
+        links = " · ".join(link for link in (report_link, original_link) if link)
+        feedback = self._feedback_links(paper)
+        original_line = "" if title == original_title else f"\n> {original_title}"
+
+        content = (
+            f"## {index}/{total} · {title}{original_line}\n"
+            f"<font color=\"info\">{level}</font> · `{paper.get('source', '').upper()}` · "
+            f"Score **{paper.get('score', 0):.1f}**\n\n"
+            f"**核心结论**\n> {summary}\n\n"
+            + "\n\n".join(details)
+            + code_line
+            + (f"\n\n{links}" if links else "")
+            + (f"\n{feedback}" if feedback else "")
+        )
+        return WebhookNotifier._truncate_wechat_markdown(content)
 
     # ------------------------------------------------------------------
     # 研究趋势分析结果通知
