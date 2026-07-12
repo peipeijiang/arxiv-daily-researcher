@@ -264,12 +264,26 @@ class WebhookNotifier(BaseNotifier):
 
     def _format_wechat_work(self, subject: str, body: str):
         """企业微信机器人 — body 已含完整 Markdown 模板内容"""
-        content = body
-        # 企业微信 markdown 限制 4096 字节
-        if len(content.encode("utf-8")) > 4000:
-            content = content[:1300] + "\n\n...(内容已截断)"
+        content = self._truncate_wechat_markdown(body)
         payload = {"msgtype": "markdown", "markdown": {"content": content}}
         return self.webhook_url, payload, {"Content-Type": "application/json"}
+
+    @staticmethod
+    def _truncate_wechat_markdown(content: str, max_bytes: int = 4000) -> str:
+        """Truncate only at line boundaries so Markdown links are never cut open."""
+        if len(content.encode("utf-8")) <= max_bytes:
+            return content
+        marker = "\n\n...(更多论文请查看完整报告)"
+        budget = max_bytes - len(marker.encode("utf-8"))
+        kept = []
+        used = 0
+        for line in content.splitlines(keepends=True):
+            size = len(line.encode("utf-8"))
+            if used + size > budget:
+                break
+            kept.append(line)
+            used += size
+        return "".join(kept).rstrip() + marker
 
     def _format_dingtalk(self, subject: str, body: str):
         """钉钉机器人（支持签名验证）"""
@@ -381,11 +395,10 @@ class NotifierAgent:
         paper_id = paper.get("paper_id", "")
         if not repo_url or not paper_id:
             return ""
-        body = f"Paper: {paper.get('title', '')}\nID: {paper_id}\nURL: {paper.get('url', '')}"
         links = []
         for action, label in (("LIKE", "喜欢"), ("IGNORE", "忽略")):
             query = urllib.parse.urlencode(
-                {"labels": "paper-feedback", "title": f"[{action}] {paper_id}", "body": body}
+                {"labels": "paper-feedback", "title": f"[{action}] {paper_id}"}
             )
             links.append(f"[{label}]({repo_url}/issues/new?{query})")
         return " | ".join(links)

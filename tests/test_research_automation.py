@@ -1,4 +1,5 @@
 import json
+import os
 import sys
 import tempfile
 import unittest
@@ -17,9 +18,26 @@ from library.evidence_builder import build_evidence_pack, audit_weekly_digest
 from sources.base_source import PaperMetadata
 from sources.citation_discovery import CitationDiscovery
 from sync_feedback import parse_feedback
+from notifications.notifier import NotifierAgent, WebhookNotifier
 
 
 class ResearchAutomationTests(unittest.TestCase):
+    def test_wechat_truncation_never_cuts_markdown_link(self):
+        link = "[忽略](https://github.com/example/issues/new?title=paper)\n"
+        content = "标题\n" + link + ("普通内容\n" * 300)
+        result = WebhookNotifier._truncate_wechat_markdown(content, max_bytes=500)
+        self.assertLessEqual(len(result.encode("utf-8")), 500)
+        self.assertIn(link.strip(), result)
+        self.assertNotIn("https://github.com/example/issues/new?title=paper\n普通内容\n...", result)
+
+    def test_feedback_links_omit_large_issue_body(self):
+        with unittest.mock.patch.dict(os.environ, {"FEEDBACK_REPO_URL": "https://github.com/o/r"}):
+            links = NotifierAgent._feedback_links(
+                {"paper_id": "doi:10.1/example", "title": "A" * 500, "url": "https://example.com"}
+            )
+        self.assertNotIn("body=", links)
+        self.assertIn("[喜欢]", links)
+        self.assertIn("[忽略]", links)
     def test_feedback_parser_uses_latest_action(self):
         result = parse_feedback(
             [
