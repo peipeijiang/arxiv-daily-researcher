@@ -220,6 +220,7 @@ class DailyResearchPipeline:
                 dblp_title_terms=settings.DBLP_TITLE_TERMS,
                 enable_semantic_scholar=settings.ENABLE_SEMANTIC_SCHOLAR_TLDR,
                 semantic_scholar_api_key=settings.SEMANTIC_SCHOLAR_API_KEY,
+                core_api_key=settings.CORE_API_KEY,
             )
 
             try:

@@ -363,6 +363,23 @@ class OpenAlexSource(BasePaperSource):
             for topic in item.get("topics", [])[:5]
             if topic.get("display_name")
         ]
+        open_access_candidates = []
+        for location in item.get("locations", []):
+            source_info = location.get("source") or {}
+            landing = location.get("landing_page_url")
+            pdf = location.get("pdf_url")
+            if not (landing or pdf):
+                continue
+            if pdf or source_info.get("type") == "repository" or location.get("is_oa"):
+                open_access_candidates.append(
+                    {
+                        "landing_page_url": landing,
+                        "pdf_url": pdf,
+                        "source": source_info.get("display_name"),
+                        "source_type": source_info.get("type"),
+                        "license": location.get("license"),
+                    }
+                )
 
         return PaperMetadata(
             paper_id=paper_id,
@@ -389,6 +406,7 @@ class OpenAlexSource(BasePaperSource):
                 value.replace("https://openalex.org/", "")
                 for value in item.get("related_works", [])[:20]
             ],
+            open_access_candidates=open_access_candidates,
         )
 
     def lookup_by_dois(self, dois: List[str]) -> Dict[str, PaperMetadata]:

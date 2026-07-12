@@ -12,6 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 from enrichers.github_code import GitHubCodeEnricher
+from enrichers.open_access import OpenAccessResolver
 from library.feedback import FeedbackStore
 from library.research_library import ResearchLibrary
 from library.evidence_builder import build_evidence_pack, audit_weekly_digest
@@ -22,6 +23,40 @@ from notifications.notifier import NotifierAgent, WebhookNotifier
 
 
 class ResearchAutomationTests(unittest.TestCase):
+    def test_unpaywall_returns_repository_pdf_with_provenance(self):
+        resolver = OpenAccessResolver(email="researcher@example.com")
+        response = Mock()
+        response.raise_for_status.return_value = None
+        response.json.return_value = {
+            "best_oa_location": {
+                "url_for_pdf": "https://repository.example.edu/paper.pdf",
+                "host_type": "repository",
+                "license": "cc-by",
+                "version": "acceptedVersion",
+            },
+            "oa_locations": [],
+        }
+        resolver.session.get = Mock(return_value=response)
+        result = resolver.from_unpaywall("https://doi.org/10.1/example")
+        self.assertEqual(result["provider"], "unpaywall")
+        self.assertEqual(result["license"], "cc-by")
+
+    def test_openalex_repository_page_can_reveal_pdf(self):
+        resolver = OpenAccessResolver()
+        resolver._pdf_from_public_page = Mock(
+            return_value="https://university.example.edu/files/paper.pdf"
+        )
+        paper = SimpleNamespace(
+            open_access_candidates=[{
+                "landing_page_url": "https://university.example.edu/item/1",
+                "pdf_url": None,
+                "source": "University Repository",
+                "source_type": "repository",
+                "license": None,
+            }]
+        )
+        result = resolver.from_openalex_locations(paper)
+        self.assertEqual(result["provider"], "institutional_or_author_repository")
     def test_wechat_truncation_never_cuts_markdown_link(self):
         link = "[忽略](https://github.com/example/issues/new?title=paper)\n"
         content = "标题\n" + link + ("普通内容\n" * 300)

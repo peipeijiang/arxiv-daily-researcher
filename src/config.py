@@ -67,6 +67,7 @@ class Settings(BaseSettings):
     # OpenAlex 配置
     OPENALEX_EMAIL: str = ""  # OpenAlex 礼貌池邮箱（可选，提高速率限制）
     OPENALEX_API_KEY: str = ""  # OpenAlex API Key（可选，2026年2月后必需）
+    CORE_API_KEY: str = ""  # CORE API Key（可选，用于发现机构仓库全文）
     OPENALEX_SEARCH_TERMS: List[str] = []  # OpenAlex 标题和摘要检索短语
     DBLP_VENUES: List[str] = []  # DBLP 会议流简称
     DBLP_TITLE_TERMS: List[str] = []  # DBLP 标题预筛词

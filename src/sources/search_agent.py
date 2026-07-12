@@ -14,6 +14,10 @@ from .arxiv_source import ArxivSource
 from .openalex_source import OpenAlexSource, JOURNAL_ISSN_MAP
 from .dblp_source import DblpSource
 from .semantic_scholar_enricher import SemanticScholarEnricher
+try:
+    from enrichers.open_access import OpenAccessResolver
+except ModuleNotFoundError:  # package import path used by tests and library consumers
+    from ..enrichers.open_access import OpenAccessResolver
 
 logger = logging.getLogger(__name__)
 
@@ -44,6 +48,7 @@ class SearchAgent:
         dblp_title_terms: List[str] = None,
         enable_semantic_scholar: bool = True,
         semantic_scholar_api_key: str = None,
+        core_api_key: str = None,
     ):
         """
         初始化搜索调度器。
@@ -73,6 +78,9 @@ class SearchAgent:
         self.openalex_search_terms = openalex_search_terms or []
         self.dblp_venues = dblp_venues or []
         self.dblp_title_terms = dblp_title_terms or []
+        self.open_access_resolver = OpenAccessResolver(
+            email=openalex_email or "", core_api_key=core_api_key or ""
+        )
 
         # 初始化 Semantic Scholar 增强器
         self.enable_semantic_scholar = enable_semantic_scholar
@@ -217,6 +225,7 @@ class SearchAgent:
                 traceback.print_exc()
 
         self._resolve_missing_arxiv_versions(results)
+        self._resolve_missing_open_access(results)
         results = self._deduplicate_across_sources(results)
 
         # 统计
@@ -251,6 +260,30 @@ class SearchAgent:
                 logger.info(f">>> ArXiv 反查命中: {paper.title[:55]} -> {match.arxiv_id}")
         if attempted:
             logger.info(f">>> 缺失全文主动反查: 尝试 {attempted} 篇，找到 ArXiv 版本 {resolved} 篇")
+        return resolved
+
+    def _resolve_missing_open_access(self, results: Dict[str, List[PaperMetadata]]) -> int:
+        """Try lawful repository APIs after ArXiv resolution has been exhausted."""
+        resolved = 0
+        attempted = 0
+        for source, papers in results.items():
+            if source == "arxiv":
+                continue
+            for paper in papers:
+                if paper.has_pdf_access() or attempted >= 40:
+                    continue
+                attempted += 1
+                candidate = self.open_access_resolver.resolve(paper)
+                if not candidate:
+                    continue
+                paper.pdf_url = candidate["pdf_url"]
+                paper.fulltext_provenance = candidate
+                resolved += 1
+                logger.info(
+                    f">>> 开放全文命中 [{candidate['provider']}]: {paper.title[:55]}"
+                )
+        if attempted:
+            logger.info(f">>> 合法开放全文反查: 尝试 {attempted} 篇，命中 {resolved} 篇")
         return resolved
 
     def _enrich_dblp_with_openalex(

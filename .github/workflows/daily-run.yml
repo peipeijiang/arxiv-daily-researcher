@@ -48,6 +48,7 @@ jobs:
           OPENALEX_EMAIL=${{ secrets.OPENALEX_EMAIL }}
           OPENALEX_API_KEY=${{ secrets.OPENALEX_API_KEY }}
           SEMANTIC_SCHOLAR_API_KEY=${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
+          CORE_API_KEY=${{ secrets.CORE_API_KEY }}
           MINERU_API_KEY=${{ secrets.MINERU_API_KEY }}
           MINERU_MODEL_VERSION=vlm
           ENABLE_NOTIFICATIONS=${{ secrets.ENABLE_NOTIFICATIONS }}

@@ -50,6 +50,8 @@ class PaperMetadata:
     referenced_works: List[str] = field(default_factory=list)
     related_works: List[str] = field(default_factory=list)
     discovery: Dict[str, Any] = field(default_factory=dict)
+    open_access_candidates: List[Dict[str, Any]] = field(default_factory=list)
+    fulltext_provenance: Dict[str, Any] = field(default_factory=dict)
 
     def has_pdf_access(self) -> bool:
         """是否可以下载PDF进行深度分析"""
@@ -100,6 +102,8 @@ class PaperMetadata:
             "referenced_works": self.referenced_works,
             "related_works": self.related_works,
             "discovery": self.discovery,
+            "open_access_candidates": self.open_access_candidates,
+            "fulltext_provenance": self.fulltext_provenance,
         }
 
 
