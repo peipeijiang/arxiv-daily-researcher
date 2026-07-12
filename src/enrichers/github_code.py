@@ -30,8 +30,8 @@ class GitHubCodeEnricher:
         }
 
     @staticmethod
-    def _classification(score: int) -> str:
-        if score >= 70:
+    def _classification(score: int, authority_evidence: bool = False) -> str:
+        if score >= 70 and authority_evidence:
             return "official"
         if score >= 40:
             return "likely"
@@ -76,10 +76,17 @@ class GitHubCodeEnricher:
             evidence.append({"type": "partial_title_in_readme", "overlap": round(overlap, 2)})
         owner = (item.get("owner") or {}).get("login", "").lower()
         author_tokens = {part.lower() for name in authors for part in re.findall(r"[a-z]+", name) if len(part) > 3}
-        if owner and any(token in owner for token in author_tokens):
+        author_owner_match = owner and any(token in owner for token in author_tokens)
+        if author_owner_match:
             score += 20
             evidence.append({"type": "author_owner_match", "owner": owner})
-        return {"confidence": min(score, 100), "classification": self._classification(score), "evidence": evidence}
+        authority_evidence = declared or bool(author_owner_match)
+        confidence = min(score, 100) if authority_evidence else min(score, 69)
+        return {
+            "confidence": confidence,
+            "classification": self._classification(confidence, authority_evidence),
+            "evidence": evidence,
+        }
 
     def find(
         self,
