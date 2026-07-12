@@ -60,6 +60,12 @@ class MetadataRenderer(BaseModuleRenderer):
             if getattr(paper_meta, 'openalex_id', None):
                 field_values['cited_by_count'] = getattr(paper_meta, 'cited_by_count', 0)
 
+        if fields_config.get('influential_citation_count', {}).get('enabled', True) and paper_meta:
+            if getattr(paper_meta, 'semantic_scholar_id', None):
+                field_values['influential_citation_count'] = getattr(
+                    paper_meta, 'influential_citation_count', 0
+                )
+
         # 发布日期
         if fields_config.get('published_date', {}).get('enabled', True):
             if paper_meta and paper_meta.published_date:

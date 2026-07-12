@@ -43,6 +43,9 @@ class PaperMetadata:
     cited_by_count: int = 0  # OpenAlex 引用数
     publication_type: Optional[str] = None  # article/preprint 等
     topics: List[str] = field(default_factory=list)  # OpenAlex 主题标签
+    semantic_scholar_id: Optional[str] = None  # Semantic Scholar Paper ID
+    semantic_scholar_url: Optional[str] = None  # Semantic Scholar 论文页
+    influential_citation_count: int = 0  # Semantic Scholar 高影响力引用数
 
     def has_pdf_access(self) -> bool:
         """是否可以下载PDF进行深度分析"""
@@ -86,6 +89,9 @@ class PaperMetadata:
             "cited_by_count": self.cited_by_count,
             "publication_type": self.publication_type,
             "topics": self.topics,
+            "semantic_scholar_id": self.semantic_scholar_id,
+            "semantic_scholar_url": self.semantic_scholar_url,
+            "influential_citation_count": self.influential_citation_count,
         }
 
 

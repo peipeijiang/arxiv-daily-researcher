@@ -2,10 +2,12 @@ from datetime import datetime, timezone
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from unittest import TestCase
+from unittest.mock import Mock
 
 from src.sources.base_source import PaperMetadata
 from src.sources.openalex_source import OpenAlexSource
 from src.sources.search_agent import SearchAgent
+from src.sources.semantic_scholar_enricher import SemanticScholarEnricher
 
 
 class OpenAlexMetadataTests(TestCase):
@@ -76,3 +78,33 @@ class OpenAlexMetadataTests(TestCase):
         self.assertEqual(arxiv.journal, "Proceedings of ACM SIGIR")
         self.assertEqual(arxiv.openalex_id, "W123")
         self.assertEqual(arxiv.cited_by_count, 3)
+
+
+class SemanticScholarBatchTests(TestCase):
+    def test_maps_batch_response_by_doi(self):
+        enricher = SemanticScholarEnricher()
+        response = Mock()
+        response.status_code = 200
+        response.json.return_value = [
+            {
+                "paperId": "s2-paper",
+                "url": "https://www.semanticscholar.org/paper/s2-paper",
+                "venue": "SIGIR",
+                "tldr": {"text": "A concise summary."},
+                "citationCount": 9,
+                "influentialCitationCount": 2,
+                "publicationTypes": ["Conference"],
+                "externalIds": {"ArXiv": "2607.12345"},
+                "openAccessPdf": {"url": "https://example.test/paper.pdf"},
+            }
+        ]
+        response.raise_for_status.return_value = None
+        enricher.session.post = Mock(return_value=response)
+
+        result = enricher.get_papers_info_batch(["https://doi.org/10.1145/example"])
+
+        paper = result["10.1145/example"]
+        self.assertEqual(paper["paper_id"], "s2-paper")
+        self.assertEqual(paper["influential_citation_count"], 2)
+        self.assertEqual(paper["arxiv_id"], "2607.12345")
+        self.assertEqual(paper["pdf_url"], "https://example.test/paper.pdf")

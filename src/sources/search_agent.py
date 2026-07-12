@@ -238,6 +238,9 @@ class SearchAgent:
             existing.semantic_scholar_tldr = (
                 existing.semantic_scholar_tldr or paper.semantic_scholar_tldr
             )
+            existing.semantic_scholar_id = paper.semantic_scholar_id
+            existing.semantic_scholar_url = paper.semantic_scholar_url
+            existing.influential_citation_count = paper.influential_citation_count
             existing.pdf_url = existing.pdf_url or paper.pdf_url
             merged += 1
 
@@ -260,30 +263,38 @@ class SearchAgent:
         if not self.semantic_scholar_enricher:
             return papers
 
-        logger.info("  正在从 Semantic Scholar 获取增强信息...")
+        logger.info("  正在从 Semantic Scholar 批量获取增强信息...")
         enriched_count = 0
         arxiv_found_count = 0
+        dois = [paper.doi for paper in papers if paper.doi]
+        batch_info = self.semantic_scholar_enricher.get_papers_info_batch(dois)
 
         for paper in papers:
-            if paper.doi:
-                # 获取完整的论文信息（TLDR + arXiv ID）
-                paper_info = self.semantic_scholar_enricher.get_paper_info(paper.doi)
-                if paper_info:
-                    # 设置 TLDR
-                    if paper_info.get("tldr"):
-                        paper.semantic_scholar_tldr = paper_info["tldr"]
-                        enriched_count += 1
+            doi_key = self._doi_key(paper.doi)
+            paper_info = batch_info.get(doi_key)
+            if not paper_info:
+                continue
 
-                    # 设置 arXiv 信息（用于后续深度分析）
-                    if paper_info.get("arxiv_id"):
-                        paper.arxiv_id = paper_info["arxiv_id"]
-                        paper.arxiv_url = paper_info.get(
-                            "arxiv_url", f"https://arxiv.org/abs/{paper_info['arxiv_id']}"
-                        )
-                        # 设置 PDF URL 以便下载
-                        paper.pdf_url = f"https://arxiv.org/pdf/{paper_info['arxiv_id']}.pdf"
-                        arxiv_found_count += 1
-                        logger.debug(f"    找到 arXiv 版本: {paper_info['arxiv_id']}")
+            paper.semantic_scholar_id = paper_info.get("paper_id")
+            paper.semantic_scholar_url = paper_info.get("url")
+            paper.influential_citation_count = paper_info.get(
+                "influential_citation_count", 0
+            )
+            if paper_info.get("venue") and paper.journal == "OpenAlex":
+                paper.journal = paper_info["venue"]
+            if paper_info.get("tldr"):
+                paper.semantic_scholar_tldr = paper_info["tldr"]
+                enriched_count += 1
+            if paper_info.get("pdf_url"):
+                paper.pdf_url = paper.pdf_url or paper_info["pdf_url"]
+
+            arxiv_id = paper_info.get("arxiv_id")
+            if arxiv_id:
+                paper.arxiv_id = paper.arxiv_id or arxiv_id
+                paper.arxiv_url = paper.arxiv_url or f"https://arxiv.org/abs/{arxiv_id}"
+                paper.pdf_url = paper.pdf_url or f"https://arxiv.org/pdf/{arxiv_id}.pdf"
+                arxiv_found_count += 1
+                logger.debug(f"    找到 arXiv 版本: {arxiv_id}")
 
         if enriched_count > 0 or arxiv_found_count > 0:
             logger.info(f"    TLDR: {enriched_count}/{len(papers)} 篇")

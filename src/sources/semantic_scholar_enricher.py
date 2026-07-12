@@ -6,7 +6,7 @@ Semantic Scholar 数据增强器
 
 import logging
 import requests
-from typing import Optional, Dict
+from typing import Optional, Dict, List
 from tenacity import retry, stop_after_attempt, wait_exponential, before_sleep_log
 
 logger = logging.getLogger(__name__)
@@ -74,6 +74,68 @@ class SemanticScholarEnricher:
             return resp
 
         return _do_get()
+
+    def get_papers_info_batch(self, dois: List[str]) -> Dict[str, Dict]:
+        """批量获取论文增强信息，避免逐篇请求耗尽公共限额。"""
+        clean_dois = []
+        seen = set()
+        for doi in dois:
+            clean = doi.replace("https://doi.org/", "").replace("DOI:", "").strip()
+            if clean and clean.lower() not in seen:
+                clean_dois.append(clean)
+                seen.add(clean.lower())
+
+        if not clean_dois:
+            return {}
+
+        results: Dict[str, Dict] = {}
+        url = f"{self.API_BASE_URL}/paper/batch"
+        fields = (
+            "title,tldr,citationCount,influentialCitationCount,externalIds,"
+            "publicationTypes,openAccessPdf,url,venue"
+        )
+
+        for start in range(0, len(clean_dois), 500):
+            chunk = clean_dois[start : start + 500]
+            try:
+                response = self.session.post(
+                    url,
+                    params={"fields": fields},
+                    json={"ids": [f"DOI:{doi}" for doi in chunk]},
+                    timeout=30,
+                )
+                if response.status_code == 429:
+                    logger.warning(
+                        "⚠️  Semantic Scholar 公共 API 已限速，跳过本轮增强；"
+                        "配置 API Key 后可获得独立限额"
+                    )
+                    break
+                response.raise_for_status()
+
+                for doi, data in zip(chunk, response.json()):
+                    if not data:
+                        continue
+                    tldr = data.get("tldr") or {}
+                    open_pdf = data.get("openAccessPdf") or {}
+                    external_ids = data.get("externalIds") or {}
+                    results[doi.lower()] = {
+                        "paper_id": data.get("paperId"),
+                        "url": data.get("url"),
+                        "venue": data.get("venue"),
+                        "tldr": tldr.get("text"),
+                        "citation_count": int(data.get("citationCount") or 0),
+                        "influential_citation_count": int(
+                            data.get("influentialCitationCount") or 0
+                        ),
+                        "publication_types": data.get("publicationTypes") or [],
+                        "arxiv_id": external_ids.get("ArXiv"),
+                        "pdf_url": open_pdf.get("url"),
+                    }
+            except requests.RequestException as exc:
+                logger.warning(f"Semantic Scholar 批量增强失败: {exc}")
+                break
+
+        return results
 
     def get_tldr(self, doi: str) -> Optional[str]:
         """
