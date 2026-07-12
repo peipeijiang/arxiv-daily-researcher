@@ -67,6 +67,7 @@ class Settings(BaseSettings):
     # OpenAlex 配置
     OPENALEX_EMAIL: str = ""  # OpenAlex 礼貌池邮箱（可选，提高速率限制）
     OPENALEX_API_KEY: str = ""  # OpenAlex API Key（可选，2026年2月后必需）
+    OPENALEX_SEARCH_TERMS: List[str] = []  # OpenAlex 标题和摘要检索短语
 
     # ArXiv 抓取配置
     ARXIV_FETCH_TIMEOUT_SECONDS: int = 180  # 单次抓取硬超时，避免无限阻塞
@@ -298,6 +299,10 @@ class Settings(BaseSettings):
                         self.ARXIV_FETCH_TIMEOUT_SECONDS = arxiv_cfg.get(
                             "fetch_timeout_seconds", self.ARXIV_FETCH_TIMEOUT_SECONDS
                         )
+                if "openalex" in ds_config:
+                    openalex_cfg = ds_config["openalex"]
+                    if isinstance(openalex_cfg, dict):
+                        self.OPENALEX_SEARCH_TERMS = openalex_cfg.get("search_terms", [])
 
             # 加载关键词配置
             if "keywords" in config:

@@ -52,9 +52,13 @@ class MetadataRenderer(BaseModuleRenderer):
         # 期刊/来源
         if fields_config.get('journal', {}).get('enabled', True):
             journal = data.get('source', '')
-            if paper_meta and hasattr(paper_meta, 'source'):
-                journal = paper_meta.source
+            if paper_meta:
+                journal = paper_meta.journal or paper_meta.source
             field_values['journal'] = journal
+
+        if fields_config.get('cited_by_count', {}).get('enabled', True) and paper_meta:
+            if getattr(paper_meta, 'openalex_id', None):
+                field_values['cited_by_count'] = getattr(paper_meta, 'cited_by_count', 0)
 
         # 发布日期
         if fields_config.get('published_date', {}).get('enabled', True):

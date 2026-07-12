@@ -39,6 +39,10 @@ class PaperMetadata:
     semantic_scholar_tldr: Optional[str] = None  # Semantic Scholar AI生成的TLDR
     arxiv_id: Optional[str] = None  # arXiv ID（期刊论文可能也有arXiv版本）
     arxiv_url: Optional[str] = None  # arXiv论文页面URL
+    openalex_id: Optional[str] = None  # OpenAlex Work ID
+    cited_by_count: int = 0  # OpenAlex 引用数
+    publication_type: Optional[str] = None  # article/preprint 等
+    topics: List[str] = field(default_factory=list)  # OpenAlex 主题标签
 
     def has_pdf_access(self) -> bool:
         """是否可以下载PDF进行深度分析"""
@@ -78,6 +82,10 @@ class PaperMetadata:
             "semantic_scholar_tldr": self.semantic_scholar_tldr,
             "arxiv_id": self.arxiv_id,
             "arxiv_url": self.arxiv_url,
+            "openalex_id": self.openalex_id,
+            "cited_by_count": self.cited_by_count,
+            "publication_type": self.publication_type,
+            "topics": self.topics,
         }
 
 

@@ -10,6 +10,7 @@ import logging
 import re
 import traceback
 import requests
+import time
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import List, Dict, Optional
@@ -117,6 +118,7 @@ class OpenAlexSource(BasePaperSource):
         max_results: int = 100,
         email: str = None,
         api_key: str = None,
+        search_terms: List[str] = None,
     ):
         """
         初始化 OpenAlex 数据源。
@@ -133,6 +135,7 @@ class OpenAlexSource(BasePaperSource):
         self.max_results = max_results
         self.email = email
         self.api_key = api_key
+        self.search_terms = search_terms or []
 
         self.session = requests.Session()
         self.session.headers.update(
@@ -197,12 +200,16 @@ class OpenAlexSource(BasePaperSource):
         if journals:
             self.journals = journals
 
-        if not self.journals:
-            logger.warning("[OpenAlex] 未指定期刊，跳过抓取")
-            return []
-
         all_papers = []
         from_date = (datetime.now() - timedelta(days=days)).strftime("%Y-%m-%d")
+        to_date = datetime.now().strftime("%Y-%m-%d")
+
+        if self.search_terms:
+            all_papers.extend(self._fetch_topic_papers(from_date, to_date))
+
+        if not self.journals:
+            logger.info(f"[OpenAlex] 主题检索共发现 {len(all_papers)} 篇论文")
+            return all_papers
 
         logger.info(f"[OpenAlex] 开始抓取期刊论文")
         logger.info(f"  目标期刊: {self.journals}")
@@ -238,6 +245,142 @@ class OpenAlexSource(BasePaperSource):
 
         logger.info(f"[OpenAlex] 总计发现 {len(all_papers)} 篇新论文")
         return all_papers
+
+    def _base_params(self) -> Dict[str, str]:
+        params = {}
+        if self.api_key:
+            params["api_key"] = self.api_key
+        elif self.email:
+            params["mailto"] = self.email
+        return params
+
+    def _fetch_topic_papers(self, from_date: str, to_date: str) -> List[PaperMetadata]:
+        """按标题和摘要中的推荐系统短语检索近期 OpenAlex Works。"""
+        logger.info("[OpenAlex] 开始主题检索")
+        logger.info(f"  检索短语: {self.search_terms}")
+        logger.info(f"  时间范围: {from_date} 至 {to_date}")
+
+        papers_by_id: Dict[str, PaperMetadata] = {}
+        per_term = max(10, min(50, self.max_results // max(1, len(self.search_terms)) + 5))
+        url = f"{self.API_BASE_URL}/works"
+
+        for index, term in enumerate(self.search_terms):
+            if len(papers_by_id) >= self.max_results:
+                break
+            params = {
+                "filter": (
+                    f'from_publication_date:{from_date},to_publication_date:{to_date},'
+                    f'type:article|preprint,title_and_abstract.search:"{term}"'
+                ),
+                "per_page": per_term,
+                "sort": "publication_date:desc",
+                "select": (
+                    "id,doi,title,authorships,abstract_inverted_index,publication_date,"
+                    "primary_location,open_access,locations,best_oa_location,ids,"
+                    "cited_by_count,type,topics"
+                ),
+            }
+            params.update(self._base_params())
+
+            try:
+                data = self._api_request(url, params)
+                found = 0
+                for item in data.get("results", []):
+                    metadata = self._metadata_from_item(item, source="openalex")
+                    if not metadata or self.is_processed(metadata.paper_id):
+                        continue
+                    dedupe_key = metadata.openalex_id or metadata.paper_id
+                    papers_by_id[dedupe_key] = metadata
+                    found += 1
+                    if len(papers_by_id) >= self.max_results:
+                        break
+                logger.info(f"  {term}: 新增 {found} 篇")
+            except Exception as exc:
+                logger.warning(f"  OpenAlex 主题检索失败 ({term}): {exc}")
+
+            # 免费 API 上限为每秒 10 次，主动留出余量。
+            if index < len(self.search_terms) - 1:
+                time.sleep(0.25)
+
+        papers = list(papers_by_id.values())[: self.max_results]
+        logger.info(f"[OpenAlex] 主题检索去重后共 {len(papers)} 篇")
+        return papers
+
+    def _metadata_from_item(self, item: Dict, source: str) -> Optional[PaperMetadata]:
+        """将 OpenAlex Work 转为统一论文元数据。"""
+        openalex_id = item.get("id", "").replace("https://openalex.org/", "")
+        doi_url = item.get("doi")
+        paper_id = doi_url or (f"openalex:{openalex_id}" if openalex_id else "")
+        if not paper_id:
+            return None
+
+        title = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", item.get("title") or "")).strip()
+        if not title:
+            return None
+
+        authors = []
+        for authorship in item.get("authorships", [])[:20]:
+            name = (authorship.get("author") or {}).get("display_name")
+            if name:
+                authors.append(name)
+
+        abstract = self._rebuild_abstract(item.get("abstract_inverted_index") or {})
+        primary_location = item.get("primary_location") or {}
+        source_info = primary_location.get("source") or {}
+        venue = (
+            source_info.get("display_name")
+            or primary_location.get("raw_source_name")
+            or "OpenAlex"
+        )
+        landing_page_url = primary_location.get("landing_page_url")
+        if not landing_page_url:
+            landing_page_url = doi_url or f"https://openalex.org/{openalex_id}"
+
+        best_oa = item.get("best_oa_location") or {}
+        pdf_url = best_oa.get("pdf_url") or primary_location.get("pdf_url")
+        if not pdf_url:
+            oa_url = (item.get("open_access") or {}).get("oa_url")
+            if oa_url and oa_url.lower().endswith(".pdf"):
+                pdf_url = oa_url
+
+        arxiv_id = None
+        arxiv_url = None
+        for location in item.get("locations", []):
+            location_url = location.get("landing_page_url") or ""
+            location_source = (location.get("source") or {}).get("display_name", "")
+            if "arxiv" not in location_source.lower() and "arxiv.org" not in location_url:
+                continue
+            match = re.search(r"arxiv\.org/(?:abs|pdf)/([^/?#]+)", location_url)
+            if match:
+                arxiv_id = match.group(1).removesuffix(".pdf")
+                arxiv_url = f"https://arxiv.org/abs/{arxiv_id}"
+                pdf_url = pdf_url or f"https://arxiv.org/pdf/{arxiv_id}.pdf"
+                break
+
+        topics = [
+            topic.get("display_name")
+            for topic in item.get("topics", [])[:5]
+            if topic.get("display_name")
+        ]
+
+        return PaperMetadata(
+            paper_id=paper_id,
+            title=title,
+            authors=authors,
+            abstract=abstract,
+            published_date=self._parse_date(item.get("publication_date")),
+            url=landing_page_url,
+            source=source,
+            pdf_url=pdf_url,
+            doi=doi_url,
+            journal=venue,
+            arxiv_id=arxiv_id,
+            arxiv_url=arxiv_url,
+            openalex_id=openalex_id or None,
+            cited_by_count=int(item.get("cited_by_count") or 0),
+            publication_type=primary_location.get("raw_type") or item.get("type"),
+            topics=topics,
+        )
 
     def _fetch_from_arxiv(
         self, arxiv_id: str, journal_code: str, journal_name: str, doi: str

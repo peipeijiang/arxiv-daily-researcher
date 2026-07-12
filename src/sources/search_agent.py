@@ -5,6 +5,7 @@
 """
 
 import logging
+import re
 from pathlib import Path
 from typing import List, Dict, Optional
 
@@ -37,6 +38,7 @@ class SearchAgent:
         max_results_per_source: Dict[str, int] = None,
         openalex_email: str = None,
         openalex_api_key: str = None,
+        openalex_search_terms: List[str] = None,
         enable_semantic_scholar: bool = True,
         semantic_scholar_api_key: str = None,
     ):
@@ -65,6 +67,7 @@ class SearchAgent:
         self.max_results_per_source = max_results_per_source or {}
         self.openalex_email = openalex_email
         self.openalex_api_key = openalex_api_key
+        self.openalex_search_terms = openalex_search_terms or []
 
         # 初始化 Semantic Scholar 增强器
         self.enable_semantic_scholar = enable_semantic_scholar
@@ -114,11 +117,11 @@ class SearchAgent:
             if journal not in journal_codes and journal in JOURNAL_ISSN_MAP:
                 journal_codes.append(journal)
 
-        if journal_codes:
+        if journal_codes or "openalex" in self.enabled_sources:
             # 使用期刊中最大的单独配置值，如果都没有则用全局默认
             openalex_max = max(
-                (self._get_max_results(jc) for jc in journal_codes),
-                default=self.max_results,
+                [self._get_max_results("openalex")]
+                + [self._get_max_results(jc) for jc in journal_codes]
             )
             self.sources["openalex"] = OpenAlexSource(
                 history_dir=self.history_dir,
@@ -126,6 +129,7 @@ class SearchAgent:
                 max_results=openalex_max,
                 email=self.openalex_email,
                 api_key=self.openalex_api_key,
+                search_terms=self.openalex_search_terms,
             )
             # 注入代理
             openalex_proxy = _settings.get_proxy_dict("openalex")
@@ -133,7 +137,10 @@ class SearchAgent:
                 self.sources["openalex"].session.proxies.update(openalex_proxy)
                 logger.info("[SearchAgent] OpenAlex 已配置网络代理")
             self._journal_codes = journal_codes
-            logger.info(f"[SearchAgent] 已启用 OpenAlex 数据源，期刊: {journal_codes}")
+            logger.info(
+                f"[SearchAgent] 已启用 OpenAlex 数据源，"
+                f"主题检索: {len(self.openalex_search_terms)} 条，期刊: {journal_codes}"
+            )
         else:
             self._journal_codes = []
 
@@ -187,10 +194,57 @@ class SearchAgent:
 
                 traceback.print_exc()
 
+        results = self._deduplicate_across_sources(results)
+
         # 统计
         total = sum(len(papers) for papers in results.values())
         logger.info(f">>> 总计抓取 {total} 篇论文，来自 {len(results)} 个数据源")
 
+        return results
+
+    @staticmethod
+    def _title_key(title: str) -> str:
+        """生成跨来源标题指纹，仅用于严格标题去重。"""
+        return re.sub(r"[^a-z0-9]+", "", (title or "").lower())
+
+    @staticmethod
+    def _doi_key(doi: Optional[str]) -> str:
+        return (doi or "").lower().replace("https://doi.org/", "").strip()
+
+    def _deduplicate_across_sources(
+        self, results: Dict[str, List[PaperMetadata]]
+    ) -> Dict[str, List[PaperMetadata]]:
+        """合并 ArXiv 与 OpenAlex 的同一论文，优先保留可下载的 ArXiv 记录。"""
+        arxiv_papers = results.get("arxiv", [])
+        by_doi = {self._doi_key(p.doi): p for p in arxiv_papers if self._doi_key(p.doi)}
+        by_title = {self._title_key(p.title): p for p in arxiv_papers if self._title_key(p.title)}
+
+        deduped_openalex = []
+        merged = 0
+        for paper in results.get("openalex", []):
+            existing = by_doi.get(self._doi_key(paper.doi)) or by_title.get(
+                self._title_key(paper.title)
+            )
+            if not existing:
+                deduped_openalex.append(paper)
+                continue
+
+            existing.doi = existing.doi or paper.doi
+            existing.journal = existing.journal or paper.journal
+            existing.openalex_id = paper.openalex_id
+            existing.cited_by_count = max(existing.cited_by_count, paper.cited_by_count)
+            existing.publication_type = paper.publication_type
+            existing.topics = paper.topics
+            existing.semantic_scholar_tldr = (
+                existing.semantic_scholar_tldr or paper.semantic_scholar_tldr
+            )
+            existing.pdf_url = existing.pdf_url or paper.pdf_url
+            merged += 1
+
+        if "openalex" in results:
+            results["openalex"] = deduped_openalex
+        if merged:
+            logger.info(f">>> 跨来源去重: 合并 {merged} 篇 ArXiv/OpenAlex 重复论文")
         return results
 
     def _enrich_with_semantic_scholar(self, papers: List[PaperMetadata]) -> List[PaperMetadata]:

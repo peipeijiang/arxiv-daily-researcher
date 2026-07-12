@@ -23,6 +23,7 @@
         "authors": { "enabled": true, "label": "作者" },
         "journal": { "enabled": true, "label": "期刊/来源" },
         "published_date": { "enabled": true, "label": "发布日期" },
+        "cited_by_count": { "enabled": true, "label": "OpenAlex引用数" },
         "url": { "enabled": true, "label": "链接" },
         "doi": { "enabled": true, "label": "DOI" }
       }

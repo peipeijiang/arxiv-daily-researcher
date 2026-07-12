@@ -211,6 +211,7 @@ class DailyResearchPipeline:
                 max_results_per_source=settings.MAX_RESULTS_PER_SOURCE,
                 openalex_email=settings.OPENALEX_EMAIL,
                 openalex_api_key=settings.OPENALEX_API_KEY,
+                openalex_search_terms=settings.OPENALEX_SEARCH_TERMS,
                 enable_semantic_scholar=settings.ENABLE_SEMANTIC_SCHOLAR_TLDR,
                 semantic_scholar_api_key=settings.SEMANTIC_SCHOLAR_API_KEY,
             )

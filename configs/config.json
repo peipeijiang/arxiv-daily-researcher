@@ -5,7 +5,10 @@
   "search_settings": {
     "search_days": 3,
     "max_results": 120,
-    "max_results_per_source": {}
+    "max_results_per_source": {
+      "arxiv": 120,
+      "openalex": 60
+    }
   },
 
   // ==================================================
@@ -13,12 +16,25 @@
   // ==================================================
   "data_sources": {
     "enabled": [
-      "arxiv"
+      "arxiv",
+      "openalex"
     ],
     "journals": [],
     "reports_by_source": true,
     "arxiv": {
       "fetch_timeout_seconds": 180
+    },
+    "openalex": {
+      "search_terms": [
+        "recommender system",
+        "sequential recommendation",
+        "generative recommendation",
+        "LLM recommendation",
+        "multimodal recommendation",
+        "conversational recommendation",
+        "recommendation agent",
+        "click-through rate prediction"
+      ]
     }
   },
 
