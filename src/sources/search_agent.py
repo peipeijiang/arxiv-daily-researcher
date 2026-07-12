@@ -12,6 +12,7 @@ from typing import List, Dict, Optional
 from .base_source import BasePaperSource, PaperMetadata
 from .arxiv_source import ArxivSource
 from .openalex_source import OpenAlexSource, JOURNAL_ISSN_MAP
+from .dblp_source import DblpSource
 from .semantic_scholar_enricher import SemanticScholarEnricher
 
 logger = logging.getLogger(__name__)
@@ -39,6 +40,8 @@ class SearchAgent:
         openalex_email: str = None,
         openalex_api_key: str = None,
         openalex_search_terms: List[str] = None,
+        dblp_venues: List[str] = None,
+        dblp_title_terms: List[str] = None,
         enable_semantic_scholar: bool = True,
         semantic_scholar_api_key: str = None,
     ):
@@ -68,6 +71,8 @@ class SearchAgent:
         self.openalex_email = openalex_email
         self.openalex_api_key = openalex_api_key
         self.openalex_search_terms = openalex_search_terms or []
+        self.dblp_venues = dblp_venues or []
+        self.dblp_title_terms = dblp_title_terms or []
 
         # 初始化 Semantic Scholar 增强器
         self.enable_semantic_scholar = enable_semantic_scholar
@@ -151,6 +156,15 @@ class SearchAgent:
                 self.semantic_scholar_enricher.session.proxies.update(s2_proxy)
                 logger.info("[SearchAgent] Semantic Scholar 已配置网络代理")
 
+        if "dblp" in self.enabled_sources and self.dblp_venues:
+            self.sources["dblp"] = DblpSource(
+                history_dir=self.history_dir,
+                venues=self.dblp_venues,
+                title_terms=self.dblp_title_terms,
+                max_results=self._get_max_results("dblp"),
+            )
+            logger.info(f"[SearchAgent] 已启用 DBLP 会议源: {self.dblp_venues}")
+
     def fetch_all_papers(self, days: int = 7) -> Dict[str, List[PaperMetadata]]:
         """
         从所有启用的数据源抓取论文。
@@ -184,6 +198,14 @@ class SearchAgent:
                             results[paper.source] = []
                         results[paper.source].append(paper)
 
+                elif source_name == "dblp":
+                    papers = source.fetch_papers(days=days)
+                    papers = self._enrich_dblp_with_openalex(papers)
+                    if self.enable_semantic_scholar and self.semantic_scholar_enricher:
+                        papers = self._enrich_with_semantic_scholar(papers)
+                    for paper in papers:
+                        results.setdefault(paper.source, []).append(paper)
+
                 else:
                     papers = source.fetch_papers(days=days)
                     results[source_name] = papers
@@ -201,6 +223,31 @@ class SearchAgent:
         logger.info(f">>> 总计抓取 {total} 篇论文，来自 {len(results)} 个数据源")
 
         return results
+
+    def _enrich_dblp_with_openalex(
+        self, papers: List[PaperMetadata]
+    ) -> List[PaperMetadata]:
+        openalex = self.sources.get("openalex")
+        if not openalex:
+            return papers
+        lookup = openalex.lookup_by_dois([paper.doi for paper in papers if paper.doi])
+        enriched = 0
+        for paper in papers:
+            match = lookup.get(self._doi_key(paper.doi))
+            if not match:
+                continue
+            paper.abstract = match.abstract or paper.abstract
+            paper.authors = match.authors or paper.authors
+            paper.pdf_url = match.pdf_url or paper.pdf_url
+            paper.openalex_id = match.openalex_id
+            paper.cited_by_count = match.cited_by_count
+            paper.topics = match.topics
+            paper.arxiv_id = match.arxiv_id
+            paper.arxiv_url = match.arxiv_url
+            paper.publication_type = match.publication_type or paper.publication_type
+            enriched += 1
+        logger.info(f">>> DBLP → OpenAlex 元数据增强: {enriched}/{len(papers)} 篇")
+        return papers
 
     @staticmethod
     def _title_key(title: str) -> str:
@@ -246,8 +293,39 @@ class SearchAgent:
 
         if "openalex" in results:
             results["openalex"] = deduped_openalex
+
+        canonical = results.get("arxiv", []) + results.get("openalex", [])
+        canonical_by_doi = {
+            self._doi_key(p.doi): p for p in canonical if self._doi_key(p.doi)
+        }
+        canonical_by_title = {
+            self._title_key(p.title): p for p in canonical if self._title_key(p.title)
+        }
+        dblp_merged = 0
+        for venue in getattr(self, "dblp_venues", []):
+            deduped_venue = []
+            for paper in results.get(venue, []):
+                existing = canonical_by_doi.get(self._doi_key(paper.doi)) or canonical_by_title.get(
+                    self._title_key(paper.title)
+                )
+                if not existing:
+                    deduped_venue.append(paper)
+                    continue
+                existing.journal = existing.journal or paper.journal
+                existing.doi = existing.doi or paper.doi
+                existing.pdf_url = existing.pdf_url or paper.pdf_url
+                existing.arxiv_id = existing.arxiv_id or paper.arxiv_id
+                existing.arxiv_url = existing.arxiv_url or paper.arxiv_url
+                if "dblp" in self.sources:
+                    self.sources["dblp"].mark_as_processed(paper.paper_id)
+                dblp_merged += 1
+            if venue in results:
+                results[venue] = deduped_venue
+
         if merged:
             logger.info(f">>> 跨来源去重: 合并 {merged} 篇 ArXiv/OpenAlex 重复论文")
+        if dblp_merged:
+            logger.info(f">>> 跨来源去重: 合并 {dblp_merged} 篇 DBLP 重复论文")
         return results
 
     def _enrich_with_semantic_scholar(self, papers: List[PaperMetadata]) -> List[PaperMetadata]:
@@ -315,6 +393,8 @@ class SearchAgent:
         # ArXiv 论文
         if source == "arxiv" and "arxiv" in self.sources:
             self.sources["arxiv"].mark_as_processed(paper_id)
+        elif source in getattr(self, "dblp_venues", []) and "dblp" in self.sources:
+            self.sources["dblp"].mark_as_processed(paper_id)
         # 期刊论文（都通过 openalex）
         elif "openalex" in self.sources:
             self.sources["openalex"].mark_as_processed(paper_id)

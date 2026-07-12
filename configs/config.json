@@ -7,7 +7,8 @@
     "max_results": 120,
     "max_results_per_source": {
       "arxiv": 120,
-      "openalex": 60
+      "openalex": 60,
+      "dblp": 30
     }
   },
 
@@ -17,7 +18,8 @@
   "data_sources": {
     "enabled": [
       "arxiv",
-      "openalex"
+      "openalex",
+      "dblp"
     ],
     "journals": [],
     "reports_by_source": true,
@@ -34,6 +36,20 @@
         "conversational recommendation",
         "recommendation agent",
         "click-through rate prediction"
+      ]
+    },
+    "dblp": {
+      "venues": ["recsys", "sigir", "wsdm", "kdd", "www", "cikm"],
+      "title_terms": [
+        "recommend",
+        "ranking",
+        "reranking",
+        "user modeling",
+        "personalization",
+        "click through",
+        "click-through",
+        "conversion rate",
+        "collaborative filtering"
       ]
     }
   },

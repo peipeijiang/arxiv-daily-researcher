@@ -6,6 +6,7 @@ from unittest.mock import Mock
 
 from src.sources.base_source import PaperMetadata
 from src.sources.openalex_source import OpenAlexSource
+from src.sources.dblp_source import DblpSource
 from src.sources.search_agent import SearchAgent
 from src.sources.semantic_scholar_enricher import SemanticScholarEnricher
 
@@ -79,6 +80,41 @@ class OpenAlexMetadataTests(TestCase):
         self.assertEqual(arxiv.openalex_id, "W123")
         self.assertEqual(arxiv.cited_by_count, 3)
 
+    def test_merges_dblp_record_into_existing_openalex_record(self):
+        openalex = PaperMetadata(
+            paper_id="https://doi.org/10.1145/example",
+            title="A Sequential Recommendation Method",
+            authors=["Ada Example"],
+            abstract="Abstract",
+            published_date=datetime.now(timezone.utc),
+            url="https://doi.org/10.1145/example",
+            source="openalex",
+            doi="https://doi.org/10.1145/example",
+        )
+        dblp = PaperMetadata(
+            paper_id="https://doi.org/10.1145/example",
+            title="A Sequential Recommendation Method",
+            authors=["Ada Example"],
+            abstract="",
+            published_date=datetime.now(timezone.utc),
+            url="https://dblp.org/rec/conf/wsdm/Example26",
+            source="wsdm",
+            doi="https://doi.org/10.1145/example",
+            journal="WSDM",
+        )
+        dblp_source = Mock()
+        agent = SearchAgent.__new__(SearchAgent)
+        agent.dblp_venues = ["wsdm"]
+        agent.sources = {"dblp": dblp_source}
+
+        results = agent._deduplicate_across_sources(
+            {"arxiv": [], "openalex": [openalex], "wsdm": [dblp]}
+        )
+
+        self.assertEqual(results["wsdm"], [])
+        self.assertEqual(openalex.journal, "WSDM")
+        dblp_source.mark_as_processed.assert_called_once_with(dblp.paper_id)
+
 
 class SemanticScholarBatchTests(TestCase):
     def test_maps_batch_response_by_doi(self):
@@ -108,3 +144,47 @@ class SemanticScholarBatchTests(TestCase):
         self.assertEqual(paper["influential_citation_count"], 2)
         self.assertEqual(paper["arxiv_id"], "2607.12345")
         self.assertEqual(paper["pdf_url"], "https://example.test/paper.pdf")
+
+
+class DblpConferenceTests(TestCase):
+    def test_filters_and_maps_recommender_paper(self):
+        payload = {
+            "result": {
+                "hits": {
+                    "hit": [
+                        {
+                            "info": {
+                                "authors": {"author": [{"text": "Ada Example"}]},
+                                "title": "A Generative Recommendation Model.",
+                                "year": "2026",
+                                "venue": "WSDM",
+                                "doi": "10.1145/example",
+                                "key": "conf/wsdm/Example26",
+                                "url": "https://dblp.org/rec/conf/wsdm/Example26",
+                            }
+                        },
+                        {
+                            "info": {
+                                "title": "Unrelated Graph Mining Paper.",
+                                "year": "2026",
+                                "venue": "WSDM",
+                                "key": "conf/wsdm/Other26",
+                            }
+                        },
+                    ]
+                }
+            }
+        }
+        with TemporaryDirectory() as directory:
+            source = DblpSource(
+                history_dir=Path(directory),
+                venues=["wsdm"],
+                title_terms=["recommend"],
+            )
+            source._request = Mock(return_value=payload)
+            papers = source.fetch_papers(days=3)
+
+        self.assertEqual(len(papers), 1)
+        self.assertEqual(papers[0].source, "wsdm")
+        self.assertEqual(papers[0].doi, "https://doi.org/10.1145/example")
+        self.assertEqual(papers[0].authors, ["Ada Example"])

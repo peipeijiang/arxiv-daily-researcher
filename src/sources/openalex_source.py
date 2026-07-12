@@ -382,6 +382,40 @@ class OpenAlexSource(BasePaperSource):
             topics=topics,
         )
 
+    def lookup_by_dois(self, dois: List[str]) -> Dict[str, PaperMetadata]:
+        """批量查询 DOI，为 DBLP 会议记录补摘要、引用和开放 PDF。"""
+        clean_dois = []
+        for doi in dois:
+            clean = doi.lower().replace("https://doi.org/", "").replace("doi:", "").strip()
+            if clean and clean not in clean_dois:
+                clean_dois.append(clean)
+
+        enriched = {}
+        select = (
+            "id,doi,title,authorships,abstract_inverted_index,publication_date,"
+            "primary_location,open_access,locations,best_oa_location,ids,"
+            "cited_by_count,type,topics"
+        )
+        for start in range(0, len(clean_dois), 50):
+            chunk = clean_dois[start : start + 50]
+            params = {
+                "filter": f"doi:{'|'.join(chunk)}",
+                "per_page": len(chunk),
+                "select": select,
+            }
+            params.update(self._base_params())
+            try:
+                data = self._api_request(f"{self.API_BASE_URL}/works", params)
+            except Exception as exc:
+                logger.warning(f"OpenAlex DOI 批量增强失败: {exc}")
+                continue
+            for item in data.get("results", []):
+                metadata = self._metadata_from_item(item, source="openalex")
+                if metadata and metadata.doi:
+                    key = metadata.doi.lower().replace("https://doi.org/", "")
+                    enriched[key] = metadata
+        return enriched
+
     def _fetch_from_arxiv(
         self, arxiv_id: str, journal_code: str, journal_name: str, doi: str
     ) -> Optional[PaperMetadata]:

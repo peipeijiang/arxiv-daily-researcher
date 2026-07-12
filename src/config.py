@@ -68,6 +68,8 @@ class Settings(BaseSettings):
     OPENALEX_EMAIL: str = ""  # OpenAlex 礼貌池邮箱（可选，提高速率限制）
     OPENALEX_API_KEY: str = ""  # OpenAlex API Key（可选，2026年2月后必需）
     OPENALEX_SEARCH_TERMS: List[str] = []  # OpenAlex 标题和摘要检索短语
+    DBLP_VENUES: List[str] = []  # DBLP 会议流简称
+    DBLP_TITLE_TERMS: List[str] = []  # DBLP 标题预筛词
 
     # ArXiv 抓取配置
     ARXIV_FETCH_TIMEOUT_SECONDS: int = 180  # 单次抓取硬超时，避免无限阻塞
@@ -303,6 +305,11 @@ class Settings(BaseSettings):
                     openalex_cfg = ds_config["openalex"]
                     if isinstance(openalex_cfg, dict):
                         self.OPENALEX_SEARCH_TERMS = openalex_cfg.get("search_terms", [])
+                if "dblp" in ds_config:
+                    dblp_cfg = ds_config["dblp"]
+                    if isinstance(dblp_cfg, dict):
+                        self.DBLP_VENUES = dblp_cfg.get("venues", [])
+                        self.DBLP_TITLE_TERMS = dblp_cfg.get("title_terms", [])
 
             # 加载关键词配置
             if "keywords" in config:
