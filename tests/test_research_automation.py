@@ -170,6 +170,22 @@ class ResearchAutomationTests(unittest.TestCase):
         self.assertNotIn("body=", links)
         self.assertIn("[喜欢]", links)
         self.assertIn("[忽略]", links)
+
+    def test_feedback_links_use_signed_one_click_endpoint_when_configured(self):
+        with unittest.mock.patch.dict(
+            os.environ,
+            {
+                "FEEDBACK_REPO_URL": "https://github.com/o/r",
+                "FEEDBACK_API_URL": "https://feedback.example.workers.dev",
+                "FEEDBACK_SIGNING_SECRET": "test-secret",
+            },
+            clear=False,
+        ):
+            links = NotifierAgent._feedback_links({"paper_id": "doi:10.1/example"})
+        self.assertIn("feedback.example.workers.dev/feedback", links)
+        self.assertIn("action=LIKE", links)
+        self.assertIn("sig=", links)
+        self.assertNotIn("issues/new", links)
     def test_feedback_parser_uses_latest_action(self):
         result = parse_feedback(
             [

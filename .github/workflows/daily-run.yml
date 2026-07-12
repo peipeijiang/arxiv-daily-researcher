@@ -100,6 +100,8 @@ jobs:
           PYTHONUNBUFFERED: "1"
           GITHUB_TOKEN: ${{ github.token }}
           FEEDBACK_REPO_URL: ${{ github.server_url }}/${{ github.repository }}
+          FEEDBACK_API_URL: ${{ secrets.FEEDBACK_API_URL }}
+          FEEDBACK_SIGNING_SECRET: ${{ secrets.FEEDBACK_SIGNING_SECRET }}
 
       - name: Commit research knowledge
         if: success()

@@ -393,15 +393,27 @@ class NotifierAgent:
     @staticmethod
     def _feedback_links(paper: Dict[str, Any]) -> str:
         repo_url = os.getenv("FEEDBACK_REPO_URL", "").rstrip("/")
+        api_url = os.getenv("FEEDBACK_API_URL", "").rstrip("/")
+        signing_secret = os.getenv("FEEDBACK_SIGNING_SECRET", "")
         paper_id = paper.get("paper_id", "")
-        if not repo_url or not paper_id:
+        if not paper_id:
             return ""
         links = []
         for action, label in (("LIKE", "喜欢"), ("IGNORE", "忽略")):
-            query = urllib.parse.urlencode(
-                {"labels": "paper-feedback", "title": f"[{action}] {paper_id}"}
-            )
-            links.append(f"[{label}]({repo_url}/issues/new?{query})")
+            if api_url and signing_secret:
+                message = f"{action}\n{paper_id}".encode("utf-8")
+                signature = hmac.new(
+                    signing_secret.encode("utf-8"), message, hashlib.sha256
+                ).hexdigest()
+                query = urllib.parse.urlencode(
+                    {"action": action, "paper_id": paper_id, "sig": signature}
+                )
+                links.append(f"[{label}]({api_url}/feedback?{query})")
+            elif repo_url:
+                query = urllib.parse.urlencode(
+                    {"labels": "paper-feedback", "title": f"[{action}] {paper_id}"}
+                )
+                links.append(f"[{label}]({repo_url}/issues/new?{query})")
         return " | ".join(links)
 
     def notify(self, result: RunResult) -> None:
