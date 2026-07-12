@@ -91,7 +91,7 @@ class SemanticScholarEnricher:
         results: Dict[str, Dict] = {}
         url = f"{self.API_BASE_URL}/paper/batch"
         fields = (
-            "title,tldr,citationCount,influentialCitationCount,externalIds,"
+            "title,abstract,tldr,citationCount,influentialCitationCount,externalIds,"
             "publicationTypes,openAccessPdf,url,venue"
         )
 
@@ -122,6 +122,7 @@ class SemanticScholarEnricher:
                         "paper_id": data.get("paperId"),
                         "url": data.get("url"),
                         "venue": data.get("venue"),
+                        "abstract": data.get("abstract"),
                         "tldr": tldr.get("text"),
                         "citation_count": int(data.get("citationCount") or 0),
                         "influential_citation_count": int(

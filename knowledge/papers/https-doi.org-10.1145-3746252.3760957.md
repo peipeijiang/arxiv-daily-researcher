@@ -29,7 +29,6 @@ Large language models (LLM) have demonstrated remarkable capability in recommend
 
 ## Code
 
-- [sisinflab/IR-RS-with-LLM-survey](https://github.com/sisinflab/IR-RS-with-LLM-survey) - likely (69 confidence), 0 stars
 
 ## Deep Analysis
 

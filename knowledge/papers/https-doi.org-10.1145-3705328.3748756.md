@@ -24,5 +24,3 @@ tags: ["paper", "recommender-systems", "Mobile Crowdsensing and Crowdsourcing", 
 
 
 ## Chinese Abstract
-
-

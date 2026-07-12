@@ -477,7 +477,8 @@ class AnalysisAgent:
             Optional[Dict]: 分析结果字典，失败时返回None
         """
         # 尝试下载并解析PDF
-        pdf_text = self._download_and_parse_pdf(pdf_url)
+        pdf_text = self._download_and_parse_pdf(pdf_url) if pdf_url else None
+        analysis_basis = "full_text" if pdf_text else "abstract"
 
         if not pdf_text:
             if fallback_to_abstract:
@@ -568,7 +569,8 @@ class AnalysisAgent:
                 logger.error(f"原始内容（前500字符）: {content[:500]}")
                 raise
 
-            logger.info(f"深度分析完成 [{title[:50]}]")
+            result["_analysis_basis"] = analysis_basis
+            logger.info(f"深度分析完成 [{title[:50]}]，依据: {analysis_basis}")
             return result
 
         except Exception as e:

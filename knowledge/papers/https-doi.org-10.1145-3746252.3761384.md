@@ -28,5 +28,3 @@ Recently, large language models (LLMs) have been introduced into recommender sys
 近年来，大语言模型（LLMs）已被引入推荐系统（RSs），用作推荐主干或增强传统推荐模型（TRMs）。然而，现有的基于LLM的推荐系统未能充分利用LLMs（如世界知识与推理能力）与TRMs（如推荐特定知识与计算效率）的互补优势，导致对物品空间的探索较为浅层。为解决这一局限，我们提出DeepRec，一种新颖的基于LLM的推荐方法，它促进LLMs与TRMs之间自主的多轮交互，以实现对物品空间的深度探索。在每一轮交互中，LLMs对用户偏好进行推理，并与TRMs协作检索候选物品。经过多轮交互后，LLMs对聚合后的候选物品进行排序，生成最终推荐。我们利用强化学习（RL）进行优化，并在三个关键方面做出创新贡献：基于推荐模型的数据展开、面向推荐的分层奖励，以及两阶段RL训练策略。在数据展开方面，我们设计了一种偏好感知的TRM，LLMs与之交互以构建轨迹数据。在奖励设计方面，我们提出了一种分层奖励函数，包含过程级奖励和结果级奖励，分别用于优化交互过程和推荐质量。在RL训练方面，我们的两阶段RL策略首先引导LLMs学习与TRMs的有效交互，随后进行面向推荐的RL以提升性能。在公开数据集上的实验表明，DeepRec显著优于传统及现有基于LLM的基线方法，为推荐系统中的深度探索建立了新范式。
 
 ## Code
-
-- [sisinflab/IR-RS-with-LLM-survey](https://github.com/sisinflab/IR-RS-with-LLM-survey) - likely (69 confidence), 0 stars

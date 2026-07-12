@@ -359,6 +359,7 @@ class SearchAgent:
 
             paper.semantic_scholar_id = paper_info.get("paper_id")
             paper.semantic_scholar_url = paper_info.get("url")
+            paper.abstract = paper.abstract or paper_info.get("abstract") or ""
             paper.influential_citation_count = paper_info.get(
                 "influential_citation_count", 0
             )

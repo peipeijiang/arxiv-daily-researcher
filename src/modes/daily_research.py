@@ -404,28 +404,32 @@ class DailyResearchPipeline:
                         logger.info(f">>> 阶段5: [{source}] 没有及格论文，跳过深度分析")
                         continue
 
-                    papers_with_pdf = []
+                    papers_for_analysis = []
                     for p in qualified_papers:
                         paper_meta = p.get("paper_metadata")
-                        if paper_meta and paper_meta.has_pdf_access():
-                            papers_with_pdf.append(p)
+                        if paper_meta and (paper_meta.has_pdf_access() or paper_meta.abstract.strip()):
+                            papers_for_analysis.append(p)
 
-                    if not papers_with_pdf:
+                    if not papers_for_analysis:
                         logger.info(
-                            f">>> 阶段5: [{source}] {len(qualified_papers)} 篇及格论文均无PDF可用，跳过深度分析"
+                            f">>> 阶段5: [{source}] {len(qualified_papers)} 篇及格论文均无PDF和摘要，跳过深度分析"
                         )
                         continue
 
+                    full_text_count = sum(
+                        1 for p in papers_for_analysis if p["paper_metadata"].has_pdf_access()
+                    )
                     logger.info(
-                        f">>> 阶段5: [{source}] 深度分析 {len(papers_with_pdf)}/{len(qualified_papers)} 篇有PDF的及格论文..."
+                        f">>> 阶段5: [{source}] 深度分析 {len(papers_for_analysis)}/{len(qualified_papers)} 篇及格论文 "
+                        f"(全文候选 {full_text_count}，摘要候选 {len(papers_for_analysis) - full_text_count})..."
                     )
 
                     qualified_papers_with_analysis = []
 
-                    if settings.ENABLE_CONCURRENCY and len(papers_with_pdf) > 1:
+                    if settings.ENABLE_CONCURRENCY and len(papers_for_analysis) > 1:
                         logger.info(f"    使用并发模式 (workers={settings.CONCURRENCY_WORKERS})")
                         with tqdm(
-                            total=len(papers_with_pdf),
+                            total=len(papers_for_analysis),
                             desc=f"🔬 [{source}] 深度分析",
                             unit="篇",
                             ncols=100,
@@ -437,7 +441,7 @@ class DailyResearchPipeline:
                                     executor.submit(
                                         _deep_analyze_single_paper, paper_info, analysis_agent
                                     ): paper_info
-                                    for paper_info in papers_with_pdf
+                                    for paper_info in papers_for_analysis
                                 }
                                 for future in as_completed(futures):
                                     paper_info = futures[future]
@@ -467,13 +471,13 @@ class DailyResearchPipeline:
                                     pbar.update(1)
                     else:
                         with tqdm(
-                            total=len(papers_with_pdf),
+                            total=len(papers_for_analysis),
                             desc=f"🔬 [{source}] 深度分析",
                             unit="篇",
                             ncols=100,
                         ) as pbar:
-                            for idx, paper_info in enumerate(papers_with_pdf, 1):
-                                pbar.set_description(f"🔬 [{source}] [{idx}/{len(papers_with_pdf)}]")
+                            for idx, paper_info in enumerate(papers_for_analysis, 1):
+                                pbar.set_description(f"🔬 [{source}] [{idx}/{len(papers_for_analysis)}]")
                                 pbar.set_postfix_str(f"{paper_info['title'][:35]}...")
 
                                 result = _deep_analyze_single_paper(paper_info, analysis_agent)
@@ -496,7 +500,7 @@ class DailyResearchPipeline:
 
                     analyses_by_source[source] = qualified_papers_with_analysis
                     logger.info(
-                        f"    [{source}] 深度分析完成: {len(qualified_papers_with_analysis)}/{len(papers_with_pdf)} 篇成功"
+                        f"    [{source}] 深度分析完成: {len(qualified_papers_with_analysis)}/{len(papers_for_analysis)} 篇成功"
                     )
 
             persisted = ResearchLibrary().persist(scored_papers_by_source, analyses_by_source)

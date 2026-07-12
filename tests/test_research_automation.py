@@ -107,13 +107,17 @@ class ResearchAutomationTests(unittest.TestCase):
         matches = enricher.find("Paper", abstract="Code: https://github.com/author/paper-code")
         self.assertEqual(matches[0]["classification"], "official")
 
-    def test_bibliography_repository_is_not_official_without_authority_evidence(self):
+    def test_bibliography_repository_is_rejected_without_authority_evidence(self):
         enricher = GitHubCodeEnricher(token="test")
-        item = {"full_name": "community/paper-list", "owner": {"login": "community"}}
+        item = {
+            "full_name": "community/paper-list",
+            "description": "A collection of works and survey",
+            "owner": {"login": "community"},
+        }
         enricher._readme = Mock(return_value="Paper title DOI 10.1/example")
         result = enricher._verify(item, "Paper title", [], None, "10.1/example")
-        self.assertEqual(result["classification"], "likely")
-        self.assertEqual(result["confidence"], 69)
+        self.assertEqual(result["classification"], "rejected")
+        self.assertEqual(result["confidence"], 0)
 
     def test_library_deduplicates_index_and_writes_graph(self):
         with tempfile.TemporaryDirectory() as tmp:

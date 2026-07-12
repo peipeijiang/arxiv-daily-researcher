@@ -29,7 +29,6 @@ Modeling user action sequences has become a popular focus in industrial recommen
 
 ## Code
 
-- [USTC-StarTeam/Survey-of-ULBM](https://github.com/USTC-StarTeam/Survey-of-ULBM) - likely (69 confidence), 0 stars
 
 ## Deep Analysis
 

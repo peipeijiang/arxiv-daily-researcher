@@ -81,6 +81,11 @@ class GitHubCodeEnricher:
             score += 20
             evidence.append({"type": "author_owner_match", "owner": owner})
         authority_evidence = declared or bool(author_owner_match)
+        repository_text = f"{item.get('full_name', '')} {item.get('description') or ''}".lower()
+        collection_markers = ("survey", "awesome", "paper-list", "paper list", "collection of works")
+        if not authority_evidence and any(marker in repository_text for marker in collection_markers):
+            evidence.append({"type": "bibliography_collection"})
+            return {"confidence": 0, "classification": "rejected", "evidence": evidence}
         confidence = min(score, 100) if authority_evidence else min(score, 69)
         return {
             "confidence": confidence,
