@@ -29,7 +29,6 @@ Recent advances in generative recommenders adopt a two-stage paradigm: items are
 
 ## Code
 
-- [jbdcia321vw/Generative-Recommendation-Papers](https://github.com/jbdcia321vw/Generative-Recommendation-Papers) - likely (69 confidence), 5 stars
 - [yliuaa/DECOR](https://github.com/yliuaa/DECOR) - possible (30 confidence), 3 stars
 
 ## Deep Analysis

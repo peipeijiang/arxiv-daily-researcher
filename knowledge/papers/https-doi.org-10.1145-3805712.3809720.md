@@ -29,7 +29,6 @@ Recently, generative recommendation has emerged as a promising paradigm, attract
 
 ## Code
 
-- [jbdcia321vw/Generative-Recommendation-Papers](https://github.com/jbdcia321vw/Generative-Recommendation-Papers) - likely (69 confidence), 5 stars
 
 ## Deep Analysis
 

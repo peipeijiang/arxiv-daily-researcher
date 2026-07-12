@@ -428,13 +428,11 @@ class NotifierAgent:
                     notifier.send(subject, self._format_wechat_overview(result), attachments)
                     for index, paper in enumerate(result.top_papers, 1):
                         try:
-                            notifier.send(
-                                subject,
-                                self._format_wechat_paper_card(
-                                    paper, index, len(result.top_papers)
-                                ),
-                            )
-                            time.sleep(0.35)
+                            for card in self._format_wechat_paper_cards(
+                                paper, index, len(result.top_papers)
+                            ):
+                                notifier.send(subject, card)
+                                time.sleep(0.35)
                         except Exception as exc:
                             logger.warning(
                                 f"企业微信论文卡片发送失败 ({paper.get('paper_id')}): {exc}"
@@ -454,6 +452,26 @@ class NotifierAgent:
             value = value[0] if value else ""
         value = " ".join(str(value or "").split())
         return value[:limit] + ("…" if len(value) > limit else "")
+
+    @staticmethod
+    def _analysis_text(value: Any) -> str:
+        if isinstance(value, list):
+            return "；".join(" ".join(str(item).split()) for item in value if item)
+        return " ".join(str(value or "").split())
+
+    @staticmethod
+    def _split_text_by_bytes(text: str, max_bytes: int = 2400) -> List[str]:
+        chunks, current, size = [], [], 0
+        for char in text:
+            char_size = len(char.encode("utf-8"))
+            if current and size + char_size > max_bytes:
+                chunks.append("".join(current))
+                current, size = [], 0
+            current.append(char)
+            size += char_size
+        if current:
+            chunks.append("".join(current))
+        return chunks or [""]
 
     def _format_wechat_overview(self, result: RunResult) -> str:
         source_lines = []
@@ -479,6 +497,12 @@ class NotifierAgent:
     def _format_wechat_paper_card(
         self, paper: Dict[str, Any], index: int, total: int
     ) -> str:
+        """Backward-compatible single-card accessor; notification uses all returned parts."""
+        return self._format_wechat_paper_cards(paper, index, total)[0]
+
+    def _format_wechat_paper_cards(
+        self, paper: Dict[str, Any], index: int, total: int
+    ) -> List[str]:
         analysis = paper.get("analysis") or {}
         basis = analysis.get("_analysis_basis")
         if basis == "full_text":
@@ -490,29 +514,31 @@ class NotifierAgent:
 
         title = analysis.get("chinese_title") or paper.get("title", "")
         original_title = paper.get("title", "")
-        summary = self._brief(analysis.get("summary") or paper.get("tldr"), 220)
-        methodology = self._brief(analysis.get("methodology"), 170)
-        results = self._brief(analysis.get("key_results"), 170)
-        limitations = self._brief(analysis.get("limitations"), 100)
+        summary = self._analysis_text(analysis.get("summary") or paper.get("tldr"))
+        methodology = self._analysis_text(analysis.get("methodology"))
+        results = self._analysis_text(analysis.get("key_results"))
+        limitations = self._analysis_text(analysis.get("limitations"))
 
-        details = []
+        sections = [("核心结论", summary)]
         if methodology:
-            details.append(f"**方法**\n> {methodology}")
+            sections.append(("方法", methodology))
         if results:
-            details.append(f"**关键结果**\n> {results}")
+            sections.append(("关键结果", results))
         if limitations:
-            details.append(f"**主要局限**\n> {limitations}")
+            sections.append(("主要局限", limitations))
 
-        code_line = ""
         repositories = paper.get("code_repositories") or []
         if repositories:
             repo = repositories[0]
-            code_line = (
-                f"\n\n**代码**\n> [{repo.get('full_name')}]({repo.get('url')}) · "
-                f"{repo.get('classification')} · 置信度 {repo.get('confidence')}"
+            sections.append(
+                (
+                    "代码",
+                    f"[{repo.get('full_name')}]({repo.get('url')}) · "
+                    f"{repo.get('classification')} · 置信度 {repo.get('confidence')}",
+                )
             )
         elif analysis:
-            code_line = "\n\n**代码**\n> 尚未发现可信的论文实现仓库"
+            sections.append(("代码", "尚未发现可信的论文实现仓库"))
 
         repo_url = os.getenv("FEEDBACK_REPO_URL", "").rstrip("/")
         paper_id = paper.get("paper_id", "")
@@ -524,18 +550,40 @@ class NotifierAgent:
         links = " · ".join(link for link in (report_link, original_link) if link)
         feedback = self._feedback_links(paper)
         original_line = "" if title == original_title else f"\n> {original_title}"
-
-        content = (
+        base_header = (
             f"## {index}/{total} · {title}{original_line}\n"
             f"<font color=\"info\">{level}</font> · `{paper.get('source', '').upper()}` · "
-            f"Score **{paper.get('score', 0):.1f}**\n\n"
-            f"**核心结论**\n> {summary}\n\n"
-            + "\n\n".join(details)
-            + code_line
-            + (f"\n\n{links}" if links else "")
-            + (f"\n{feedback}" if feedback else "")
+            f"Score **{paper.get('score', 0):.1f}**"
         )
-        return WebhookNotifier._truncate_wechat_markdown(content)
+        blocks = []
+        for label, value in sections:
+            chunks = self._split_text_by_bytes(value)
+            for chunk_index, chunk in enumerate(chunks):
+                suffix = "（续）" if chunk_index else ""
+                blocks.append(f"**{label}{suffix}**\n> {chunk}")
+        footer = "\n".join(value for value in (links, feedback) if value)
+        if footer:
+            blocks.append(footer)
+
+        pages, current = [], []
+        for block in blocks:
+            candidate = base_header + "\n\n" + "\n\n".join(current + [block])
+            if current and len(candidate.encode("utf-8")) > 3650:
+                pages.append(current)
+                current = [block]
+            else:
+                current.append(block)
+        if current:
+            pages.append(current)
+
+        rendered = []
+        page_total = len(pages)
+        for page_index, page_blocks in enumerate(pages, 1):
+            part = f" · {page_index}/{page_total}" if page_total > 1 else ""
+            header = base_header.replace("\n<font", f"{part}\n<font", 1)
+            content = header + "\n\n" + "\n\n".join(page_blocks)
+            rendered.append(WebhookNotifier._truncate_wechat_markdown(content))
+        return rendered
 
     # ------------------------------------------------------------------
     # 研究趋势分析结果通知

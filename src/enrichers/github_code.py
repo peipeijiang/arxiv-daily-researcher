@@ -83,7 +83,12 @@ class GitHubCodeEnricher:
         authority_evidence = declared or bool(author_owner_match)
         repository_text = f"{item.get('full_name', '')} {item.get('description') or ''}".lower()
         collection_markers = ("survey", "awesome", "paper-list", "paper list", "collection of works")
-        if not authority_evidence and any(marker in repository_text for marker in collection_markers):
+        repo_name = (item.get("full_name") or "").rsplit("/", 1)[-1].lower()
+        looks_like_paper_collection = repo_name.endswith(("-papers", "_papers"))
+        if not authority_evidence and (
+            any(marker in repository_text for marker in collection_markers)
+            or looks_like_paper_collection
+        ):
             evidence.append({"type": "bibliography_collection"})
             return {"confidence": 0, "classification": "rejected", "evidence": evidence}
         confidence = min(score, 100) if authority_evidence else min(score, 69)

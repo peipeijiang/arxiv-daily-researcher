@@ -55,6 +55,40 @@ class ResearchAutomationTests(unittest.TestCase):
         self.assertIn("主要局限", card)
         self.assertLessEqual(len(card.encode("utf-8")), 4000)
 
+    def test_wechat_paper_cards_split_without_ellipsis_or_data_loss(self):
+        agent = NotifierAgent.__new__(NotifierAgent)
+        long_method = "甲" * 3000 + "方法终点"
+        limitations = ["局限一", "局限二", "局限三"]
+        with unittest.mock.patch.dict(
+            os.environ, {"FEEDBACK_REPO_URL": "https://github.com/o/r"}
+        ):
+            cards = agent._format_wechat_paper_cards(
+                {
+                    "paper_id": "arxiv:long",
+                    "title": "Long Paper",
+                    "source": "arxiv",
+                    "score": 90,
+                    "url": "https://arxiv.org/abs/long",
+                    "analysis": {
+                        "_analysis_basis": "full_text",
+                        "summary": "完整结论",
+                        "methodology": long_method,
+                        "key_results": ["结果一", "结果二"],
+                        "limitations": limitations,
+                    },
+                    "code_repositories": [],
+                },
+                1,
+                5,
+            )
+        joined = "".join(cards)
+        self.assertGreater(len(cards), 1)
+        self.assertNotIn("…", joined)
+        self.assertEqual(joined.count("甲"), 3000)
+        self.assertIn("方法终点", joined)
+        self.assertIn("局限一；局限二；局限三", joined)
+        self.assertTrue(all(len(card.encode("utf-8")) <= 4000 for card in cards))
+
     def test_unpaywall_returns_repository_pdf_with_provenance(self):
         resolver = OpenAccessResolver(email="researcher@example.com")
         response = Mock()
@@ -185,6 +219,17 @@ class ResearchAutomationTests(unittest.TestCase):
         result = enricher._verify(item, "Paper title", [], None, "10.1/example")
         self.assertEqual(result["classification"], "rejected")
         self.assertEqual(result["confidence"], 0)
+
+    def test_papers_collection_repository_is_rejected(self):
+        enricher = GitHubCodeEnricher(token="test")
+        item = {
+            "full_name": "community/Generative-Recommendation-Papers",
+            "description": "Reading resources",
+            "owner": {"login": "community"},
+        }
+        enricher._readme = Mock(return_value="Paper title DOI 10.1/example")
+        result = enricher._verify(item, "Paper title", [], None, "10.1/example")
+        self.assertEqual(result["classification"], "rejected")
 
     def test_library_deduplicates_index_and_writes_graph(self):
         with tempfile.TemporaryDirectory() as tmp:
