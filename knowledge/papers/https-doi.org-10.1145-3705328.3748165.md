@@ -9,20 +9,20 @@ tags: ["paper", "recommender-systems", "Nutritional Studies and Diet", "Food Was
 
 # GreenFoodLens: Sustainability Labels for Food Recommendation
 
-该论文提出GreenFoodLens，一种在食品推荐中引入可持续性标签的方法，旨在提升推荐系统的可持续性意识。
+[查看原文](https://dblp.org/rec/conf/recsys/BalloccuBFMMM25)
 
-## Metadata
+## 一句话结论
 
-- Authors: Giacomo Balloccu, Ludovico Boratto, Gianni Fenu, Mirko Marras, Giacomo Medda, Giovanni Murgia
-- DOI: https://doi.org/10.1145/3705328.3748165
-- URL: https://dblp.org/rec/conf/recsys/BalloccuBFMMM25
-- Venue: RecSys
-- Score: 24.0
+> 该论文提出GreenFoodLens，一种在食品推荐中引入可持续性标签的方法，旨在提升推荐系统的可持续性意识。
 
-## Abstract
+## 论文信息
 
+- **作者**：Giacomo Balloccu, Ludovico Boratto, Gianni Fenu, Mirko Marras, Giacomo Medda, Giovanni Murgia
+- **来源**：RecSys
+- **发布时间**：2025-01-01
+- **相关度评分**：24.0
+- **DOI**：[https://doi.org/10.1145/3705328.3748165](https://doi.org/10.1145/3705328.3748165)
 
+---
 
-## Chinese Abstract
-
-
+_知识库更新时间：2026-07-12T11:20:57.446732_

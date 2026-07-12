@@ -33,6 +33,178 @@ class ResearchLibrary:
             record.get("updated_at", ""),
         )
 
+    @staticmethod
+    def _text(value) -> str:
+        if isinstance(value, list):
+            return "；".join(str(item).strip() for item in value if str(item).strip())
+        return str(value or "").strip()
+
+    @staticmethod
+    def _markdown_list(value) -> List[str]:
+        if not value:
+            return []
+        items = value if isinstance(value, list) else [value]
+        return [f"- {str(item).strip()}" for item in items if str(item).strip()]
+
+    @classmethod
+    def _analysis_markdown(cls, analysis: Dict) -> List[str]:
+        if not analysis:
+            return []
+
+        basis = analysis.get("_analysis_basis")
+        basis_label = {
+            "full_text": "全文深读",
+            "abstract": "摘要分析",
+        }.get(basis, "AI 深度分析")
+        lines = ["", "## 深度解读", "", f"> 分析依据：**{basis_label}**"]
+        scalar_sections = (
+            ("核心结论", "summary"),
+            ("研究方法", "methodology"),
+            ("关键结果", "key_results"),
+            ("与当前研究方向的关联", "relevance_to_keywords"),
+        )
+        list_sections = (
+            ("主要创新", "innovations"),
+            ("技术栈", "tech_stack"),
+            ("方法优势", "strengths"),
+            ("主要局限", "limitations"),
+        )
+        section_order = [
+            ("scalar", scalar_sections[0]),
+            ("list", list_sections[0]),
+            ("scalar", scalar_sections[1]),
+            ("scalar", scalar_sections[2]),
+            ("list", list_sections[1]),
+            ("list", list_sections[2]),
+            ("list", list_sections[3]),
+            ("scalar", scalar_sections[3]),
+        ]
+        for kind, (label, key) in section_order:
+            value = analysis.get(key)
+            if not value:
+                continue
+            lines += ["", f"### {label}", ""]
+            if kind == "list":
+                lines += cls._markdown_list(value)
+            else:
+                lines.append(cls._text(value))
+        return lines
+
+    @classmethod
+    def render_record(cls, record: Dict) -> str:
+        """Render a mobile-friendly GitHub Markdown research report."""
+        analysis = record.get("analysis") or {}
+        original_title = record.get("title") or "Untitled paper"
+        display_title = analysis.get("chinese_title") or original_title
+        frontmatter = {
+            "title": display_title,
+            "paper_id": record.get("paper_id"),
+            "source": record.get("source"),
+            "published": record.get("published_date"),
+            "score": record.get("score", 0),
+            "tags": ["paper", "recommender-systems"] + (record.get("topics") or [])[:5],
+        }
+        body = [
+            "---",
+            *[f"{key}: {json.dumps(value, ensure_ascii=False, default=str)}" for key, value in frontmatter.items()],
+            "---",
+            "",
+            f"# {display_title}",
+        ]
+        if display_title != original_title:
+            body += ["", f"> **英文原标题**：{original_title}"]
+
+        links = []
+        if record.get("url"):
+            links.append(f"[查看原文]({record['url']})")
+        if record.get("arxiv_url") and record.get("arxiv_url") != record.get("url"):
+            links.append(f"[ArXiv]({record['arxiv_url']})")
+        if record.get("semantic_scholar_url"):
+            links.append(f"[Semantic Scholar]({record['semantic_scholar_url']})")
+        if links:
+            body += ["", " · ".join(links)]
+
+        tldr = cls._text(record.get("tldr"))
+        if tldr:
+            body += ["", "## 一句话结论", "", f"> {tldr}"]
+
+        authors = ", ".join(record.get("authors") or []) or "-"
+        published = cls._text(record.get("published_date")).split("T", 1)[0] or "-"
+        doi = cls._text(record.get("doi"))
+        doi_text = f"[{doi}]({doi})" if doi.startswith(("http://", "https://")) else doi or "-"
+        body += [
+            "",
+            "## 论文信息",
+            "",
+            f"- **作者**：{authors}",
+            f"- **来源**：{cls._text(record.get('journal') or record.get('source')) or '-'}",
+            f"- **发布时间**：{published}",
+            f"- **相关度评分**：{float(record.get('score') or 0):.1f}",
+            f"- **DOI**：{doi_text}",
+        ]
+
+        abstract_cn = cls._text(record.get("abstract_cn"))
+        abstract = cls._text(record.get("abstract"))
+        if abstract_cn:
+            body += [
+                "",
+                "<details open>",
+                "<summary><strong>中文摘要</strong></summary>",
+                "",
+                abstract_cn,
+                "",
+                "</details>",
+            ]
+        if abstract:
+            body += [
+                "",
+                "<details>",
+                "<summary><strong>英文摘要</strong></summary>",
+                "",
+                abstract,
+                "",
+                "</details>",
+            ]
+
+        body += cls._analysis_markdown(analysis)
+
+        repositories = record.get("code_repositories") or []
+        if repositories:
+            body += ["", "## 代码与复现", ""]
+            for repo in repositories:
+                classification = repo.get("classification") or "possible"
+                confidence = repo.get("confidence")
+                confidence_text = f"，置信度 {confidence}" if confidence is not None else ""
+                body.append(
+                    f"- [{repo.get('full_name')}]({repo.get('url')})："
+                    f"{classification}{confidence_text}，Stars {repo.get('stars', 0)}"
+                )
+
+        discovery = record.get("discovery") or {}
+        if discovery:
+            body += [
+                "",
+                "<details>",
+                "<summary><strong>发现与关联证据</strong></summary>",
+                "",
+            ]
+            for key, value in discovery.items():
+                body.append(f"- **{key}**：{cls._text(value)}")
+            body += ["", "</details>"]
+
+        body += [
+            "",
+            "---",
+            "",
+            f"_知识库更新时间：{record.get('updated_at') or '-'}_",
+        ]
+        return "\n".join(body) + "\n"
+
+    def write_record(self, record: Dict) -> Path:
+        path = self.papers_dir / f"{self._slug(record['paper_id'])}.md"
+        path.write_text(self.render_record(record), encoding="utf-8")
+        return path
+
     def persist(self, scored_by_source: Dict, analyses_by_source: Dict) -> int:
         analysis_map = {
             row["paper_id"]: row.get("analysis")
@@ -67,28 +239,7 @@ class ResearchLibrary:
                         "updated_at": datetime.now().isoformat(),
                     }
                 )
-                slug = self._slug(paper.paper_id)
-                path = self.papers_dir / f"{slug}.md"
-                frontmatter = {
-                    "title": paper.title,
-                    "paper_id": paper.paper_id,
-                    "source": source,
-                    "published": record.get("published_date"),
-                    "score": score.total_score,
-                    "tags": ["paper", "recommender-systems"] + paper.topics[:5],
-                }
-                body = ["---"] + [f"{k}: {json.dumps(v, ensure_ascii=False)}" for k, v in frontmatter.items()] + ["---", "", f"# {paper.title}", "", score.tldr, "", "## Metadata", "", f"- Authors: {', '.join(paper.authors)}", f"- DOI: {paper.doi or ''}", f"- URL: {paper.url}", f"- Venue: {paper.journal or source}", f"- Score: {score.total_score:.1f}", "", "## Abstract", "", paper.abstract, "", "## Chinese Abstract", "", row.get("abstract_cn", "")]
-                if paper.code_repositories:
-                    body += ["", "## Code", ""] + [
-                        f"- [{repo['full_name']}]({repo['url']}) - {repo['classification']} "
-                        f"({repo['confidence']} confidence), {repo['stars']} stars"
-                        for repo in paper.code_repositories
-                    ]
-                if paper.discovery:
-                    body += ["", "## Discovery Evidence", "", "```json", json.dumps(paper.discovery, ensure_ascii=False, indent=2), "```"]
-                if record.get("analysis"):
-                    body += ["", "## Deep Analysis", "", "```json", json.dumps(record["analysis"], ensure_ascii=False, default=str, indent=2), "```"]
-                path.write_text("\n".join(body) + "\n", encoding="utf-8")
+                self.write_record(record)
                 records_by_id[paper.paper_id] = record
                 graph["nodes"][paper.openalex_id or paper.paper_id] = {"title": paper.title, "paper_id": paper.paper_id}
                 source_id = paper.openalex_id or paper.paper_id

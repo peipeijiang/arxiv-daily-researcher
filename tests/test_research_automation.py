@@ -23,6 +23,37 @@ from notifications.notifier import NotifierAgent, WebhookNotifier
 
 
 class ResearchAutomationTests(unittest.TestCase):
+    def test_knowledge_report_renders_analysis_as_native_markdown(self):
+        report = ResearchLibrary.render_record(
+            {
+                "paper_id": "arxiv:1",
+                "title": "Original Paper Title",
+                "authors": ["Ada", "Lin"],
+                "source": "arxiv",
+                "score": 88,
+                "url": "https://arxiv.org/abs/1",
+                "abstract": "English abstract.",
+                "abstract_cn": "中文摘要。",
+                "tldr": "一句话总结。",
+                "analysis": {
+                    "_analysis_basis": "full_text",
+                    "chinese_title": "中文论文标题",
+                    "summary": "完整核心结论。",
+                    "innovations": ["创新一", "创新二"],
+                    "methodology": "完整研究方法。",
+                    "key_results": ["结果一", "结果二"],
+                    "tech_stack": ["T5", "LightGCN"],
+                    "limitations": ["局限一"],
+                },
+            }
+        )
+        self.assertIn("# 中文论文标题", report)
+        self.assertIn("### 核心结论", report)
+        self.assertIn("- 创新一", report)
+        self.assertIn("<details>", report)
+        self.assertNotIn("```json", report)
+        self.assertNotIn('"methodology":', report)
+
     def test_wechat_paper_card_uses_deep_analysis(self):
         agent = NotifierAgent.__new__(NotifierAgent)
         with unittest.mock.patch.dict(
