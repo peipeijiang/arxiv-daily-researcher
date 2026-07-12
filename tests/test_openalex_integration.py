@@ -3,6 +3,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 from unittest import TestCase
 from unittest.mock import Mock
+from types import SimpleNamespace
 
 from src.sources.base_source import PaperMetadata
 from src.sources.openalex_source import OpenAlexSource
@@ -12,6 +13,28 @@ from src.sources.semantic_scholar_enricher import SemanticScholarEnricher
 
 
 class OpenAlexMetadataTests(TestCase):
+    def test_resolves_missing_pdf_by_exact_arxiv_title(self):
+        result = SimpleNamespace(
+            title="A Sequential Recommendation Method",
+            doi="10.1145/example",
+            authors=[SimpleNamespace(name="Ada Example")],
+            summary="Full abstract",
+            published=datetime.now(timezone.utc),
+            entry_id="https://arxiv.org/abs/2607.12345v2",
+            pdf_url="https://arxiv.org/pdf/2607.12345v2",
+            categories=["cs.IR"],
+            get_short_id=lambda: "2607.12345v2",
+        )
+        with TemporaryDirectory() as directory:
+            from src.sources.arxiv_source import ArxivSource
+            source = ArxivSource(history_dir=Path(directory))
+            source.client.results = Mock(return_value=[result])
+            paper = source.find_by_title(
+                "A Sequential Recommendation Method", ["Ada Example"], "10.1145/example"
+            )
+        self.assertEqual(paper.arxiv_id, "2607.12345")
+        self.assertEqual(paper.pdf_url, "https://arxiv.org/pdf/2607.12345v2")
+
     def test_maps_conference_metadata(self):
         item = {
             "id": "https://openalex.org/W123",
@@ -126,6 +149,7 @@ class SemanticScholarBatchTests(TestCase):
                 "paperId": "s2-paper",
                 "url": "https://www.semanticscholar.org/paper/s2-paper",
                 "venue": "SIGIR",
+                "abstract": "A complete abstract.",
                 "tldr": {"text": "A concise summary."},
                 "citationCount": 9,
                 "influentialCitationCount": 2,
@@ -144,6 +168,7 @@ class SemanticScholarBatchTests(TestCase):
         self.assertEqual(paper["influential_citation_count"], 2)
         self.assertEqual(paper["arxiv_id"], "2607.12345")
         self.assertEqual(paper["pdf_url"], "https://example.test/paper.pdf")
+        self.assertEqual(paper["abstract"], "A complete abstract.")
 
 
 class DblpConferenceTests(TestCase):

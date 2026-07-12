@@ -530,7 +530,7 @@ class AnalysisAgent:
             # 使用模板中的格式
             prompt = analysis_template.format(
                 title=title,
-                content=pdf_text[:15000],
+                content=pdf_text[:50000],
                 research_context=(
                     settings.RESEARCH_CONTEXT if settings.RESEARCH_CONTEXT else "通用学术研究"
                 ),
@@ -541,7 +541,7 @@ class AnalysisAgent:
             prompt = f"""论文标题: {title}
 
 论文内容:
-{pdf_text[:15000]}
+{pdf_text[:50000]}
 
 研究背景:
 {settings.RESEARCH_CONTEXT if settings.RESEARCH_CONTEXT else "通用学术研究"}
@@ -557,6 +557,11 @@ class AnalysisAgent:
 
         # 添加输出格式说明
         prompt += f"\n\n{prompts_config.get('field_output_format', '使用JSON格式输出。')}"
+        prompt += """
+
+事实约束：不得补写输入内容中没有出现的实验数字、数据集、基线、模型名称、损失函数或结论。
+任何百分比和指标值都必须能在输入原文中逐字找到；无法确认时写“输入内容未提供”，不要用常识推测。
+"""
         if analysis_basis == "abstract":
             prompt += """
 

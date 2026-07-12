@@ -216,6 +216,7 @@ class SearchAgent:
 
                 traceback.print_exc()
 
+        self._resolve_missing_arxiv_versions(results)
         results = self._deduplicate_across_sources(results)
 
         # 统计
@@ -223,6 +224,34 @@ class SearchAgent:
         logger.info(f">>> 总计抓取 {total} 篇论文，来自 {len(results)} 个数据源")
 
         return results
+
+    def _resolve_missing_arxiv_versions(self, results: Dict[str, List[PaperMetadata]]) -> int:
+        """Actively search ArXiv for papers whose upstream metadata has no PDF."""
+        arxiv_source = self.sources.get("arxiv")
+        if not arxiv_source:
+            return 0
+        resolved = 0
+        attempted = 0
+        for source, papers in results.items():
+            if source == "arxiv":
+                continue
+            for paper in papers:
+                if paper.has_pdf_access() or attempted >= 20:
+                    continue
+                attempted += 1
+                match = arxiv_source.find_by_title(paper.title, paper.authors, paper.doi)
+                if not match:
+                    continue
+                paper.arxiv_id = match.arxiv_id
+                paper.arxiv_url = match.arxiv_url
+                paper.pdf_url = match.pdf_url
+                paper.abstract = paper.abstract or match.abstract
+                paper.categories = paper.categories or match.categories
+                resolved += 1
+                logger.info(f">>> ArXiv 反查命中: {paper.title[:55]} -> {match.arxiv_id}")
+        if attempted:
+            logger.info(f">>> 缺失全文主动反查: 尝试 {attempted} 篇，找到 ArXiv 版本 {resolved} 篇")
+        return resolved
 
     def _enrich_dblp_with_openalex(
         self, papers: List[PaperMetadata]

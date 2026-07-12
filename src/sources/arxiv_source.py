@@ -11,6 +11,8 @@ import arxiv
 import logging
 import signal
 import time
+import re
+from difflib import SequenceMatcher
 from datetime import datetime, date, timedelta, timezone
 from pathlib import Path
 from typing import List, Optional
@@ -102,6 +104,62 @@ class ArxivSource(BasePaperSource):
 
     def can_download_pdf(self) -> bool:
         return True
+
+    @staticmethod
+    def _title_key(title: str) -> str:
+        return re.sub(r"[^a-z0-9]+", " ", (title or "").lower()).strip()
+
+    def find_by_title(
+        self, title: str, authors: List[str] = None, doi: str = None
+    ) -> Optional[PaperMetadata]:
+        """Resolve a non-ArXiv paper to a strongly matching ArXiv version."""
+        clean_title = self._title_key(title)
+        if not clean_title:
+            return None
+        query_title = re.sub(r'["\\]', " ", title).strip()
+        search = arxiv.Search(
+            query=f'ti:"{query_title}"',
+            max_results=5,
+            sort_by=arxiv.SortCriterion.Relevance,
+        )
+        expected_doi = (doi or "").lower().replace("https://doi.org/", "").strip()
+        expected_surnames = {
+            self._title_key(name).split()[-1]
+            for name in (authors or [])
+            if self._title_key(name).split()
+        }
+        try:
+            for result in self.client.results(search):
+                candidate_title = self._title_key(result.title)
+                title_similarity = SequenceMatcher(None, clean_title, candidate_title).ratio()
+                candidate_doi = (result.doi or "").lower().replace("https://doi.org/", "").strip()
+                candidate_surnames = {
+                    self._title_key(author.name).split()[-1]
+                    for author in result.authors
+                    if self._title_key(author.name).split()
+                }
+                doi_match = bool(expected_doi and candidate_doi == expected_doi)
+                author_match = not expected_surnames or bool(expected_surnames & candidate_surnames)
+                if not doi_match and (title_similarity < 0.92 or not author_match):
+                    continue
+                arxiv_id = re.sub(r"v\d+$", "", result.get_short_id())
+                return PaperMetadata(
+                    paper_id=arxiv_id,
+                    title=result.title,
+                    authors=[author.name for author in result.authors],
+                    abstract=result.summary,
+                    published_date=result.published,
+                    url=result.entry_id,
+                    source="arxiv",
+                    pdf_url=result.pdf_url,
+                    doi=result.doi,
+                    categories=list(result.categories) if result.categories else [],
+                    arxiv_id=arxiv_id,
+                    arxiv_url=f"https://arxiv.org/abs/{arxiv_id}",
+                )
+        except Exception as exc:
+            logger.warning(f"[ArXiv] 标题反查失败 [{title[:45]}]: {exc}")
+        return None
 
     def fetch_papers(self, days: int, domains: List[str] = None, **kwargs) -> List[PaperMetadata]:
         """
