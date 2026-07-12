@@ -557,6 +557,13 @@ class AnalysisAgent:
 
         # 添加输出格式说明
         prompt += f"\n\n{prompts_config.get('field_output_format', '使用JSON格式输出。')}"
+        if analysis_basis == "abstract":
+            prompt += """
+
+重要证据限制：当前仅提供论文摘要，不是全文。只能陈述摘要明确支持的信息；不得猜测具体模型名称、
+数据集、基线、损失函数、消融实验、参数或实现细节。摘要未披露的字段请明确写“摘要未提供”，
+并把局限区分为“论文局限”与“当前证据局限”。
+"""
 
         try:
             content = self._call_smart_llm(prompt)
