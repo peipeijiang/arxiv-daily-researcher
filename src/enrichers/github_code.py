@@ -2,6 +2,7 @@
 
 import os
 import re
+import base64
 from typing import Dict, List
 
 import requests
@@ -9,6 +10,7 @@ import requests
 
 class GitHubCodeEnricher:
     API_URL = "https://api.github.com/search/repositories"
+    REPO_API_URL = "https://api.github.com/repos"
 
     def __init__(self, token: str = None):
         self.session = requests.Session()
@@ -27,7 +29,67 @@ class GitHubCodeEnricher:
             if len(token) >= 4 and token not in {"with", "from", "using", "based", "towards"}
         }
 
-    def find(self, title: str, max_results: int = 3) -> List[Dict]:
+    @staticmethod
+    def _classification(score: int) -> str:
+        if score >= 70:
+            return "official"
+        if score >= 40:
+            return "likely"
+        return "possible"
+
+    def _readme(self, full_name: str) -> str:
+        try:
+            response = self.session.get(f"{self.REPO_API_URL}/{full_name}/readme", timeout=20)
+            if response.status_code == 404:
+                return ""
+            response.raise_for_status()
+            return base64.b64decode(response.json().get("content", "")).decode(
+                "utf-8", errors="ignore"
+            )
+        except (requests.RequestException, ValueError):
+            return ""
+
+    def _verify(
+        self, item: Dict, title: str, authors: List[str], arxiv_id: str, doi: str, declared: bool = False
+    ) -> Dict:
+        readme = self._readme(item.get("full_name", ""))
+        normalized_readme = readme.lower()
+        evidence = []
+        score = 0
+        if declared:
+            score += 70
+            evidence.append({"type": "paper_declared_url", "value": item.get("html_url")})
+        if arxiv_id and arxiv_id.lower() in normalized_readme:
+            score += 50
+            evidence.append({"type": "arxiv_id_in_readme", "value": arxiv_id})
+        clean_doi = (doi or "").lower().replace("https://doi.org/", "")
+        if clean_doi and clean_doi in normalized_readme:
+            score += 50
+            evidence.append({"type": "doi_in_readme", "value": clean_doi})
+        title_tokens = self._tokens(title)
+        overlap = len(title_tokens & self._tokens(readme)) / max(len(title_tokens), 1)
+        if overlap >= 0.8:
+            score += 30
+            evidence.append({"type": "title_in_readme", "overlap": round(overlap, 2)})
+        elif overlap >= 0.4:
+            score += 15
+            evidence.append({"type": "partial_title_in_readme", "overlap": round(overlap, 2)})
+        owner = (item.get("owner") or {}).get("login", "").lower()
+        author_tokens = {part.lower() for name in authors for part in re.findall(r"[a-z]+", name) if len(part) > 3}
+        if owner and any(token in owner for token in author_tokens):
+            score += 20
+            evidence.append({"type": "author_owner_match", "owner": owner})
+        return {"confidence": min(score, 100), "classification": self._classification(score), "evidence": evidence}
+
+    def find(
+        self,
+        title: str,
+        authors: List[str] = None,
+        arxiv_id: str = None,
+        doi: str = None,
+        abstract: str = "",
+        max_results: int = 3,
+    ) -> List[Dict]:
         query = f'"{title[:180]}" in:readme'
         try:
             response = self.session.get(
@@ -41,12 +103,36 @@ class GitHubCodeEnricher:
         except requests.RequestException:
             return []
 
+        items = response.json().get("items", [])
+        declared_names = {
+            match.rstrip("/.,)")
+            for match in re.findall(r"github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)", abstract or "")
+        }
+        for full_name in declared_names:
+            try:
+                repo_response = self.session.get(f"{self.REPO_API_URL}/{full_name}", timeout=20)
+                repo_response.raise_for_status()
+                declared_item = repo_response.json()
+                declared_item["_paper_declared"] = True
+                items.insert(0, declared_item)
+            except requests.RequestException:
+                continue
+
         title_tokens = self._tokens(title)
         matches = []
-        for item in response.json().get("items", []):
+        seen = set()
+        for item in items:
+            if not item.get("full_name") or item["full_name"] in seen:
+                continue
+            seen.add(item["full_name"])
             text = f"{item.get('name', '')} {item.get('description') or ''}"
             overlap = len(title_tokens & self._tokens(text))
-            if title_tokens and overlap / len(title_tokens) < 0.15:
+            if not item.get("_paper_declared") and title_tokens and overlap / len(title_tokens) < 0.15:
+                continue
+            verification = self._verify(
+                item, title, authors or [], arxiv_id, doi, declared=item.get("_paper_declared", False)
+            )
+            if verification["confidence"] < 20:
                 continue
             matches.append(
                 {
@@ -55,9 +141,7 @@ class GitHubCodeEnricher:
                     "description": item.get("description"),
                     "stars": int(item.get("stargazers_count") or 0),
                     "updated_at": item.get("updated_at"),
-                    "match": "readme-title",
+                    **verification,
                 }
             )
-            if len(matches) >= max_results:
-                break
-        return matches
+        return sorted(matches, key=lambda row: (row["confidence"], row["stars"]), reverse=True)[:max_results]

@@ -426,6 +426,42 @@ class OpenAlexSource(BasePaperSource):
                     enriched[key] = metadata
         return enriched
 
+    def lookup_by_ids(self, work_ids: List[str]) -> Dict[str, PaperMetadata]:
+        """Batch-resolve OpenAlex work IDs for bounded graph expansion."""
+        clean_ids = list(dict.fromkeys(value.replace("https://openalex.org/", "") for value in work_ids if value))
+        resolved = {}
+        select = (
+            "id,doi,title,authorships,abstract_inverted_index,publication_date,"
+            "primary_location,open_access,locations,best_oa_location,ids,"
+            "cited_by_count,type,topics,referenced_works,related_works"
+        )
+        for start in range(0, len(clean_ids), 50):
+            chunk = clean_ids[start : start + 50]
+            params = {"filter": f"openalex:{'|'.join(chunk)}", "per_page": len(chunk), "select": select}
+            params.update(self._base_params())
+            data = self._api_request(f"{self.API_BASE_URL}/works", params)
+            for item in data.get("results", []):
+                paper = self._metadata_from_item(item, source="citation")
+                if paper and paper.openalex_id:
+                    resolved[paper.openalex_id] = paper
+        return resolved
+
+    def find_recent_citing(self, work_id: str, from_date: str, limit: int = 10) -> List[PaperMetadata]:
+        """Find recent works that cite one seed work."""
+        params = {
+            "filter": f"cites:{work_id},from_publication_date:{from_date}",
+            "sort": "publication_date:desc",
+            "per_page": min(limit, 25),
+            "select": (
+                "id,doi,title,authorships,abstract_inverted_index,publication_date,"
+                "primary_location,open_access,locations,best_oa_location,ids,"
+                "cited_by_count,type,topics,referenced_works,related_works"
+            ),
+        }
+        params.update(self._base_params())
+        data = self._api_request(f"{self.API_BASE_URL}/works", params)
+        return [paper for item in data.get("results", []) if (paper := self._metadata_from_item(item, source="citation"))]
+
     def _fetch_from_arxiv(
         self, arxiv_id: str, journal_code: str, journal_name: str, doi: str
     ) -> Optional[PaperMetadata]:

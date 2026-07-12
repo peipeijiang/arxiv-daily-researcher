@@ -65,7 +65,13 @@ class ResearchLibrary:
                 }
                 body = ["---"] + [f"{k}: {json.dumps(v, ensure_ascii=False)}" for k, v in frontmatter.items()] + ["---", "", f"# {paper.title}", "", score.tldr, "", "## Metadata", "", f"- Authors: {', '.join(paper.authors)}", f"- DOI: {paper.doi or ''}", f"- URL: {paper.url}", f"- Venue: {paper.journal or source}", f"- Score: {score.total_score:.1f}", "", "## Abstract", "", paper.abstract, "", "## Chinese Abstract", "", row.get("abstract_cn", "")]
                 if paper.code_repositories:
-                    body += ["", "## Code", ""] + [f"- [{repo['full_name']}]({repo['url']}) - {repo['stars']} stars" for repo in paper.code_repositories]
+                    body += ["", "## Code", ""] + [
+                        f"- [{repo['full_name']}]({repo['url']}) - {repo['classification']} "
+                        f"({repo['confidence']} confidence), {repo['stars']} stars"
+                        for repo in paper.code_repositories
+                    ]
+                if paper.discovery:
+                    body += ["", "## Discovery Evidence", "", "```json", json.dumps(paper.discovery, ensure_ascii=False, indent=2), "```"]
                 if record.get("analysis"):
                     body += ["", "## Deep Analysis", "", "```json", json.dumps(record["analysis"], ensure_ascii=False, default=str, indent=2), "```"]
                 path.write_text("\n".join(body) + "\n", encoding="utf-8")

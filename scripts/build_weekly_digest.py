@@ -12,6 +12,7 @@ from openai import OpenAI
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from config import settings
+from library import build_evidence_pack, audit_weekly_digest
 
 
 def recent_records(path=Path("knowledge/index.jsonl"), days=7):
@@ -35,32 +36,56 @@ def main():
     if not records:
         print("No qualified papers found for this week.")
         return
-    compact = [
-        {
-            "title": row.get("title"),
-            "source": row.get("source"),
-            "score": row.get("score"),
-            "tldr": row.get("tldr"),
-            "topics": row.get("topics", [])[:5],
-            "citations": row.get("cited_by_count", 0),
-            "code": row.get("code_repositories", [])[:2],
-            "url": row.get("url"),
-        }
-        for row in records[:50]
-    ]
-    prompt = """你是推荐系统研究负责人。基于下面最近七天论文，输出中文周报 Markdown。
-必须包含：本周三大研究主题、方法与技术演进、证据与代表论文、可运行代码仓库、值得追踪的研究空白、下周阅读优先级。区分论文事实与推断，引用论文标题和链接，内容精炼但具体。\n\n"""
+    evidence_pack = build_evidence_pack(records[:50])
+    prompt = """你是推荐系统研究负责人。只能依据给定证据包输出中文周报 Markdown。
+必须包含：本周三大研究主题、方法与技术演进、代表论文、已验证代码仓库、研究空白、下周阅读优先级。
+
+证据规则：
+1. 每个关键判断单独一行，并以[论文事实]、[跨论文观察]或[AI推断]开头。
+2. [论文事实]必须在同一行引用至少一个证据ID，如[P01-C01]。
+3. [跨论文观察]必须在同一行引用至少两篇不同论文的证据ID。
+4. [AI推断]必须明确不确定性，不得伪装成作者结论；可以不引用证据。
+5. 不得创造证据ID、实验数字、官方代码身份或论文未提供的信息。
+6. 代码仓库必须写明official、likely或possible及置信度。
+7. 内容精炼，每条带证据的陈述保持在一行内。\n\n证据包：\n"""
     client = OpenAI(api_key=settings.SMART_LLM.api_key, base_url=settings.SMART_LLM.base_url)
     response = client.chat.completions.create(
         model=settings.SMART_LLM.model_name,
         temperature=settings.SMART_LLM.temperature,
-        messages=[{"role": "user", "content": prompt + json.dumps(compact, ensure_ascii=False)}],
+        messages=[{"role": "user", "content": prompt + json.dumps(evidence_pack, ensure_ascii=False)}],
     )
     content = response.choices[0].message.content
+    valid, errors = audit_weekly_digest(content, evidence_pack)
+    if not valid:
+        repair_prompt = (
+            prompt
+            + json.dumps(evidence_pack, ensure_ascii=False)
+            + "\n\n上一版周报：\n"
+            + content
+            + "\n\n审计错误：\n- "
+            + "\n- ".join(errors)
+            + "\n请修复所有错误并输出完整周报，不要解释修改过程。"
+        )
+        repaired = client.chat.completions.create(
+            model=settings.SMART_LLM.model_name,
+            temperature=0.1,
+            messages=[{"role": "user", "content": repair_prompt}],
+        )
+        content = repaired.choices[0].message.content
+        valid, errors = audit_weekly_digest(content, evidence_pack)
+        if not valid:
+            raise RuntimeError(f"Weekly evidence audit failed after repair: {errors}")
     now = datetime.now()
     path = Path("knowledge/reports/weekly") / f"{now:%Y}-W{now:%W}.md"
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(f"# 推荐系统研究周报 {now:%Y-%m-%d}\n\n{content}\n", encoding="utf-8")
+    evidence_index = "\n".join(
+        f"- [{claim['claim_id']}] [{claim['paper_id']}]({claim['source_url']}) · {claim['kind']}"
+        for claim in evidence_pack["claims"]
+    )
+    path.write_text(
+        f"# 推荐系统研究周报 {now:%Y-%m-%d}\n\n{content}\n\n## 证据索引\n\n{evidence_index}\n",
+        encoding="utf-8",
+    )
 
     webhook = os.getenv("WECHAT_WEBHOOK_URL", "")
     if webhook:

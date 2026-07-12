@@ -28,7 +28,7 @@ from config import settings
 from utils.logger import setup_logger
 from utils.token_counter import token_counter
 from agents import KeywordAgent, AnalysisAgent
-from sources import SearchAgent, PaperMetadata, ArxivFetchError
+from sources import SearchAgent, PaperMetadata, ArxivFetchError, CitationDiscovery
 from report.daily import Reporter
 from notifications import NotifierAgent, RunResult
 from enrichers import GitHubCodeEnricher
@@ -246,6 +246,19 @@ class DailyResearchPipeline:
                         logger.warning(f"发送错误通知失败: {ne}")
                 return fetch_fail_result
 
+            openalex_source = search_agent.get_source("openalex")
+            if openalex_source:
+                existing_ids = {
+                    paper.paper_id for papers in papers_by_source.values() for paper in papers
+                }
+                try:
+                    citation_papers = CitationDiscovery(openalex_source).discover(existing_ids)
+                    if citation_papers:
+                        papers_by_source["citation"] = citation_papers
+                        logger.info(f">>> 引用关系扩展发现 {len(citation_papers)} 篇候选论文")
+                except Exception as exc:
+                    logger.warning(f"引用关系扩展失败，继续常规流程: {exc}")
+
             total_papers_count = sum(len(papers) for papers in papers_by_source.values())
 
             if total_papers_count == 0:
@@ -363,7 +376,13 @@ class DailyResearchPipeline:
                 logger.info(f">>> 阶段4.5: 为 {len(qualified_rows)} 篇及格论文检索 GitHub 代码...")
                 for row in qualified_rows:
                     paper = row["paper_metadata"]
-                    paper.code_repositories = github_enricher.find(paper.title)
+                    paper.code_repositories = github_enricher.find(
+                        title=paper.title,
+                        authors=paper.authors,
+                        arxiv_id=paper.arxiv_id,
+                        doi=paper.doi,
+                        abstract=paper.abstract,
+                    )
 
             if translation_cache:
                 cache_savings = total_papers_count - len(translation_cache)

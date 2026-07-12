@@ -10,6 +10,7 @@
 
 from .base_source import BasePaperSource, PaperMetadata
 from .arxiv_source import ArxivSource, ArxivFetchError
+from .citation_discovery import CitationDiscovery
 from .openalex_source import OpenAlexSource
 from .dblp_source import DblpSource
 from .semantic_scholar_enricher import SemanticScholarEnricher
@@ -20,6 +21,7 @@ __all__ = [
     "PaperMetadata",
     "ArxivSource",
     "ArxivFetchError",
+    "CitationDiscovery",
     "OpenAlexSource",
     "DblpSource",
     "SemanticScholarEnricher",

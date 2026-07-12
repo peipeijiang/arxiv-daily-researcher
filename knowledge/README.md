@@ -8,3 +8,4 @@ AI analyses, code repositories, user feedback, citation links, and weekly report
 - `graph.json`: OpenAlex citation and related-paper edges
 - `feedback.json`: preferences synchronized from GitHub Issues
 - `reports/weekly/`: weekly AI research synthesis
+- `evidence/`: claim-level evidence packs used to audit weekly reports
