@@ -56,10 +56,6 @@
       "title": "Causal-BPR: Causal Bayesian Personalized Ranking for Unbiased Recommendation under Exposure Bias",
       "paper_id": "https://doi.org/10.5281/zenodo.21304738"
     },
-    "W7168020496": {
-      "title": "Bayesian Personalized Ranking with Posterior-Difference Optimization for Top-N Recommendation",
-      "paper_id": "https://doi.org/10.5281/zenodo.21304717"
-    },
     "W7168015677": {
       "title": "Bayesian Personalized Ranking with Posterior-Difference Optimization for Top-N Recommendation",
       "paper_id": "https://doi.org/10.5281/zenodo.21304716"
@@ -75,14 +71,6 @@
     "W7168019311": {
       "title": "Multi-World Bayesian Personalized Ranking for Implicit Feedback Recommendation",
       "paper_id": "https://doi.org/10.5281/zenodo.21304732"
-    },
-    "W7168047034": {
-      "title": "Multi-World Bayesian Personalized Ranking for Implicit Feedback Recommendation",
-      "paper_id": "https://doi.org/10.5281/zenodo.21304731"
-    },
-    "W7168047260": {
-      "title": "Causal-BPR: Causal Bayesian Personalized Ranking for Unbiased Recommendation under Exposure Bias",
-      "paper_id": "https://doi.org/10.5281/zenodo.21304737"
     },
     "W7168016152": {
       "title": "Noise-Separated Bayesian Personalized Ranking for Robust Implicit Recommendation",

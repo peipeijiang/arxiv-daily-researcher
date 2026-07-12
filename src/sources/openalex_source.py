@@ -303,7 +303,25 @@ class OpenAlexSource(BasePaperSource):
             if index < len(self.search_terms) - 1:
                 time.sleep(0.25)
 
-        papers = list(papers_by_id.values())[: self.max_results]
+        papers_by_title = {}
+        for paper in papers_by_id.values():
+            title_key = re.sub(r"[^a-z0-9]+", "", paper.title.lower())
+            existing = papers_by_title.get(title_key)
+            quality = (
+                bool(paper.pdf_url),
+                bool(paper.abstract),
+                paper.cited_by_count,
+                len(paper.referenced_works),
+            )
+            existing_quality = (
+                bool(existing.pdf_url),
+                bool(existing.abstract),
+                existing.cited_by_count,
+                len(existing.referenced_works),
+            ) if existing else None
+            if not existing or quality > existing_quality:
+                papers_by_title[title_key] = paper
+        papers = list(papers_by_title.values())[: self.max_results]
         logger.info(f"[OpenAlex] 主题检索去重后共 {len(papers)} 篇")
         return papers
 

@@ -209,6 +209,31 @@ class ResearchAutomationTests(unittest.TestCase):
             graph = json.loads(library.graph_path.read_text())
             self.assertEqual({edge["type"] for edge in graph["edges"]}, {"cites", "related"})
 
+    def test_library_deduplicates_different_ids_with_identical_titles(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "knowledge"
+            library = ResearchLibrary(root)
+            published = datetime(2026, 7, 12)
+            low = PaperMetadata(
+                paper_id="doi:version-1", source="openalex", title="Same Paper Title",
+                authors=[], abstract="abstract", published_date=published, url="https://one"
+            )
+            high = PaperMetadata(
+                paper_id="doi:version-2", source="openalex", title="Same Paper Title",
+                authors=[], abstract="abstract", published_date=published, url="https://two"
+            )
+            low_score = SimpleNamespace(total_score=30, is_qualified=False, tldr="low")
+            high_score = SimpleNamespace(total_score=80, is_qualified=True, tldr="high")
+            rows = {"openalex": [
+                {"paper_metadata": low, "score_response": low_score},
+                {"paper_metadata": high, "score_response": high_score},
+            ]}
+            library.persist(rows, {})
+            saved = [json.loads(line) for line in library.index_path.read_text().splitlines()]
+            self.assertEqual(len(saved), 1)
+            self.assertEqual(saved[0]["paper_id"], "doi:version-2")
+            self.assertFalse((library.papers_dir / "doi-version-1.md").exists())
+
     def test_citation_discovery_is_bounded_and_records_provenance(self):
         with tempfile.TemporaryDirectory() as tmp:
             index = Path(tmp) / "index.jsonl"
