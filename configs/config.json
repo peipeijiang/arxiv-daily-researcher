@@ -3,8 +3,8 @@
   // Search Configuration
   // ==================================================
   "search_settings": {
-    "search_days": 14,
-    "max_results": 100,
+    "search_days": 3,
+    "max_results": 120,
     "max_results_per_source": {}
   },
 
@@ -34,7 +34,10 @@
   // ==================================================
   "target_domains": {
     "domains": [
-      "quant-ph"
+      "cs.IR",
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
     ]
   },
 
@@ -44,9 +47,24 @@
   "keywords": {
     "primary_keywords": {
       "weight": 1.0,
-      "keywords": []
+      "keywords": [
+        "recommender system",
+        "recommendation system",
+        "sequential recommendation",
+        "generative recommendation",
+        "large language model recommendation",
+        "LLM-based recommendation",
+        "recommendation agent",
+        "multimodal recommendation",
+        "conversational recommendation",
+        "ranking and reranking",
+        "user modeling",
+        "click-through rate prediction",
+        "causal recommendation",
+        "fairness in recommendation"
+      ]
     },
-    "enable_reference_extraction": true,
+    "enable_reference_extraction": false,
     "reference_keywords_config": {
       "max_keywords": 10,
       "similarity_threshold": 0.75,
@@ -65,7 +83,7 @@
         }
       }
     },
-    "research_context": ""
+    "research_context": "持续跟踪推荐系统领域的最新学术研究，重点关注序列推荐、生成式推荐、LLM 与推荐系统结合、推荐智能体、多模态推荐、对话式推荐、排序与重排、用户建模、CTR/CVR 预测，以及推荐系统的因果性、公平性、鲁棒性和工业落地。优先选择有明确方法创新、可靠实验、公开代码或可复现细节的工作。"
   },
 
   // ==================================================
@@ -134,7 +152,7 @@
     "enabled": true,
     "on_success": true,
     "on_failure": true,
-    "attach_reports": true,
+    "attach_reports": false,
     "top_n": 5,
     "channels": {
       "email": {
@@ -187,7 +205,7 @@
   // PDF Parser Configuration
   // ==================================================
   "pdf_parser": {
-    "mode": "mineru",
+    "mode": "pymupdf",
     "mineru_model_version": "vlm",
     "poll_interval": 3,
     "poll_timeout": 300
@@ -205,7 +223,7 @@
   // Auto-update Configuration
   // ==================================================
   "auto_update": {
-    "enabled": true
+    "enabled": false
   },
 
   // ==================================================
@@ -236,7 +254,7 @@
   // WebDAV Sync Configuration
   // ==================================================
   "webdav": {
-    "enabled": true,
+    "enabled": false,
     "remote_path": "/arxiv-daily-researcher/",
     "sync_mode": "after_report",
     "cron_schedule": "0 23 * * *",
