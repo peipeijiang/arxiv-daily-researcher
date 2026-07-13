@@ -537,11 +537,28 @@ class NotifierAgent:
         total_tokens = (result.token_usage or {}).get("total")
         if total_tokens:
             token_line = f"\n> Token：{total_tokens:,}"
+        full_text_count = sum(
+            1
+            for paper in result.top_papers
+            if (paper.get("analysis") or {}).get("_analysis_basis") == "full_text"
+        )
+        abstract_only_count = len(result.top_papers) - full_text_count
+        basis_line = ""
+        if result.top_papers:
+            basis_line = (
+                f"\n> 全文深读 **{full_text_count}** 篇 · "
+                f"仅摘要 **{abstract_only_count}** 篇"
+            )
+            if abstract_only_count:
+                basis_line += (
+                    "\n<font color=\"warning\">存在未获取正文的论文，"
+                    "对应卡片已标记证据限制。</font>"
+                )
         return (
             f"## 推荐系统每日研究\n"
             f"<font color=\"info\">运行成功</font> · {result.run_timestamp}\n\n"
             f"> 抓取 **{result.total_papers_fetched}** 篇 · 及格 **{result.total_qualified}** 篇 · "
-            f"深度分析 **{result.total_analyzed}** 篇{token_line}\n\n"
+            f"深度分析 **{result.total_analyzed}** 篇{token_line}{basis_line}\n\n"
             + "\n".join(source_lines)
             + f"\n\n随后发送 Top {len(result.top_papers)} 单篇研究卡片。"
         )
@@ -559,10 +576,19 @@ class NotifierAgent:
         basis = analysis.get("_analysis_basis")
         if basis == "full_text":
             level = "全文深读"
+            basis_warning = ""
         elif basis == "abstract":
             level = "摘要分析"
+            basis_warning = (
+                '<font color="warning">未获取论文正文，本卡片仅基于摘要；'
+                "实验细节、关键结果和局限性可能不完整。</font>"
+            )
         else:
             level = "摘要速览" if not analysis else "深度分析"
+            basis_warning = (
+                '<font color="warning">未确认获取论文正文，本卡片基于有限材料；'
+                "请谨慎使用实验结论和局限性分析。</font>"
+            )
 
         title = analysis.get("chinese_title") or paper.get("title", "")
         original_title = paper.get("title", "")
@@ -602,10 +628,12 @@ class NotifierAgent:
         links = " · ".join(link for link in (report_link, original_link) if link)
         feedback = self._feedback_links(paper)
         original_line = "" if title == original_title else f"\n> {original_title}"
+        warning_line = f"\n{basis_warning}" if basis_warning else ""
         base_header = (
             f"## {index}/{total} · {title}{original_line}\n"
-            f"<font color=\"info\">{level}</font> · `{paper.get('source', '').upper()}` · "
-            f"Score **{paper.get('score', 0):.1f}**"
+            f"<font color=\"{'info' if basis == 'full_text' else 'warning'}\">{level}</font> · "
+            f"`{paper.get('source', '').upper()}` · Score **{paper.get('score', 0):.1f}**"
+            f"{warning_line}"
         )
         blocks = []
         for label, value in sections:

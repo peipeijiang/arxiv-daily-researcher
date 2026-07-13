@@ -115,7 +115,44 @@ class ResearchAutomationTests(unittest.TestCase):
         self.assertIn("完整方法", card)
         self.assertIn("关键结果", card)
         self.assertIn("主要局限", card)
+        self.assertNotIn("未获取论文正文", card)
         self.assertLessEqual(len(card.encode("utf-8")), 4000)
+
+    def test_wechat_abstract_card_prominently_marks_missing_full_text(self):
+        agent = NotifierAgent.__new__(NotifierAgent)
+        card = agent._format_wechat_paper_card(
+            {
+                "paper_id": "doi:abstract-only",
+                "title": "Abstract Only Paper",
+                "source": "www",
+                "score": 50,
+                "analysis": {
+                    "_analysis_basis": "abstract",
+                    "summary": "摘要结论",
+                },
+            },
+            1,
+            1,
+        )
+
+        self.assertIn('<font color="warning">摘要分析</font>', card)
+        self.assertIn("未获取论文正文，本卡片仅基于摘要", card)
+        self.assertIn("实验细节、关键结果和局限性可能不完整", card)
+
+    def test_wechat_overview_counts_full_text_and_abstract_cards(self):
+        agent = NotifierAgent.__new__(NotifierAgent)
+        overview = agent._format_wechat_overview(
+            RunResult(
+                top_papers=[
+                    {"analysis": {"_analysis_basis": "full_text"}},
+                    {"analysis": {"_analysis_basis": "abstract"}},
+                ]
+            )
+        )
+
+        self.assertIn("全文深读 **1** 篇", overview)
+        self.assertIn("仅摘要 **1** 篇", overview)
+        self.assertIn("存在未获取正文的论文", overview)
 
     def test_structured_limitations_render_as_readable_labels(self):
         limitations = {
