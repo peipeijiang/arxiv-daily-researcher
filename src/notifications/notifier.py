@@ -493,8 +493,22 @@ class NotifierAgent:
 
     @staticmethod
     def _analysis_text(value: Any) -> str:
+        if isinstance(value, dict):
+            labels = {
+                "paper_limitations": "论文本身局限",
+                "evidence_limitations": "当前证据局限",
+            }
+            parts = []
+            for key, item in value.items():
+                text = NotifierAgent._analysis_text(item)
+                if text:
+                    label = labels.get(key, str(key).replace("_", " "))
+                    parts.append(f"{label}：{text}")
+            return "；".join(parts)
         if isinstance(value, list):
-            return "；".join(" ".join(str(item).split()) for item in value if item)
+            return "；".join(
+                NotifierAgent._analysis_text(item) for item in value if item
+            )
         return " ".join(str(value or "").split())
 
     @staticmethod

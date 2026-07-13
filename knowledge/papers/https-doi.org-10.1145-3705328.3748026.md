@@ -76,7 +76,8 @@ This paper presents the first multistakeholder approach for translating diverse 
 
 ### 主要局限
 
-- {'paper_limitations': '摘要未明确提及论文的局限性。', 'evidence_limitations': '当前仅提供摘要，无法评估实验细节、数据集、基线、模型或具体指标的有效性。'}
+- **论文本身局限**：摘要未明确提及论文的局限性。
+- **当前证据局限**：当前仅提供摘要，无法评估实验细节、数据集、基线、模型或具体指标的有效性。
 
 ### 与当前研究方向的关联
 

@@ -116,6 +116,36 @@ class ResearchAutomationTests(unittest.TestCase):
         self.assertIn("主要局限", card)
         self.assertLessEqual(len(card.encode("utf-8")), 4000)
 
+    def test_structured_limitations_render_as_readable_labels(self):
+        limitations = {
+            "paper_limitations": "摘要未提供具体局限性。",
+            "evidence_limitations": "当前仅基于摘要分析。",
+        }
+        agent = NotifierAgent.__new__(NotifierAgent)
+        card = agent._format_wechat_paper_card(
+            {
+                "paper_id": "arxiv:structured",
+                "title": "Structured Limitations",
+                "source": "www",
+                "score": 50,
+                "analysis": {"summary": "结论", "limitations": limitations},
+            },
+            1,
+            1,
+        )
+        report = ResearchLibrary.render_record(
+            {
+                "paper_id": "arxiv:structured",
+                "title": "Structured Limitations",
+                "analysis": {"summary": "结论", "limitations": limitations},
+            }
+        )
+
+        for output in (card, report):
+            self.assertIn("论文本身局限", output)
+            self.assertIn("当前证据局限", output)
+            self.assertNotIn("{'paper_limitations'", output)
+
     def test_wechat_paper_cards_split_without_ellipsis_or_data_loss(self):
         agent = NotifierAgent.__new__(NotifierAgent)
         long_method = "甲" * 3000 + "方法终点"

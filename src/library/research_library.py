@@ -35,16 +35,42 @@ class ResearchLibrary:
 
     @staticmethod
     def _text(value) -> str:
+        if isinstance(value, dict):
+            labels = {
+                "paper_limitations": "论文本身局限",
+                "evidence_limitations": "当前证据局限",
+            }
+            return "；".join(
+                f"{labels.get(key, str(key).replace('_', ' '))}：{ResearchLibrary._text(item)}"
+                for key, item in value.items()
+                if ResearchLibrary._text(item)
+            )
         if isinstance(value, list):
-            return "；".join(str(item).strip() for item in value if str(item).strip())
+            return "；".join(
+                ResearchLibrary._text(item) for item in value if ResearchLibrary._text(item)
+            )
         return str(value or "").strip()
 
     @staticmethod
     def _markdown_list(value) -> List[str]:
         if not value:
             return []
+        if isinstance(value, dict):
+            labels = {
+                "paper_limitations": "论文本身局限",
+                "evidence_limitations": "当前证据局限",
+            }
+            return [
+                f"- **{labels.get(key, str(key).replace('_', ' '))}**：{ResearchLibrary._text(item)}"
+                for key, item in value.items()
+                if ResearchLibrary._text(item)
+            ]
         items = value if isinstance(value, list) else [value]
-        return [f"- {str(item).strip()}" for item in items if str(item).strip()]
+        return [
+            f"- {ResearchLibrary._text(item)}"
+            for item in items
+            if ResearchLibrary._text(item)
+        ]
 
     @classmethod
     def _analysis_markdown(cls, analysis: Dict) -> List[str]:

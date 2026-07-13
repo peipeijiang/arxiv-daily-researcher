@@ -74,7 +74,8 @@ With the development of multi-modal modeling techniques, recent sequential recom
 
 ### 主要局限
 
-- {'paper_limitations': '摘要未提供具体局限性。', 'evidence_limitations': '当前仅基于摘要分析，缺乏实验细节、数据集名称、基线模型等具体信息，无法全面评估局限性。'}
+- **论文本身局限**：摘要未提供具体局限性。
+- **当前证据局限**：当前仅基于摘要分析，缺乏实验细节、数据集名称、基线模型等具体信息，无法全面评估局限性。
 
 ### 与当前研究方向的关联
 
