@@ -260,6 +260,27 @@ class WebhookNotifier(BaseNotifier):
         url, payload, headers = formatter(subject, body)
         resp = requests.post(url, json=payload, headers=headers, timeout=30)
         resp.raise_for_status()
+
+        # These APIs can report application errors in an HTTP 200 response.
+        if self.platform in {"wechat_work", "dingtalk", "telegram"}:
+            try:
+                response_data = resp.json()
+            except ValueError as exc:
+                raise RuntimeError(
+                    f"Webhook [{self.platform}] returned invalid JSON"
+                ) from exc
+
+            if self.platform == "telegram":
+                if response_data.get("ok") is not True:
+                    description = response_data.get("description", "unknown error")
+                    raise RuntimeError(f"Webhook [telegram] rejected message: {description}")
+            elif response_data.get("errcode", 0) != 0:
+                errcode = response_data.get("errcode")
+                errmsg = response_data.get("errmsg", "unknown error")
+                raise RuntimeError(
+                    f"Webhook [{self.platform}] rejected message: {errcode} {errmsg}"
+                )
+
         logger.info(f"Webhook [{self.platform}] 通知已发送")
         return True
 
@@ -416,16 +437,16 @@ class NotifierAgent:
                 links.append(f"[{label}]({repo_url}/issues/new?{query})")
         return " | ".join(links)
 
-    def notify(self, result: RunResult) -> None:
-        """格式化并发送运行结果通知到所有已配置的渠道"""
+    def notify(self, result: RunResult) -> bool:
+        """格式化并发送运行结果通知，全部成功时返回 True。"""
         if not self.notifiers:
-            logger.debug("未配置任何通知渠道，跳过")
-            return
+            logger.error("未配置任何通知渠道，无法发送")
+            return False
 
         if result.success and not self.settings.NOTIFY_ON_SUCCESS:
-            return
+            return True
         if not result.success and not self.settings.NOTIFY_ON_FAILURE:
-            return
+            return True
 
         subject = self._format_subject(result)
         html_body = self._format_html_body(result)
@@ -433,6 +454,7 @@ class NotifierAgent:
             self._collect_attachments(result) if self.settings.NOTIFY_ATTACH_REPORTS else []
         )
 
+        delivery_succeeded = True
         for notifier in self.notifiers:
             try:
                 platform = self._platform_for_notifier(notifier)
@@ -446,7 +468,8 @@ class NotifierAgent:
                                 notifier.send(subject, card)
                                 time.sleep(0.35)
                         except Exception as exc:
-                            logger.warning(
+                            delivery_succeeded = False
+                            logger.error(
                                 f"企业微信论文卡片发送失败 ({paper.get('paper_id')}): {exc}"
                             )
                     continue
@@ -456,7 +479,10 @@ class NotifierAgent:
                 else:
                     notifier.send(subject, body, attachments)
             except Exception as e:
-                logger.warning(f"通知发送失败 ({type(notifier).__name__}): {e}")
+                delivery_succeeded = False
+                logger.error(f"通知发送失败 ({type(notifier).__name__}): {e}")
+
+        return delivery_succeeded
 
     @staticmethod
     def _brief(value: Any, limit: int) -> str:

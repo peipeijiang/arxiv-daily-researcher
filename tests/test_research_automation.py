@@ -19,10 +19,40 @@ from library.evidence_builder import build_evidence_pack, audit_weekly_digest
 from sources.base_source import PaperMetadata
 from sources.citation_discovery import CitationDiscovery
 from sync_feedback import parse_feedback
-from notifications.notifier import NotifierAgent, WebhookNotifier
+from notifications.notifier import NotifierAgent, RunResult, WebhookNotifier
 
 
 class ResearchAutomationTests(unittest.TestCase):
+    def test_wechat_webhook_rejects_api_error_in_http_200(self):
+        response = Mock()
+        response.raise_for_status.return_value = None
+        response.json.return_value = {"errcode": 93000, "errmsg": "robot webhook error"}
+        with unittest.mock.patch(
+            "notifications.notifier.requests.post", return_value=response
+        ):
+            notifier = WebhookNotifier("wechat_work", "https://example.test/webhook")
+            with self.assertRaisesRegex(RuntimeError, "93000"):
+                notifier.send("subject", "body")
+
+    def test_notify_reports_partial_wechat_delivery_failure(self):
+        agent = NotifierAgent.__new__(NotifierAgent)
+        agent.settings = SimpleNamespace(
+            NOTIFY_ON_SUCCESS=True,
+            NOTIFY_ON_FAILURE=True,
+            NOTIFY_ATTACH_REPORTS=False,
+            TOKEN_TRACKING_ENABLED=False,
+        )
+        notifier = Mock(spec=WebhookNotifier)
+        notifier.platform = "wechat_work"
+        notifier.send.side_effect = [True, RuntimeError("timeout")]
+        agent.notifiers = [notifier]
+        result = RunResult(
+            success=True,
+            top_papers=[{"paper_id": "arxiv:1", "title": "Paper"}],
+        )
+
+        self.assertFalse(agent.notify(result))
+
     def test_knowledge_report_renders_analysis_as_native_markdown(self):
         report = ResearchLibrary.render_record(
             {

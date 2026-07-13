@@ -653,10 +653,12 @@ class DailyResearchPipeline:
                 logger.info(">>> 阶段8: 发送通知...")
                 try:
                     notifier = NotifierAgent()
-                    notifier.notify(run_result)
-                    logger.info("通知发送完成")
+                    if notifier.notify(run_result):
+                        logger.info("通知发送完成")
+                    else:
+                        logger.error("通知发送失败：至少一个通知渠道或论文卡片未送达")
                 except Exception as e:
-                    logger.warning(f"通知发送失败: {e}")
+                    logger.error(f"通知发送失败: {e}", exc_info=True)
 
             return run_result
 
