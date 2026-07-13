@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from notifications.notifier import NotifierAgent, RunResult, WebhookNotifier  # noqa: E402
+from config import settings  # noqa: E402
 
 
 def load_records(index_path: Path) -> list[dict]:
@@ -108,6 +109,7 @@ def main() -> int:
     key, batch = select_latest_complete_batch(records, args.top)
     result = build_result(key, batch, args.top)
     formatter = NotifierAgent.__new__(NotifierAgent)
+    formatter.settings = settings
     messages = [formatter._format_wechat_overview(result)]
     for index, paper in enumerate(result.top_papers, 1):
         messages.extend(formatter._format_wechat_paper_cards(paper, index, len(result.top_papers)))
@@ -119,7 +121,7 @@ def main() -> int:
         return 0
 
     notifier = WebhookNotifier("wechat_work", args.webhook_url)
-    subject = "推荐系统每日研究（知识库重发）"
+    subject = f"{settings.RESEARCH_FIELD_NAME}每日研究（知识库重发）"
     for index, message in enumerate(messages, 1):
         notifier.send(subject, message)
         print(f"Sent message {index}/{len(messages)}")

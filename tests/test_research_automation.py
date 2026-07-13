@@ -85,6 +85,18 @@ class ResearchAutomationTests(unittest.TestCase):
         self.assertNotIn("```json", report)
         self.assertNotIn('"methodology":', report)
 
+    def test_knowledge_report_uses_configured_field_tag(self):
+        report = ResearchLibrary.render_record(
+            {
+                "paper_id": "doi:banking",
+                "title": "A Banking Paper",
+                "research_field_tag": "banking-fiscal-monetary-policy",
+            }
+        )
+
+        self.assertIn('"banking-fiscal-monetary-policy"', report)
+        self.assertNotIn('"recommender-systems"', report)
+
     def test_wechat_paper_card_uses_deep_analysis(self):
         agent = NotifierAgent.__new__(NotifierAgent)
         with unittest.mock.patch.dict(
@@ -153,6 +165,15 @@ class ResearchAutomationTests(unittest.TestCase):
         self.assertIn("全文深读 **1** 篇", overview)
         self.assertIn("仅摘要 **1** 篇", overview)
         self.assertIn("存在未获取正文的论文", overview)
+
+    def test_wechat_overview_uses_configured_research_field(self):
+        agent = NotifierAgent.__new__(NotifierAgent)
+        agent.settings = SimpleNamespace(RESEARCH_FIELD_NAME="商业银行、财政和货币政策")
+
+        overview = agent._format_wechat_overview(RunResult())
+
+        self.assertIn("## 商业银行、财政和货币政策每日研究", overview)
+        self.assertNotIn("推荐系统每日研究", overview)
 
     def test_structured_limitations_render_as_readable_labels(self):
         limitations = {

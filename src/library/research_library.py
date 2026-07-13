@@ -128,7 +128,8 @@ class ResearchLibrary:
             "source": record.get("source"),
             "published": record.get("published_date"),
             "score": record.get("score", 0),
-            "tags": ["paper", "recommender-systems"] + (record.get("topics") or [])[:5],
+            "tags": ["paper", record.get("research_field_tag") or "academic-research"]
+            + (record.get("topics") or [])[:5],
         }
         body = [
             "---",
@@ -251,6 +252,8 @@ class ResearchLibrary:
 
         for source, rows in scored_by_source.items():
             for row in rows:
+                from config import settings
+
                 paper = row["paper_metadata"]
                 score = row["score_response"]
                 record = paper.to_dict()
@@ -262,6 +265,8 @@ class ResearchLibrary:
                         "tldr": score.tldr,
                         "abstract_cn": row.get("abstract_cn", ""),
                         "analysis": analysis_map.get(paper.paper_id),
+                        "research_field": settings.RESEARCH_FIELD_NAME,
+                        "research_field_tag": settings.RESEARCH_FIELD_TAG,
                         "updated_at": datetime.now().isoformat(),
                     }
                 )

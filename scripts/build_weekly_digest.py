@@ -37,7 +37,7 @@ def main():
         print("No qualified papers found for this week.")
         return
     evidence_pack = build_evidence_pack(records[:50])
-    prompt = """你是推荐系统研究负责人。只能依据给定证据包输出中文周报 Markdown。
+    prompt = f"""你是{settings.RESEARCH_FIELD_NAME}研究负责人。只能依据给定证据包输出中文周报 Markdown。
 必须包含：本周三大研究主题、方法与技术演进、代表论文、已验证代码仓库、研究空白、下周阅读优先级。
 
 证据规则：
@@ -83,7 +83,7 @@ def main():
         for claim in evidence_pack["claims"]
     )
     path.write_text(
-        f"# 推荐系统研究周报 {now:%Y-%m-%d}\n\n{content}\n\n## 证据索引\n\n{evidence_index}\n",
+        f"# {settings.RESEARCH_FIELD_NAME}研究周报 {now:%Y-%m-%d}\n\n{content}\n\n## 证据索引\n\n{evidence_index}\n",
         encoding="utf-8",
     )
 

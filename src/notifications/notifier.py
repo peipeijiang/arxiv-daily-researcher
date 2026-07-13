@@ -526,6 +526,9 @@ class NotifierAgent:
         return chunks or [""]
 
     def _format_wechat_overview(self, result: RunResult) -> str:
+        field_name = getattr(
+            getattr(self, "settings", None), "RESEARCH_FIELD_NAME", "推荐系统"
+        )
         source_lines = []
         for source in sorted(result.papers_by_source):
             source_lines.append(
@@ -555,7 +558,7 @@ class NotifierAgent:
                     "对应卡片已标记证据限制。</font>"
                 )
         return (
-            f"## 推荐系统每日研究\n"
+            f"## {field_name}每日研究\n"
             f"<font color=\"info\">运行成功</font> · {result.run_timestamp}\n\n"
             f"> 抓取 **{result.total_papers_fetched}** 篇 · 及格 **{result.total_qualified}** 篇 · "
             f"深度分析 **{result.total_analyzed}** 篇{token_line}{basis_line}\n\n"

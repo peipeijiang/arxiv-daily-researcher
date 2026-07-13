@@ -98,6 +98,8 @@ class Settings(BaseSettings):
     REFERENCE_COUNT_LOW: int = 3
 
     # 研究背景上下文
+    RESEARCH_FIELD_NAME: str = "推荐系统"
+    RESEARCH_FIELD_TAG: str = "recommender-systems"
     RESEARCH_CONTEXT: str = ""
 
     # ==================== 关键词追踪配置 ====================
@@ -276,6 +278,14 @@ class Settings(BaseSettings):
         try:
             with open(config_path, "r", encoding="utf-8") as f:
                 config = json5.load(f)  # 使用json5支持注释
+
+            profile = config.get("research_profile") or {}
+            self.RESEARCH_FIELD_NAME = profile.get(
+                "field_name", self.RESEARCH_FIELD_NAME
+            )
+            self.RESEARCH_FIELD_TAG = profile.get(
+                "field_slug", self.RESEARCH_FIELD_TAG
+            )
 
             # 加载搜索设置
             if "search_settings" in config:
