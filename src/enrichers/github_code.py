@@ -4,6 +4,7 @@ import os
 import re
 import base64
 from typing import Dict, List
+from urllib.parse import quote
 
 import requests
 
@@ -14,6 +15,7 @@ class GitHubCodeEnricher:
 
     def __init__(self, token: str = None):
         self.session = requests.Session()
+        self._readme_cache: Dict[str, str] = {}
         token = token or os.getenv("GITHUB_TOKEN", "")
         if token:
             self.session.headers["Authorization"] = f"Bearer {token}"
@@ -38,16 +40,67 @@ class GitHubCodeEnricher:
         return "possible"
 
     def _readme(self, full_name: str) -> str:
+        if full_name in self._readme_cache:
+            return self._readme_cache[full_name]
         try:
             response = self.session.get(f"{self.REPO_API_URL}/{full_name}/readme", timeout=20)
             if response.status_code == 404:
                 return ""
             response.raise_for_status()
-            return base64.b64decode(response.json().get("content", "")).decode(
+            readme = base64.b64decode(response.json().get("content", "")).decode(
                 "utf-8", errors="ignore"
             )
+            self._readme_cache[full_name] = readme
+            return readme
         except (requests.RequestException, ValueError):
             return ""
+
+    def find_paper_pdf(self, full_name: str, title: str) -> Dict:
+        """Return a paper PDF explicitly linked by a title-matched repository README."""
+        readme = self._readme(full_name)
+        title_tokens = self._tokens(title)
+        overlap = len(title_tokens & self._tokens(readme)) / max(len(title_tokens), 1)
+        if overlap < 0.8:
+            return {}
+
+        links = re.findall(r"\[([^\]]+)\]\(([^)]+)\)", readme)
+        for label, href in links:
+            clean_href = href.strip().split("#", 1)[0]
+            if "paper" not in label.lower() and not re.search(r"\.pdf$", clean_href, re.I):
+                continue
+            if clean_href.startswith(("http://", "https://")):
+                if "github.com" not in clean_href and "raw.githubusercontent.com" not in clean_href:
+                    continue
+                return {
+                    "pdf_url": clean_href,
+                    "provider": "github_author_repository",
+                    "repository": full_name,
+                }
+
+            relative_path = re.sub(r"^\./", "", clean_href).lstrip("/")
+            if not relative_path.lower().endswith(".pdf"):
+                continue
+            candidate_paths = [relative_path]
+            if relative_path.startswith("blob/"):
+                candidate_paths.append(relative_path.removeprefix("blob/"))
+            for path in candidate_paths:
+                try:
+                    response = self.session.get(
+                        f"{self.REPO_API_URL}/{full_name}/contents/{quote(path)}", timeout=20
+                    )
+                    if response.status_code == 404:
+                        continue
+                    response.raise_for_status()
+                    download_url = response.json().get("download_url")
+                    if download_url:
+                        return {
+                            "pdf_url": download_url,
+                            "provider": "github_author_repository",
+                            "repository": full_name,
+                        }
+                except (requests.RequestException, ValueError):
+                    continue
+        return {}
 
     def _verify(
         self, item: Dict, title: str, authors: List[str], arxiv_id: str, doi: str, declared: bool = False

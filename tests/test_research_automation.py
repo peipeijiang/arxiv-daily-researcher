@@ -1,3 +1,4 @@
+import base64
 import json
 import os
 import sys
@@ -214,6 +215,27 @@ class ResearchAutomationTests(unittest.TestCase):
         )
         result = resolver.from_openalex_locations(paper)
         self.assertEqual(result["provider"], "institutional_or_author_repository")
+
+    def test_openreview_exact_title_returns_public_pdf(self):
+        resolver = OpenAccessResolver()
+        response = Mock()
+        response.raise_for_status.return_value = None
+        response.json.return_value = {
+            "notes": [
+                {
+                    "id": "openreview-note-id",
+                    "content": {"title": {"value": "Exact Research Title"}},
+                }
+            ]
+        }
+        resolver.session.get = Mock(return_value=response)
+
+        result = resolver.from_openreview("Exact Research Title")
+
+        self.assertEqual(result["provider"], "openreview")
+        self.assertEqual(
+            result["pdf_url"], "https://openreview.net/pdf?id=openreview-note-id"
+        )
     def test_wechat_truncation_never_cuts_markdown_link(self):
         link = "[忽略](https://github.com/example/issues/new?title=paper)\n"
         content = "标题\n" + link + ("普通内容\n" * 300)
@@ -285,7 +307,6 @@ class ResearchAutomationTests(unittest.TestCase):
         readme = Mock()
         readme.status_code = 200
         readme.raise_for_status.return_value = None
-        import base64
         readme.json.return_value = {
             "content": base64.b64encode(b"Modern Recommender Models with Graph Learning").decode()
         }
@@ -294,6 +315,28 @@ class ResearchAutomationTests(unittest.TestCase):
         self.assertEqual([item["full_name"] for item in matches], ["lab/modern-recommender-models"])
         self.assertEqual(matches[0]["classification"], "possible")
         self.assertTrue(matches[0]["evidence"])
+
+    def test_github_enricher_finds_readme_linked_author_pdf(self):
+        enricher = GitHubCodeEnricher(token="test")
+        readme = Mock()
+        readme.status_code = 200
+        readme.raise_for_status.return_value = None
+        readme.json.return_value = {
+            "content": base64.b64encode(
+                b"# Exact Research Title\n[paper](blob/The_WebConf_2025_.pdf)"
+            ).decode()
+        }
+        contents = Mock()
+        contents.raise_for_status.return_value = None
+        contents.json.return_value = {
+            "download_url": "https://raw.githubusercontent.com/author/repo/main/paper.pdf"
+        }
+        enricher.session.get = Mock(side_effect=[readme, contents])
+
+        result = enricher.find_paper_pdf("author/repo", "Exact Research Title")
+
+        self.assertEqual(result["provider"], "github_author_repository")
+        self.assertEqual(result["repository"], "author/repo")
 
     def test_declared_repository_is_official(self):
         enricher = GitHubCodeEnricher(token="test")

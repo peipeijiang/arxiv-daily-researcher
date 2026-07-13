@@ -11,6 +11,7 @@ import requests
 class OpenAccessResolver:
     UNPAYWALL_URL = "https://api.unpaywall.org/v2"
     CORE_URL = "https://api.core.ac.uk/v3"
+    OPENREVIEW_URL = "https://api2.openreview.net/notes"
 
     def __init__(self, email: str = "", core_api_key: str = ""):
         self.email = email
@@ -25,6 +26,10 @@ class OpenAccessResolver:
     @staticmethod
     def _result(url: str, provider: str, **metadata) -> Dict:
         return {"pdf_url": url, "provider": provider, **metadata}
+
+    @staticmethod
+    def _title_key(title: str) -> str:
+        return re.sub(r"[^a-z0-9]+", "", (title or "").lower())
 
     def _pdf_from_public_page(self, page_url: str) -> Optional[str]:
         """Find a directly linked PDF on an author or institutional repository page."""
@@ -105,9 +110,41 @@ class OpenAccessResolver:
             return None
         return None
 
+    def from_openreview(self, title: str) -> Optional[Dict]:
+        """Find an exact-title public OpenReview submission and its PDF."""
+        if not title:
+            return None
+        try:
+            response = self.session.get(
+                self.OPENREVIEW_URL,
+                params={"content.title": title, "limit": 10},
+                timeout=20,
+            )
+            response.raise_for_status()
+            expected = self._title_key(title)
+            for note in response.json().get("notes", []):
+                content = note.get("content") or {}
+                note_title = content.get("title") or ""
+                if isinstance(note_title, dict):
+                    note_title = note_title.get("value") or ""
+                if self._title_key(note_title) != expected:
+                    continue
+                note_id = note.get("id")
+                if note_id:
+                    return self._result(
+                        f"https://openreview.net/pdf?id={note_id}",
+                        "openreview",
+                        license="public submission",
+                        landing_page=f"https://openreview.net/forum?id={note_id}",
+                    )
+        except requests.RequestException:
+            return None
+        return None
+
     def resolve(self, paper) -> Optional[Dict]:
         return (
             self.from_openalex_locations(paper)
             or self.from_unpaywall(paper.doi)
+            or self.from_openreview(paper.title)
             or self.from_core(paper.doi, paper.title)
         )

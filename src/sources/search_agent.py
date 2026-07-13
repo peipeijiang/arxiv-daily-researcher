@@ -270,7 +270,7 @@ class SearchAgent:
             if source == "arxiv":
                 continue
             for paper in papers:
-                if paper.has_pdf_access() or attempted >= 40:
+                if paper.arxiv_id or paper.fulltext_provenance or attempted >= 40:
                     continue
                 attempted += 1
                 candidate = self.open_access_resolver.resolve(paper)

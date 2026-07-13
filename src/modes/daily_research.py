@@ -384,6 +384,17 @@ class DailyResearchPipeline:
                         doi=paper.doi,
                         abstract=paper.abstract,
                     )
+                    if not paper.arxiv_id and not paper.fulltext_provenance:
+                        for repository in paper.code_repositories:
+                            fulltext = github_enricher.find_paper_pdf(
+                                repository.get("full_name", ""), paper.title
+                            )
+                            if not fulltext:
+                                continue
+                            paper.pdf_url = fulltext["pdf_url"]
+                            paper.fulltext_provenance = fulltext
+                            logger.info(f">>> 作者 GitHub 全文命中: {paper.title[:55]}")
+                            break
 
             if translation_cache:
                 cache_savings = total_papers_count - len(translation_cache)
