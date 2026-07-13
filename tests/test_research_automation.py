@@ -327,6 +327,28 @@ class ResearchAutomationTests(unittest.TestCase):
         self.assertIn("仅摘要 **1** 篇", overview)
         self.assertIn("存在未获取正文的论文", overview)
 
+    def test_paper_card_separates_venue_from_discovery_source(self):
+        agent = NotifierAgent.__new__(NotifierAgent)
+        card = agent._format_wechat_paper_card(
+            {
+                "paper_id": "doi:venue",
+                "title": "Venue Metadata",
+                "source": "openalex",
+                "journal": "Proceedings of ACM RecSys",
+                "publication_type": "proceedings-article",
+                "published_date": "2026-07-13T00:00:00",
+                "score": 72,
+                "analysis": {"_analysis_basis": "full_text", "summary": "结论"},
+            },
+            1,
+            1,
+        )
+
+        self.assertIn("**期刊 / 会议 / 系列**\n> Proceedings of ACM RecSys", card)
+        self.assertIn("`会议论文` · `2026-07-13`", card)
+        self.assertIn('<font color="info">全文深读</font> · 基础分 **72.0**', card)
+        self.assertIn("发现渠道：OPENALEX", card)
+
     def test_wechat_overview_uses_configured_research_field(self):
         agent = NotifierAgent.__new__(NotifierAgent)
         agent.settings = SimpleNamespace(RESEARCH_FIELD_NAME="商业银行、财政和货币政策")
