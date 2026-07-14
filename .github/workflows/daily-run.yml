@@ -16,7 +16,7 @@ on:
 jobs:
   research:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     permissions:
       contents: write
       issues: read
@@ -49,6 +49,7 @@ jobs:
           OPENALEX_API_KEY=${{ secrets.OPENALEX_API_KEY }}
           SEMANTIC_SCHOLAR_API_KEY=${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
           CORE_API_KEY=${{ secrets.CORE_API_KEY }}
+          SEARCH_DAYS_OVERRIDE=${{ inputs.search_days || '1' }}
           MINIMAX_API_KEY=${{ secrets.MINIMAX_API_KEY }}
           EMBEDDING_BASE_URL=https://api.minimaxi.com/v1
           EMBEDDING_MODEL=embo-01
@@ -76,9 +77,9 @@ jobs:
           path: |
             data/history/
             data/keywords/
-          key: research-data-${{ github.run_number }}
+          key: research-data-v2-${{ github.run_number }}
           restore-keys: |
-            research-data-
+            research-data-v2-
 
       - name: Create data directories
         run: |
@@ -126,10 +127,10 @@ jobs:
           retention-days: 30
 
       - name: Save data for next run
-        if: always()
+        if: success()
         uses: actions/cache/save@v4
         with:
           path: |
             data/history/
             data/keywords/
-          key: research-data-${{ github.run_number }}
+          key: research-data-v2-${{ github.run_number }}

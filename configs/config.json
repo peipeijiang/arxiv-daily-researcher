@@ -4,11 +4,11 @@
   // ==================================================
   "search_settings": {
     "search_days": 3,
-    "max_results": 120,
+    "max_results": 40,
     "max_results_per_source": {
-      "arxiv": 120,
-      "openalex": 60,
-      "dblp": 30
+      "arxiv": 40,
+      "openalex": 25,
+      "dblp": 15
     }
   },
 

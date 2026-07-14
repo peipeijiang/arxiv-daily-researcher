@@ -13,7 +13,7 @@ class CitationDiscovery:
         self.openalex = openalex
         self.index_path = index_path
 
-    def _seeds(self, limit: int = 10) -> List[Dict]:
+    def _seeds(self, limit: int = 5) -> List[Dict]:
         if not self.index_path.exists():
             return []
         seeds = {}
@@ -26,12 +26,12 @@ class CitationDiscovery:
                 continue
         return sorted(seeds.values(), key=lambda row: row.get("score", 0), reverse=True)[:limit]
 
-    def discover(self, existing_ids: set, max_total: int = 60) -> List[PaperMetadata]:
+    def discover(self, existing_ids: set, max_total: int = 20) -> List[PaperMetadata]:
         candidates = {}
         for seed in self._seeds():
             seed_id = seed["openalex_id"]
-            related_ids = seed.get("related_works", [])[:5]
-            reference_ids = seed.get("referenced_works", [])[:5]
+            related_ids = seed.get("related_works", [])[:3]
+            reference_ids = seed.get("referenced_works", [])[:3]
             for relation, ids in (("related_to_seed", related_ids), ("referenced_by_seed", reference_ids)):
                 for work_id, paper in self.openalex.lookup_by_ids(ids).items():
                     if paper.paper_id in existing_ids or self.openalex.is_processed(paper.paper_id):
@@ -45,7 +45,7 @@ class CitationDiscovery:
                     }
                     candidates[work_id] = paper
             since = (date.today() - timedelta(days=30)).isoformat()
-            for paper in self.openalex.find_recent_citing(seed_id, since, limit=10):
+            for paper in self.openalex.find_recent_citing(seed_id, since, limit=5):
                 if paper.paper_id in existing_ids or self.openalex.is_processed(paper.paper_id):
                     continue
                 paper.discovery = {

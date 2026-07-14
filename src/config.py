@@ -56,6 +56,7 @@ class Settings(BaseSettings):
     # ==================== 搜索配置 ====================
     MAX_RESULTS: int = 100  # 单次搜索的最大返回结果数
     SEARCH_DAYS: int = 7  # 搜索最近N天的论文
+    SEARCH_DAYS_OVERRIDE: Optional[int] = None  # GitHub Actions 手动/定时窗口覆盖
     TARGET_DOMAINS: List[str] = ["quant-ph"]  # 目标领域列表
 
     # ==================== 数据源配置 ====================
@@ -307,6 +308,8 @@ class Settings(BaseSettings):
             if "search_settings" in config:
                 settings = config["search_settings"]
                 self.SEARCH_DAYS = settings.get("search_days", self.SEARCH_DAYS)
+                if self.SEARCH_DAYS_OVERRIDE is not None:
+                    self.SEARCH_DAYS = max(1, self.SEARCH_DAYS_OVERRIDE)
                 self.MAX_RESULTS = settings.get("max_results", self.MAX_RESULTS)
                 self.MAX_RESULTS_PER_SOURCE = settings.get("max_results_per_source", {})
 
