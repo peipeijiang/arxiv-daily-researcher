@@ -735,6 +735,858 @@
     "W4410636559": {
       "title": "Conf-GNNRec: Quantifying and Calibrating the Prediction Confidence for GNN-based Recommendation Methods",
       "paper_id": "https://doi.org/10.1145/3701716.3715475"
+    },
+    "2607.11465v1": {
+      "title": "Score-Only Distillation for Compact Dense Retrieval",
+      "paper_id": "2607.11465v1"
+    },
+    "2607.11564v1": {
+      "title": "PaperRouter-Agent: A Content-Grounded LLM Agent for Personalized Hierarchical Paper Routing",
+      "paper_id": "2607.11564v1"
+    },
+    "2607.11464v1": {
+      "title": "FAIR GraphRAG: A Retrieval-Augmented Generation Approach for Semantic Data Analysis",
+      "paper_id": "2607.11464v1"
+    },
+    "2607.11392v1": {
+      "title": "Beyond Semantic IDs: Encoding Business-Value Ranking into Document Identifiers for Generative Retrieval",
+      "paper_id": "2607.11392v1"
+    },
+    "2607.11362v1": {
+      "title": "Boolean queries are all you need?",
+      "paper_id": "2607.11362v1"
+    },
+    "2607.11354v1": {
+      "title": "User Preference Induction with LLMs for Offline Top-N Recommendation Evaluation",
+      "paper_id": "2607.11354v1"
+    },
+    "2607.11353v1": {
+      "title": "Characterising AI Models for Cataloguing",
+      "paper_id": "2607.11353v1"
+    },
+    "2607.11267v1": {
+      "title": "Enhancing LLMs through human feedback: a journey towards self-improvement",
+      "paper_id": "2607.11267v1"
+    },
+    "2607.11326v1": {
+      "title": "Prompt Generation Technical Report",
+      "paper_id": "2607.11326v1"
+    },
+    "2607.11159v1": {
+      "title": "NGM-RAG: Neural Graph Matching based Retrieval-Augmented Generation",
+      "paper_id": "2607.11159v1"
+    },
+    "2607.11109v1": {
+      "title": "Generative Chinese Statute Retrieval",
+      "paper_id": "2607.11109v1"
+    },
+    "2607.11875v1": {
+      "title": "Invariant Learning Dynamics of Transformers in Inductive Reasoning Tasks",
+      "paper_id": "2607.11875v1"
+    },
+    "2607.11883v1": {
+      "title": "Requential Coding: Pushing the Limits of Model Compression with Self-Generated Training Data",
+      "paper_id": "2607.11883v1"
+    },
+    "2607.11874v1": {
+      "title": "A Minimalist Retargeting-Guided Reinforcement Learning Recipe for Dexterous Manipulation",
+      "paper_id": "2607.11874v1"
+    },
+    "2607.11873v1": {
+      "title": "A Durability and Cross-Language Transfer Benchmark for a Validated Teaching-Feedback Classification Protocol",
+      "paper_id": "2607.11873v1"
+    },
+    "2607.11871v1": {
+      "title": "Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias",
+      "paper_id": "2607.11871v1"
+    },
+    "2607.11843v1": {
+      "title": "Input-Aware Dynamic Backdoor Attack Against Quantum Neural Networks",
+      "paper_id": "2607.11843v1"
+    },
+    "2607.11826v1": {
+      "title": "Transformer-Guided Swarm Intelligence for Frugal Neural Architecture Search",
+      "paper_id": "2607.11826v1"
+    },
+    "2607.11816v1": {
+      "title": "Relaxing Faithfulness with Intervention-Only Causal Discovery",
+      "paper_id": "2607.11816v1"
+    },
+    "2607.11760v1": {
+      "title": "From Expressivity to Sample Complexity: Narrow Teachers for Transformers via C-RASP",
+      "paper_id": "2607.11760v1"
+    },
+    "2607.11796v1": {
+      "title": "An Exact Instrument for State Usage in Selective State-Space Models, and the Input-Driven Migration It Reveals",
+      "paper_id": "2607.11796v1"
+    },
+    "2607.11758v1": {
+      "title": "From Global to Factor-Wise Expert Composition in Discrete Diffusion Models",
+      "paper_id": "2607.11758v1"
+    },
+    "2607.11752v1": {
+      "title": "Paradoxes of Game Theoretic Equilibria and Price of Anarchy",
+      "paper_id": "2607.11752v1"
+    },
+    "2607.11751v1": {
+      "title": "When Local Monitors Miss Compositional Harm: Diagnosing Distributed Backdoors in Multi-Agent Systems",
+      "paper_id": "2607.11751v1"
+    },
+    "2607.11746v1": {
+      "title": "HiFi-LLP: High-Fidelity, Low-Cost Latency Predictors with Confidence for Robust HW-NAS",
+      "paper_id": "2607.11746v1"
+    },
+    "2607.11734v1": {
+      "title": "NeuralActuator: Neural Actuation Modeling for Robot Dynamics and External Force Perception",
+      "paper_id": "2607.11734v1"
+    },
+    "2607.11725v1": {
+      "title": "Time-Lag-Aware Deep Reinforcement Learning for Flexible Job-Shop Scheduling in PPVC Module Factories",
+      "paper_id": "2607.11725v1"
+    },
+    "2607.11720v1": {
+      "title": "Active Offline-to-Online Reinforcement Learning",
+      "paper_id": "2607.11720v1"
+    },
+    "2607.11712v1": {
+      "title": "CatRetriever: Contrastive Representation Learning for Slab-to-Bulk Retrieval in Generative Catalyst Discovery",
+      "paper_id": "2607.11712v1"
+    },
+    "2607.11701v1": {
+      "title": "$\\mathtt{Q^2SAR}$: overcoming classical bottlenecks in drug discovery via quantum multiple kernel learning",
+      "paper_id": "2607.11701v1"
+    },
+    "2607.11686v1": {
+      "title": "Self-Healing Visual Recovery for Autonomous Ground Vehicles Using Camera-Only Visual Odometry",
+      "paper_id": "2607.11686v1"
+    },
+    "2607.11684v1": {
+      "title": "Diversified Multinomial Logit Contextual Bandits",
+      "paper_id": "2607.11684v1"
+    },
+    "2607.11672v1": {
+      "title": "A multi-scale feature enhanced graph neural network for fluid dynamics prediction in complex geometries",
+      "paper_id": "2607.11672v1"
+    },
+    "2607.11666v1": {
+      "title": "How to Tame Grokking: Representation Geometry as a Control Signal",
+      "paper_id": "2607.11666v1"
+    },
+    "2607.11656v1": {
+      "title": "Imputation-free transformer learning enables robust Alzheimer's disease prediction and calibrated uncertainty quantification across heterogeneous clinical cohorts",
+      "paper_id": "2607.11656v1"
+    },
+    "2607.11653v1": {
+      "title": "Bet on Features: Anytime-Valid and Feature-Aware Auditing of Conditional Quantile Forecasters",
+      "paper_id": "2607.11653v1"
+    },
+    "2607.11635v1": {
+      "title": "Fundamental Limitations of Fixed-Budget Best-Arm Identification",
+      "paper_id": "2607.11635v1"
+    },
+    "2607.11632v1": {
+      "title": "Reproducing human biases in route choice using large language models: Toward scalable behavioral modeling",
+      "paper_id": "2607.11632v1"
+    },
+    "2607.11624v1": {
+      "title": "SKooP: Symmetric Koopman Predictions for Faster and More Generalizable Legged Robot Locomotion with Reinforcement Learning",
+      "paper_id": "2607.11624v1"
+    },
+    "2607.11621v1": {
+      "title": "Lesioned Multimodal Language Models Reproduce Aphasic Picture-Naming Patterns",
+      "paper_id": "2607.11621v1"
+    },
+    "2607.11607v1": {
+      "title": "Auditing the Risk Claims of Distributional Reinforcement Learning",
+      "paper_id": "2607.11607v1"
+    },
+    "2607.11600v1": {
+      "title": "Privacy-Aware Collaborative and Distributed Bayesian Optimization",
+      "paper_id": "2607.11600v1"
+    },
+    "2607.11606v1": {
+      "title": "Globally Consistent Coloring Schemes for Language Identification",
+      "paper_id": "2607.11606v1"
+    },
+    "2607.11585v1": {
+      "title": "Machine Learning-Based Reconstruction for Resistive Silicon Sensors",
+      "paper_id": "2607.11585v1"
+    },
+    "2607.11578v1": {
+      "title": "DiffEEG: A Self-Supervised Denoising Diffusion Model for Learning EEG Generic Representations",
+      "paper_id": "2607.11578v1"
+    },
+    "2607.11577v1": {
+      "title": "Structure-Feature Aligned Graph Learning via Alternating Constrained Optimization",
+      "paper_id": "2607.11577v1"
+    },
+    "2607.11565v1": {
+      "title": "Heuristic Learning for Active Flow Control Using Coding Agents",
+      "paper_id": "2607.11565v1"
+    },
+    "2607.11555v1": {
+      "title": "Advancing Optimal Subset Oracle via Learning Relaxation of Neural Set Functions",
+      "paper_id": "2607.11555v1"
+    },
+    "2607.11548v1": {
+      "title": "Training-Free Off-Screen Player Imputation for Broadcast-Based Spatial Football Analytics",
+      "paper_id": "2607.11548v1"
+    },
+    "2607.11542v1": {
+      "title": "Condition-Stratified Robustness Analysis of Post-Hoc Calibration Methods for Probabilistic Classifiers",
+      "paper_id": "2607.11542v1"
+    },
+    "2607.11541v1": {
+      "title": "Random Label Prediction Heads for Studying Memorization in Deep Neural Networks",
+      "paper_id": "2607.11541v1"
+    },
+    "2607.11540v1": {
+      "title": "Tropical Circuits with Scalar Multiplication Gates",
+      "paper_id": "2607.11540v1"
+    },
+    "2607.11533v1": {
+      "title": "Adaptive Routing for Efficient Diffusion Transformer-Based PNI Prediction",
+      "paper_id": "2607.11533v1"
+    },
+    "2607.11530v1": {
+      "title": "Learning Residual Kinematic Corrections for Continuous Neural Decoding via Reinforcement Learning",
+      "paper_id": "2607.11530v1"
+    },
+    "2607.11526v1": {
+      "title": "AutoMatBench: An Automatic Optimization Toolkit for the Acceleration of Material Properties Prediction Benchmarking",
+      "paper_id": "2607.11526v1"
+    },
+    "2607.11510v1": {
+      "title": "DAG-FM: A Foundation Model for Causal Discovery under Heterogeneous Causal Mechanisms",
+      "paper_id": "2607.11510v1"
+    },
+    "2607.11508v1": {
+      "title": "CDFM: Towards a General-Purpose Causal Discovery Foundation Model",
+      "paper_id": "2607.11508v1"
+    },
+    "2607.11506v1": {
+      "title": "SCOPE-RL: Optimizing Reasoning Paths Before and After Success",
+      "paper_id": "2607.11506v1"
+    },
+    "2607.11505v1": {
+      "title": "Proxy Exploration and Reusable Guidance: A Modular LLM Post-Training Paradigm via Proxy-Guided Update Signals",
+      "paper_id": "2607.11505v1"
+    },
+    "2607.11497v1": {
+      "title": "IG-GAN: A Generative Adversarial Network for Aerodynamic Data Generation Based on Intrinsic Geometry",
+      "paper_id": "2607.11497v1"
+    },
+    "2607.11493v1": {
+      "title": "Agentic Skill Optimization over Lie Algebroids",
+      "paper_id": "2607.11493v1"
+    },
+    "2607.11488v1": {
+      "title": "Compound Interference Recognition for LR-FHSS Satellite IoT Uplinks via Multi-Domain Instance Fusion",
+      "paper_id": "2607.11488v1"
+    },
+    "2607.11475v1": {
+      "title": "HyperSafe: Inference-Time Safety Recovery for Fine-Tuned Language Models",
+      "paper_id": "2607.11475v1"
+    },
+    "2607.11473v1": {
+      "title": "Towards Efficient Convolutional Neural Network for Embedded Hardware via Multi-Dimensional Pruning",
+      "paper_id": "2607.11473v1"
+    },
+    "2607.11445v1": {
+      "title": "Event-based Neural Decoding for Neuroprosthetic Motor Control",
+      "paper_id": "2607.11445v1"
+    },
+    "2607.11470v1": {
+      "title": "Climate-Invariant Conformal Prediction Intervals for Multi-Horizon Solar and Wind Forecasting",
+      "paper_id": "2607.11470v1"
+    },
+    "2607.11432v1": {
+      "title": "Generalizing Preference-based Reinforcement Learning: a Rationality Model for Incomparability",
+      "paper_id": "2607.11432v1"
+    },
+    "2607.11442v1": {
+      "title": "Velocity Scheduled Flow Matching",
+      "paper_id": "2607.11442v1"
+    },
+    "2607.11429v1": {
+      "title": "Physics-Aware Conditional SetGAN for Spatially Consistent Multi-User TR 38.901 Channel Generation",
+      "paper_id": "2607.11429v1"
+    },
+    "2607.11388v1": {
+      "title": "StructAgent: Harness Long-horizon Digital Agents with Unified Causal Structure",
+      "paper_id": "2607.11388v1"
+    },
+    "2607.11374v1": {
+      "title": "Surprisingly Simple and Effective Multi-Domain Graph Foundation Model through Graph-to-Table Alignment",
+      "paper_id": "2607.11374v1"
+    },
+    "2607.11368v1": {
+      "title": "Decomposing Runtime, Kernel, and Quantization Speedups via a Matched FP16 Intermediate: A Hardware-Conditioned Case Study on Four NVIDIA RTX A5000 GPUs",
+      "paper_id": "2607.11368v1"
+    },
+    "2607.11364v1": {
+      "title": "BackgroundMellow: A Multi-Modal Cohesive Framework for Narrative-Driven Rich Cinematic Soundscape Generation",
+      "paper_id": "2607.11364v1"
+    },
+    "2607.11349v1": {
+      "title": "Inter-Stop Energy Prediction and Causal Driver Quantification for Dual-Source Trolleybuses via a Time-Aware Tabular Deep Learning Architecture",
+      "paper_id": "2607.11349v1"
+    },
+    "2607.11327v1": {
+      "title": "PRISM Edit: One Vector for All Temporal Answers",
+      "paper_id": "2607.11327v1"
+    },
+    "2607.11310v1": {
+      "title": "SPARC-Net: A Spectral, Causality-Aware, and Hard-Constrained Physics-Informed Architecture for Stiff and Shock-Dominated Partial Differential Equations",
+      "paper_id": "2607.11310v1"
+    },
+    "2607.11289v1": {
+      "title": "Backpropagation as a Nilpotent Linear System",
+      "paper_id": "2607.11289v1"
+    },
+    "2607.11273v1": {
+      "title": "Fixed-Protocol Amortized MPS Tomography with Conformalized Predictive Uncertainty",
+      "paper_id": "2607.11273v1"
+    },
+    "2607.11272v1": {
+      "title": "Long-Memory Reservoir Computing for Data-Scarce Dengue Forecasting",
+      "paper_id": "2607.11272v1"
+    },
+    "2607.11263v1": {
+      "title": "Bringing Back Rule Induction to Fluid Intelligence Research? An Initial Validation of the ARC-AGI Benchmark in Humans",
+      "paper_id": "2607.11263v1"
+    },
+    "2607.11269v1": {
+      "title": "Trustworthy synthetic data for campaign decision support: strategy simulation fidelity and the PolicySynth framework",
+      "paper_id": "2607.11269v1"
+    },
+    "2607.11257v1": {
+      "title": "LaGuadia: Language-Guided Adaptive Distillation from Pathology Foundation Models",
+      "paper_id": "2607.11257v1"
+    },
+    "2607.11212v1": {
+      "title": "PREF-Gate: Provenance-Constrained Relational Evidence Fusion with Validation-Gated Selection for Graph Fraud Detection",
+      "paper_id": "2607.11212v1"
+    },
+    "2607.11211v1": {
+      "title": "FastTPS: An Optimized Method for LLM Token Phase for AI accelerators",
+      "paper_id": "2607.11211v1"
+    },
+    "2607.11177v1": {
+      "title": "NeuroMem-FHP: A Likelihood-Free Deep Learning Framework for Parameter Estimation of Fractional Hawkes Process",
+      "paper_id": "2607.11177v1"
+    },
+    "2607.11172v1": {
+      "title": "STAMP: Provenance-Guided Credit Assignment for Deep Search Agents",
+      "paper_id": "2607.11172v1"
+    },
+    "2607.11167v1": {
+      "title": "Pix2Act: Image-Space Manipulation Policies with Equivariant Augmentation",
+      "paper_id": "2607.11167v1"
+    },
+    "2607.11140v1": {
+      "title": "Learning Subgroup Relations Using Siamese Graph Neural Networks",
+      "paper_id": "2607.11140v1"
+    },
+    "2607.11146v1": {
+      "title": "Rank-Conditioned Sample Reuse for the Plackett--Luce Best-of-$K$ Objective",
+      "paper_id": "2607.11146v1"
+    },
+    "2607.11138v1": {
+      "title": "A Formal Hierarchical Architecture for Agentic Orchestration with Stack-Based Execution and Lazy Discovery",
+      "paper_id": "2607.11138v1"
+    },
+    "2607.11128v1": {
+      "title": "Comparison-Based Ordinal Learning for Proactive Driving Risk Assessment",
+      "paper_id": "2607.11128v1"
+    },
+    "2607.11126v1": {
+      "title": "ToolAtlas: Learning Once, Reusing Everywhere with Tool-Side Memory",
+      "paper_id": "2607.11126v1"
+    },
+    "2607.11122v1": {
+      "title": "Implicit Neural Networks as Static Controllers: Certificates and Performance Separation",
+      "paper_id": "2607.11122v1"
+    },
+    "2607.11112v1": {
+      "title": "CA-DGCL: Dynamic Graph Continual Learning via Condensation and Attachment",
+      "paper_id": "2607.11112v1"
+    },
+    "2607.11116v1": {
+      "title": "The Equilibrium Is the Initialization: Lazy Identity Collapse in Physics-Structured Deep Equilibrium Reasoning",
+      "paper_id": "2607.11116v1"
+    },
+    "2607.11110v1": {
+      "title": "Neural Discovery of Memory and Nonlocal Kernels in Integro-Differential Equations with Constrained Kolmogorov--Arnold Networks",
+      "paper_id": "2607.11110v1"
+    },
+    "2607.11107v1": {
+      "title": "A Novel Graph Fraud Detector via Grouped Attribute Completion and Confidence-Aware Contrastive Learning",
+      "paper_id": "2607.11107v1"
+    },
+    "2607.11094v1": {
+      "title": "Multi-dimensional training-priority weighting based on physical information propagation paths: a unified residual-weighting framework for physics-informed neural networks",
+      "paper_id": "2607.11094v1"
+    },
+    "2607.11095v1": {
+      "title": "When cheap gradients fail: the measurement cost of attacking quantum classifiers",
+      "paper_id": "2607.11095v1"
+    },
+    "2607.11091v1": {
+      "title": "Adapting Evidential Neural Networks to Test-Time Neighbor Fusion Improves Molecular Property Prediction",
+      "paper_id": "2607.11091v1"
+    },
+    "2607.11075v1": {
+      "title": "Link Adaptation Using Joint-Thompson Sampling",
+      "paper_id": "2607.11075v1"
+    },
+    "2607.11073v1": {
+      "title": "AeroMELD: A Linear Embedding of Aerosol Populations for Diagnostics and Latent Dynamics",
+      "paper_id": "2607.11073v1"
+    },
+    "2607.11881v1": {
+      "title": "Metacognition in LLMs: Foundations, Progress, and Opportunities",
+      "paper_id": "2607.11881v1"
+    },
+    "2607.11839v1": {
+      "title": "LoRA-Based Cascaded Multimodal Fusion for Action Recognition in Medical Training Environments",
+      "paper_id": "2607.11839v1"
+    },
+    "2607.11862v1": {
+      "title": "Evidence-Backed Video Question Answering",
+      "paper_id": "2607.11862v1"
+    },
+    "2607.11808v1": {
+      "title": "Introducing Human-Centeredness in AI-Assisted Lexicography",
+      "paper_id": "2607.11808v1"
+    },
+    "2607.11818v1": {
+      "title": "MM-ToolSandBox: A Unified Framework for Evaluating Visual Tool-Calling Agents",
+      "paper_id": "2607.11818v1"
+    },
+    "2607.11798v1": {
+      "title": "StoryTeller: Training-Free Narrative Grounding for Long-Form Audio Description",
+      "paper_id": "2607.11798v1"
+    },
+    "2607.11801v1": {
+      "title": "Encoder-Side Neuron Identification and Amplification for Acoustic Perception in Large Audio-Language Models",
+      "paper_id": "2607.11801v1"
+    },
+    "2607.11749v1": {
+      "title": "Playful AI in Professional Email: A Field Experiment on Tone and Recipient Engagement",
+      "paper_id": "2607.11749v1"
+    },
+    "2607.11771v1": {
+      "title": "Evaluating RE Practices for Explainability: Synthesizing Insights from Daimler Truck into an Explainable RE Framework Proposal",
+      "paper_id": "2607.11771v1"
+    },
+    "2607.11706v1": {
+      "title": "VoxENES 2026: Benchmarking Generalization of Speech Spoofing Detectors Against LLM-Era TTS and Voice Conversion",
+      "paper_id": "2607.11706v1"
+    },
+    "2607.11707v1": {
+      "title": "An Explainable Agentic System for Detection of Conversational Scams with Summary-Based Memory",
+      "paper_id": "2607.11707v1"
+    },
+    "2607.11698v1": {
+      "title": "Agent Hacks Agent: Autoresearch for Production-Agent Red-Teaming",
+      "paper_id": "2607.11698v1"
+    },
+    "2607.11696v1": {
+      "title": "Think Through a Bottleneck: Hourglass Reasoning for Rigorous Induction",
+      "paper_id": "2607.11696v1"
+    },
+    "2607.11689v1": {
+      "title": "From World Action Models to Embodied Brains: A Roadmap for Open-World Physical Intelligence",
+      "paper_id": "2607.11689v1"
+    },
+    "2607.11683v1": {
+      "title": "RAGU: A Multi-Step GraphRAG Engine with a Compact Domain-Adapted LLM",
+      "paper_id": "2607.11683v1"
+    },
+    "2607.11649v1": {
+      "title": "Closing the Loop: An Access-Control Architecture for Automated, Anomaly-Driven Network Revocation in IoT Deployments",
+      "paper_id": "2607.11649v1"
+    },
+    "2607.11643v1": {
+      "title": "Xiaomi-Robotics-U0: Unified Embodied Synthesis with World Foundation Model",
+      "paper_id": "2607.11643v1"
+    },
+    "2607.11614v1": {
+      "title": "Extending LLM Context via Associative Recurrent Memory",
+      "paper_id": "2607.11614v1"
+    },
+    "2607.11598v1": {
+      "title": "Interaction Scaling: Grounding the Third Axis of Test-Time Compute",
+      "paper_id": "2607.11598v1"
+    },
+    "2607.11594v1": {
+      "title": "MAGIC: Transition-Aware Generation of Navigable Multi-Scene Game Worlds with Large Language Models",
+      "paper_id": "2607.11594v1"
+    },
+    "2607.11586v1": {
+      "title": "HCRMap: Pressure-Aware Hot-Expert Residency Mapping for 3.5D MoE Chiplet Inference",
+      "paper_id": "2607.11586v1"
+    },
+    "2607.11560v1": {
+      "title": "Technical Report on the CVPR 2026@AdvML Workshop Challenge",
+      "paper_id": "2607.11560v1"
+    },
+    "2607.11523v1": {
+      "title": "Vinci2: Providing Proactive Assistance in Continuous Egocentric Videos",
+      "paper_id": "2607.11523v1"
+    },
+    "2607.11512v1": {
+      "title": "Toward Inclusive Avatar Design with Limb Differences Through Artificial Intelligence",
+      "paper_id": "2607.11512v1"
+    },
+    "2607.11501v1": {
+      "title": "Comparative Analysis of GAT and BERT for Human-Like Playtesting",
+      "paper_id": "2607.11501v1"
+    },
+    "2607.11498v1": {
+      "title": "See like a Robot: Robot-Centric Pointmaps for Vision-Language-Action Models",
+      "paper_id": "2607.11498v1"
+    },
+    "2607.11492v1": {
+      "title": "Enhancing Query Efficiency for d-DNNF Representations Through Preprocessing",
+      "paper_id": "2607.11492v1"
+    },
+    "2607.11487v1": {
+      "title": "LightMem-Ego: Your AI Memory for Everyday Life",
+      "paper_id": "2607.11487v1"
+    },
+    "2607.11459v1": {
+      "title": "A Multimodal Dataset for Large Language Model Applications in the Energy Domain",
+      "paper_id": "2607.11459v1"
+    },
+    "2607.11436v1": {
+      "title": "The Ebb and Flow of Multimodal Focus: Scheduling Visual Relay Windows for Grounded VLM Reasoning",
+      "paper_id": "2607.11436v1"
+    },
+    "2607.11433v1": {
+      "title": "Omni-Decision: A Progressive Evidence-State Agent System for Omni-Modal QA",
+      "paper_id": "2607.11433v1"
+    },
+    "2607.11412v1": {
+      "title": "Uncertainty Quantification for EO Regression Tasks: Building Height, Tree Canopy Height and Above-ground Biomass Estimation",
+      "paper_id": "2607.11412v1"
+    },
+    "2607.11399v1": {
+      "title": "Agentic Routing: The Harness-Native Data Flywheel",
+      "paper_id": "2607.11399v1"
+    },
+    "2607.11377v1": {
+      "title": "A Glimpse into Long-term Physical Coexistence with Intelligent Robots",
+      "paper_id": "2607.11377v1"
+    },
+    "2607.11363v1": {
+      "title": "Beyond Sally-Anne: Evaluating Theory of Mind in LLMs using Epistemic Schelling Points",
+      "paper_id": "2607.11363v1"
+    },
+    "2607.11357v1": {
+      "title": "OpsMem: Dual-Memory Reasoning with Cross-Memory Resonance for Failure Diagnosis",
+      "paper_id": "2607.11357v1"
+    },
+    "2607.11348v1": {
+      "title": "Understanding the Impact of AI Code Assistants on Security API Usage: An Empirical Study",
+      "paper_id": "2607.11348v1"
+    },
+    "2607.11347v1": {
+      "title": "From Neural Network Decisions to Training Cases: An Exact Account via Case-Based Decision Theory",
+      "paper_id": "2607.11347v1"
+    },
+    "2607.11346v1": {
+      "title": "Compile, Then Page: Executable SOP Programs and a Capability-Gated Runtime for Procedural LLM Agents",
+      "paper_id": "2607.11346v1"
+    },
+    "2607.11343v1": {
+      "title": "Longitudinal Multi-View Breast Cancer Risk Prediction",
+      "paper_id": "2607.11343v1"
+    },
+    "2607.11342v1": {
+      "title": "Fail-Aware and Explainable Test Oracle Prediction",
+      "paper_id": "2607.11342v1"
+    },
+    "2607.11338v1": {
+      "title": "AutoVSR: Automatic Visual-to-Symbolic Reasoning for Symbolic Expression Generation from Circuit Schematic",
+      "paper_id": "2607.11338v1"
+    },
+    "2607.11334v1": {
+      "title": "Verifier-Guided Twelve-Tone Composition: A Generate-Verify-Repair Harness for Symbolic Music Generation",
+      "paper_id": "2607.11334v1"
+    },
+    "2607.11317v1": {
+      "title": "Calibrated e-CUSUM Decoding for Quantized Reasoning Models: Why Token Log-Probability Is the Wrong Observable for Decoding Monitors",
+      "paper_id": "2607.11317v1"
+    },
+    "2607.11314v1": {
+      "title": "Programming Language Policy as an AI Literacy Equity Problem: A 15-Nation Comparative Analysis",
+      "paper_id": "2607.11314v1"
+    },
+    "2607.11307v1": {
+      "title": "Efficient Test-Time Optimization for Multi-Agent Proof Autoformalization",
+      "paper_id": "2607.11307v1"
+    },
+    "2607.11292v1": {
+      "title": "The Paternalistic Filter: Epistemic Injustice and Differential Refusal in LLM-Mediated History Education for Marginalized Romanian Students",
+      "paper_id": "2607.11292v1"
+    },
+    "2607.11288v1": {
+      "title": "Mako: A Self-Evolving Agentic Operating System (SE-AOS) for Autonomous Web Exploitation",
+      "paper_id": "2607.11288v1"
+    },
+    "2607.11287v1": {
+      "title": "A Unified Framework for Comprehensive Cardiac CT Segmentation and Phenotyping: Human-in-the-Loop Data Annotation, Vision Foundation Model Development, Multicenter Evaluation and Clinical Validation",
+      "paper_id": "2607.11287v1"
+    },
+    "2607.11276v1": {
+      "title": "Automated Textbook Auditing with Multi-Agent LLM Systems",
+      "paper_id": "2607.11276v1"
+    },
+    "2607.11270v1": {
+      "title": "Towards Predictive, Aligned, and Scalable Robot Learning",
+      "paper_id": "2607.11270v1"
+    },
+    "2607.11266v1": {
+      "title": "Valid $\\ne$ Necessary: Diagnosing Latent Inefficiency in Chain-of-Thought",
+      "paper_id": "2607.11266v1"
+    },
+    "2607.11250v1": {
+      "title": "Multi-Agent LLMs Fail to Explore Each Other",
+      "paper_id": "2607.11250v1"
+    },
+    "2607.11245v1": {
+      "title": "An Empirical Study for GUI Test Migration from Android to OpenHarmony System",
+      "paper_id": "2607.11245v1"
+    },
+    "2607.11228v1": {
+      "title": "DeepBias: Adaptive In-depth Probing of Social Biases in LVLMs",
+      "paper_id": "2607.11228v1"
+    },
+    "2607.11226v1": {
+      "title": "Heterogeneous Agent Cohorts for Safe Open-Ended Exploration with Runtime Constraint Memory",
+      "paper_id": "2607.11226v1"
+    },
+    "2607.11221v1": {
+      "title": "HandFlow: Fully Generative 4D Hand Recovery with Flow Matching",
+      "paper_id": "2607.11221v1"
+    },
+    "2607.11207v1": {
+      "title": "ProgramTab: Boosting Table Reasoning of LLMs via Programmatic Paradigm",
+      "paper_id": "2607.11207v1"
+    },
+    "2607.11197v1": {
+      "title": "What We Talk About When We Talk About LLM Planning: Evidence for Two Distinct Planning Abilities",
+      "paper_id": "2607.11197v1"
+    },
+    "2607.11193v1": {
+      "title": "RepTran: Search-Based Repair of Transformer Models",
+      "paper_id": "2607.11193v1"
+    },
+    "2607.11185v1": {
+      "title": "SCALECUA: Scaling Computer Use Agents with Verifiable Task Synthesis and Efficient Online RL",
+      "paper_id": "2607.11185v1"
+    },
+    "2607.11175v1": {
+      "title": "The Path to Self-Evolving Clinical Systems: Scaling Medical Agents from Assistance to Autonomy",
+      "paper_id": "2607.11175v1"
+    },
+    "2607.11151v1": {
+      "title": "AMT-X: Phase-Structured Multi-Turn Red-Teaming with Checklist-Gated Evaluation",
+      "paper_id": "2607.11151v1"
+    },
+    "2607.11149v1": {
+      "title": "The Hidden Footprint: Making Storage a First-Class Metric for LLM Agent Evaluation",
+      "paper_id": "2607.11149v1"
+    },
+    "2607.11141v1": {
+      "title": "NextFund: A Unified Performance Tracking Platform for Agentic Portfolio Management",
+      "paper_id": "2607.11141v1"
+    },
+    "2607.11124v1": {
+      "title": "BeatEdit: Symbolic Music Generation as Explicit Editing",
+      "paper_id": "2607.11124v1"
+    },
+    "2607.11119v1": {
+      "title": "VIA: Visual Interface Agent for Robot Control",
+      "paper_id": "2607.11119v1"
+    },
+    "2607.11117v1": {
+      "title": "MusicMark: A Robust Generative Watermarking Framework for Music Generation",
+      "paper_id": "2607.11117v1"
+    },
+    "2607.11098v1": {
+      "title": "AgentCheck: A Reproduce-Intervene-Mitigate Workbench for LLM Agents over MCP",
+      "paper_id": "2607.11098v1"
+    },
+    "2607.11089v1": {
+      "title": "OS-Pruner: Pruning Chains-of-Thought of Reasoning Models via Optimal Stopping",
+      "paper_id": "2607.11089v1"
+    },
+    "2607.11084v1": {
+      "title": "NVAITC AI Scientist: A Governed End-to-End Research System -- A Hypertension GWAS Case Study",
+      "paper_id": "2607.11084v1"
+    },
+    "2607.11081v1": {
+      "title": "Controlling Motion Transfer in Diffusion Transformers via Attention Heads",
+      "paper_id": "2607.11081v1"
+    },
+    "2607.11079v1": {
+      "title": "Are LLMs Ready for Scientific Discovery? A Capability-Oriented Benchmark for AI Scientists",
+      "paper_id": "2607.11079v1"
+    },
+    "2607.11078v1": {
+      "title": "Do Video-LLMs Actually Watch? Diagnosing Character-Tracking Failures in Long-Form Video",
+      "paper_id": "2607.11078v1"
+    },
+    "2607.11849v1": {
+      "title": "AdvancedMathBench: A Benchmark Suite for Advanced Mathematical Proof Generation and Verification",
+      "paper_id": "2607.11849v1"
+    },
+    "2607.11787v1": {
+      "title": "Forgetting Our Way to Shared Meaning: Effects of Forgetting on Conceptual Alignment in a Non-Partnership Coordination Game",
+      "paper_id": "2607.11787v1"
+    },
+    "2607.11783v1": {
+      "title": "How Temperature Shapes Ideological Discourse in Retrieval-Augmented Generation?",
+      "paper_id": "2607.11783v1"
+    },
+    "2607.11736v1": {
+      "title": "MET: Theory-Grounded and Culture-Aware Multilingual Moral Reasoning",
+      "paper_id": "2607.11736v1"
+    },
+    "2607.11722v1": {
+      "title": "STEP: Career-Path Recommendation via Temporal and Educational Trajectory Modeling",
+      "paper_id": "2607.11722v1"
+    },
+    "2607.11715v1": {
+      "title": "JobHop v2: A Large-Scale Career Trajectory Dataset from Unstructured Resumes",
+      "paper_id": "2607.11715v1"
+    },
+    "2607.11703v1": {
+      "title": "Production and Perception in LLMs: A Token Probability Approach",
+      "paper_id": "2607.11703v1"
+    },
+    "2607.11667v1": {
+      "title": "Losing My Composure: Predicting Compositionality Over Time",
+      "paper_id": "2607.11667v1"
+    },
+    "2607.11597v1": {
+      "title": "Beyond Benchmarks: Exposing the Hidden Crisis in Bangla Hate Speech Detection",
+      "paper_id": "2607.11597v1"
+    },
+    "2607.11515v1": {
+      "title": "Dzongkha Next Word Prediction System",
+      "paper_id": "2607.11515v1"
+    },
+    "2607.11503v1": {
+      "title": "GEIS: A Generation-Evaluation-Improvement Loop of Agent Skills for Long-Form Article Generation",
+      "paper_id": "2607.11503v1"
+    },
+    "2607.11486v1": {
+      "title": "Communicating Chess Strategies in Natural Language",
+      "paper_id": "2607.11486v1"
+    },
+    "2607.11471v1": {
+      "title": "Are LLMs ready for HardChoices?",
+      "paper_id": "2607.11471v1"
+    },
+    "2607.11444v1": {
+      "title": "UMoE:Unlocking Every Expert in Domain-Specific Training",
+      "paper_id": "2607.11444v1"
+    },
+    "2607.11437v1": {
+      "title": "Relational Positioning as a Measurable Risk Object: History-Carried Lock-in and Self-Confabulation in Multi-Turn Human-AI Dialogue",
+      "paper_id": "2607.11437v1"
+    },
+    "2607.11434v1": {
+      "title": "Direct Image-to-Modern Vietnamese Translation of Han-Nom Manuscripts via Multimodal RLHF Preference Alignment",
+      "paper_id": "2607.11434v1"
+    },
+    "2607.11423v1": {
+      "title": "ToFu: A White-Box, Token-Efficient Agent Harness for Researchers",
+      "paper_id": "2607.11423v1"
+    },
+    "2607.11414v1": {
+      "title": "Confidently Wrong: Detecting Hallucinations in Financial Question Answering from LLM Internal States",
+      "paper_id": "2607.11414v1"
+    },
+    "2607.11358v1": {
+      "title": "RefineEvo: Planning-Guided Heuristic Evolution with Bidirectional Experience",
+      "paper_id": "2607.11358v1"
+    },
+    "2607.11400v1": {
+      "title": "Cross-Architecture LLM Ensembles, Feature-Based Reranking and Retrieval-Augmented Prompting for Legal Information Processing",
+      "paper_id": "2607.11400v1"
+    },
+    "2607.11279v1": {
+      "title": "FAD-SA-GRU: Enhancing Hate Speech Detection in Algerian Dialect Through Feature-Augmented Self-Attention GRU Networks",
+      "paper_id": "2607.11279v1"
+    },
+    "2607.11341v1": {
+      "title": "The In-Car Sign Language Corpus (ICSL): A Multi-Modal Resource for Constrained-Space Sign Language Recognition",
+      "paper_id": "2607.11341v1"
+    },
+    "2607.11258v1": {
+      "title": "TreeThink: A Modular Tree Search Library for Mathematical Reasoning with LLMs",
+      "paper_id": "2607.11258v1"
+    },
+    "2607.11215v1": {
+      "title": "Q-BridgeNet: A Quantization Network for Cross-Lingual Sign Language Translation",
+      "paper_id": "2607.11215v1"
+    },
+    "2607.11213v1": {
+      "title": "When the Target Domain Changes: AI-Mediated Construct Drift in High-Stakes English Language AssessmenW",
+      "paper_id": "2607.11213v1"
+    },
+    "2607.11183v1": {
+      "title": "Amplitude-Only FFN Intervention for Tool-Structured LLM Inference Method: Gated Evaluation Protocol, and Cross-Model Empirical Results",
+      "paper_id": "2607.11183v1"
+    },
+    "2607.11166v1": {
+      "title": "Query-Focused Event Summarization: A Dataset and Benchmark",
+      "paper_id": "2607.11166v1"
+    },
+    "2607.11163v1": {
+      "title": "Unified Gradient Projection: Language-Balanced Continual Learning for Multilingual Low-Resource ASR",
+      "paper_id": "2607.11163v1"
+    },
+    "2607.11131v1": {
+      "title": "TIGER: Text-Conditioned Visual Gated Routing with Acceptance Alignment for Multimodal Speculative Decoding",
+      "paper_id": "2607.11131v1"
+    },
+    "2607.11127v1": {
+      "title": "Do LLMs Fabricate Legal Citations? A Bilingual Benchmark on Saudi Data Protection Law and the GDPR",
+      "paper_id": "2607.11127v1"
+    },
+    "2607.11120v1": {
+      "title": "Simple Features and Honest Calibration for Ambivalence and Hesitancy Recognition in Video",
+      "paper_id": "2607.11120v1"
+    },
+    "2607.11074v1": {
+      "title": "ResearchQA: Benchmarking Citation-Grounded Question-Answering on Scientific Papers",
+      "paper_id": "2607.11074v1"
+    },
+    "2607.11070v1": {
+      "title": "MJ: Multi-turn LLM Jailbreaking via Decomposed Credit Assignment",
+      "paper_id": "2607.11070v1"
+    },
+    "W4414035008": {
+      "title": "Normative Alignment of Recommender Systems via Internal Label Shift",
+      "paper_id": "https://doi.org/10.1145/3705328.3759309"
+    },
+    "W4414034914": {
+      "title": "Hierarchical Graph Information Bottleneck for Multi-Behavior Recommendation",
+      "paper_id": "https://doi.org/10.1145/3705328.3748073"
+    },
+    "W7167905574": {
+      "title": "Beyond the Single Path: Divergent Reasoning for LLM-based Recommendation",
+      "paper_id": "https://doi.org/10.1145/3805712.3809732"
+    },
+    "W7154834653": {
+      "title": "Bi-Level Optimization for Generative Recommendation: Bridging Tokenization and Generation",
+      "paper_id": "https://doi.org/10.1145/3805712.3809632"
     }
   },
   "edges": [
@@ -7717,6 +8569,596 @@
       "from": "W4410636559",
       "to": "W4396696052",
       "type": "related"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W2141253686",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W2150766729",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W2161676175",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W2562236173",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W2886498471",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W2911936302",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W2949676527",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W2953083078",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W2969886764",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W2970793364",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W3012748865",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W3019548522",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W3034503922",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W3101101404",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W3122725723",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W3134235469",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W3199543545",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W4224903831",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W4280615086",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W4285221954",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W4296604448",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W4321480060",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W4386729306",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W4386729664",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W4386730525",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W4386845623",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W4403222284",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W4403319954",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W4403582730",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W4404781003",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W4409671542",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W4391375266",
+      "type": "related"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W2899084033",
+      "type": "related"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W2748952813",
+      "type": "related"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W4390273403",
+      "type": "related"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W4386781444",
+      "type": "related"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W2150182025",
+      "type": "related"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W1989297139",
+      "type": "related"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W2342143608",
+      "type": "related"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W3092950680",
+      "type": "related"
+    },
+    {
+      "from": "W4414035008",
+      "to": "W2496755843",
+      "type": "related"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W1638081485",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W1806220264",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W2064754513",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W2517217469",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W2604314403",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W2723293840",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W2951045934",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W2951369132",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W2962745591",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W2996863522",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W2998249317",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W3035287707",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W3035669589",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W3045200674",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W3093519337",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W3093862905",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W3175450343",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W3176294187",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W3177890934",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W3199916614",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W4212931205",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W4306317296",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W4307203553",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W4324359913",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W4378771633",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W4385567607",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W4385750174",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W4394947896",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W4400528186",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W4401024508",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W4401863879",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W4402639612",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W4403577423",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W4409149706",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W4412377975",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W4413360778",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W4391375266",
+      "type": "related"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W2899084033",
+      "type": "related"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W2748952813",
+      "type": "related"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W2595172197",
+      "type": "related"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W2084856301",
+      "type": "related"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W2127970246",
+      "type": "related"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W2885125400",
+      "type": "related"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W1989889224",
+      "type": "related"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W4382618745",
+      "type": "related"
+    },
+    {
+      "from": "W4414034914",
+      "to": "W1973775000",
+      "type": "related"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W2626454364",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W2761752002",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W2783272285",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W2963367478",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W3032793209",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W4386728933",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W4387848931",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W4396758712",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W4396843633",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W4400525124",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W4400528915",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W4400606525",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W4400909953",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W4403220611",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W4404782432",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W4409365123",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W4411119800",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W4411599972",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W4412376976",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W4412377003",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W4412377062",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W4412377193",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W4412377908",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W4412396170",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W4412825747",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W4414580659",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W4415798326",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W4416034961",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W7138221254",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W7152567327",
+      "type": "cites"
+    },
+    {
+      "from": "W7167905574",
+      "to": "W7155896750",
+      "type": "cites"
     }
   ]
 }
