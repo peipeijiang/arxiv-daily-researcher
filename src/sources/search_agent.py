@@ -305,15 +305,51 @@ class SearchAgent:
 
                 traceback.print_exc()
 
+        results = self._deduplicate_across_sources(results)
+        results = self._apply_owner_limits(results)
         self._resolve_missing_arxiv_versions(results)
         self._resolve_missing_open_access(results)
-        results = self._deduplicate_across_sources(results)
 
         # 统计
         total = sum(len(papers) for papers in results.values())
         logger.info(f">>> 总计抓取 {total} 篇论文，来自 {len(results)} 个数据源")
 
         return results
+
+    def _apply_owner_limits(
+        self, results: Dict[str, List[PaperMetadata]]
+    ) -> Dict[str, List[PaperMetadata]]:
+        """Enforce configured limits across every group owned by one source."""
+        grouped: Dict[str, List[tuple[str, PaperMetadata]]] = {}
+        for source_label, papers in results.items():
+            owner = self._source_owner.get(source_label, source_label)
+            grouped.setdefault(owner, []).extend((source_label, paper) for paper in papers)
+
+        for owner, entries in grouped.items():
+            limit = max(0, int(self._get_max_results(owner)))
+            if not limit or len(entries) <= limit:
+                continue
+
+            newest = sorted(
+                entries,
+                key=lambda item: (
+                    item[1].published_date.isoformat()
+                    if item[1].published_date
+                    else "",
+                    item[1].paper_id,
+                ),
+                reverse=True,
+            )[:limit]
+            selected = {id(paper) for _, paper in newest}
+            for source_label in {label for label, _ in entries}:
+                results[source_label] = [
+                    paper for paper in results[source_label] if id(paper) in selected
+                ]
+            logger.info(
+                f">>> 数据源硬上限 [{owner}]: {len(entries)} -> {limit} 篇（保留最新论文）"
+            )
+
+        return {source: papers for source, papers in results.items() if papers}
 
     def _resolve_missing_arxiv_versions(self, results: Dict[str, List[PaperMetadata]]) -> int:
         """Actively search ArXiv for papers whose upstream metadata has no PDF."""

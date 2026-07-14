@@ -28,6 +28,28 @@ from notifications.notifier import NotifierAgent, RunResult, WebhookNotifier
 
 
 class ResearchAutomationTests(unittest.TestCase):
+    def test_search_agent_enforces_limit_across_source_groups(self):
+        agent = SearchAgent.__new__(SearchAgent)
+        agent.max_results = 10
+        agent.max_results_per_source = {"dblp": 2}
+        agent._source_owner = {"recsys": "dblp", "sigir": "dblp"}
+        results = {
+            "recsys": [
+                SimpleNamespace(paper_id="old", published_date=datetime(2026, 7, 10)),
+                SimpleNamespace(paper_id="new", published_date=datetime(2026, 7, 14)),
+            ],
+            "sigir": [
+                SimpleNamespace(paper_id="middle", published_date=datetime(2026, 7, 12))
+            ],
+        }
+
+        limited = agent._apply_owner_limits(results)
+
+        self.assertEqual(
+            {paper.paper_id for papers in limited.values() for paper in papers},
+            {"new", "middle"},
+        )
+
     def test_search_agent_marks_repec_history_in_repec_owner(self):
         agent = SearchAgent.__new__(SearchAgent)
         repec = Mock()
