@@ -3,7 +3,7 @@ title: "USD：面向大规模首页推荐的用户意图驱动采样与双重去
 paper_id: "https://doi.org/10.1145/3705328.3748096"
 source: "recsys"
 published: "2025-01-01T00:00:00"
-score: 46.0
+score: 38.0
 tags: ["paper", "recommender-systems", "Recommender Systems and Techniques", "Spam and Phishing Detection", "Image and Video Quality Assessment"]
 ---
 
@@ -15,66 +15,80 @@ tags: ["paper", "recommender-systems", "Recommender Systems and Techniques", "Sp
 
 ## 一句话结论
 
-> 论文提出了一种用户意图驱动的采样和双重去偏框架，有效解决了大规模首页推荐中的偏差问题，提升了推荐效果。
+> 针对大规模首页推荐中曝光偏差导致的伪负样本和伪正样本问题，提出用户意图驱动的采样和双去偏框架，在淘宝首页线上实验中显著提升用户点击率。
 
 ## 论文信息
 
 - **作者**：Jiaqi Zheng, Cheng Guo, Yi Cao, Chaoqun Hou, Tong Liu, Bo Zheng
 - **来源**：RecSys
 - **发布时间**：2025-01-01
-- **相关度评分**：46.0
+- **相关度评分**：38.0
 - **DOI**：[https://doi.org/10.1145/3705328.3748096](https://doi.org/10.1145/3705328.3748096)
+
+<details open>
+<summary><strong>中文摘要</strong></summary>
+
+大规模首页推荐面临由曝光偏差导致的伪负样本这一关键挑战，其中非点击行为可能反映用户注意力缺失而非缺乏兴趣。现有研究缺乏对无效曝光的深入分析，通常仅针对孤立问题（如采样策略），忽视了伪正样本的关键影响——例如首页点击仅为访问营销入口的行为。我们提出一个面向大规模首页推荐的统一采样与去偏框架。该框架包含两个核心组件：（1）用户意图感知的负采样模块，用于过滤无效曝光样本；（2）意图驱动的双去偏模块，可联合校正曝光偏差与点击偏差。在淘宝平台上的大规模在线实验验证了本框架的有效性，在淘宝首页的两个营销板块——百亿补贴与淘宝秒杀中，用户点击率（UCTR）分别显著提升35.4%和14.5%。
+
+</details>
+
+<details>
+<summary><strong>英文摘要</strong></summary>
+
+Large-scale homepage recommendations face critical challenges from pseudo-negative samples caused by exposure bias, where non-clicks may indicate inattention rather than disinterest. Existing work lacks thorough analysis of invalid exposures and typically addresses isolated aspects (e.g., sampling strategies), overlooking the critical impact of pseudo-positive samples - such as homepage clicks merely to visit marketing portals. We propose a unified framework for large-scale homepage recommendation sampling and debiasing. Our framework consists of two key components: (1) a user intent-aware negative sampling module to filter invalid exposure samples, and (2) an intent-driven dual-debiasing module that jointly corrects exposure bias and click bias. Extensive online experiments on Taobao demonstrate the efficacy of our framework, achieving significant improvements in user click-through rates (UCTR) by 35.4% and 14.5% in two variants of the marketing block on the Taobao homepage, Baiyibutie and Taobaomiaosha.
+
+</details>
 
 ## 深度解读
 
-> 分析依据：**AI 深度分析**
+> 分析依据：**全文深读**
 
 ### 核心结论
 
-大规模首页推荐面临曝光偏差导致的伪负样本问题（非点击可能源于注意力不足而非不感兴趣），以及伪正样本问题（首页点击可能仅为访问营销门户）。现有工作缺乏对无效曝光的深入分析，且通常孤立处理采样或去偏。本文提出统一框架USD，包含两个关键组件：（1）用户意图感知负采样模块，过滤无效曝光样本；（2）意图驱动的双重去偏模块，联合校正曝光偏差和点击偏差。在淘宝首页的两个营销板块（百亿补贴和淘宝秒杀）上，在线A/B测试显示用户点击率（UCTR）分别提升35.4%和14.5%。
+论文针对大规模首页推荐中因曝光偏差导致的伪负样本问题，以及点击偏差导致的伪正样本问题，提出统一框架USD。该框架包含两个核心模块：用户意图感知负采样模块，用于过滤无效曝光样本；意图驱动的双重去偏模块，联合纠正曝光偏差和点击偏差。在淘宝首页的两个营销板块（百亿补贴和淘宝秒杀）上进行在线实验，用户点击率分别提升35.4%和14.5%。
 
 ### 主要创新
 
-- 首次在大规模首页推荐中联合处理无效曝光和样本选择偏差，通过意图驱动采样和去偏提供可扩展的生产解决方案。
-- 提出意图感知采样器，利用用户当天是否访问营销门户作为信号，从大规模数据中筛选置信负样本。
-- 设计因果双重去偏模块，基于用户意图概率对门户访问用户和板块点击用户分别进行逆倾向加权，差异化校正偏差。
-- 构建用户意图提取模块（UIEM），利用用户历史行为序列建模对营销门户和板块的细粒度意图。
+- 首次联合解决大规模首页推荐中的无效曝光和样本选择偏差问题，提出意图驱动的采样与去偏框架。
+- 提出用户意图感知采样器，利用用户当天是否访问营销门户来筛选置信负样本，优于基于点击的采样。
+- 提出因果双重去偏模块，基于用户对营销门户和营销板块的意图概率，分别对曝光偏差和点击偏差进行差异化校正。
+- 设计用户意图提取模块（UIEM），利用用户历史行为序列建模细粒度意图，辅助去偏。
 
 ### 研究方法
 
-首先，通过用户意图感知负采样模块，基于用户当天是否访问营销门户筛选置信负样本。然后，构建用户意图提取模块（UIEM），使用Transformer解码器处理用户过去一个月的行为序列，预测用户对营销门户和板块的意图概率。最后，因果双重去偏模块根据用户所属群体（门户访问或板块点击），使用逆倾向评分（IPS）对CTR损失进行加权，联合校正曝光偏差和点击偏差。整体损失函数包含CTR损失和两个辅助任务损失。
+论文首先定义CTR预测任务，提出用户意图驱动负采样，选择当天访问营销门户的用户作为置信样本。然后构建用户意图提取模块（UIEM），使用Transformer解码器处理用户过去一个月的行为序列，预测用户对营销门户和营销板块的意图概率。最后，基于因果推断，对采样后的样本进行双重去偏：对仅访问门户的用户使用1/(1-门户意图概率)加权，对点击板块的用户使用1/板块意图概率加权，并联合优化CTR损失和两个辅助意图预测损失。
 
 ### 关键结果
 
-在淘宝工业数据集上，USD在GAUC_avg、GAUC_show、GAUC_click和AUC指标上均优于BASE、ESMM、NISE、ESCM^2-IPW、ESCM^2-DR和DCMT等基线。消融实验验证了各模块的有效性：去除意图采样导致性能下降，去除双重去偏模块分别导致GAUC_avg下降2.55%、0.65%和0.82%。在线A/B测试中，百亿补贴和淘宝秒杀板块的UCTR分别提升35.4%和14.5%。
+离线实验：USD在GAUCavg、GAUCshow、GAUCclick和AUC上均优于BASE、ESMM、NISE、ESCM²-IPW、ESCM²-DR、DCMT等基线。；消融实验：移除意图采样（仅点击采样）导致性能下降；移除双重去偏模块、门户去偏或板块去偏均导致GAUCavg下降，分别下降2.55%、0.65%、0.82%。；在线A/B测试：在淘宝首页百亿补贴板块UCTR提升35.4%，在淘宝秒杀板块UCTR提升14.5%。
 
 ### 技术栈
 
-- Transformer解码器（含因果掩码和位置编码）
+- Transformer架构（Decoder + 因果掩码 + 位置编码）
 - 多层感知机（MLP）
-- 逆倾向评分（IPS）
-- 交叉熵损失
+- 逆倾向得分（IPS）
+- 交叉熵损失函数
 - AdagradDecayV2优化器
 - GAUC评估指标
 
 ### 方法优势
 
-- 针对首页推荐场景的独特问题（伪正负样本）提出统一解决方案，具有实际工业价值。
-- 方法创新性强，将用户意图显式融入采样和去偏过程。
-- 在线实验效果显著，验证了方法的有效性。
-- 消融实验充分，各组件贡献清晰。
+- 针对首页推荐场景的独特问题（无效曝光和伪正样本）提出统一解决方案，具有实际工业价值。
+- 方法创新性强，将用户意图显式建模并用于采样和去偏，而非仅用于表示学习。
+- 离线实验和在线A/B测试均验证了有效性，且已在淘宝全量部署。
+- 消融实验充分，验证了各模块的必要性。
 
 ### 主要局限
 
-- 用户意图提取模块依赖历史行为序列，对新用户或行为稀疏用户可能效果有限。
-- 双重去偏模块的权重剪裁范围（[1,15]）需手动调参，可能影响泛化性。
-- 论文未讨论计算开销和部署成本。
-- 实验仅在淘宝首页场景验证，泛化性需在其他平台验证。
+- 方法依赖用户当天是否访问营销门户作为采样信号，可能不适用于无此类行为的场景。
+- 用户意图提取模块需要用户历史行为序列，对冷启动用户可能效果有限。
+- 论文未讨论超参数α和β的敏感性分析。
+- 仅针对淘宝首页营销板块，泛化性未在其他平台验证。
 
 ### 与当前研究方向的关联
 
-论文与CTR/CVR预测、推荐系统因果性、工业落地高度相关。CTR预测是核心任务；因果性体现在使用逆倾向评分去偏；工业落地体现在淘宝大规模在线实验。此外，用户建模（意图提取）和采样策略也是重要组成部分。
+CTR/CVR预测：论文核心任务是CTR预测，并针对点击偏差进行去偏。；用户建模：通过用户意图提取模块建模用户对营销门户和板块的意图。；推荐系统的因果性：使用逆倾向得分进行因果去偏。；工业落地：论文方法已在淘宝首页全量部署，在线实验提升显著。；排序与重排：论文聚焦于排序阶段的采样和去偏。
 
 ---
 
-_知识库更新时间：2026-07-12T07:42:44.677852_
+_知识库更新时间：2026-07-17T03:54:55.380080_
