@@ -26,7 +26,7 @@ tags: ["paper", "recommender-systems", "Recommender Systems and Techniques", "Mo
 <details open>
 <summary><strong>中文摘要</strong></summary>
 
-多场景推荐（Multi-Scenario Recommendation, MSR）任务，即构建统一模型以提升所有推荐场景性能的研究，近年来受到了广泛关注。然而，当前MSR研究面临两大显著挑战，阻碍了该领域的发展：缺乏多场景数据集处理的统一流程，从而妨碍了公平比较；且大多数模型为闭源，使得与当前最先进（SOTA）模型的比较变得复杂。为此，我们提出了基准测试平台Scenario-Wise Rec，该平台包含六个公开数据集和十二个基线模型，并配备了一套训练与评估流程。我们进一步在工业广告数据集上验证了Scenario-Wise Rec的鲁棒性。希望该基准测试能够帮助研究人员清晰理解先前工作，从而开发出新颖模型，并以此促进MSR领域的协作研究生态。我们的源代码已公开（https://github.com/Applied-Machine-Learning-Lab/Scenario-Wise-Rec）。
+多场景推荐（Multi-Scenario Recommendation, MSR）任务，即构建统一模型以提升所有推荐场景的性能，近年来受到了广泛关注。然而，当前MSR研究面临两大挑战，阻碍了该领域的发展：缺乏多场景数据集处理的统一流程，从而妨碍了公平比较；且大多数模型为闭源，使得与当前最先进（SOTA）模型的比较变得复杂。为此，我们提出了基准测试平台Scenario-Wise Rec，该平台包含六个公开数据集和十二个基线模型，并配套提供训练与评估流程。我们进一步在工业广告数据集上验证了Scenario-Wise Rec的鲁棒性。希望该基准测试能够帮助研究人员清晰理解先前工作，从而开发新模型，并促进MSR领域的协作研究生态。我们的源代码已公开（https://github.com/Applied-Machine-Learning-Lab/Scenario-Wise-Rec）。
 
 </details>
 
@@ -39,4 +39,4 @@ Multi-Scenario Recommendation (MSR) tasks, referring to building a unified model
 
 ---
 
-_知识库更新时间：2026-07-12T10:37:28.677573_
+_知识库更新时间：2026-07-20T04:18:26.518560_
