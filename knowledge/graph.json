@@ -2163,6 +2163,174 @@
     "W7167888733": {
       "title": "Advantage-Conditioned Flow Policy for Offline Reinforcement Learning in Recommendation",
       "paper_id": "https://doi.org/10.1145/3805712.3809626"
+    },
+    "2607.18152v1": {
+      "title": "jina-reranker-v3.5: An Efficient Listwise Reranker with Hybrid Attention and Self-Distillation",
+      "paper_id": "2607.18152v1"
+    },
+    "2607.18102v1": {
+      "title": "FinSAgent: Corpus-Aligned Multi-Agent RAG Framework for Evidence-Grounded SEC Filing Question Answering",
+      "paper_id": "2607.18102v1"
+    },
+    "2607.18237v1": {
+      "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+      "paper_id": "2607.18237v1"
+    },
+    "2607.18236v1": {
+      "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+      "paper_id": "2607.18236v1"
+    },
+    "2607.18226v1": {
+      "title": "Causal Discovery on Irregular Time Series",
+      "paper_id": "2607.18226v1"
+    },
+    "2607.18225v1": {
+      "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+      "paper_id": "2607.18225v1"
+    },
+    "2607.18199v1": {
+      "title": "PPL-Factory: Task-Aware and Budget-Aware Data Selection from Language Modeling to Reasoning",
+      "paper_id": "2607.18199v1"
+    },
+    "2607.18209v1": {
+      "title": "Unveiling Invariant and Transferable Latent Factors Across Heterogeneous Environments via ATLAS",
+      "paper_id": "2607.18209v1"
+    },
+    "2607.18195v1": {
+      "title": "Certified Training for Convolutional Perturbations",
+      "paper_id": "2607.18195v1"
+    },
+    "2607.18198v1": {
+      "title": "Three-Body Scattering for Generative Modeling",
+      "paper_id": "2607.18198v1"
+    },
+    "2607.18187v1": {
+      "title": "EVOLVE: Efficient Learned Volume Compression with Variable-Rate Encoding on a Cross-Domain Database",
+      "paper_id": "2607.18187v1"
+    },
+    "2607.18171v1": {
+      "title": "FlashRT: Agent Harness for Guiding Agents to Deploy Real-Time Multimodal Applications",
+      "paper_id": "2607.18171v1"
+    },
+    "2607.18164v1": {
+      "title": "A Continual Validation, Updating, and Decision-Making Framework for Self-Adaptive Digital Twins via Robust Model Predictive Control: A Case Study in Additive Manufacturing",
+      "paper_id": "2607.18164v1"
+    },
+    "2607.18163v1": {
+      "title": "OR Else: A Differentiable Trust Region for Policy Optimization",
+      "paper_id": "2607.18163v1"
+    },
+    "2607.18162v1": {
+      "title": "The Calibration Channel Determines the Bayes-Error Proxy: An Exact Law for Temperature-Induced Distortion",
+      "paper_id": "2607.18162v1"
+    },
+    "2607.18149v1": {
+      "title": "Differentiable Logic Gate Networks for Low-Latency EEG Classification on Edge Devices",
+      "paper_id": "2607.18149v1"
+    },
+    "2607.18148v1": {
+      "title": "Totally Positive Matrices and the Highest-Order Coefficients of the Characteristic Polynomial",
+      "paper_id": "2607.18148v1"
+    },
+    "2607.18144v1": {
+      "title": "Do Language Models Dream of Binding Molecules? Benchmarking LLMs under Spatial Constraints",
+      "paper_id": "2607.18144v1"
+    },
+    "2607.18130v1": {
+      "title": "Manifold-Constrained Hyper-Connections for Parameter-Efficient Finetuning",
+      "paper_id": "2607.18130v1"
+    },
+    "2607.18127v1": {
+      "title": "ClouDens: Operational Context-Aware Anomaly Detection for Large-scale Cloud System Monitoring",
+      "paper_id": "2607.18127v1"
+    },
+    "2607.18119v1": {
+      "title": "COVAriance-Induced Fairness Gap Penalty for Subgroup-Fair Clustering",
+      "paper_id": "2607.18119v1"
+    },
+    "2607.18114v1": {
+      "title": "How Does Alignment Tuning Shape Representations of Sycophancy and Related Cue-Induced Biases in LLMs?",
+      "paper_id": "2607.18114v1"
+    },
+    "2607.18110v1": {
+      "title": "LLM-as-a-Coach: Experiential Learning for Non-Verifiable Tasks",
+      "paper_id": "2607.18110v1"
+    },
+    "2607.18101v1": {
+      "title": "Empowering On-Device Model Adaptation with an Edge AI Inference Accelerator",
+      "paper_id": "2607.18101v1"
+    },
+    "2607.18091v1": {
+      "title": "SciForma: Structure-Faithful Generation of Scientific Diagrams",
+      "paper_id": "2607.18091v1"
+    },
+    "2607.18088v1": {
+      "title": "The Label Complexity of Class-Conditional Coverage under Distribution Shift",
+      "paper_id": "2607.18088v1"
+    },
+    "2607.18235v1": {
+      "title": "Automated Discovery Has No Universally Superior Harness",
+      "paper_id": "2607.18235v1"
+    },
+    "2607.18230v1": {
+      "title": "Simple Domain Generalization for Strong Pixel-Level Image Tampering Detection in Modern VLMs",
+      "paper_id": "2607.18230v1"
+    },
+    "2607.18228v1": {
+      "title": "Logical Judgments Under Pressure: Diagnosing Syllogistic Stability with Learned Soft Prefixes",
+      "paper_id": "2607.18228v1"
+    },
+    "2607.18218v1": {
+      "title": "GigaPath-Flash and GigaTIME-Flash: Efficient Pathology Foundation Models for Whole-Slide and Tumor Microenvironment Analysis",
+      "paper_id": "2607.18218v1"
+    },
+    "2607.18200v1": {
+      "title": "Learning Adaptive Safety Margins for Visual Navigation",
+      "paper_id": "2607.18200v1"
+    },
+    "2607.18161v1": {
+      "title": "TRIM: Reducing AI-Generated CodeSlop via Agent Trajectory Minimization",
+      "paper_id": "2607.18161v1"
+    },
+    "2607.18147v1": {
+      "title": "LLMs and Agentic AI Systems for Smart Grids: A Tutorial on Architectures and Applications",
+      "paper_id": "2607.18147v1"
+    },
+    "2607.18142v1": {
+      "title": "O-VAD: Industrial Video Anomaly Detection through Object-Centric Tracking and Reasoning",
+      "paper_id": "2607.18142v1"
+    },
+    "2607.18116v1": {
+      "title": "SGA: Plug&Play Geometric Verification for Educational Video Synthesis",
+      "paper_id": "2607.18116v1"
+    },
+    "2607.18100v1": {
+      "title": "Can We Break LLMs Out of Self-Loops? Fine-Grained Reasoning Control with Activation Steering",
+      "paper_id": "2607.18100v1"
+    },
+    "2607.18213v1": {
+      "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+      "paper_id": "2607.18213v1"
+    },
+    "2607.18232v1": {
+      "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+      "paper_id": "2607.18232v1"
+    },
+    "2607.18181v1": {
+      "title": "VEHBench: A Stage-Local Diagnostic Benchmark for LLM-Assisted Vibration Energy Harvester Design",
+      "paper_id": "2607.18181v1"
+    },
+    "2607.18098v1": {
+      "title": "VDAR-Router: Adaptive LLMs Routing via Verbalized Query Difficulty Analysis Retrieval",
+      "paper_id": "2607.18098v1"
+    },
+    "W7158084841": {
+      "title": "Where Relevance Emerges: A Layer-Wise Study of Internal Attention for Zero-Shot Re-Ranking",
+      "paper_id": "https://doi.org/10.1145/3805712.3808558"
+    },
+    "W7162756172": {
+      "title": "Joint Optimization of Relevance and Engagement in Multi-Task Ranking for E-Commerce with Efficient LLM Supervision",
+      "paper_id": "https://doi.org/10.1145/3805712.3808481"
     }
   },
   "edges": [
@@ -2254,356 +2422,6 @@
     {
       "from": "W7168035566",
       "to": "W7162084355",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W2963367478",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W2971522550",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W2984100107",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W2988217457",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W3021397474",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W3101922104",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W3105816068",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W3156636935",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W3194782062",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W3208227120",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W3217305727",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W4283065823",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W4285282571",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W4290944002",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W4367318940",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W4384648324",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W4385570594",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W4385573970",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W4386576685",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W4386729952",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W4388979610",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W4393147787",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W4401042501",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W4404783220",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W4406263938",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W4409166455",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W4411236274",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W4412377138",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W2497720472",
-      "type": "related"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W4292659306",
-      "type": "related"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W3044321615",
-      "type": "related"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W2806221744",
-      "type": "related"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W2326937258",
-      "type": "related"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W394267150",
-      "type": "related"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W2773965352",
-      "type": "related"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W4294892107",
-      "type": "related"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W2357748469",
-      "type": "related"
-    },
-    {
-      "from": "W4414034972",
-      "to": "W2392917037",
-      "type": "related"
-    },
-    {
-      "from": "W4416016495",
-      "to": "W1493122757",
-      "type": "cites"
-    },
-    {
-      "from": "W4416016495",
-      "to": "W1541504294",
-      "type": "cites"
-    },
-    {
-      "from": "W4416016495",
-      "to": "W2017085528",
-      "type": "cites"
-    },
-    {
-      "from": "W4416016495",
-      "to": "W2058336014",
-      "type": "cites"
-    },
-    {
-      "from": "W4416016495",
-      "to": "W2073483673",
-      "type": "cites"
-    },
-    {
-      "from": "W4416016495",
-      "to": "W2085225290",
-      "type": "cites"
-    },
-    {
-      "from": "W4416016495",
-      "to": "W2099932395",
-      "type": "cites"
-    },
-    {
-      "from": "W4416016495",
-      "to": "W2907492528",
-      "type": "cites"
-    },
-    {
-      "from": "W4416016495",
-      "to": "W3152187935",
-      "type": "cites"
-    },
-    {
-      "from": "W4416016495",
-      "to": "W3176130152",
-      "type": "cites"
-    },
-    {
-      "from": "W4416016495",
-      "to": "W4226134687",
-      "type": "cites"
-    },
-    {
-      "from": "W4416016495",
-      "to": "W4386379925",
-      "type": "cites"
-    },
-    {
-      "from": "W4416016495",
-      "to": "W4386858959",
-      "type": "cites"
-    },
-    {
-      "from": "W4416016495",
-      "to": "W4392942767",
-      "type": "cites"
-    },
-    {
-      "from": "W4416016495",
-      "to": "W4400973925",
-      "type": "cites"
-    },
-    {
-      "from": "W4416016495",
-      "to": "W4402516549",
-      "type": "cites"
-    },
-    {
-      "from": "W4416016495",
-      "to": "W4402597304",
-      "type": "cites"
-    },
-    {
-      "from": "W4416017057",
-      "to": "W2051167396",
-      "type": "cites"
-    },
-    {
-      "from": "W4416017057",
-      "to": "W2251818205",
-      "type": "cites"
-    },
-    {
-      "from": "W4416017057",
-      "to": "W3021397474",
-      "type": "cites"
-    },
-    {
-      "from": "W4416017057",
-      "to": "W4252076394",
-      "type": "cites"
-    },
-    {
-      "from": "W4416017057",
-      "to": "W4284664419",
-      "type": "cites"
-    },
-    {
-      "from": "W4416017057",
-      "to": "W4384890816",
-      "type": "cites"
-    },
-    {
-      "from": "W4416017057",
-      "to": "W4389523765",
-      "type": "cites"
-    },
-    {
-      "from": "W4416017057",
-      "to": "W4392963986",
-      "type": "cites"
-    },
-    {
-      "from": "W4416017057",
-      "to": "W4402670856",
-      "type": "cites"
-    },
-    {
-      "from": "W4416017057",
-      "to": "W4402671584",
-      "type": "cites"
-    },
-    {
-      "from": "W4416017057",
-      "to": "W4402671832",
-      "type": "cites"
-    },
-    {
-      "from": "W4416017057",
-      "to": "W4404781843",
-      "type": "cites"
-    },
-    {
-      "from": "W4416017057",
-      "to": "W4411113192",
-      "type": "cites"
-    },
-    {
-      "from": "W4416017057",
-      "to": "W4412888159",
-      "type": "cites"
-    },
-    {
-      "from": "W4416017057",
-      "to": "W6911415352",
       "type": "cites"
     },
     {
@@ -2929,236 +2747,6 @@
     {
       "from": "W4414034771",
       "to": "W4281554608",
-      "type": "related"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W153275262",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W2052421337",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W3133383654",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4211005362",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4281488643",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4288701803",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4292092796",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4311000453",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4315977496",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4328127920",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4353081311",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4366245582",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4366782941",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4379283754",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4380875740",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4381185832",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4388631551",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4390955670",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4393259519",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4396832973",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4399363214",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4399471718",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4399777641",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4400023863",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4400261185",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4403220159",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4403222563",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4403796239",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4404314593",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4406272925",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4406604144",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4407184412",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4409415146",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4412212567",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W6966860781",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W6967274467",
-      "type": "cites"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W2748952813",
-      "type": "related"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4390273403",
-      "type": "related"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4386781444",
-      "type": "related"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W2150182025",
-      "type": "related"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W3092950680",
-      "type": "related"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W3197542405",
-      "type": "related"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W2056712470",
-      "type": "related"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W3125580266",
-      "type": "related"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4288390103",
-      "type": "related"
-    },
-    {
-      "from": "W4414034950",
-      "to": "W4317039510",
       "type": "related"
     },
     {
@@ -12564,6 +12152,586 @@
     {
       "from": "W4416078488",
       "to": "W4401863879",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W2963367478",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W2971522550",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W2984100107",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W2988217457",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W3021397474",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W3101922104",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W3105816068",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W3156636935",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W3194782062",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W3208227120",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W3217305727",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W4283065823",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W4285282571",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W4290944002",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W4367318940",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W4384648324",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W4385570594",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W4385573970",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W4386576685",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W4386729952",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W4388979610",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W4393147787",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W4401042501",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W4404783220",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W4406263938",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W4409166455",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W4411236274",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W4412377138",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W2497720472",
+      "type": "related"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W4292659306",
+      "type": "related"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W3044321615",
+      "type": "related"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W2806221744",
+      "type": "related"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W2326937258",
+      "type": "related"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W394267150",
+      "type": "related"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W2773965352",
+      "type": "related"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W4294892107",
+      "type": "related"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W2357748469",
+      "type": "related"
+    },
+    {
+      "from": "W4414034972",
+      "to": "W2392917037",
+      "type": "related"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W153275262",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W2052421337",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W3133383654",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4211005362",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4281488643",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4288701803",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4292092796",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4311000453",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4315977496",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4328127920",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4353081311",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4366245582",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4366782941",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4379283754",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4380875740",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4381185832",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4388631551",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4390955670",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4393259519",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4396832973",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4399363214",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4399471718",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4399777641",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4400023863",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4400261185",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4403220159",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4403222563",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4403796239",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4404314593",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4406272925",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4406604144",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4407184412",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4409415146",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4412212567",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W6966860781",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W6967274467",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W2748952813",
+      "type": "related"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4390273403",
+      "type": "related"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4386781444",
+      "type": "related"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W2150182025",
+      "type": "related"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W3092950680",
+      "type": "related"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W3197542405",
+      "type": "related"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W2056712470",
+      "type": "related"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W3125580266",
+      "type": "related"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4288390103",
+      "type": "related"
+    },
+    {
+      "from": "W4414034950",
+      "to": "W4317039510",
+      "type": "related"
+    },
+    {
+      "from": "W4416017057",
+      "to": "W2051167396",
+      "type": "cites"
+    },
+    {
+      "from": "W4416017057",
+      "to": "W2251818205",
+      "type": "cites"
+    },
+    {
+      "from": "W4416017057",
+      "to": "W3021397474",
+      "type": "cites"
+    },
+    {
+      "from": "W4416017057",
+      "to": "W4252076394",
+      "type": "cites"
+    },
+    {
+      "from": "W4416017057",
+      "to": "W4284664419",
+      "type": "cites"
+    },
+    {
+      "from": "W4416017057",
+      "to": "W4384890816",
+      "type": "cites"
+    },
+    {
+      "from": "W4416017057",
+      "to": "W4389523765",
+      "type": "cites"
+    },
+    {
+      "from": "W4416017057",
+      "to": "W4392963986",
+      "type": "cites"
+    },
+    {
+      "from": "W4416017057",
+      "to": "W4402670856",
+      "type": "cites"
+    },
+    {
+      "from": "W4416017057",
+      "to": "W4402671584",
+      "type": "cites"
+    },
+    {
+      "from": "W4416017057",
+      "to": "W4402671832",
+      "type": "cites"
+    },
+    {
+      "from": "W4416017057",
+      "to": "W4404781843",
+      "type": "cites"
+    },
+    {
+      "from": "W4416017057",
+      "to": "W4411113192",
+      "type": "cites"
+    },
+    {
+      "from": "W4416017057",
+      "to": "W4412888159",
+      "type": "cites"
+    },
+    {
+      "from": "W4416017057",
+      "to": "W6911415352",
+      "type": "cites"
+    },
+    {
+      "from": "W4416016495",
+      "to": "W1493122757",
+      "type": "cites"
+    },
+    {
+      "from": "W4416016495",
+      "to": "W1541504294",
+      "type": "cites"
+    },
+    {
+      "from": "W4416016495",
+      "to": "W2017085528",
+      "type": "cites"
+    },
+    {
+      "from": "W4416016495",
+      "to": "W2058336014",
+      "type": "cites"
+    },
+    {
+      "from": "W4416016495",
+      "to": "W2073483673",
+      "type": "cites"
+    },
+    {
+      "from": "W4416016495",
+      "to": "W2085225290",
+      "type": "cites"
+    },
+    {
+      "from": "W4416016495",
+      "to": "W2099932395",
+      "type": "cites"
+    },
+    {
+      "from": "W4416016495",
+      "to": "W2907492528",
+      "type": "cites"
+    },
+    {
+      "from": "W4416016495",
+      "to": "W3152187935",
+      "type": "cites"
+    },
+    {
+      "from": "W4416016495",
+      "to": "W3176130152",
+      "type": "cites"
+    },
+    {
+      "from": "W4416016495",
+      "to": "W4226134687",
+      "type": "cites"
+    },
+    {
+      "from": "W4416016495",
+      "to": "W4386379925",
+      "type": "cites"
+    },
+    {
+      "from": "W4416016495",
+      "to": "W4386858959",
+      "type": "cites"
+    },
+    {
+      "from": "W4416016495",
+      "to": "W4392942767",
+      "type": "cites"
+    },
+    {
+      "from": "W4416016495",
+      "to": "W4400973925",
+      "type": "cites"
+    },
+    {
+      "from": "W4416016495",
+      "to": "W4402516549",
+      "type": "cites"
+    },
+    {
+      "from": "W4416016495",
+      "to": "W4402597304",
       "type": "cites"
     }
   ]
