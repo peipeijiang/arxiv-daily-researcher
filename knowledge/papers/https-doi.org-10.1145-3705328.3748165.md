@@ -13,7 +13,7 @@ tags: ["paper", "recommender-systems", "Nutritional Studies and Diet", "Food Was
 
 ## 一句话结论
 
-> 该论文提出GreenFoodLens，一种在食品推荐中引入可持续性标签的方法，旨在提升推荐系统的可持续性意识。
+> 该论文提出GreenFoodLens，通过可持续性标签增强食品推荐系统，旨在提升推荐中的可持续性意识，但未提供具体实验结果。
 
 ## 论文信息
 
@@ -25,4 +25,4 @@ tags: ["paper", "recommender-systems", "Nutritional Studies and Diet", "Food Was
 
 ---
 
-_知识库更新时间：2026-07-12T11:20:57.446732_
+_知识库更新时间：2026-07-22T04:05:16.240092_
