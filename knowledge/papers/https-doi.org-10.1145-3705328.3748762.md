@@ -3,13 +3,13 @@ title: "Bayesian Perspectives on Offline Evaluation for Recommender Systems"
 paper_id: "https://doi.org/10.1145/3705328.3748762"
 source: "recsys"
 published: "2025-01-01T00:00:00"
-score: 20.0
+score: 24.0
 tags: ["paper", "recommender-systems", "Advanced Bandit Algorithms Research", "Recommender Systems and Techniques", "Consumer Market Behavior and Pricing"]
 ---
 
 # Bayesian Perspectives on Offline Evaluation for Recommender Systems
 
-[查看原文](https://dblp.org/rec/conf/recsys/Benigni25)
+[查看原文](https://dblp.org/rec/conf/recsys/Benigni25) · [Semantic Scholar](https://www.semanticscholar.org/paper/80cea401ebab1dba93bf0a7dc24f3f40c085ad1a)
 
 ## 一句话结论
 
@@ -20,13 +20,13 @@ tags: ["paper", "recommender-systems", "Advanced Bandit Algorithms Research", "R
 - **作者**：Michael Benigni
 - **来源**：RecSys
 - **发布时间**：2025-01-01
-- **相关度评分**：20.0
+- **相关度评分**：24.0
 - **DOI**：[https://doi.org/10.1145/3705328.3748762](https://doi.org/10.1145/3705328.3748762)
 
 <details open>
 <summary><strong>中文摘要</strong></summary>
 
-离线评估是推荐系统部署与优化中的基础环节。近年来，情境赌博机框架已成为离线评估与反事实评估的重要方法，促使基于逆倾向得分（IPS）、直接方法（DM）及双重稳健（DR）技术的估计器日益受到关注。然而，现有方法几乎全部依赖频率学派统计，限制了其捕捉模型不确定性并将其反映在评估结果中的能力。本研究探索了贝叶斯统计在推荐任务离线策略评估中的新研究方向，其动机源于对更稳健应对分布偏移、数据稀疏及模型误设的可靠估计器的需求。本文识别出三个尚未充分探索的研究方向：（i）利用贝叶斯奖励模型的后验不确定性设计自适应混合估计器；（ii）通过联合概率框架显式建模离线策略评估问题的所有组成部分（情境、动作与奖励）；（iii）通过后验推断量化策略价值估计的认知不确定性。通过借助贝叶斯框架，旨在提升离线评估协议的可靠性、可解释性与安全性，为推荐系统研究中最持久的挑战之一提供新视角。这一视角在数据稀缺或高风险场景中尤为重要，因为理解不确定性对于可信决策至关重要。
+离线评估是推荐系统开发与优化中的基础环节。近年来，情境赌博机（contextual bandit）框架已成为离线评估与反事实评估的重要方法，促使基于逆倾向得分（IPS）、直接方法（DM）及双重稳健（DR）技术的估计器日益受到关注。然而，现有方法几乎全部依赖频率学派统计，这限制了其捕捉模型不确定性并将之反映于评估结果的能力。本研究探索了贝叶斯统计在推荐任务离线策略评估（Off-Policy Evaluation）中的新方向，其动机源于对更稳健应对分布偏移、数据稀疏及模型误设的可靠估计器的需求。本文识别出三个尚未充分探索的研究方向：（i）利用贝叶斯奖励模型的后验不确定性设计自适应混合估计器；（ii）通过联合概率框架显式建模OPE问题中的所有组件（情境、动作与奖励）；（iii）通过后验推断量化策略价值估计中的认知不确定性。通过借助贝叶斯框架，本研究旨在提升离线评估协议的可靠性、可解释性与安全性，为推荐系统研究中最持久的挑战之一提供新视角。这一视角在数据稀缺或高风险场景中尤为重要——在此类场景中，理解不确定性对于可信决策至关重要。
 
 </details>
 
@@ -39,4 +39,4 @@ Offline evaluation is a fundamental component in the deployment and development 
 
 ---
 
-_知识库更新时间：2026-07-12T11:20:57.447040_
+_知识库更新时间：2026-07-23T04:05:05.422688_
