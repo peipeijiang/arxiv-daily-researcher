@@ -13,7 +13,7 @@ tags: ["paper", "recommender-systems", "AI and HR Technologies", "Recommender Sy
 
 ## 一句话结论
 
-> 该论文介绍了第五届人力资源推荐系统研讨会（RecSys-in-HR 2025）的会议论文集，聚焦于推荐系统在人力资源领域的应用。
+> 该论文介绍了第五届人力资源推荐系统研讨会（RecSys-in-HR 2025）的论文集，聚焦于推荐系统在人力资源管理中的应用。
 
 ## 论文信息
 
@@ -39,4 +39,4 @@ Proceedings of the 5th Workshop on Recommender Systems for Human Resources (RecS
 
 ---
 
-_知识库更新时间：2026-07-13T06:43:12.873601_
+_知识库更新时间：2026-07-24T04:05:55.200694_
