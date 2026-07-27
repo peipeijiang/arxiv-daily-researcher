@@ -2879,6 +2879,14 @@
     "W7167926076": {
       "title": "Time-Interval-Aware Disentangled Expert Modeling for Next-Basket Recommendation",
       "paper_id": "https://doi.org/10.1145/3805712.3809615"
+    },
+    "W4414034885": {
+      "title": "A Language Model-Based Playlist Generation Recommender System",
+      "paper_id": "https://doi.org/10.1145/3705328.3748053"
+    },
+    "W4414034756": {
+      "title": "Leave No One Behind: Fairness-Aware Cross-Domain Recommender Systems for Non-Overlapping Users",
+      "paper_id": "https://doi.org/10.1145/3705328.3748082"
     }
   },
   "edges": [
@@ -14886,6 +14894,421 @@
       "from": "W7167926076",
       "to": "W4416036318",
       "type": "cites"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W2070462330",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W2096733369",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W2493916176",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W2892896937",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W2894468515",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W2895245677",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W2895769822",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W2970641574",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W3119828346",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W3193246203",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W4283366562",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W4327644095",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W4391520039",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W4401306886",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W4401516066",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W4409166188",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W4391375266",
+      "type": "related"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W2899084033",
+      "type": "related"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W2748952813",
+      "type": "related"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W4390273403",
+      "type": "related"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W4386781444",
+      "type": "related"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W2150182025",
+      "type": "related"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W3092950680",
+      "type": "related"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W3197542405",
+      "type": "related"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W2056712470",
+      "type": "related"
+    },
+    {
+      "from": "W4414034885",
+      "to": "W3125580266",
+      "type": "related"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W290370860",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W2040825624",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W2117311203",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W2117420919",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W2129679514",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W2344249450",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W2607725432",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W2740605635",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W2796608345",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W2899813732",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W2904156528",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W2963981376",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W2964995401",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W3094484861",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W3098400049",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W3155450594",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W3163155381",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W3190386329",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W3208227120",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W3217015614",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4226072877",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4280595799",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4280611174",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4282027681",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4283065823",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4283702870",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4294068568",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4296591849",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4296604555",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4300482433",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4309185982",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4315630824",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4360884927",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4365794906",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4384652641",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4384887418",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4385302663",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4385825460",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4392910965",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4394717863",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4400910114",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4403219719",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4403221136",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4403735307",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4405055891",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4409771076",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4411134774",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4391375266",
+      "type": "related"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W2899084033",
+      "type": "related"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W2748952813",
+      "type": "related"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4390273403",
+      "type": "related"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W4386781444",
+      "type": "related"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W2150182025",
+      "type": "related"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W3092950680",
+      "type": "related"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W3197542405",
+      "type": "related"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W2056712470",
+      "type": "related"
+    },
+    {
+      "from": "W4414034756",
+      "to": "W3125580266",
+      "type": "related"
     }
   ]
 }
