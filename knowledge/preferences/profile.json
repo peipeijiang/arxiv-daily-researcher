@@ -9,26 +9,26 @@
   "embedding_enabled": true,
   "positive_terms": [
     "existing",
-    "propose",
+    "systems",
     "experiments",
     "demonstrate",
-    "recommendation",
-    "two",
     "user",
+    "recommendation",
     "key",
-    "systems",
-    "extensive",
     "techniques",
+    "two",
+    "extensive",
     "recommender",
+    "propose",
     "strategies",
-    "lacks",
     "such",
-    "心组件",
+    "lacks",
+    "transformer",
     "在线",
-    "components",
-    "liu",
-    "video"
+    "jointly",
+    "recsys",
+    "our"
   ],
   "negative_terms": [],
-  "updated_at": "2026-07-28T03:51:43.138772+00:00"
+  "updated_at": "2026-07-29T03:54:24.146409+00:00"
 }
