@@ -3415,6 +3415,178 @@
     "2607.27167v1": {
       "title": "SpecFirst: Behavioral Specification Elicitation as a First-Class Step in Agent-Based Program Synthesis from Scratch",
       "paper_id": "2607.27167v1"
+    },
+    "2607.28618v1": {
+      "title": "AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis",
+      "paper_id": "2607.28618v1"
+    },
+    "2607.28571v1": {
+      "title": "Finding Change in Satellite Archives from Text: How to Combine Before-and-After Images Efficiently",
+      "paper_id": "2607.28571v1"
+    },
+    "2607.28498v1": {
+      "title": "TCA-SIR: Learning Target-Conditioned Abstractions for Scientific Inspiration Retrieval",
+      "paper_id": "2607.28498v1"
+    },
+    "2607.28628v1": {
+      "title": "Learning to Trace Seiberg Dualities",
+      "paper_id": "2607.28628v1"
+    },
+    "2607.28627v1": {
+      "title": "ReToken: One Token to Improve Vision-Language Models for Visual Retrieval",
+      "paper_id": "2607.28627v1"
+    },
+    "2607.28608v1": {
+      "title": "KAISEN: Reproducible Subgroup Fairness Auditing for Clinical Risk Models",
+      "paper_id": "2607.28608v1"
+    },
+    "2607.28591v1": {
+      "title": "Change2Task: From Repository Changes to Executable Coding Agent Tasks and Environments",
+      "paper_id": "2607.28591v1"
+    },
+    "2607.28589v1": {
+      "title": "MixFrag: Fragility-Guided Mixed-Precision Post-Training Quantization for Vision Transformers",
+      "paper_id": "2607.28589v1"
+    },
+    "2607.28582v1": {
+      "title": "$β$-OPSD: Deriving with Policy Optimization, Training with Self-Distillation",
+      "paper_id": "2607.28582v1"
+    },
+    "2607.28576v1": {
+      "title": "Sample More, Reflect Less: Self-Refine and Reflexion Lose to Repeated Sampling at Equal Token Cost, from 1.5B to 7B",
+      "paper_id": "2607.28576v1"
+    },
+    "2607.28567v1": {
+      "title": "Doubly Robust Functional Representation Learning for Longitudinal Causal Inference with Irregular Histories",
+      "paper_id": "2607.28567v1"
+    },
+    "2607.28553v1": {
+      "title": "APO: Unsupervised Atomic Policy Optimization for 3D Structure Prediction of Atomic Systems",
+      "paper_id": "2607.28553v1"
+    },
+    "2607.28538v1": {
+      "title": "ScaFE: Data-Efficient Scar Classification with LLM-Generated Clinical Feature Programs",
+      "paper_id": "2607.28538v1"
+    },
+    "2607.28537v1": {
+      "title": "Graph Neural Network Force Fields for Spin Dynamics in Metallic Magnets",
+      "paper_id": "2607.28537v1"
+    },
+    "2607.28525v1": {
+      "title": "Same Graph Cross-Task Transfer in GNNs: Protocols and Predictors",
+      "paper_id": "2607.28525v1"
+    },
+    "2607.28497v1": {
+      "title": "The Role of Causality in Algorithmic Recourse",
+      "paper_id": "2607.28497v1"
+    },
+    "2607.28495v1": {
+      "title": "Stage-Replay Divergence Follows the KV Cache: Fixed-Prefix Precision Controls and Bidirectional Cache Transplantation",
+      "paper_id": "2607.28495v1"
+    },
+    "2607.28488v1": {
+      "title": "SCOPE: Supply-Chain Operations through Coupled Policies for End-to-End Coordination",
+      "paper_id": "2607.28488v1"
+    },
+    "2607.28623v1": {
+      "title": "PAC-MAN: Perception-Aware CBF-RL for Whole-Body Safety in Humanoid Dodgeball",
+      "paper_id": "2607.28623v1"
+    },
+    "2607.28617v1": {
+      "title": "AISPA: User-Centric System Prompt Auditing for Large Language Model Applications",
+      "paper_id": "2607.28617v1"
+    },
+    "2607.28609v1": {
+      "title": "OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models",
+      "paper_id": "2607.28609v1"
+    },
+    "2607.28587v1": {
+      "title": "PAIChecker: Uncovering and Checking PR-Issue Misalignment in SWE-Bench-Like Benchmarks",
+      "paper_id": "2607.28587v1"
+    },
+    "2607.28580v1": {
+      "title": "DualG-MRAG: Decoupling Macro-Reasoning and Micro-Matching for Multimodal Retrieval-Augmented Generation",
+      "paper_id": "2607.28580v1"
+    },
+    "2607.28575v1": {
+      "title": "Algorithms for Structured Elections under Thiele Voting Rules",
+      "paper_id": "2607.28575v1"
+    },
+    "2607.28573v1": {
+      "title": "Rethinking Inference-Time Scaling in Local Computer-Use Agents: Failure Modes and Compute Tradeoffs",
+      "paper_id": "2607.28573v1"
+    },
+    "2607.28545v1": {
+      "title": "ORCA-bench: How Ready Are Language Model Agents for Oncall?",
+      "paper_id": "2607.28545v1"
+    },
+    "2607.28527v1": {
+      "title": "MANTA: Multi-Agent Network Topology Adaptation for Self-Evolving Multi-Agent Systems",
+      "paper_id": "2607.28527v1"
+    },
+    "2607.28526v1": {
+      "title": "What to Remove, What to Preserve: Dual-Ambiguity Rectification for All-in-One Image Restoration",
+      "paper_id": "2607.28526v1"
+    },
+    "2607.28523v1": {
+      "title": "Selective Credibility-Limited Belief Update",
+      "paper_id": "2607.28523v1"
+    },
+    "2607.28520v1": {
+      "title": "Agents That Certify Their Own Exploits: Confidence-Scheduled Restricted Responses for Safe Opponent Exploitation",
+      "paper_id": "2607.28520v1"
+    },
+    "2607.28503v1": {
+      "title": "InfoOps Bench: A live information operations safety benchmark",
+      "paper_id": "2607.28503v1"
+    },
+    "2607.28481v1": {
+      "title": "A Fuzzy Rule-based Neuro-Symbolic Approach for Pipe Severity Prediction in Sewer Networks",
+      "paper_id": "2607.28481v1"
+    },
+    "2607.28607v1": {
+      "title": "Inducing language models to assert their own consciousness restores human beliefs and values",
+      "paper_id": "2607.28607v1"
+    },
+    "2607.28590v1": {
+      "title": "VAD: Attributing Visual Evidence for Target Reconstruction in Multimodal On-Policy Distillation",
+      "paper_id": "2607.28590v1"
+    },
+    "2607.28568v1": {
+      "title": "Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering",
+      "paper_id": "2607.28568v1"
+    },
+    "2607.28528v1": {
+      "title": "AI systems and the reproduction of (standard) language ideologies in World Englishes",
+      "paper_id": "2607.28528v1"
+    },
+    "2607.28513v1": {
+      "title": "Creative Transformation in Literary Texts: Modelling Change Across Representational Levels",
+      "paper_id": "2607.28513v1"
+    },
+    "2607.28505v1": {
+      "title": "Generative AI and linguistic diversity in academic writing and publishing: Perspectives from World Englishes",
+      "paper_id": "2607.28505v1"
+    },
+    "2607.28496v1": {
+      "title": "Beyond Sentiment: Structured Information Extraction from Financial News",
+      "paper_id": "2607.28496v1"
+    },
+    "2607.28478v1": {
+      "title": "Would You Walk to the Car Wash? Revealing the Salience Bias of Large Language Models in Commonsense Reasoning",
+      "paper_id": "2607.28478v1"
+    },
+    "W7171699748": {
+      "title": "fishFingers: Bioconcentration factor (BCF) and fish species bioaccumulation distribution prediction for chemicals detected by HRMS using recommender system machine learning",
+      "paper_id": "https://doi.org/10.5281/zenodo.21675247"
+    },
+    "W4414034990": {
+      "title": "RecViz: Intuitive Graph-based Visual Analytics for Dataset Exploration and Recommender System Evaluation",
+      "paper_id": "https://doi.org/10.1145/3705328.3759335"
+    },
+    "W4414034770": {
+      "title": "Lift It Up Right: A Recommender System for Safer Lifting Postures",
+      "paper_id": "https://doi.org/10.1145/3705328.3759314"
     }
   },
   "edges": [
@@ -17276,6 +17448,306 @@
     {
       "from": "W4409670777",
       "to": "W846528073",
+      "type": "related"
+    },
+    {
+      "from": "W4414034990",
+      "to": "W1987869189",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034990",
+      "to": "W1991352880",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034990",
+      "to": "W2028695285",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034990",
+      "to": "W2049670925",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034990",
+      "to": "W2123402141",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034990",
+      "to": "W2131681506",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034990",
+      "to": "W2293992322",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034990",
+      "to": "W2762403786",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034990",
+      "to": "W3099768174",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034990",
+      "to": "W4281561529",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034990",
+      "to": "W4284687944",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034990",
+      "to": "W4289518026",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034990",
+      "to": "W4403221702",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034990",
+      "to": "W4390273403",
+      "type": "related"
+    },
+    {
+      "from": "W4414034990",
+      "to": "W4386781444",
+      "type": "related"
+    },
+    {
+      "from": "W4414034990",
+      "to": "W2150182025",
+      "type": "related"
+    },
+    {
+      "from": "W4414034990",
+      "to": "W2362367986",
+      "type": "related"
+    },
+    {
+      "from": "W4414034990",
+      "to": "W348707231",
+      "type": "related"
+    },
+    {
+      "from": "W4414034990",
+      "to": "W2571228289",
+      "type": "related"
+    },
+    {
+      "from": "W4414034990",
+      "to": "W4390204044",
+      "type": "related"
+    },
+    {
+      "from": "W4414034990",
+      "to": "W4293108519",
+      "type": "related"
+    },
+    {
+      "from": "W4414034990",
+      "to": "W3041760129",
+      "type": "related"
+    },
+    {
+      "from": "W4414034990",
+      "to": "W2186032312",
+      "type": "related"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W1098869735",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W2041757785",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W2083886656",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W2307770531",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W2512526919",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W2728872568",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W2807126412",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W2907268465",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W2962730651",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W2962936462",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W2967043539",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W2972987593",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W2980453977",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W3111523098",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W4213425821",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W4221119663",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W4249780303",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W4386729525",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W4386730131",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W4386730132",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W4400106444",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W4402716047",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W4403220193",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W4403221955",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W4403222486",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W4406814972",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W4411236312",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W2953205341",
+      "type": "related"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W235065745",
+      "type": "related"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W2029935773",
+      "type": "related"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W2787754950",
+      "type": "related"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W1572215850",
+      "type": "related"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W1985775355",
+      "type": "related"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W2352115286",
+      "type": "related"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W2581771437",
+      "type": "related"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W2084793300",
+      "type": "related"
+    },
+    {
+      "from": "W4414034770",
+      "to": "W2476350415",
       "type": "related"
     }
   ]
