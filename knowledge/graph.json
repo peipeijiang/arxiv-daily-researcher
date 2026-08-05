@@ -3823,6 +3823,166 @@
     "W4414035018": {
       "title": "FAccTRec 2025: The 8th Workshop on Responsible Recommendation",
       "paper_id": "https://doi.org/10.1145/3705328.3748502"
+    },
+    "2608.04001v1": {
+      "title": "Test-Time Scaling in Reasoning LLMs: Inference Regimes, Evaluation, and Reproducibility",
+      "paper_id": "2608.04001v1"
+    },
+    "2608.03899v1": {
+      "title": "ATLAS: Learning to Recommend Across Unseen Domains",
+      "paper_id": "2608.03899v1"
+    },
+    "2608.03990v1": {
+      "title": "Assessment of Conditional Diffusion Model for Synthetic Histopathology Image Generation",
+      "paper_id": "2608.03990v1"
+    },
+    "2608.03967v1": {
+      "title": "Information-Geometric Forward Policy Training in GFlowNets",
+      "paper_id": "2608.03967v1"
+    },
+    "2608.03941v1": {
+      "title": "Muon Meets Mamba: Spectral Optimization for State Space Models",
+      "paper_id": "2608.03941v1"
+    },
+    "2608.03930v1": {
+      "title": "Logic Before Language: Pre-pretraining on Formal Derivations Fosters Skill Acquisition and Compressibility",
+      "paper_id": "2608.03930v1"
+    },
+    "2608.03929v1": {
+      "title": "Latent Reward Registers for Diffusion Preference Alignment",
+      "paper_id": "2608.03929v1"
+    },
+    "2608.03928v1": {
+      "title": "Robust Low-Tubal-Rank Tensor Completion under Cross-Concentrated Sampling",
+      "paper_id": "2608.03928v1"
+    },
+    "2608.03927v1": {
+      "title": "A Physics-Flavored Transformer Network for Parametrizing Contraction Dynamics of Engineered Skeletal Muscle Tissues",
+      "paper_id": "2608.03927v1"
+    },
+    "2608.03926v1": {
+      "title": "PRISM: Powerful Time Series to Image (TS2I) Representations for Multivariate Anomaly Detection",
+      "paper_id": "2608.03926v1"
+    },
+    "2608.03916v1": {
+      "title": "Trajectory inference via Acceleration Matching",
+      "paper_id": "2608.03916v1"
+    },
+    "2608.03913v1": {
+      "title": "Sparse Weight Decomposition for Efficient Circuit Extraction",
+      "paper_id": "2608.03913v1"
+    },
+    "2608.03910v1": {
+      "title": "Socially Grounded Agentic AI: Coordinating Plural Perspectives through Social Theory",
+      "paper_id": "2608.03910v1"
+    },
+    "2608.03893v1": {
+      "title": "Cross-Model KV Cache Transfer in LLM Families: A Closed-Form Linear Mapping for Prefill Reuse",
+      "paper_id": "2608.03893v1"
+    },
+    "2608.03887v1": {
+      "title": "Omega-S: A Functional Resilience Index for LLM Fine-Tuning",
+      "paper_id": "2608.03887v1"
+    },
+    "2608.04007v1": {
+      "title": "TurnSight: Turn-Level Hindsight Self-Distillation for Tool-Integrated Reasoning",
+      "paper_id": "2608.04007v1"
+    },
+    "2608.03983v1": {
+      "title": "Can Large Language Models Recover Semantic Optimization Opportunities That Compilers Miss?",
+      "paper_id": "2608.03983v1"
+    },
+    "2608.03979v1": {
+      "title": "Video-DeepResearch: Towards the Next-Generation Multimodal Deepresearch Agent",
+      "paper_id": "2608.03979v1"
+    },
+    "2608.03972v1": {
+      "title": "ReflectRL: Learning from Golden Negative Trajectories via Reflective-to-Direct Reasoning",
+      "paper_id": "2608.03972v1"
+    },
+    "2608.03970v1": {
+      "title": "Should We Type or Talk to LLM Agents? A Comprehensive Study of Voice and Keyboard Input Perturbations",
+      "paper_id": "2608.03970v1"
+    },
+    "2608.03962v1": {
+      "title": "Separating quantum circuits from classical LLMs",
+      "paper_id": "2608.03962v1"
+    },
+    "2608.03961v1": {
+      "title": "Interpretable Adaptive Sampling for LLM Test-Time Scaling",
+      "paper_id": "2608.03961v1"
+    },
+    "2608.03958v1": {
+      "title": "A game theory for foundation models shows new paths to rational cooperation through similarity inference",
+      "paper_id": "2608.03958v1"
+    },
+    "2608.03952v1": {
+      "title": "TACT: Taxonomy-Aligned Post-Training for Pedagogically Adaptive English Tutoring",
+      "paper_id": "2608.03952v1"
+    },
+    "2608.03921v1": {
+      "title": "The Transformer Revolution, Part 1: Dynamic Processing through Output- Weight Interconnections",
+      "paper_id": "2608.03921v1"
+    },
+    "2608.03920v1": {
+      "title": "Equivariant Music Transformer",
+      "paper_id": "2608.03920v1"
+    },
+    "2608.03918v1": {
+      "title": "When and Where to Look: Adaptive Visual Evidence Scheduling for Efficient Long Video Understanding",
+      "paper_id": "2608.03918v1"
+    },
+    "2608.03917v1": {
+      "title": "Implementing Causal Perception: Competing SCMs and Situated Fairness",
+      "paper_id": "2608.03917v1"
+    },
+    "2608.03902v1": {
+      "title": "When Efficiency Becomes Fragility: Exploiting Dynamic Routing Vulnerabilities in Adaptive UAV Tracking",
+      "paper_id": "2608.03902v1"
+    },
+    "2608.03892v1": {
+      "title": "Intertemporal Preference Steering in Qwen3 via Contrastive Activation Addition",
+      "paper_id": "2608.03892v1"
+    },
+    "2608.03890v1": {
+      "title": "CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement",
+      "paper_id": "2608.03890v1"
+    },
+    "2608.04010v1": {
+      "title": "ParVL: Parallel Scaling and Expandable Compute Allocation for Multimodal LLMs",
+      "paper_id": "2608.04010v1"
+    },
+    "2608.04009v1": {
+      "title": "SocietyBench: Forecasting Counterfactual Social-World Evolution",
+      "paper_id": "2608.04009v1"
+    },
+    "2608.04008v1": {
+      "title": "WorldCup Arena: Prospective, Leakage-Free Evaluation of Frontier LLMs on a Live Tournament",
+      "paper_id": "2608.04008v1"
+    },
+    "2608.04003v1": {
+      "title": "PAST-Bench: Benchmarking the Foundations of Recursive Self-Improvement in Personal Agents",
+      "paper_id": "2608.04003v1"
+    },
+    "2608.03999v1": {
+      "title": "Agogic: Performance-Timed Music Tokens for LLM-Native Text-to-Symbolic-Music Generation",
+      "paper_id": "2608.03999v1"
+    },
+    "2608.03994v1": {
+      "title": "When Attention Goes Blind: Numerical Failure in ALiBi Positional Encodings",
+      "paper_id": "2608.03994v1"
+    },
+    "2608.03984v1": {
+      "title": "string2string Studio: An Interactive, In-Browser Platform for String-to-String Algorithms",
+      "paper_id": "2608.03984v1"
+    },
+    "2608.03966v1": {
+      "title": "HalluTruthQA-4K: A Fine-Grained Corpus and Annotation Process for Arabic Hallucination Detection and Truth Verification",
+      "paper_id": "2608.03966v1"
+    },
+    "2608.03898v1": {
+      "title": "ANNOTARES: A Dataset for Extracting Logical Structures from German Statutory Texts",
+      "paper_id": "2608.03898v1"
     }
   },
   "edges": [
