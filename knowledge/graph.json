@@ -3983,6 +3983,174 @@
     "2608.03898v1": {
       "title": "ANNOTARES: A Dataset for Extracting Logical Structures from German Statutory Texts",
       "paper_id": "2608.03898v1"
+    },
+    "2608.05141v1": {
+      "title": "OctoLong: Mid-Training On Cross-Repository Code Contexts Enhances Long-Context Modeling",
+      "paper_id": "2608.05141v1"
+    },
+    "2608.05139v1": {
+      "title": "Toward Skill-Native LLMs: Skill Entropy for Benchmarking and Training Long-Horizon Reasoning",
+      "paper_id": "2608.05139v1"
+    },
+    "2608.05132v1": {
+      "title": "Predicting Brain Morphometry with MT-GNN: Mesh Evolution in Continuous Time with Graph-Based Metric Tensor Embeddings",
+      "paper_id": "2608.05132v1"
+    },
+    "2608.05136v1": {
+      "title": "The Loss Does Not See the Basis, but Adam Does",
+      "paper_id": "2608.05136v1"
+    },
+    "2608.05127v1": {
+      "title": "SSTQ:Privacy-Preserving Vector Quantization via Subsampled Stochastic TurboQuant",
+      "paper_id": "2608.05127v1"
+    },
+    "2608.05124v1": {
+      "title": "Chained Recursive Language Models for Multi-Iteration Reasoning",
+      "paper_id": "2608.05124v1"
+    },
+    "2608.05115v1": {
+      "title": "Robust and Efficient Motion Reasoning for Privacy-Aware Classroom Incident Recognition",
+      "paper_id": "2608.05115v1"
+    },
+    "2608.05120v1": {
+      "title": "DASyR-LLM: Domain-Aware Symbolic Regression with LLMs for Kinetic Model Discovery",
+      "paper_id": "2608.05120v1"
+    },
+    "2608.05112v1": {
+      "title": "Stable Density Ridges: Consistency and Convergence of Subspace Constrained Mean Shift",
+      "paper_id": "2608.05112v1"
+    },
+    "2608.05111v1": {
+      "title": "Reward Structure Shapes the Interaction Between Episodic Exploration and Neural Memory in Reinforcement Learning",
+      "paper_id": "2608.05111v1"
+    },
+    "2608.05110v1": {
+      "title": "Representational separation between unitary and channel quantum generative models via shared classical randomness at shallow depth",
+      "paper_id": "2608.05110v1"
+    },
+    "2608.05104v1": {
+      "title": "BnBERT-iPET: Sparse Few-Shot Language Modeling for Bengali via Lottery Ticket Pruning",
+      "paper_id": "2608.05104v1"
+    },
+    "2608.05103v1": {
+      "title": "Multimodal Spatiotemporal Atmospheric Data Assimilation with Latent Flow-matching",
+      "paper_id": "2608.05103v1"
+    },
+    "2608.05088v1": {
+      "title": "MALT: Lightweight Curvature-Aware Muon via Diagonal Preconditioning",
+      "paper_id": "2608.05088v1"
+    },
+    "2608.05084v1": {
+      "title": "Learning When to Stop: Prefix-Optimal Dynamic Diffusion Policies for Continuous Control",
+      "paper_id": "2608.05084v1"
+    },
+    "2608.05085v1": {
+      "title": "Capability-Gated Planning: Cost-to-Goal Discovery and the Limits of Myopic Experiment Selection",
+      "paper_id": "2608.05085v1"
+    },
+    "2608.05080v1": {
+      "title": "Optimizing What Policies Learn From: Recoverability-aware Rollout Intervention Learning",
+      "paper_id": "2608.05080v1"
+    },
+    "2608.05076v1": {
+      "title": "MultiPathFormer: Towards a Foundation Model for Multipath Wireless Propagation",
+      "paper_id": "2608.05076v1"
+    },
+    "2608.05064v1": {
+      "title": "Provable Limits and Certified Deferral for Verbalized Uncertainty in Small Language Models",
+      "paper_id": "2608.05064v1"
+    },
+    "2608.05054v1": {
+      "title": "MarsCast: Transfer Learning of AI Weather Foundation Models to Planetary Atmospheres",
+      "paper_id": "2608.05054v1"
+    },
+    "2608.05033v1": {
+      "title": "SparseDitto: Customizing GPU Kernels for Different Sparsity Patterns with LLM-Based Agentic System",
+      "paper_id": "2608.05033v1"
+    },
+    "2608.05144v1": {
+      "title": "Argus: A General-Purpose Agentic Runtime for Long-Horizon Reasoning",
+      "paper_id": "2608.05144v1"
+    },
+    "2608.05138v1": {
+      "title": "Teaching Nemotron Greek: Mining a Corpus, Adapting Retrieval, and Grounding Generation for Modern Greek across Specialist Domains",
+      "paper_id": "2608.05138v1"
+    },
+    "2608.05131v1": {
+      "title": "OPD-V: Visual On-Policy Self-Distillation with Modality Balance",
+      "paper_id": "2608.05131v1"
+    },
+    "2608.05107v1": {
+      "title": "CoPlan: A Trustworthy Co-Intelligence Interface for Care Planning through Role-Based Contestable Argument Graphs",
+      "paper_id": "2608.05107v1"
+    },
+    "2608.05102v1": {
+      "title": "ABSeeker: Training Long-Horizon Search Agents via Answer-Backtracked Credit Assignment",
+      "paper_id": "2608.05102v1"
+    },
+    "2608.05095v1": {
+      "title": "Hierarchical Graph Memory for LLM Agents with Path-level Localization and Rewrite",
+      "paper_id": "2608.05095v1"
+    },
+    "2608.05086v1": {
+      "title": "Item Response Theory for AI Safety",
+      "paper_id": "2608.05086v1"
+    },
+    "2608.05069v1": {
+      "title": "VQ-VAD: Vector-quantized Motion Representation Learning for Human-centric Video Anomaly Detection",
+      "paper_id": "2608.05069v1"
+    },
+    "2608.05063v1": {
+      "title": "Hardware Design and Security in the Era of Chiplets and LLMs",
+      "paper_id": "2608.05063v1"
+    },
+    "2608.05060v1": {
+      "title": "RepairFormer: Automated Repair of Structured Inputs Using Transformers",
+      "paper_id": "2608.05060v1"
+    },
+    "2608.05050v1": {
+      "title": "The Effect of Perceived Race and Gender on Police Language Use: Experimental Evidence from VR Simulations",
+      "paper_id": "2608.05050v1"
+    },
+    "2608.05045v1": {
+      "title": "Gradient Immunity: Null-Space Resistance to Malicious Fine-Tuning",
+      "paper_id": "2608.05045v1"
+    },
+    "2608.05030v1": {
+      "title": "From Score Matrices to Football-Aware Match-State Simulation: An Auditable LLM Harness for Exact-Score Reranking",
+      "paper_id": "2608.05030v1"
+    },
+    "2608.05026v1": {
+      "title": "ArtAnno: Annotating Implicit Semantics in Artworks through LLM Agent-Driven Bidirectional Human-AI Augmentation",
+      "paper_id": "2608.05026v1"
+    },
+    "2608.05148v1": {
+      "title": "Reasoning Core: Designing Broad Procedural Data for Completion-Supervised Reasoning Training",
+      "paper_id": "2608.05148v1"
+    },
+    "2608.05126v1": {
+      "title": "Spoken Function Calling: A New Perspective on Spoken Language Understanding for Large Audio Language Models",
+      "paper_id": "2608.05126v1"
+    },
+    "2608.05097v1": {
+      "title": "Same Formulas, Different Semantics: Do Language Models Follow Modal Logic Specifications?",
+      "paper_id": "2608.05097v1"
+    },
+    "2608.05075v1": {
+      "title": "German parties shifted towards intuition-based rhetoric after the far right's parliamentary breakthrough",
+      "paper_id": "2608.05075v1"
+    },
+    "2608.05028v1": {
+      "title": "Language Models Generalize to Human-like Word Order Preferences",
+      "paper_id": "2608.05028v1"
+    },
+    "W4414034927": {
+      "title": "Evaluating Podcast Recommendations with Profile-Aware LLM-as-a-Judge",
+      "paper_id": "https://doi.org/10.1145/3705328.3759305"
+    },
+    "W4414035010": {
+      "title": "Auditing Recommender Systems for User Empowerment in Very Large Online Platforms under the Digital Services Act",
+      "paper_id": "https://doi.org/10.1145/3705328.3748074"
     }
   },
   "edges": [
@@ -20639,6 +20807,306 @@
     {
       "from": "W4414035018",
       "to": "W4396696052",
+      "type": "related"
+    },
+    {
+      "from": "W4414034927",
+      "to": "W3152994072",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034927",
+      "to": "W4247950230",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034927",
+      "to": "W4389519254",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034927",
+      "to": "W4396843797",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034927",
+      "to": "W4399528455",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034927",
+      "to": "W4400526908",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034927",
+      "to": "W4400606525",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034927",
+      "to": "W4401043863",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034927",
+      "to": "W4403220350",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034927",
+      "to": "W4404781419",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034927",
+      "to": "W4412945473",
+      "type": "cites"
+    },
+    {
+      "from": "W4414034927",
+      "to": "W4391375266",
+      "type": "related"
+    },
+    {
+      "from": "W4414034927",
+      "to": "W2899084033",
+      "type": "related"
+    },
+    {
+      "from": "W4414034927",
+      "to": "W2748952813",
+      "type": "related"
+    },
+    {
+      "from": "W4414034927",
+      "to": "W2390279801",
+      "type": "related"
+    },
+    {
+      "from": "W4414034927",
+      "to": "W4391913857",
+      "type": "related"
+    },
+    {
+      "from": "W4414034927",
+      "to": "W2358668433",
+      "type": "related"
+    },
+    {
+      "from": "W4414034927",
+      "to": "W4396701345",
+      "type": "related"
+    },
+    {
+      "from": "W4414034927",
+      "to": "W2376932109",
+      "type": "related"
+    },
+    {
+      "from": "W4414034927",
+      "to": "W2001405890",
+      "type": "related"
+    },
+    {
+      "from": "W4414034927",
+      "to": "W4396696052",
+      "type": "related"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W1991223915",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W2007528787",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W2045674914",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W2058990114",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W2112354254",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W2141438078",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W2158934860",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W2553850813",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W2612952759",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W2834192818",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W2964135621",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W2971408993",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W2980951591",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W2992252352",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W3039858003",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W3138849077",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W3153158084",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W4294739250",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W4296604363",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W4386242359",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W4386242383",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W4386728738",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W4387074965",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W4393176161",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W4399362537",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W4399913206",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W4400292697",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W4405089767",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W4408369673",
+      "type": "cites"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W2748952813",
+      "type": "related"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W4390273403",
+      "type": "related"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W4386781444",
+      "type": "related"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W2150182025",
+      "type": "related"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W3092950680",
+      "type": "related"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W3197542405",
+      "type": "related"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W2056712470",
+      "type": "related"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W3125580266",
+      "type": "related"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W4288390103",
+      "type": "related"
+    },
+    {
+      "from": "W4414035010",
+      "to": "W4317039510",
       "type": "related"
     }
   ]
