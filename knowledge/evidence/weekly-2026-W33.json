@@ -1,0 +1,1179 @@
+{
+  "generated_at": "2026-08-17T02:12:03.632004",
+  "papers": [
+    {
+      "paper_ref": "P01",
+      "paper_id": "https://doi.org/10.1145/3770855.3818010",
+      "title": "G²PRO: Gradient-guided Graph Prompt Optimization for LLM-based POI Recommendation",
+      "url": "https://doi.org/10.1145/3770855.3818010",
+      "topics": [],
+      "score": 98.0,
+      "discovery": {
+        "channel": "citation_expansion",
+        "relation": "cites_seed",
+        "seed_paper_id": "https://doi.org/10.1145/3626772.3657828",
+        "seed_title": "Let Me Do It For You: Towards LLM Empowered Recommendation via Tool Learning",
+        "seed_score": 90.0
+      },
+      "claim_ids": [
+        "P01-C01",
+        "P01-C02"
+      ]
+    },
+    {
+      "paper_ref": "P02",
+      "paper_id": "https://doi.org/10.1145/3711896.3736919",
+      "title": "EARN: Efficient Inference Acceleration for LLM-based Generative Recommendation by Register Tokens",
+      "url": "https://dblp.org/rec/conf/kdd/0002000SHC25",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Topic Modeling",
+        "Machine Learning in Healthcare"
+      ],
+      "score": 95.0,
+      "discovery": {},
+      "claim_ids": [
+        "P02-C01",
+        "P02-C02"
+      ]
+    },
+    {
+      "paper_ref": "P03",
+      "paper_id": "https://doi.org/10.1145/3770855.3818479",
+      "title": "ScienceDB AI: An LLM-Driven Agentic Recommender System for Large-Scale Scientific Data Sharing Services",
+      "url": "https://doi.org/10.1145/3770855.3818479",
+      "topics": [],
+      "score": 88.0,
+      "discovery": {
+        "channel": "citation_expansion",
+        "relation": "cites_seed",
+        "seed_paper_id": "https://doi.org/10.1145/3626772.3657828",
+        "seed_title": "Let Me Do It For You: Towards LLM Empowered Recommendation via Tool Learning",
+        "seed_score": 90.0
+      },
+      "claim_ids": [
+        "P03-C01",
+        "P03-C02"
+      ]
+    },
+    {
+      "paper_ref": "P04",
+      "paper_id": "https://doi.org/10.1145/3805712.3809535",
+      "title": "Beyond Static Best-of-N: Bayesian List-wise Alignment for LLM-based Recommendation",
+      "url": "https://doi.org/10.1145/3805712.3809535",
+      "topics": [],
+      "score": 88.0,
+      "discovery": {
+        "channel": "citation_expansion",
+        "relation": "cites_seed",
+        "seed_paper_id": "https://doi.org/10.1145/3589334.3645537",
+        "seed_title": "AgentCF: Collaborative Learning with Autonomous Language Agents for Recommender Systems",
+        "seed_score": 100.0
+      },
+      "claim_ids": [
+        "P04-C01",
+        "P04-C02"
+      ]
+    },
+    {
+      "paper_ref": "P05",
+      "paper_id": "https://doi.org/10.3390/math14142631",
+      "title": "LLM-RS: A Large Language Model-Based Sequential Recommendation with Reasoning",
+      "url": "https://doi.org/10.3390/math14142631",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Explainable Artificial Intelligence (XAI)",
+        "Multimodal Machine Learning Applications"
+      ],
+      "score": 87.0,
+      "discovery": {
+        "channel": "citation_expansion",
+        "relation": "cites_seed",
+        "seed_paper_id": "https://doi.org/10.1145/3589334.3645537",
+        "seed_title": "AgentCF: Collaborative Learning with Autonomous Language Agents for Recommender Systems",
+        "seed_score": 100.0
+      },
+      "claim_ids": [
+        "P05-C01",
+        "P05-C02"
+      ]
+    },
+    {
+      "paper_ref": "P06",
+      "paper_id": "https://doi.org/10.1145/3833420",
+      "title": "RosePO: Customized Preference Alignment in LLM-Based Recommendation",
+      "url": "https://doi.org/10.1145/3833420",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Explainable Artificial Intelligence (XAI)",
+        "Sentiment Analysis and Opinion Mining"
+      ],
+      "score": 81.0,
+      "discovery": {
+        "channel": "citation_expansion",
+        "relation": "cites_seed",
+        "seed_paper_id": "https://doi.org/10.1145/3589334.3645537",
+        "seed_title": "AgentCF: Collaborative Learning with Autonomous Language Agents for Recommender Systems",
+        "seed_score": 100.0
+      },
+      "claim_ids": [
+        "P06-C01",
+        "P06-C02"
+      ]
+    },
+    {
+      "paper_ref": "P07",
+      "paper_id": "2608.12184v1",
+      "title": "Making Collaborative Signals Count: Graph-Aware Large Language Models for Sequential Recommendation",
+      "url": "http://arxiv.org/abs/2608.12184v1",
+      "topics": [],
+      "score": 75.0,
+      "discovery": {},
+      "claim_ids": [
+        "P07-C01",
+        "P07-C02"
+      ]
+    },
+    {
+      "paper_ref": "P08",
+      "paper_id": "https://doi.org/10.1145/3705328.3748068",
+      "title": "R4ec: A Reasoning, Reflection, and Refinement Framework for Recommendation Systems",
+      "url": "https://dblp.org/rec/conf/recsys/GuZX0L0G25",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Image Retrieval and Classification Techniques",
+        "Topic Modeling"
+      ],
+      "score": 70.0,
+      "discovery": {},
+      "claim_ids": [
+        "P08-C01",
+        "P08-C02"
+      ]
+    },
+    {
+      "paper_ref": "P09",
+      "paper_id": "https://doi.org/10.1145/3773966.3778028",
+      "title": "Personalization in the Era of Super(?)-intelligence",
+      "url": "https://dblp.org/rec/conf/wsdm/Caverlee26",
+      "topics": [
+        "Innovative Human-Technology Interaction",
+        "Explainable Artificial Intelligence (XAI)",
+        "Ethics and Social Impacts of AI"
+      ],
+      "score": 70.0,
+      "discovery": {},
+      "claim_ids": [
+        "P09-C01",
+        "P09-C02"
+      ]
+    },
+    {
+      "paper_ref": "P10",
+      "paper_id": "https://doi.org/10.1145/3830081",
+      "title": "Synergizing Large Language Model and Knowledge Graph for Cold-Start Recommendation",
+      "url": "https://doi.org/10.1145/3830081",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Topic Modeling",
+        "Sentiment Analysis and Opinion Mining"
+      ],
+      "score": 66.0,
+      "discovery": {
+        "channel": "citation_expansion",
+        "relation": "cites_seed",
+        "seed_paper_id": "https://doi.org/10.1145/3589334.3645537",
+        "seed_title": "AgentCF: Collaborative Learning with Autonomous Language Agents for Recommender Systems",
+        "seed_score": 100.0
+      },
+      "claim_ids": [
+        "P10-C01",
+        "P10-C02"
+      ]
+    },
+    {
+      "paper_ref": "P11",
+      "paper_id": "https://doi.org/10.1145/3705328.3748064",
+      "title": "VL-CLIP: Enhancing Multimodal Recommendations via Visual Grounding and LLM-Augmented CLIP Embeddings",
+      "url": "https://dblp.org/rec/conf/recsys/GiahiYKZMXBKA25",
+      "topics": [
+        "Multimodal Machine Learning Applications",
+        "Topic Modeling",
+        "Natural Language Processing Techniques"
+      ],
+      "score": 62.0,
+      "discovery": {},
+      "claim_ids": [
+        "P11-C01",
+        "P11-C02"
+      ]
+    },
+    {
+      "paper_ref": "P12",
+      "paper_id": "https://doi.org/10.1145/3726302.3730359",
+      "title": "SIGIR 2025 Workshop on eCommerce (ECOM25): From Research to Product: Challenges, Lessons, and Opportunities in eCommerce Search and Recommendations",
+      "url": "https://dblp.org/rec/conf/sigir/0001KCGT25",
+      "topics": [
+        "Semantic Web and Ontologies",
+        "Topic Modeling",
+        "Recommender Systems and Techniques"
+      ],
+      "score": 62.0,
+      "discovery": {},
+      "claim_ids": [
+        "P12-C01",
+        "P12-C02"
+      ]
+    },
+    {
+      "paper_ref": "P13",
+      "paper_id": "https://doi.org/10.1145/3779211.3795741",
+      "title": "Agentic Orchestration for Adaptive Educational Recommendations: A Multi-Agent LLM Framework for Personalized Learning Pathways",
+      "url": "https://dblp.org/rec/conf/wsdm/ChaturvediG26",
+      "topics": [
+        "Intelligent Tutoring Systems and Adaptive Learning",
+        "Recommender Systems and Techniques",
+        "Online Learning and Analytics"
+      ],
+      "score": 60.0,
+      "discovery": {},
+      "claim_ids": [
+        "P13-C01",
+        "P13-C02"
+      ]
+    },
+    {
+      "paper_ref": "P14",
+      "paper_id": "2608.09634v1",
+      "title": "IntHQ: Task-Interactive Hierarchical Query on Dual-Stream Representations for Generative Recommendation",
+      "url": "http://arxiv.org/abs/2608.09634v1",
+      "topics": [],
+      "score": 58.0,
+      "discovery": {},
+      "claim_ids": [
+        "P14-C01",
+        "P14-C02"
+      ]
+    },
+    {
+      "paper_ref": "P15",
+      "paper_id": "https://doi.org/10.1145/3711896.3736968",
+      "title": "FindRec: Stein-Guided Entropic Flow for Multi-Modal Sequential Recommendation",
+      "url": "https://dblp.org/rec/conf/kdd/0001XW0YWYGX25",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Advanced Bandit Algorithms Research",
+        "Image Retrieval and Classification Techniques"
+      ],
+      "score": 56.0,
+      "discovery": {},
+      "claim_ids": [
+        "P15-C01",
+        "P15-C02",
+        "P15-C03"
+      ]
+    },
+    {
+      "paper_ref": "P16",
+      "paper_id": "https://doi.org/10.1145/3773966.3779358",
+      "title": "G-TRAC: Graph-textual Representations Alignment for Cold-start Recommendations",
+      "url": "https://dblp.org/rec/conf/wsdm/Chang0TW26",
+      "topics": [
+        "Advanced Graph Neural Networks",
+        "Topic Modeling",
+        "Sentiment Analysis and Opinion Mining"
+      ],
+      "score": 50.0,
+      "discovery": {},
+      "claim_ids": [
+        "P16-C01",
+        "P16-C02"
+      ]
+    },
+    {
+      "paper_ref": "P17",
+      "paper_id": "https://doi.org/10.1145/3705328.3748164",
+      "title": "Time to Split: Exploring Data Splitting Strategies for Offline Evaluation of Sequential Recommenders",
+      "url": "https://dblp.org/rec/conf/recsys/GusakVKVF25",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Advanced Bandit Algorithms Research",
+        "Customer churn and segmentation"
+      ],
+      "score": 50.0,
+      "discovery": {},
+      "claim_ids": [
+        "P17-C01",
+        "P17-C02",
+        "P17-C03"
+      ]
+    },
+    {
+      "paper_ref": "P18",
+      "paper_id": "openalex:W7166257379",
+      "title": "Responsible AI Through Algorithmic Control",
+      "url": "https://aisel.aisnet.org/treos_amcis2026/167",
+      "topics": [
+        "Ethics and Social Impacts of AI",
+        "Privacy, Security, and Data Protection",
+        "AI in Service Interactions"
+      ],
+      "score": 50.0,
+      "discovery": {},
+      "claim_ids": [
+        "P18-C01",
+        "P18-C02"
+      ]
+    },
+    {
+      "paper_ref": "P19",
+      "paper_id": "https://doi.org/10.1145/3705328.3748148",
+      "title": "Informfully Recommenders - Reproducibility Framework for Diversity-aware Intra-session Recommendations",
+      "url": "https://dblp.org/rec/conf/recsys/HeitzLIB25",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Topic Modeling",
+        "Information Retrieval and Search Behavior"
+      ],
+      "score": 50.0,
+      "discovery": {},
+      "claim_ids": [
+        "P19-C01",
+        "P19-C02",
+        "P19-C03"
+      ]
+    },
+    {
+      "paper_ref": "P20",
+      "paper_id": "https://doi.org/10.1145/3774904.3792790",
+      "title": "Beyond the Flat Sequence: Hierarchical and Preference-Aware Generative Recommendations",
+      "url": "https://dblp.org/rec/conf/www/ChenCLZCDLQ26",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Mobile Crowdsensing and Crowdsourcing",
+        "Explainable Artificial Intelligence (XAI)"
+      ],
+      "score": 48.0,
+      "discovery": {},
+      "claim_ids": [
+        "P20-C01",
+        "P20-C02"
+      ]
+    },
+    {
+      "paper_ref": "P21",
+      "paper_id": "2608.09685v1",
+      "title": "Adaptive Semantic Capacity Allocation for Parallel Generative Recommendation",
+      "url": "http://arxiv.org/abs/2608.09685v1",
+      "topics": [],
+      "score": 45.0,
+      "discovery": {},
+      "claim_ids": [
+        "P21-C01",
+        "P21-C02"
+      ]
+    },
+    {
+      "paper_ref": "P22",
+      "paper_id": "https://doi.org/10.1145/3705328.3759316",
+      "title": "Rethinking Subjective Features in Recommender Systems: Personal Views Over Aggregated Values",
+      "url": "https://dblp.org/rec/conf/recsys/GolubovikjT25",
+      "topics": [
+        "Video Analysis and Summarization",
+        "Music and Audio Processing",
+        "Advanced Text Analysis Techniques"
+      ],
+      "score": 44.0,
+      "discovery": {},
+      "claim_ids": [
+        "P22-C01",
+        "P22-C02"
+      ]
+    },
+    {
+      "paper_ref": "P23",
+      "paper_id": "https://doi.org/10.1145/3292500.3330989",
+      "title": "KGAT",
+      "url": "https://doi.org/10.1145/3292500.3330989",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Advanced Graph Neural Networks",
+        "Epigenetics and DNA Methylation"
+      ],
+      "score": 44.0,
+      "discovery": {
+        "channel": "citation_expansion",
+        "relation": "referenced_by_seed",
+        "seed_paper_id": "https://doi.org/10.1145/3626772.3657828",
+        "seed_title": "Let Me Do It For You: Towards LLM Empowered Recommendation via Tool Learning",
+        "seed_score": 90.0
+      },
+      "claim_ids": [
+        "P23-C01",
+        "P23-C02",
+        "P23-C03",
+        "P23-C04"
+      ]
+    },
+    {
+      "paper_ref": "P24",
+      "paper_id": "2608.11061v1",
+      "title": "Batch Size or Negatives? A Selection Rule for Memory-Constrained Recommender Training",
+      "url": "http://arxiv.org/abs/2608.11061v1",
+      "topics": [],
+      "score": 43.0,
+      "discovery": {},
+      "claim_ids": [
+        "P24-C01",
+        "P24-C02"
+      ]
+    },
+    {
+      "paper_ref": "P25",
+      "paper_id": "https://doi.org/10.1145/3774904.3792419",
+      "title": "Modeling Endogenous Logic: Causal Neuro-Symbolic Reasoning Model for Explainable Multi-Behavior Recommendation",
+      "url": "https://dblp.org/rec/conf/www/ChenCWTVW26",
+      "topics": [
+        "Explainable Artificial Intelligence (XAI)",
+        "Recommender Systems and Techniques",
+        "Topic Modeling"
+      ],
+      "score": 43.0,
+      "discovery": {},
+      "claim_ids": [
+        "P25-C01",
+        "P25-C02"
+      ]
+    },
+    {
+      "paper_ref": "P26",
+      "paper_id": "https://doi.org/10.1145/3705328.3759331",
+      "title": "Recommendation Is a Dish Better Served Warm",
+      "url": "https://dblp.org/rec/conf/recsys/GusakSF25",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Advanced Bandit Algorithms Research",
+        "Topic Modeling"
+      ],
+      "score": 42.0,
+      "discovery": {},
+      "claim_ids": [
+        "P26-C01",
+        "P26-C02"
+      ]
+    },
+    {
+      "paper_ref": "P27",
+      "paper_id": "2608.11190v1",
+      "title": "Are We Really Making Progress in Group Recommendation? Unmasking the Tie-Breaking Illusion",
+      "url": "http://arxiv.org/abs/2608.11190v1",
+      "topics": [],
+      "score": 40.0,
+      "discovery": {},
+      "claim_ids": [
+        "P27-C01",
+        "P27-C02",
+        "P27-C03"
+      ]
+    },
+    {
+      "paper_ref": "P28",
+      "paper_id": "https://doi.org/10.1109/icdm.2018.00035",
+      "title": "Self-Attentive Sequential Recommendation",
+      "url": "https://doi.org/10.1109/icdm.2018.00035",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Machine Learning in Healthcare",
+        "Generative Adversarial Networks and Image Synthesis"
+      ],
+      "score": 38.0,
+      "discovery": {
+        "channel": "citation_expansion",
+        "relation": "referenced_by_seed",
+        "seed_paper_id": "https://doi.org/10.1145/3589334.3645537",
+        "seed_title": "AgentCF: Collaborative Learning with Autonomous Language Agents for Recommender Systems",
+        "seed_score": 100.0
+      },
+      "claim_ids": [
+        "P28-C01",
+        "P28-C02",
+        "P28-C03",
+        "P28-C04"
+      ]
+    },
+    {
+      "paper_ref": "P29",
+      "paper_id": "https://doi.org/10.1145/3357384.3357895",
+      "title": "BERT4Rec",
+      "url": "https://doi.org/10.1145/3357384.3357895",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Topic Modeling",
+        "Machine Learning in Healthcare"
+      ],
+      "score": 38.0,
+      "discovery": {
+        "channel": "citation_expansion",
+        "relation": "referenced_by_seed",
+        "seed_paper_id": "https://doi.org/10.1145/3626772.3657828",
+        "seed_title": "Let Me Do It For You: Towards LLM Empowered Recommendation via Tool Learning",
+        "seed_score": 90.0
+      },
+      "claim_ids": [
+        "P29-C01",
+        "P29-C02",
+        "P29-C03",
+        "P29-C04"
+      ]
+    },
+    {
+      "paper_ref": "P30",
+      "paper_id": "https://doi.org/10.1145/3773966.3778016",
+      "title": "Decoupling User Features for User Cold-Start App Recommendation: Static Attributes versus Behavioral Sequences",
+      "url": "https://dblp.org/rec/conf/wsdm/ChenK00026",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Advanced Bandit Algorithms Research",
+        "Advanced Graph Neural Networks"
+      ],
+      "score": 37.0,
+      "discovery": {},
+      "claim_ids": [
+        "P30-C01",
+        "P30-C02"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "P01-C01",
+      "paper_id": "https://doi.org/10.1145/3770855.3818010",
+      "paper_ref": "P01",
+      "kind": "paper_summary",
+      "text": "提出G2PRO框架，通过梯度引导的图提示优化，结合GNN和LLM，有效提升基于LLM的POI推荐性能。",
+      "location": "AI paper-level summary",
+      "source_url": "https://doi.org/10.1145/3770855.3818010"
+    },
+    {
+      "claim_id": "P01-C02",
+      "paper_id": "https://doi.org/10.1145/3770855.3818010",
+      "paper_ref": "P01",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "https://doi.org/10.1145/3770855.3818010"
+    },
+    {
+      "claim_id": "P02-C01",
+      "paper_id": "https://doi.org/10.1145/3711896.3736919",
+      "paper_ref": "P02",
+      "kind": "paper_summary",
+      "text": "本文提出EARN框架，利用早期层的注意力模式将信息压缩到注册令牌中，以加速基于LLM的生成式推荐，实现高达3.79倍加速和80.8%的KV缓存减少，同时保持或提升准确性。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/kdd/0002000SHC25"
+    },
+    {
+      "claim_id": "P02-C02",
+      "paper_id": "https://doi.org/10.1145/3711896.3736919",
+      "paper_ref": "P02",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 3",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/kdd/0002000SHC25"
+    },
+    {
+      "claim_id": "P03-C01",
+      "paper_id": "https://doi.org/10.1145/3770855.3818479",
+      "paper_ref": "P03",
+      "kind": "paper_summary",
+      "text": "本文提出了ScienceDB AI，一个基于LLM的智能体推荐系统，通过对话和深度推理为大规模科学数据共享服务提供个性化推荐，离线指标提升超过30%，点击率提升超过200%。",
+      "location": "AI paper-level summary",
+      "source_url": "https://doi.org/10.1145/3770855.3818479"
+    },
+    {
+      "claim_id": "P03-C02",
+      "paper_id": "https://doi.org/10.1145/3770855.3818479",
+      "paper_ref": "P03",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "https://doi.org/10.1145/3770855.3818479"
+    },
+    {
+      "claim_id": "P04-C01",
+      "paper_id": "https://doi.org/10.1145/3805712.3809535",
+      "paper_ref": "P04",
+      "kind": "paper_summary",
+      "text": "本文针对LLM推荐系统中静态Best-of-N对齐的不足，提出贝叶斯列表级对齐方法，通过动态参考和梯度修正提升列表级指标（如NDCG和公平性）的优化效果。",
+      "location": "AI paper-level summary",
+      "source_url": "https://doi.org/10.1145/3805712.3809535"
+    },
+    {
+      "claim_id": "P04-C02",
+      "paper_id": "https://doi.org/10.1145/3805712.3809535",
+      "paper_ref": "P04",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 1",
+      "location": "OpenAlex metadata",
+      "source_url": "https://doi.org/10.1145/3805712.3809535"
+    },
+    {
+      "claim_id": "P05-C01",
+      "paper_id": "https://doi.org/10.3390/math14142631",
+      "paper_ref": "P05",
+      "kind": "paper_summary",
+      "text": "本文提出LLM-RS框架，利用大语言模型为序列推荐生成显式推理链和解释，在保持准确性的同时提升可解释性和用户信任。",
+      "location": "AI paper-level summary",
+      "source_url": "https://doi.org/10.3390/math14142631"
+    },
+    {
+      "claim_id": "P05-C02",
+      "paper_id": "https://doi.org/10.3390/math14142631",
+      "paper_ref": "P05",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "https://doi.org/10.3390/math14142631"
+    },
+    {
+      "claim_id": "P06-C01",
+      "paper_id": "https://doi.org/10.1145/3833420",
+      "paper_ref": "P06",
+      "kind": "paper_summary",
+      "text": "该论文提出RosePO框架，通过个性化平滑的成对偏好优化来改进基于LLM的推荐，有效缓解语义幻觉和流行度偏差，提升推荐性能。",
+      "location": "AI paper-level summary",
+      "source_url": "https://doi.org/10.1145/3833420"
+    },
+    {
+      "claim_id": "P06-C02",
+      "paper_id": "https://doi.org/10.1145/3833420",
+      "paper_ref": "P06",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "https://doi.org/10.1145/3833420"
+    },
+    {
+      "claim_id": "P07-C01",
+      "paper_id": "2608.12184v1",
+      "paper_ref": "P07",
+      "kind": "paper_summary",
+      "text": "提出图感知大语言模型GALLM，通过将协同图关系注入注意力机制，提升序列推荐性能，在四个基准上平均HR@5提升9.76%。",
+      "location": "AI paper-level summary",
+      "source_url": "http://arxiv.org/abs/2608.12184v1"
+    },
+    {
+      "claim_id": "P07-C02",
+      "paper_id": "2608.12184v1",
+      "paper_ref": "P07",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "http://arxiv.org/abs/2608.12184v1"
+    },
+    {
+      "claim_id": "P08-C01",
+      "paper_id": "https://doi.org/10.1145/3705328.3748068",
+      "paper_ref": "P08",
+      "kind": "paper_summary",
+      "text": "论文提出R4ec框架，通过LLM的推理、反思和精炼过程提升推荐系统性能，在Amazon-Book和MovieLens-1M数据集上验证了有效性，并在广告平台获得2.2%收入提升。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/recsys/GuZX0L0G25"
+    },
+    {
+      "claim_id": "P08-C02",
+      "paper_id": "https://doi.org/10.1145/3705328.3748068",
+      "paper_ref": "P08",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 3",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/recsys/GuZX0L0G25"
+    },
+    {
+      "claim_id": "P09-C01",
+      "paper_id": "https://doi.org/10.1145/3773966.3778028",
+      "paper_ref": "P09",
+      "kind": "paper_summary",
+      "text": "该论文探讨了在超级智能时代，个性化推荐系统如何从预测用户意图转向主动推理和创造，以引导用户发现新见解，并质疑是否真正迎来超级智能个性化。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/wsdm/Caverlee26"
+    },
+    {
+      "claim_id": "P09-C02",
+      "paper_id": "https://doi.org/10.1145/3773966.3778028",
+      "paper_ref": "P09",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/wsdm/Caverlee26"
+    },
+    {
+      "claim_id": "P10-C01",
+      "paper_id": "https://doi.org/10.1145/3830081",
+      "paper_ref": "P10",
+      "kind": "paper_summary",
+      "text": "本文提出SCSRec框架，通过协同大语言模型和知识图谱生成高质量的模拟交互数据，以解决冷启动推荐问题，并在多个数据集上取得最优性能。",
+      "location": "AI paper-level summary",
+      "source_url": "https://doi.org/10.1145/3830081"
+    },
+    {
+      "claim_id": "P10-C02",
+      "paper_id": "https://doi.org/10.1145/3830081",
+      "paper_ref": "P10",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "https://doi.org/10.1145/3830081"
+    },
+    {
+      "claim_id": "P11-C01",
+      "paper_id": "https://doi.org/10.1145/3705328.3748064",
+      "paper_ref": "P11",
+      "kind": "paper_summary",
+      "text": "该论文提出VL-CLIP框架，通过视觉定位和LLM增强CLIP嵌入，显著提升多模态推荐系统的检索和推荐性能，CTR提升18.6%。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/recsys/GiahiYKZMXBKA25"
+    },
+    {
+      "claim_id": "P11-C02",
+      "paper_id": "https://doi.org/10.1145/3705328.3748064",
+      "paper_ref": "P11",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 5",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/recsys/GiahiYKZMXBKA25"
+    },
+    {
+      "claim_id": "P12-C01",
+      "paper_id": "https://doi.org/10.1145/3726302.3730359",
+      "paper_ref": "P12",
+      "kind": "paper_summary",
+      "text": "该论文提出了SIGIR 2025电子商务研讨会，旨在通过互动讨论解决研究到产品转化中的不可复现性、LLM评估指标、多模态以及有机与赞助搜索的交互等挑战，促进电子商务搜索和推荐领域的发展。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/sigir/0001KCGT25"
+    },
+    {
+      "claim_id": "P12-C02",
+      "paper_id": "https://doi.org/10.1145/3726302.3730359",
+      "paper_ref": "P12",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/sigir/0001KCGT25"
+    },
+    {
+      "claim_id": "P13-C01",
+      "paper_id": "https://doi.org/10.1145/3779211.3795741",
+      "paper_ref": "P13",
+      "kind": "paper_summary",
+      "text": "The paper proposes a multi-agent LLM framework for educational recommendations that uses hierarchical agent orchestration to provide adaptive and personalized learning pathways, demonstrating capabilities beyond single-model approaches.",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/wsdm/ChaturvediG26"
+    },
+    {
+      "claim_id": "P13-C02",
+      "paper_id": "https://doi.org/10.1145/3779211.3795741",
+      "paper_ref": "P13",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/wsdm/ChaturvediG26"
+    },
+    {
+      "claim_id": "P14-C01",
+      "paper_id": "2608.09634v1",
+      "paper_ref": "P14",
+      "kind": "paper_summary",
+      "text": "本文提出IntHQ，一种通过双流解耦、任务交互建模和层次查询来缓解多任务生成式推荐中源、关系和层次崩溃的方法，并在离线评估和Amap生产环境中显著提升了UVCTR。",
+      "location": "AI paper-level summary",
+      "source_url": "http://arxiv.org/abs/2608.09634v1"
+    },
+    {
+      "claim_id": "P14-C02",
+      "paper_id": "2608.09634v1",
+      "paper_ref": "P14",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "http://arxiv.org/abs/2608.09634v1"
+    },
+    {
+      "claim_id": "P15-C01",
+      "paper_id": "https://doi.org/10.1145/3711896.3736968",
+      "paper_ref": "P15",
+      "kind": "paper_summary",
+      "text": "The paper proposes FindRec, a framework for multi-modal sequential recommendation that uses Stein-guided entropic flow to coordinate multimodal features and ID streams, achieving superior performance on real-world datasets.",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/kdd/0001XW0YWYGX25"
+    },
+    {
+      "claim_id": "P15-C02",
+      "paper_id": "https://doi.org/10.1145/3711896.3736968",
+      "paper_ref": "P15",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 6",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/kdd/0001XW0YWYGX25"
+    },
+    {
+      "claim_id": "P15-C03",
+      "paper_id": "https://doi.org/10.1145/3711896.3736968",
+      "paper_ref": "P15",
+      "kind": "code_repository",
+      "text": "Code candidate Applied-Machine-Learning-Lab/FindRec is classified official with confidence 70",
+      "location": "https://github.com/Applied-Machine-Learning-Lab/FindRec",
+      "source_url": "https://dblp.org/rec/conf/kdd/0001XW0YWYGX25"
+    },
+    {
+      "claim_id": "P16-C01",
+      "paper_id": "https://doi.org/10.1145/3773966.3779358",
+      "paper_ref": "P16",
+      "kind": "paper_summary",
+      "text": "G-TRAC proposes a graph-textual representation alignment method to address cold-start recommendations by integrating transformer-based textual modeling with graph neural networks, improving recommendation quality for new users and items.",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/wsdm/Chang0TW26"
+    },
+    {
+      "claim_id": "P16-C02",
+      "paper_id": "https://doi.org/10.1145/3773966.3779358",
+      "paper_ref": "P16",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/wsdm/Chang0TW26"
+    },
+    {
+      "claim_id": "P17-C01",
+      "paper_id": "https://doi.org/10.1145/3705328.3748164",
+      "paper_ref": "P17",
+      "kind": "paper_summary",
+      "text": "该论文系统分析了序列推荐离线评估中不同数据划分策略（如留一法和全局时间划分）对评估结果的影响，指出留一法存在时间泄漏和测试范围不现实的问题，而全局时间划分更贴近实际部署，并提出了改进的评估协议。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/recsys/GusakVKVF25"
+    },
+    {
+      "claim_id": "P17-C02",
+      "paper_id": "https://doi.org/10.1145/3705328.3748164",
+      "paper_ref": "P17",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 10",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/recsys/GusakVKVF25"
+    },
+    {
+      "claim_id": "P17-C03",
+      "paper_id": "https://doi.org/10.1145/3705328.3748164",
+      "paper_ref": "P17",
+      "kind": "code_repository",
+      "text": "Code candidate monkey0head/time-to-split is classified likely with confidence 69",
+      "location": "https://github.com/monkey0head/time-to-split",
+      "source_url": "https://dblp.org/rec/conf/recsys/GusakVKVF25"
+    },
+    {
+      "claim_id": "P18-C01",
+      "paper_id": "openalex:W7166257379",
+      "paper_ref": "P18",
+      "kind": "paper_summary",
+      "text": "该论文通过设计界面级控制功能，研究算法控制如何提升推荐系统的透明度、用户自主性和信任，以实现负责任AI。",
+      "location": "AI paper-level summary",
+      "source_url": "https://aisel.aisnet.org/treos_amcis2026/167"
+    },
+    {
+      "claim_id": "P18-C02",
+      "paper_id": "openalex:W7166257379",
+      "paper_ref": "P18",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "https://aisel.aisnet.org/treos_amcis2026/167"
+    },
+    {
+      "claim_id": "P19-C01",
+      "paper_id": "https://doi.org/10.1145/3705328.3748148",
+      "paper_ref": "P19",
+      "kind": "paper_summary",
+      "text": "The paper presents Informfully Recommenders, a reproducibility framework for diversity-aware intra-session recommendations, providing an end-to-end solution for implementing and experimenting with normative and diverse recommender systems.",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/recsys/HeitzLIB25"
+    },
+    {
+      "claim_id": "P19-C02",
+      "paper_id": "https://doi.org/10.1145/3705328.3748148",
+      "paper_ref": "P19",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 2",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/recsys/HeitzLIB25"
+    },
+    {
+      "claim_id": "P19-C03",
+      "paper_id": "https://doi.org/10.1145/3705328.3748148",
+      "paper_ref": "P19",
+      "kind": "code_repository",
+      "text": "Code candidate Informfully/Recommenders is classified likely with confidence 69",
+      "location": "https://github.com/Informfully/Recommenders",
+      "source_url": "https://dblp.org/rec/conf/recsys/HeitzLIB25"
+    },
+    {
+      "claim_id": "P20-C01",
+      "paper_id": "https://doi.org/10.1145/3774904.3792790",
+      "paper_ref": "P20",
+      "kind": "paper_summary",
+      "text": "本文提出了一种层次化和偏好感知的生成式推荐框架HPGR，通过结构感知预训练和偏好引导的稀疏注意力机制，在工业数据集和在线A/B测试中超越了现有基线，解决了生成式推荐中忽略用户行为层次结构和计算效率低的问题。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/www/ChenCLZCDLQ26"
+    },
+    {
+      "claim_id": "P20-C02",
+      "paper_id": "https://doi.org/10.1145/3774904.3792790",
+      "paper_ref": "P20",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/www/ChenCLZCDLQ26"
+    },
+    {
+      "claim_id": "P21-C01",
+      "paper_id": "2608.09685v1",
+      "paper_ref": "P21",
+      "kind": "paper_summary",
+      "text": "本文提出InforID框架，通过自适应分配语义槽容量来优化并行生成推荐，在保持一步预测的同时提升推荐精度。",
+      "location": "AI paper-level summary",
+      "source_url": "http://arxiv.org/abs/2608.09685v1"
+    },
+    {
+      "claim_id": "P21-C02",
+      "paper_id": "2608.09685v1",
+      "paper_ref": "P21",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "http://arxiv.org/abs/2608.09685v1"
+    },
+    {
+      "claim_id": "P22-C01",
+      "paper_id": "https://doi.org/10.1145/3705328.3759316",
+      "paper_ref": "P22",
+      "kind": "paper_summary",
+      "text": "该论文通过对比固定聚合与用户特定表示，证明在推荐系统中建模主观特征时用户特定表示更优，从而提升推荐性能。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/recsys/GolubovikjT25"
+    },
+    {
+      "claim_id": "P22-C02",
+      "paper_id": "https://doi.org/10.1145/3705328.3759316",
+      "paper_ref": "P22",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 1",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/recsys/GolubovikjT25"
+    },
+    {
+      "claim_id": "P23-C01",
+      "paper_id": "https://doi.org/10.1145/3292500.3330989",
+      "paper_ref": "P23",
+      "kind": "paper_summary",
+      "text": "本文提出知识图谱注意力网络（KGAT），通过显式建模知识图谱中的高阶连通性，利用注意力机制传播嵌入，从而提升推荐系统的准确性、多样性和可解释性。",
+      "location": "AI paper-level summary",
+      "source_url": "https://doi.org/10.1145/3292500.3330989"
+    },
+    {
+      "claim_id": "P23-C02",
+      "paper_id": "https://doi.org/10.1145/3292500.3330989",
+      "paper_ref": "P23",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 2117",
+      "location": "OpenAlex metadata",
+      "source_url": "https://doi.org/10.1145/3292500.3330989"
+    },
+    {
+      "claim_id": "P23-C03",
+      "paper_id": "https://doi.org/10.1145/3292500.3330989",
+      "paper_ref": "P23",
+      "kind": "code_repository",
+      "text": "Code candidate xiangwang1223/knowledge_graph_attention_network is classified official with confidence 100",
+      "location": "https://github.com/xiangwang1223/knowledge_graph_attention_network",
+      "source_url": "https://doi.org/10.1145/3292500.3330989"
+    },
+    {
+      "claim_id": "P23-C04",
+      "paper_id": "https://doi.org/10.1145/3292500.3330989",
+      "paper_ref": "P23",
+      "kind": "code_repository",
+      "text": "Code candidate LunaBlack/KGAT-pytorch is classified likely with confidence 69",
+      "location": "https://github.com/LunaBlack/KGAT-pytorch",
+      "source_url": "https://doi.org/10.1145/3292500.3330989"
+    },
+    {
+      "claim_id": "P24-C01",
+      "paper_id": "2608.11061v1",
+      "paper_ref": "P24",
+      "kind": "paper_summary",
+      "text": "该论文通过理论分析和实验证明，在固定内存预算下，推荐系统训练应优先增加批次大小而非负样本数量，以实现更快的收敛和更好的推荐质量。",
+      "location": "AI paper-level summary",
+      "source_url": "http://arxiv.org/abs/2608.11061v1"
+    },
+    {
+      "claim_id": "P24-C02",
+      "paper_id": "2608.11061v1",
+      "paper_ref": "P24",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "http://arxiv.org/abs/2608.11061v1"
+    },
+    {
+      "claim_id": "P25-C01",
+      "paper_id": "https://doi.org/10.1145/3774904.3792419",
+      "paper_ref": "P25",
+      "kind": "paper_summary",
+      "text": "该论文提出一种因果神经符号推理模型（CNRE），通过模拟用户行为链的内生逻辑并引入因果推断，在提升多行为推荐性能的同时提供多层级可解释性。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/www/ChenCWTVW26"
+    },
+    {
+      "claim_id": "P25-C02",
+      "paper_id": "https://doi.org/10.1145/3774904.3792419",
+      "paper_ref": "P25",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/www/ChenCWTVW26"
+    },
+    {
+      "claim_id": "P26-C01",
+      "paper_id": "https://doi.org/10.1145/3705328.3759331",
+      "paper_ref": "P26",
+      "kind": "paper_summary",
+      "text": "该论文系统研究了推荐系统中冷启动阈值的设定对评估结果的影响，发现不一致的阈值会导致数据浪费或噪声增加，影响评估可靠性。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/recsys/GusakSF25"
+    },
+    {
+      "claim_id": "P26-C02",
+      "paper_id": "https://doi.org/10.1145/3705328.3759331",
+      "paper_ref": "P26",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 2",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/recsys/GusakSF25"
+    },
+    {
+      "claim_id": "P27-C01",
+      "paper_id": "2608.11190v1",
+      "paper_ref": "P27",
+      "kind": "paper_summary",
+      "text": "该论文揭示了群组推荐中因训练时分数压缩和评估时确定性平局打破导致的系统性评估偏差，并提出平局感知评估协议，发现许多先前报告的改进在平局感知评估下大幅缩水。",
+      "location": "AI paper-level summary",
+      "source_url": "http://arxiv.org/abs/2608.11190v1"
+    },
+    {
+      "claim_id": "P27-C02",
+      "paper_id": "2608.11190v1",
+      "paper_ref": "P27",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "http://arxiv.org/abs/2608.11190v1"
+    },
+    {
+      "claim_id": "P27-C03",
+      "paper_id": "2608.11190v1",
+      "paper_ref": "P27",
+      "kind": "code_repository",
+      "text": "Code candidate songduoma/TieAwareGroupRec is classified official with confidence 100",
+      "location": "https://github.com/songduoma/TieAwareGroupRec",
+      "source_url": "http://arxiv.org/abs/2608.11190v1"
+    },
+    {
+      "claim_id": "P28-C01",
+      "paper_id": "https://doi.org/10.1109/icdm.2018.00035",
+      "paper_ref": "P28",
+      "kind": "paper_summary",
+      "text": "该论文提出了一种基于自注意力机制的序列推荐模型（SASRec），在稀疏和密集数据集上均优于现有方法，且效率更高。",
+      "location": "AI paper-level summary",
+      "source_url": "https://doi.org/10.1109/icdm.2018.00035"
+    },
+    {
+      "claim_id": "P28-C02",
+      "paper_id": "https://doi.org/10.1109/icdm.2018.00035",
+      "paper_ref": "P28",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 2898",
+      "location": "OpenAlex metadata",
+      "source_url": "https://doi.org/10.1109/icdm.2018.00035"
+    },
+    {
+      "claim_id": "P28-C03",
+      "paper_id": "https://doi.org/10.1109/icdm.2018.00035",
+      "paper_ref": "P28",
+      "kind": "code_repository",
+      "text": "Code candidate recommenders-team/recommenders is classified possible with confidence 30",
+      "location": "https://github.com/recommenders-team/recommenders",
+      "source_url": "https://doi.org/10.1109/icdm.2018.00035"
+    },
+    {
+      "claim_id": "P28-C04",
+      "paper_id": "https://doi.org/10.1109/icdm.2018.00035",
+      "paper_ref": "P28",
+      "kind": "code_repository",
+      "text": "Code candidate tangxyw/RecSysPapers is classified possible with confidence 30",
+      "location": "https://github.com/tangxyw/RecSysPapers",
+      "source_url": "https://doi.org/10.1109/icdm.2018.00035"
+    },
+    {
+      "claim_id": "P29-C01",
+      "paper_id": "https://doi.org/10.1145/3357384.3357895",
+      "paper_ref": "P29",
+      "kind": "paper_summary",
+      "text": "BERT4Rec利用深度双向自注意力模型和Cloze目标，通过联合左右上下文预测随机掩码的物品，从而更有效地建模用户行为序列，在四个基准数据集上优于现有序列推荐模型。",
+      "location": "AI paper-level summary",
+      "source_url": "https://doi.org/10.1145/3357384.3357895"
+    },
+    {
+      "claim_id": "P29-C02",
+      "paper_id": "https://doi.org/10.1145/3357384.3357895",
+      "paper_ref": "P29",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 2419",
+      "location": "OpenAlex metadata",
+      "source_url": "https://doi.org/10.1145/3357384.3357895"
+    },
+    {
+      "claim_id": "P29-C03",
+      "paper_id": "https://doi.org/10.1145/3357384.3357895",
+      "paper_ref": "P29",
+      "kind": "code_repository",
+      "text": "Code candidate FeiSun/BERT4Rec is classified likely with confidence 69",
+      "location": "https://github.com/FeiSun/BERT4Rec",
+      "source_url": "https://doi.org/10.1145/3357384.3357895"
+    },
+    {
+      "claim_id": "P29-C04",
+      "paper_id": "https://doi.org/10.1145/3357384.3357895",
+      "paper_ref": "P29",
+      "kind": "code_repository",
+      "text": "Code candidate PaddlePaddle/PaddleRec is classified possible with confidence 30",
+      "location": "https://github.com/PaddlePaddle/PaddleRec",
+      "source_url": "https://doi.org/10.1145/3357384.3357895"
+    },
+    {
+      "claim_id": "P30-C01",
+      "paper_id": "https://doi.org/10.1145/3773966.3778016",
+      "paper_ref": "P30",
+      "kind": "paper_summary",
+      "text": "本文提出AFIM架构，通过解耦用户属性特征和行为序列特征并动态融合，有效缓解了用户冷启动推荐中的特征干扰问题，在多个数据集上优于现有方法。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/wsdm/ChenK00026"
+    },
+    {
+      "claim_id": "P30-C02",
+      "paper_id": "https://doi.org/10.1145/3773966.3778016",
+      "paper_ref": "P30",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/wsdm/ChenK00026"
+    }
+  ]
+}
