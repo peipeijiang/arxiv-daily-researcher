@@ -3,7 +3,7 @@ title: "DSFNet: Learning Disentangled Scenario Factorization for Multi-Scenario 
 paper_id: "https://doi.org/10.1145/3701716.3715219"
 source: "www"
 published: "2025-01-01T00:00:00"
-score: 30.0
+score: 8.0
 tags: ["paper", "recommender-systems", "Data Management and Algorithms", "Data Mining Algorithms and Applications", "Text and Document Classification Technologies"]
 ---
 
@@ -13,20 +13,20 @@ tags: ["paper", "recommender-systems", "Data Management and Algorithms", "Data M
 
 ## 一句话结论
 
-> 该论文提出DSFNet，通过解耦场景因子解决多场景路线排序中的场景数量爆炸、高纠缠和高容量需求问题，并在新构建的大规模数据集MSDR上验证了有效性，已部署于高德地图。
+> 该论文提出DSFNet方法，通过解耦场景因子解决多场景路线排序中的场景爆炸、高纠缠和高容量需求问题，并发布了首个大规模公开数据集MSDR，在工业界（高德地图）成功部署。
 
 ## 论文信息
 
 - **作者**：J. Yu, Yihai Duan, Longfei Xu, Chao Chen, Shuliang Liu, Kaikui Liu, Fan Yang, Xiangxiang Chu, Ning Guo
 - **来源**：WWW
 - **发布时间**：2025-01-01
-- **相关度评分**：30.0
+- **相关度评分**：8.0
 - **DOI**：[https://doi.org/10.1145/3701716.3715219](https://doi.org/10.1145/3701716.3715219)
 
 <details open>
 <summary><strong>中文摘要</strong></summary>
 
-多场景路线排序（Multi-scenario Route Ranking, MSRR）在许多工业地图系统中至关重要。然而，工业界主要采用交互式界面鼓励用户选择预定义场景，这可能阻碍下游排序性能。此外，在学术界，多场景排序研究仅来自其他领域，由于缺乏公开可用的MSRR数据集，目前尚无专门针对路线数据的研究。而且，现有所有多场景工作仍未能同时解决MSRR的三个特定挑战，即场景数量爆炸、高度耦合性和高容量需求。与以往不同，为解决MSRR，我们的核心思想是将路线排序中的复杂场景分解为若干解耦的因子场景模式。据此，我们提出了一种新方法——解耦场景因子网络（Disentangled Scenario Factorization Network, DSFNet），该方法基于高容量多因子场景分支结构灵活组合场景相关参数。随后，提出了一种新的正则化方法以诱导因子场景的解耦。此外，还开发了两种额外的新技术，即场景感知批归一化（scenario-aware batch normalization）和场景感知特征过滤（scenario-aware feature filtering），以提升网络对场景表征的感知能力。同时，为促进学术界对MSRR的研究，我们提出了MSDR——首个大规模公开可用的带标注工业多场景驾驶路线数据集（Multi-Scenario Driving Route dataset）。综合实验结果表明，我们的DSFNet具有优越性，并已成功部署于高德地图（AMap）以服务主要在线交通流量。
+多场景路线排序（MSRR）在许多工业地图系统中至关重要。然而，工业界主要采用交互式界面鼓励用户选择预定义场景，这可能阻碍下游排序性能。此外，在学术界，多场景排序工作仅来自其他领域，由于缺乏公开可用的MSRR数据集，尚无专门针对路线数据的研究。而且，现有的多场景工作仍无法同时解决MSRR的三个具体挑战，即场景数量爆炸、高度纠缠和高容量需求。与以往方法不同，为解决MSRR，我们的关键思想是将路线排序中的复杂场景分解为多个解纠缠的因子场景模式。据此，我们提出了一种新颖方法——解纠缠场景因子网络（DSFNet），该网络基于高容量多因子场景分支结构灵活组合场景相关参数。随后，提出了一种新颖的正则化方法以诱导因子场景的解纠缠。此外，还开发了两种额外的新技术，即场景感知批归一化和场景感知特征过滤，以提高网络对场景表示的感知能力。同时，为促进学术界MSRR研究，我们提出了MSDR，这是首个大规模公开可用的带标注工业多场景驾驶路线数据集。综合实验结果表明，我们的DSFNet具有优越性，并已成功部署于高德地图（AMap）以服务主要在线交通。
 
 </details>
 
@@ -39,4 +39,4 @@ Multi-scenario route ranking (MSRR) is crucial in many industrial mapping system
 
 ---
 
-_知识库更新时间：2026-07-13T01:23:50.736331_
+_知识库更新时间：2026-08-20T02:19:08.958183_

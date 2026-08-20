@@ -3,7 +3,7 @@ title: "TourRank: Utilizing Large Language Models for Documents Ranking with a T
 paper_id: "https://doi.org/10.1145/3696410.3714863"
 source: "www"
 published: "2025-01-01T00:00:00"
-score: 26.0
+score: 10.0
 tags: ["paper", "recommender-systems", "Topic Modeling", "Natural Language Processing Techniques", "Advanced Text Analysis Techniques"]
 ---
 
@@ -13,20 +13,20 @@ tags: ["paper", "recommender-systems", "Topic Modeling", "Natural Language Proce
 
 ## 一句话结论
 
-> 论文提出TourRank方法，受体育赛事启发，通过多阶段分组和积分系统解决LLM在文档排序中的输入长度限制、顺序敏感性和成本平衡问题，在TREC DL和BEIR上取得SOTA性能。
+> 该论文提出了一种基于锦标赛策略的文档排序方法TourRank，利用大语言模型在零样本条件下实现高效且鲁棒的文档排序，在TREC DL和BEIR基准上取得了领先性能。
 
 ## 论文信息
 
 - **作者**：Yiqun Chen, Qi Liu, Yi Zhang, Weiwei Sun, Xinyu Ma, Wei Yang, Daiting Shi, Jiaxin Mao, Dawei Yin
 - **来源**：WWW
 - **发布时间**：2025-01-01
-- **相关度评分**：26.0
+- **相关度评分**：10.0
 - **DOI**：[https://doi.org/10.1145/3696410.3714863](https://doi.org/10.1145/3696410.3714863)
 
 <details open>
 <summary><strong>中文摘要</strong></summary>
 
-大型语言模型（Large Language Models, LLMs）日益被应用于零样本文档排序，并取得了令人称赞的结果。然而，LLMs在排序任务中仍面临若干显著挑战：（1）LLMs受限于有限的输入长度，无法同时处理大量文档；（2）输出文档序列受文档输入顺序影响，导致排序结果不一致；（3）在成本与排序性能之间取得平衡颇具挑战。为解决这些问题，我们提出一种名为TourRank¹的新型文档排序方法，其灵感来源于体育赛事（如国际足联世界杯）。具体而言，我们：1）通过引入类似于体育赛事小组赛阶段的多阶段分组策略，克服了输入长度的限制并降低了排序延迟；2）采用积分系统对多个排序结果进行集成，从而提升了排序性能及对输入顺序的鲁棒性。我们在TREC DL数据集和BEIR基准测试上使用不同LLMs对TourRank进行了测试。实验结果表明，TourRank以适中的成本实现了最先进的性能。
+大语言模型（LLMs）越来越多地被应用于零样本文档排序，并取得了令人瞩目的成果。然而，LLMs在排序任务中仍面临若干重大挑战：（1）LLMs受限于有限的输入长度，无法同时处理大量文档；（2）输出文档序列受文档输入顺序影响，导致排序结果不一致；（3）在成本与排序性能之间取得平衡较为困难。为解决上述问题，我们提出了一种新颖的文档排序方法，名为TourRank¹，其灵感来源于体育赛事（如国际足联世界杯）。具体而言，我们：1）通过引入类似于体育赛事小组赛阶段的多阶段分组策略，克服输入长度限制并降低排序延迟；2）利用积分系统集成多个排序结果，提升排序性能及对输入顺序的鲁棒性。我们在TREC DL数据集和BEIR基准上使用不同LLMs对TourRank进行了测试。实验结果表明，TourRank在适度成本下实现了最先进的性能。
 
 </details>
 
@@ -39,4 +39,4 @@ Large Language Models (LLMs) are increasingly employed in zero-shot documents ra
 
 ---
 
-_知识库更新时间：2026-07-13T01:23:50.736067_
+_知识库更新时间：2026-08-20T02:19:08.957675_
