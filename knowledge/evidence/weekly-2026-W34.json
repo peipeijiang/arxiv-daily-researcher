@@ -1,0 +1,530 @@
+{
+  "generated_at": "2026-08-24T02:15:07.289943",
+  "papers": [
+    {
+      "paper_ref": "P01",
+      "paper_id": "https://doi.org/10.1145/3705328.3748007",
+      "title": "A Tutorial on Agentic LLM for Recommender Systems",
+      "url": "https://dblp.org/rec/conf/recsys/HuangW0M025",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Data Stream Mining Techniques",
+        "Topic Modeling"
+      ],
+      "score": 97.0,
+      "discovery": {},
+      "claim_ids": [
+        "P01-C01",
+        "P01-C02"
+      ]
+    },
+    {
+      "paper_ref": "P02",
+      "paper_id": "https://doi.org/10.1145/3589335.3641247",
+      "title": "Large Language Models for Recommendation: Progresses and Future Directions",
+      "url": "https://doi.org/10.1145/3589335.3641247",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Topic Modeling",
+        "Advanced Graph Neural Networks"
+      ],
+      "score": 95.0,
+      "discovery": {
+        "channel": "citation_expansion",
+        "relation": "referenced_by_seed",
+        "seed_paper_id": "https://doi.org/10.1145/3705328.3748007",
+        "seed_title": "A Tutorial on Agentic LLM for Recommender Systems",
+        "seed_score": 97.0
+      },
+      "claim_ids": [
+        "P02-C01",
+        "P02-C02"
+      ]
+    },
+    {
+      "paper_ref": "P03",
+      "paper_id": "https://doi.org/10.1145/3705328.3747997",
+      "title": "The 13th International Workshop on News Recommendation and Analytics (INRA 2025)",
+      "url": "https://dblp.org/rec/conf/recsys/IanaTYKLO25",
+      "topics": [
+        "Topic Modeling",
+        "Recommender Systems and Techniques",
+        "Machine Learning in Healthcare"
+      ],
+      "score": 92.0,
+      "discovery": {},
+      "claim_ids": [
+        "P03-C01",
+        "P03-C02"
+      ]
+    },
+    {
+      "paper_ref": "P04",
+      "paper_id": "2608.18952v1",
+      "title": "rEDMRec: Distilling Large Language Model Reasoning into an Editable Experience Memory for Recommendation",
+      "url": "http://arxiv.org/abs/2608.18952v1",
+      "topics": [],
+      "score": 79.0,
+      "discovery": {},
+      "claim_ids": [
+        "P04-C01",
+        "P04-C02"
+      ]
+    },
+    {
+      "paper_ref": "P05",
+      "paper_id": "https://doi.org/10.1145/3705328.3748147",
+      "title": "The Future is Sparse: Embedding Compression for Scalable Retrieval in Recommender Systems",
+      "url": "https://dblp.org/rec/conf/recsys/KasalickySVBAK25",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Image Retrieval and Classification Techniques",
+        "Advanced Image and Video Retrieval Techniques"
+      ],
+      "score": 68.0,
+      "discovery": {},
+      "claim_ids": [
+        "P05-C01",
+        "P05-C02",
+        "P05-C03",
+        "P05-C04"
+      ]
+    },
+    {
+      "paper_ref": "P06",
+      "paper_id": "https://doi.org/10.1145/3726302.3729917",
+      "title": "Can LLMs Enhance Fairness in Recommendation Systems? A Data Augmentation Approach",
+      "url": "https://dblp.org/rec/conf/sigir/0001S00G25",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Privacy-Preserving Technologies in Data",
+        "Customer churn and segmentation"
+      ],
+      "score": 58.0,
+      "discovery": {},
+      "claim_ids": [
+        "P06-C01",
+        "P06-C02"
+      ]
+    },
+    {
+      "paper_ref": "P07",
+      "paper_id": "https://doi.org/10.1145/3705328.3748076",
+      "title": "Beyond Immediate Click: Engagement-Aware and MoE-Enhanced Transformers for Sequential Movie Recommendation",
+      "url": "https://dblp.org/rec/conf/recsys/JiangPZC25",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Image Retrieval and Classification Techniques",
+        "Expert finding and Q&A systems"
+      ],
+      "score": 57.0,
+      "discovery": {},
+      "claim_ids": [
+        "P07-C01",
+        "P07-C02"
+      ]
+    },
+    {
+      "paper_ref": "P08",
+      "paper_id": "https://doi.org/10.1145/3285029",
+      "title": "Deep Learning Based Recommender System",
+      "url": "https://doi.org/10.1145/3285029",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Advanced Image and Video Retrieval Techniques",
+        "Advanced Graph Neural Networks"
+      ],
+      "score": 56.0,
+      "discovery": {
+        "channel": "citation_expansion",
+        "relation": "referenced_by_seed",
+        "seed_paper_id": "https://doi.org/10.1145/3705328.3748007",
+        "seed_title": "A Tutorial on Agentic LLM for Recommender Systems",
+        "seed_score": 97.0
+      },
+      "claim_ids": [
+        "P08-C01",
+        "P08-C02",
+        "P08-C03",
+        "P08-C04"
+      ]
+    },
+    {
+      "paper_ref": "P09",
+      "paper_id": "https://doi.org/10.1145/3726302.3729912",
+      "title": "Bridging Interests and Truth: Towards Mitigating Fake News with Personalized and Truthful Recommendations",
+      "url": "https://dblp.org/rec/conf/sigir/0001LHZKW25",
+      "topics": [
+        "Misinformation and Its Impacts",
+        "Spam and Phishing Detection",
+        "Topic Modeling"
+      ],
+      "score": 46.0,
+      "discovery": {},
+      "claim_ids": [
+        "P09-C01",
+        "P09-C02"
+      ]
+    },
+    {
+      "paper_ref": "P10",
+      "paper_id": "https://doi.org/10.1145/3705328.3748124",
+      "title": "SocRipple: A Two-Stage Framework for Cold-Start Video Recommendations",
+      "url": "https://dblp.org/rec/conf/recsys/JaspalDR25a",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Image Retrieval and Classification Techniques",
+        "Advanced Graph Neural Networks"
+      ],
+      "score": 43.0,
+      "discovery": {},
+      "claim_ids": [
+        "P10-C01",
+        "P10-C02"
+      ]
+    },
+    {
+      "paper_ref": "P11",
+      "paper_id": "https://doi.org/10.1145/3705328.3748037",
+      "title": "Emotion Vector-Based Fine-Tuning of Large Language Models for Age-Aware Teenage Book Recommendations",
+      "url": "https://dblp.org/rec/conf/recsys/HillNS25",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Mental Health via Writing",
+        "Sentiment Analysis and Opinion Mining"
+      ],
+      "score": 41.0,
+      "discovery": {},
+      "claim_ids": [
+        "P11-C01",
+        "P11-C02"
+      ]
+    },
+    {
+      "paper_ref": "P12",
+      "paper_id": "https://doi.org/10.1145/3705328.3748167",
+      "title": "Exploring the Potential of LLMs for Serendipity Evaluation in Recommender Systems",
+      "url": "https://dblp.org/rec/conf/recsys/KangZC25",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Topic Modeling",
+        "Intelligent Tutoring Systems and Adaptive Learning"
+      ],
+      "score": 41.0,
+      "discovery": {},
+      "claim_ids": [
+        "P12-C01",
+        "P12-C02",
+        "P12-C03"
+      ]
+    },
+    {
+      "paper_ref": "P13",
+      "paper_id": "https://doi.org/10.1145/3705328.3748049",
+      "title": "Scalable Data Debugging for Neighborhood-based Recommendation with Data Shapley Values",
+      "url": "https://dblp.org/rec/conf/recsys/KersbergenSKRS25",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Data Management and Algorithms",
+        "Image Retrieval and Classification Techniques"
+      ],
+      "score": 37.0,
+      "discovery": {},
+      "claim_ids": [
+        "P13-C01",
+        "P13-C02",
+        "P13-C03"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "P01-C01",
+      "paper_id": "https://doi.org/10.1145/3705328.3748007",
+      "paper_ref": "P01",
+      "kind": "paper_summary",
+      "text": "该教程介绍了基于多模态大语言模型的智能体推荐系统的关键概念和架构，强调规划、记忆和多模态推理能力，以支持主动推荐策略并解决可解释性、安全性和终身个性化等挑战。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/recsys/HuangW0M025"
+    },
+    {
+      "claim_id": "P01-C02",
+      "paper_id": "https://doi.org/10.1145/3705328.3748007",
+      "paper_ref": "P01",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/recsys/HuangW0M025"
+    },
+    {
+      "claim_id": "P02-C01",
+      "paper_id": "https://doi.org/10.1145/3589335.3641247",
+      "paper_ref": "P02",
+      "kind": "paper_summary",
+      "text": "该论文综述了LLM在推荐系统中的应用进展，探讨了LLM如何推动推荐系统在架构、学习范式和能力上的发展，并指出了该领域面临的挑战和未来方向。",
+      "location": "AI paper-level summary",
+      "source_url": "https://doi.org/10.1145/3589335.3641247"
+    },
+    {
+      "claim_id": "P02-C02",
+      "paper_id": "https://doi.org/10.1145/3589335.3641247",
+      "paper_ref": "P02",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 16",
+      "location": "OpenAlex metadata",
+      "source_url": "https://doi.org/10.1145/3589335.3641247"
+    },
+    {
+      "claim_id": "P03-C01",
+      "paper_id": "https://doi.org/10.1145/3705328.3747997",
+      "paper_ref": "P03",
+      "kind": "paper_summary",
+      "text": "该论文介绍了第13届新闻推荐与分析国际研讨会（INRA 2025），旨在探讨生成式AI和LLM对新闻推荐系统的影响，以及相关的技术、法律、伦理和社会问题。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/recsys/IanaTYKLO25"
+    },
+    {
+      "claim_id": "P03-C02",
+      "paper_id": "https://doi.org/10.1145/3705328.3747997",
+      "paper_ref": "P03",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 1",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/recsys/IanaTYKLO25"
+    },
+    {
+      "claim_id": "P04-C01",
+      "paper_id": "2608.18952v1",
+      "paper_ref": "P04",
+      "kind": "paper_summary",
+      "text": "rEDMRec通过将LLM的推理蒸馏为可编辑的经验记忆，使轻量级学生模型仅通过检索记忆进行推荐，在多个数据集上显著提升了排序性能，同时降低了推理成本。",
+      "location": "AI paper-level summary",
+      "source_url": "http://arxiv.org/abs/2608.18952v1"
+    },
+    {
+      "claim_id": "P04-C02",
+      "paper_id": "2608.18952v1",
+      "paper_ref": "P04",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "http://arxiv.org/abs/2608.18952v1"
+    },
+    {
+      "claim_id": "P05-C01",
+      "paper_id": "https://doi.org/10.1145/3705328.3748147",
+      "paper_ref": "P05",
+      "kind": "paper_summary",
+      "text": "该论文提出了一种嵌入压缩方法，在保持推荐性能的同时大幅减少内存占用，实现了可扩展的推荐检索。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/recsys/KasalickySVBAK25"
+    },
+    {
+      "claim_id": "P05-C02",
+      "paper_id": "https://doi.org/10.1145/3705328.3748147",
+      "paper_ref": "P05",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 4",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/recsys/KasalickySVBAK25"
+    },
+    {
+      "claim_id": "P05-C03",
+      "paper_id": "https://doi.org/10.1145/3705328.3748147",
+      "paper_ref": "P05",
+      "kind": "code_repository",
+      "text": "Code candidate recombee/CompresSAE is classified likely with confidence 69",
+      "location": "https://github.com/recombee/CompresSAE",
+      "source_url": "https://dblp.org/rec/conf/recsys/KasalickySVBAK25"
+    },
+    {
+      "claim_id": "P05-C04",
+      "paper_id": "https://doi.org/10.1145/3705328.3748147",
+      "paper_ref": "P05",
+      "kind": "code_repository",
+      "text": "Code candidate alopatenko/LLMSearchRecommender is classified possible with confidence 30",
+      "location": "https://github.com/alopatenko/LLMSearchRecommender",
+      "source_url": "https://dblp.org/rec/conf/recsys/KasalickySVBAK25"
+    },
+    {
+      "claim_id": "P06-C01",
+      "paper_id": "https://doi.org/10.1145/3726302.3729917",
+      "paper_ref": "P06",
+      "kind": "paper_summary",
+      "text": "本文提出利用LLM通过数据增强提升推荐系统的公平性，在真实数据集上验证了方法在推荐性能、公平性和鲁棒性上的优势。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/sigir/0001S00G25"
+    },
+    {
+      "claim_id": "P06-C02",
+      "paper_id": "https://doi.org/10.1145/3726302.3729917",
+      "paper_ref": "P06",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 2",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/sigir/0001S00G25"
+    },
+    {
+      "claim_id": "P07-C01",
+      "paper_id": "https://doi.org/10.1145/3705328.3748076",
+      "paper_ref": "P07",
+      "kind": "paper_summary",
+      "text": "该论文提出了一种参与度感知和MoE增强的Transformer序列推荐框架，通过改进负采样、多任务学习和多步预测，在流媒体数据上显著提升了排序性能。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/recsys/JiangPZC25"
+    },
+    {
+      "claim_id": "P07-C02",
+      "paper_id": "https://doi.org/10.1145/3705328.3748076",
+      "paper_ref": "P07",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/recsys/JiangPZC25"
+    },
+    {
+      "claim_id": "P08-C01",
+      "paper_id": "https://doi.org/10.1145/3285029",
+      "paper_ref": "P08",
+      "kind": "paper_summary",
+      "text": "该论文全面综述了基于深度学习的推荐系统，提出了分类法并总结了最新进展，为深度学习在推荐系统中的应用提供了系统性回顾。",
+      "location": "AI paper-level summary",
+      "source_url": "https://doi.org/10.1145/3285029"
+    },
+    {
+      "claim_id": "P08-C02",
+      "paper_id": "https://doi.org/10.1145/3285029",
+      "paper_ref": "P08",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 1446",
+      "location": "OpenAlex metadata",
+      "source_url": "https://doi.org/10.1145/3285029"
+    },
+    {
+      "claim_id": "P08-C03",
+      "paper_id": "https://doi.org/10.1145/3285029",
+      "paper_ref": "P08",
+      "kind": "code_repository",
+      "text": "Code candidate hurshd0/must-read-papers-for-ml is classified likely with confidence 69",
+      "location": "https://github.com/hurshd0/must-read-papers-for-ml",
+      "source_url": "https://doi.org/10.1145/3285029"
+    },
+    {
+      "claim_id": "P08-C04",
+      "paper_id": "https://doi.org/10.1145/3285029",
+      "paper_ref": "P08",
+      "kind": "code_repository",
+      "text": "Code candidate hongleizhang/RSPapers is classified likely with confidence 50",
+      "location": "https://github.com/hongleizhang/RSPapers",
+      "source_url": "https://doi.org/10.1145/3285029"
+    },
+    {
+      "claim_id": "P09-C01",
+      "paper_id": "https://doi.org/10.1145/3726302.3729912",
+      "paper_ref": "P09",
+      "kind": "paper_summary",
+      "text": "论文提出PRISM框架，利用扩散模型生成个性化且真实的新闻推荐，以缓解假新闻传播问题。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/sigir/0001LHZKW25"
+    },
+    {
+      "claim_id": "P09-C02",
+      "paper_id": "https://doi.org/10.1145/3726302.3729912",
+      "paper_ref": "P09",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 3",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/sigir/0001LHZKW25"
+    },
+    {
+      "claim_id": "P10-C01",
+      "paper_id": "https://doi.org/10.1145/3705328.3748124",
+      "paper_ref": "P10",
+      "kind": "paper_summary",
+      "text": "SocRipple通过两阶段检索框架利用社交连接和KNN扩展，显著提升冷启动视频推荐的分发量（+36%）同时保持用户参与度。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/recsys/JaspalDR25a"
+    },
+    {
+      "claim_id": "P10-C02",
+      "paper_id": "https://doi.org/10.1145/3705328.3748124",
+      "paper_ref": "P10",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/recsys/JaspalDR25a"
+    },
+    {
+      "claim_id": "P11-C01",
+      "paper_id": "https://doi.org/10.1145/3705328.3748037",
+      "paper_ref": "P11",
+      "kind": "paper_summary",
+      "text": "该论文提出一种基于情感向量的LLM微调方法，用于为青少年提供符合年龄和情感需求的图书推荐，实验证明该方法能显著提升推荐准确性和适龄性。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/recsys/HillNS25"
+    },
+    {
+      "claim_id": "P11-C02",
+      "paper_id": "https://doi.org/10.1145/3705328.3748037",
+      "paper_ref": "P11",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/recsys/HillNS25"
+    },
+    {
+      "claim_id": "P12-C01",
+      "paper_id": "https://doi.org/10.1145/3705328.3748167",
+      "paper_ref": "P12",
+      "kind": "paper_summary",
+      "text": "本文探索了LLM在推荐系统惊喜度评估中的潜力，发现即使最简单的零样本LLM也能达到或超越传统代理指标，且多LLM技术和辅助数据能进一步提升与人类感知的一致性。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/recsys/KangZC25"
+    },
+    {
+      "claim_id": "P12-C02",
+      "paper_id": "https://doi.org/10.1145/3705328.3748167",
+      "paper_ref": "P12",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 1",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/recsys/KangZC25"
+    },
+    {
+      "claim_id": "P12-C03",
+      "paper_id": "https://doi.org/10.1145/3705328.3748167",
+      "paper_ref": "P12",
+      "kind": "code_repository",
+      "text": "Code candidate Leah-HKBU/SerenEva is classified official with confidence 100",
+      "location": "https://github.com/Leah-HKBU/SerenEva",
+      "source_url": "https://dblp.org/rec/conf/recsys/KangZC25"
+    },
+    {
+      "claim_id": "P13-C01",
+      "paper_id": "https://doi.org/10.1145/3705328.3748049",
+      "paper_ref": "P13",
+      "kind": "paper_summary",
+      "text": "This paper introduces KMC-Shapley, a scalable algorithm for estimating Data Shapley values in neighborhood-based recommendation systems, enabling efficient identification of harmful data points to improve recommendation quality and safety.",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/recsys/KersbergenSKRS25"
+    },
+    {
+      "claim_id": "P13-C02",
+      "paper_id": "https://doi.org/10.1145/3705328.3748049",
+      "paper_ref": "P13",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 2",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/recsys/KersbergenSKRS25"
+    },
+    {
+      "claim_id": "P13-C03",
+      "paper_id": "https://doi.org/10.1145/3705328.3748049",
+      "paper_ref": "P13",
+      "kind": "code_repository",
+      "text": "Code candidate bkersbergen/illoominate is classified official with confidence 100",
+      "location": "https://github.com/bkersbergen/illoominate",
+      "source_url": "https://dblp.org/rec/conf/recsys/KersbergenSKRS25"
+    }
+  ]
+}
