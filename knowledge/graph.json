@@ -6343,6 +6343,166 @@
     "2608.25977v1": {
       "title": "When Personality Meets Quantization: A Layer-wise MBTI Analysis of Quantized LLMs",
       "paper_id": "2608.25977v1"
+    },
+    "2608.27413v1": {
+      "title": "Scaling Graph Neural Networks for Friend Recommendation: Multi-Hash User Embeddings and Temporal Neighbor Sampling",
+      "paper_id": "2608.27413v1"
+    },
+    "2608.27422v1": {
+      "title": "misi: a Metric Inverted Sample Index",
+      "paper_id": "2608.27422v1"
+    },
+    "2608.27394v1": {
+      "title": "RATIO: A Benchmark for Retrieval Across Typed Ideation Operations in Scientific Literature",
+      "paper_id": "2608.27394v1"
+    },
+    "2608.27391v1": {
+      "title": "CorporateBench: Large-Scale Q&A Benchmarking with Temporal Knowledge Bases",
+      "paper_id": "2608.27391v1"
+    },
+    "2608.27366v1": {
+      "title": "Stageboost: Recommending Signals Based on Counterfactual Estimation",
+      "paper_id": "2608.27366v1"
+    },
+    "2608.27421v1": {
+      "title": "Learning a Continuous Sepsis Severity Score Without Hour-by-Hour Supervision: A Two-Site Retrospective Study",
+      "paper_id": "2608.27421v1"
+    },
+    "2608.27402v1": {
+      "title": "How Language Models Organize and Structure Moral Knowledge",
+      "paper_id": "2608.27402v1"
+    },
+    "2608.27382v1": {
+      "title": "Token-Level Advertising",
+      "paper_id": "2608.27382v1"
+    },
+    "2608.27372v1": {
+      "title": "Universality and sharp thresholds for ellipsoid fitting",
+      "paper_id": "2608.27372v1"
+    },
+    "2608.27370v1": {
+      "title": "Puro-2B: Poor Lab's Qwen2-1.5B Trained on RTX 5090 within $5090",
+      "paper_id": "2608.27370v1"
+    },
+    "2608.27351v1": {
+      "title": "Understanding Evolution Strategies for LLM Reasoning: Broader Reasoning Coverage than GRPO",
+      "paper_id": "2608.27351v1"
+    },
+    "2608.27339v1": {
+      "title": "Beyond Parallel Blindness: Information Floors and Model Gaps in Block Drafting",
+      "paper_id": "2608.27339v1"
+    },
+    "2608.27313v1": {
+      "title": "A Finite Sample Analysis for Quantile Temporal Difference Learning in Distributional Reinforcement Learning",
+      "paper_id": "2608.27313v1"
+    },
+    "2608.27454v1": {
+      "title": "WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution",
+      "paper_id": "2608.27454v1"
+    },
+    "2608.27449v1": {
+      "title": "SWE-Prime: Fewer Trajectories, Better Performance",
+      "paper_id": "2608.27449v1"
+    },
+    "2608.27442v1": {
+      "title": "From Static to Dynamic: Benchmarking Real-World Code Review with MCR-Bench",
+      "paper_id": "2608.27442v1"
+    },
+    "2608.27439v1": {
+      "title": "RedEvoAgent: Automatic Red-Teaming Agent with Experience-Driven Skill Evolution",
+      "paper_id": "2608.27439v1"
+    },
+    "2608.27429v1": {
+      "title": "Mechanistic Reaction Prediction via Discrete Flow Matching on Graph-Structured Electron Occupation",
+      "paper_id": "2608.27429v1"
+    },
+    "2608.27427v1": {
+      "title": "Persona-Execution Separation: An Architecture Pattern for Evolving LLM Agents under Execution Audit",
+      "paper_id": "2608.27427v1"
+    },
+    "2608.27424v1": {
+      "title": "Beyond F1: Evaluating Coverage and Failure Recovery in AI Model Security Scanners",
+      "paper_id": "2608.27424v1"
+    },
+    "2608.27406v1": {
+      "title": "CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators",
+      "paper_id": "2608.27406v1"
+    },
+    "2608.27397v1": {
+      "title": "Making Clinical Language Models Auditable: Concept-Guided Fine-Tuning for Robust Prediction",
+      "paper_id": "2608.27397v1"
+    },
+    "2608.27395v1": {
+      "title": "LeVJEPA: Efficient & Scalable Video Pretraining without the Heuristics",
+      "paper_id": "2608.27395v1"
+    },
+    "2608.27392v1": {
+      "title": "Property-Specific Recoverability from Contact PPG to Camera rPPG under Heterogeneous Observation Conditions",
+      "paper_id": "2608.27392v1"
+    },
+    "2608.27367v1": {
+      "title": "Successive Capacity Growth: Task-Complexity-Driven Width and Depth Expansion for Vision Transformer Encoders in JEPA World Models",
+      "paper_id": "2608.27367v1"
+    },
+    "2608.27365v1": {
+      "title": "KnockGS:interaction-Grounded Calibrationof Physical Gaussian Representations",
+      "paper_id": "2608.27365v1"
+    },
+    "2608.27364v1": {
+      "title": "Sophistication in GenAI Use: Field Evidence from a Large Firm",
+      "paper_id": "2608.27364v1"
+    },
+    "2608.27358v1": {
+      "title": "RCMN: Understanding Misleadingness in Influential Public Discourse",
+      "paper_id": "2608.27358v1"
+    },
+    "2608.27345v1": {
+      "title": "PAWBench: How Far Are We from Probabilistically Aligned World Modeling?",
+      "paper_id": "2608.27345v1"
+    },
+    "2608.27340v1": {
+      "title": "Not All Eval-Awareness Is Equal: Capabilities Framing Predicts Compliance",
+      "paper_id": "2608.27340v1"
+    },
+    "2608.27455v1": {
+      "title": "CritICL: Inference-Time Weak-to-Strong Generalization from Small Language Model Failure Modes",
+      "paper_id": "2608.27455v1"
+    },
+    "2608.27448v1": {
+      "title": "TTPO: Test-Time Policy Optimization",
+      "paper_id": "2608.27448v1"
+    },
+    "2608.27428v1": {
+      "title": "Stochastic Estimation of Transduced Language Models",
+      "paper_id": "2608.27428v1"
+    },
+    "2608.27420v1": {
+      "title": "Boosting LLM Exploration via Weak-Model Guidance in RLVR",
+      "paper_id": "2608.27420v1"
+    },
+    "2608.27409v1": {
+      "title": "Consolidating RLVR Capabilities Across Domains: A Deep Dive into Fusion Paradigms",
+      "paper_id": "2608.27409v1"
+    },
+    "2608.27380v1": {
+      "title": "D2C-Routing: Dimension-to-Composition Evidence Routing for Mixed-Origin AI-Generated Text Detection",
+      "paper_id": "2608.27380v1"
+    },
+    "2608.27360v1": {
+      "title": "Your Voice Cloning System is Secretly a Voice Anonymizer",
+      "paper_id": "2608.27360v1"
+    },
+    "2608.27348v1": {
+      "title": "INTENT-AS-A-TOOL Makes it Easy to Track Agentic Misalignment",
+      "paper_id": "2608.27348v1"
+    },
+    "2608.27343v1": {
+      "title": "Pair-Level Essay-Scale Republication and Reuse from Fragmented Historical Text Reuse: A Workflow Study on Eighteenth-Century Books and Newspapers",
+      "paper_id": "2608.27343v1"
+    },
+    "2608.27334v1": {
+      "title": "BTS-AgentBench: A Deterministic, Replayable Pipeline from Read-Only Telemetry Logs to Agent Benchmarks",
+      "paper_id": "2608.27334v1"
     }
   },
   "edges": [
