@@ -1,0 +1,599 @@
+{
+  "generated_at": "2026-08-31T06:20:44.593918",
+  "papers": [
+    {
+      "paper_ref": "P01",
+      "paper_id": "https://doi.org/10.1007/978-3-032-37654-1_23",
+      "title": "FedAgent-Rec: Enhancing Fairness and Personalization in Federated Recommendation via Multi-agent Behavior Simulation and Reranking",
+      "url": "https://doi.org/10.1007/978-3-032-37654-1_23",
+      "topics": [],
+      "score": 94.0,
+      "discovery": {
+        "channel": "citation_expansion",
+        "relation": "cites_seed",
+        "seed_paper_id": "https://doi.org/10.1145/3589334.3645537",
+        "seed_title": "AgentCF: Collaborative Learning with Autonomous Language Agents for Recommender Systems",
+        "seed_score": 100.0
+      },
+      "claim_ids": [
+        "P01-C01",
+        "P01-C02"
+      ]
+    },
+    {
+      "paper_ref": "P02",
+      "paper_id": "https://doi.org/10.1145/3711896.3736553",
+      "title": "Large Language Model Enhanced Recommender Systems: Methods, Applications and Trends",
+      "url": "https://dblp.org/rec/conf/kdd/00020WW0S00J00025",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Topic Modeling",
+        "Advanced Graph Neural Networks"
+      ],
+      "score": 90.0,
+      "discovery": {},
+      "claim_ids": [
+        "P02-C01",
+        "P02-C02"
+      ]
+    },
+    {
+      "paper_ref": "P03",
+      "paper_id": "2608.23484v1",
+      "title": "Multi-Modal Semantic Expansion with Constrained LLM Reranking for Conversational Music Recommendation",
+      "url": "http://arxiv.org/abs/2608.23484v1",
+      "topics": [],
+      "score": 84.0,
+      "discovery": {},
+      "claim_ids": [
+        "P03-C01",
+        "P03-C02"
+      ]
+    },
+    {
+      "paper_ref": "P04",
+      "paper_id": "https://doi.org/10.1145/3773966.3779410",
+      "title": "TRACE: A Scalable and Extensible Framework for Auditing YouTube&apos;s Recommendation Algorithm",
+      "url": "https://dblp.org/rec/conf/wsdm/DessainTK26",
+      "topics": [
+        "Persona Design and Applications",
+        "Recommender Systems and Techniques",
+        "AI in Service Interactions"
+      ],
+      "score": 71.0,
+      "discovery": {},
+      "claim_ids": [
+        "P04-C01",
+        "P04-C02"
+      ]
+    },
+    {
+      "paper_ref": "P05",
+      "paper_id": "https://doi.org/10.1145/3726302.3730053",
+      "title": "Order-agnostic Identifier for Large Language Model-based Generative Recommendation",
+      "url": "https://dblp.org/rec/conf/sigir/0001S0FWNC25",
+      "topics": [
+        "Topic Modeling",
+        "Recommender Systems and Techniques",
+        "Natural Language Processing Techniques"
+      ],
+      "score": 63.0,
+      "discovery": {},
+      "claim_ids": [
+        "P05-C01",
+        "P05-C02",
+        "P05-C03"
+      ]
+    },
+    {
+      "paper_ref": "P06",
+      "paper_id": "https://doi.org/10.1145/3779211.3793173",
+      "title": "SPARK: Search Personalization via Agent-Driven Retrieval and Knowledge-sharing",
+      "url": "https://dblp.org/rec/conf/wsdm/ChhetriDC26",
+      "topics": [],
+      "score": 62.0,
+      "discovery": {},
+      "claim_ids": [
+        "P06-C01",
+        "P06-C02"
+      ]
+    },
+    {
+      "paper_ref": "P07",
+      "paper_id": "https://doi.org/10.1145/3726302.3729911",
+      "title": "Bridge the Domains: Large Language Models Enhanced Cross-domain Sequential Recommendation",
+      "url": "https://dblp.org/rec/conf/sigir/00020W0Z0LH025",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Topic Modeling",
+        "Advanced Graph Neural Networks"
+      ],
+      "score": 58.0,
+      "discovery": {},
+      "claim_ids": [
+        "P07-C01",
+        "P07-C02",
+        "P07-C03"
+      ]
+    },
+    {
+      "paper_ref": "P08",
+      "paper_id": "https://doi.org/10.1145/3773966.3778026",
+      "title": "Enhanced Cold-Start Sequential Recommendation with Causal Diffusion Preference Modeling",
+      "url": "https://dblp.org/rec/conf/wsdm/DongX0Z26",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Advanced Graph Neural Networks",
+        "Advanced Bandit Algorithms Research"
+      ],
+      "score": 56.0,
+      "discovery": {},
+      "claim_ids": [
+        "P08-C01",
+        "P08-C02"
+      ]
+    },
+    {
+      "paper_ref": "P09",
+      "paper_id": "2608.24815v1",
+      "title": "Auditing Return Conditioning as a Control Knob: An Offline Diagnostic for Decision Transformer Recommendation",
+      "url": "http://arxiv.org/abs/2608.24815v1",
+      "topics": [],
+      "score": 54.0,
+      "discovery": {},
+      "claim_ids": [
+        "P09-C01",
+        "P09-C02"
+      ]
+    },
+    {
+      "paper_ref": "P10",
+      "paper_id": "2608.27366v1",
+      "title": "Stageboost: Recommending Signals Based on Counterfactual Estimation",
+      "url": "http://arxiv.org/abs/2608.27366v1",
+      "topics": [],
+      "score": 52.0,
+      "discovery": {},
+      "claim_ids": [
+        "P10-C01",
+        "P10-C02"
+      ]
+    },
+    {
+      "paper_ref": "P11",
+      "paper_id": "https://doi.org/10.1145/3726302.3730003",
+      "title": "ID-Free Not Risk-Free: LLM-Powered Agents Unveil Risks in ID-Free Recommender Systems",
+      "url": "https://dblp.org/rec/conf/sigir/00020Y0NSY25",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Caching and Content Delivery",
+        "Advanced Bandit Algorithms Research"
+      ],
+      "score": 50.0,
+      "discovery": {},
+      "claim_ids": [
+        "P11-C01",
+        "P11-C02"
+      ]
+    },
+    {
+      "paper_ref": "P12",
+      "paper_id": "https://doi.org/10.1145/3696410.3714733",
+      "title": "Explainable Multi-Modality Alignment for Transferable Recommendation",
+      "url": "https://dblp.org/rec/conf/www/0004MGZWZZY25",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Topic Modeling",
+        "Machine Learning in Healthcare"
+      ],
+      "score": 48.0,
+      "discovery": {},
+      "claim_ids": [
+        "P12-C01",
+        "P12-C02",
+        "P12-C03"
+      ]
+    },
+    {
+      "paper_ref": "P13",
+      "paper_id": "https://doi.org/10.1145/3773966.3777978",
+      "title": "SimDiffRec: Semantic Similarity-Guided Diffusion for Contrastive Sequential Recommendation",
+      "url": "https://dblp.org/rec/conf/wsdm/ChoiNP26",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Advanced Bandit Algorithms Research",
+        "Image Retrieval and Classification Techniques"
+      ],
+      "score": 43.0,
+      "discovery": {},
+      "claim_ids": [
+        "P13-C01",
+        "P13-C02",
+        "P13-C03"
+      ]
+    },
+    {
+      "paper_ref": "P14",
+      "paper_id": "2608.27413v1",
+      "title": "Scaling Graph Neural Networks for Friend Recommendation: Multi-Hash User Embeddings and Temporal Neighbor Sampling",
+      "url": "http://arxiv.org/abs/2608.27413v1",
+      "topics": [],
+      "score": 41.0,
+      "discovery": {},
+      "claim_ids": [
+        "P14-C01",
+        "P14-C02",
+        "P14-C03"
+      ]
+    },
+    {
+      "paper_ref": "P15",
+      "paper_id": "https://doi.org/10.1145/3705328.3759327",
+      "title": "End-to-End Time Interval-wise Segmentation for Sequential Recommendation",
+      "url": "https://dblp.org/rec/conf/recsys/KimKKSLC25a",
+      "topics": [
+        "Recommender Systems and Techniques",
+        "Advanced Bandit Algorithms Research",
+        "Image Retrieval and Classification Techniques"
+      ],
+      "score": 38.0,
+      "discovery": {},
+      "claim_ids": [
+        "P15-C01",
+        "P15-C02"
+      ]
+    },
+    {
+      "paper_ref": "P16",
+      "paper_id": "https://doi.org/10.1145/3726302.3730022",
+      "title": "LIGHT: Enhancing Learning Path Recommendation via Knowledge Topology-Aware Sequence Optimization",
+      "url": "https://dblp.org/rec/conf/sigir/0002Y0SMC025",
+      "topics": [
+        "Machine Learning and Algorithms",
+        "Intelligent Tutoring Systems and Adaptive Learning",
+        "Metaheuristic Optimization Algorithms Research"
+      ],
+      "score": 37.0,
+      "discovery": {},
+      "claim_ids": [
+        "P16-C01",
+        "P16-C02"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "P01-C01",
+      "paper_id": "https://doi.org/10.1007/978-3-032-37654-1_23",
+      "paper_ref": "P01",
+      "kind": "paper_summary",
+      "text": "该论文提出FedAgent-Rec框架，通过多智能体行为模拟和重排序，在联邦推荐系统中同时提升公平性和个性化，实验验证了其有效性。",
+      "location": "AI paper-level summary",
+      "source_url": "https://doi.org/10.1007/978-3-032-37654-1_23"
+    },
+    {
+      "claim_id": "P01-C02",
+      "paper_id": "https://doi.org/10.1007/978-3-032-37654-1_23",
+      "paper_ref": "P01",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "https://doi.org/10.1007/978-3-032-37654-1_23"
+    },
+    {
+      "claim_id": "P02-C01",
+      "paper_id": "https://doi.org/10.1145/3711896.3736553",
+      "paper_ref": "P02",
+      "kind": "paper_summary",
+      "text": "该论文系统综述了LLM增强推荐系统（LLMERS）的最新方法、应用和趋势，提出了基于知识增强、交互增强和模型增强的分类体系，并指出了未来研究方向。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/kdd/00020WW0S00J00025"
+    },
+    {
+      "claim_id": "P02-C02",
+      "paper_id": "https://doi.org/10.1145/3711896.3736553",
+      "paper_ref": "P02",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 11",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/kdd/00020WW0S00J00025"
+    },
+    {
+      "claim_id": "P03-C01",
+      "paper_id": "2608.23484v1",
+      "paper_ref": "P03",
+      "kind": "paper_summary",
+      "text": "This paper presents a multi-modal conversational music recommender system with constrained LLM reranking, achieving a composite score of 0.3213 on the RecSys 2026 TalkPlayData Challenge.",
+      "location": "AI paper-level summary",
+      "source_url": "http://arxiv.org/abs/2608.23484v1"
+    },
+    {
+      "claim_id": "P03-C02",
+      "paper_id": "2608.23484v1",
+      "paper_ref": "P03",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "http://arxiv.org/abs/2608.23484v1"
+    },
+    {
+      "claim_id": "P04-C01",
+      "paper_id": "https://doi.org/10.1145/3773966.3779410",
+      "paper_ref": "P04",
+      "kind": "paper_summary",
+      "text": "TRACE是一个可扩展的框架，利用大语言模型模拟用户旅程，以可复现的方式审计YouTube推荐算法，从而研究个性化推荐和过滤气泡的形成。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/wsdm/DessainTK26"
+    },
+    {
+      "claim_id": "P04-C02",
+      "paper_id": "https://doi.org/10.1145/3773966.3779410",
+      "paper_ref": "P04",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/wsdm/DessainTK26"
+    },
+    {
+      "claim_id": "P05-C01",
+      "paper_id": "https://doi.org/10.1145/3726302.3730053",
+      "paper_ref": "P05",
+      "kind": "paper_summary",
+      "text": "论文提出了一种顺序无关的标识符方法，用于基于大语言模型的生成式推荐，以解决现有标识符在语义捕获和协同过滤信息编码上的不足，从而提升推荐性能。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/sigir/0001S0FWNC25"
+    },
+    {
+      "claim_id": "P05-C02",
+      "paper_id": "https://doi.org/10.1145/3726302.3730053",
+      "paper_ref": "P05",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 13",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/sigir/0001S0FWNC25"
+    },
+    {
+      "claim_id": "P05-C03",
+      "paper_id": "https://doi.org/10.1145/3726302.3730053",
+      "paper_ref": "P05",
+      "kind": "code_repository",
+      "text": "Code candidate Linxyhaha/SETRec is classified likely with confidence 69",
+      "location": "https://github.com/Linxyhaha/SETRec",
+      "source_url": "https://dblp.org/rec/conf/sigir/0001S0FWNC25"
+    },
+    {
+      "claim_id": "P06-C01",
+      "paper_id": "https://doi.org/10.1145/3779211.3793173",
+      "paper_ref": "P06",
+      "kind": "paper_summary",
+      "text": "SPARK框架通过协调基于LLM的个性化智能体进行检索和知识共享，以建模用户动态多维信息需求，实现搜索个性化。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/wsdm/ChhetriDC26"
+    },
+    {
+      "claim_id": "P06-C02",
+      "paper_id": "https://doi.org/10.1145/3779211.3793173",
+      "paper_ref": "P06",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/wsdm/ChhetriDC26"
+    },
+    {
+      "claim_id": "P07-C01",
+      "paper_id": "https://doi.org/10.1145/3726302.3729911",
+      "paper_ref": "P07",
+      "kind": "paper_summary",
+      "text": "该论文提出LLM4CDSR模型，利用大语言模型统一表示物品和总结用户跨域偏好，以解决跨域序列推荐中的重叠困境和转换复杂性问题，并在三个公开数据集上验证了有效性。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/sigir/00020W0Z0LH025"
+    },
+    {
+      "claim_id": "P07-C02",
+      "paper_id": "https://doi.org/10.1145/3726302.3729911",
+      "paper_ref": "P07",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 18",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/sigir/00020W0Z0LH025"
+    },
+    {
+      "claim_id": "P07-C03",
+      "paper_id": "https://doi.org/10.1145/3726302.3729911",
+      "paper_ref": "P07",
+      "kind": "code_repository",
+      "text": "Code candidate CHIANGEL/Awesome-LLM-for-RecSys is classified official with confidence 100",
+      "location": "https://github.com/CHIANGEL/Awesome-LLM-for-RecSys",
+      "source_url": "https://dblp.org/rec/conf/sigir/00020W0Z0LH025"
+    },
+    {
+      "claim_id": "P08-C01",
+      "paper_id": "https://doi.org/10.1145/3773966.3778026",
+      "paper_ref": "P08",
+      "kind": "paper_summary",
+      "text": "该论文提出CDMRec，一种因果扩散偏好模型，通过生成冷启动用户的偏好表示并集成到现有序列推荐模型中，有效缓解了用户冷启动问题，在多个数据集上显著提升了推荐性能。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/wsdm/DongX0Z26"
+    },
+    {
+      "claim_id": "P08-C02",
+      "paper_id": "https://doi.org/10.1145/3773966.3778026",
+      "paper_ref": "P08",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/wsdm/DongX0Z26"
+    },
+    {
+      "claim_id": "P09-C01",
+      "paper_id": "2608.24815v1",
+      "paper_ref": "P09",
+      "kind": "paper_summary",
+      "text": "The paper proposes an offline diagnostic framework to audit return-to-go conditioning in Decision Transformer recommenders, finding that intervention locality and RTG content affect controllability, but the results do not establish reward control.",
+      "location": "AI paper-level summary",
+      "source_url": "http://arxiv.org/abs/2608.24815v1"
+    },
+    {
+      "claim_id": "P09-C02",
+      "paper_id": "2608.24815v1",
+      "paper_ref": "P09",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "http://arxiv.org/abs/2608.24815v1"
+    },
+    {
+      "claim_id": "P10-C01",
+      "paper_id": "2608.27366v1",
+      "paper_ref": "P10",
+      "kind": "paper_summary",
+      "text": "The paper proposes a two-stage XGBoost model with counterfactual estimation to select and rank signals on eBay's View-Item page, achieving a 0.08% lift in overall GMB and 0.58% in Parts and Accessories GMB.",
+      "location": "AI paper-level summary",
+      "source_url": "http://arxiv.org/abs/2608.27366v1"
+    },
+    {
+      "claim_id": "P10-C02",
+      "paper_id": "2608.27366v1",
+      "paper_ref": "P10",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "http://arxiv.org/abs/2608.27366v1"
+    },
+    {
+      "claim_id": "P11-C01",
+      "paper_id": "https://doi.org/10.1145/3726302.3730003",
+      "paper_ref": "P11",
+      "kind": "paper_summary",
+      "text": "该论文揭示了LLM-powered agents对ID-free推荐系统的攻击风险，并提出了一种检测方法，以增强其安全性。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/sigir/00020Y0NSY25"
+    },
+    {
+      "claim_id": "P11-C02",
+      "paper_id": "https://doi.org/10.1145/3726302.3730003",
+      "paper_ref": "P11",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 4",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/sigir/00020Y0NSY25"
+    },
+    {
+      "claim_id": "P12-C01",
+      "paper_id": "https://doi.org/10.1145/3696410.3714733",
+      "paper_ref": "P12",
+      "kind": "paper_summary",
+      "text": "该论文提出了一种可解释的多模态对齐方法（EARec），通过并行对齐多种模态到共享锚点并组合模型，提升了序列推荐系统的可迁移性和可扩展性。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/www/0004MGZWZZY25"
+    },
+    {
+      "claim_id": "P12-C02",
+      "paper_id": "https://doi.org/10.1145/3696410.3714733",
+      "paper_ref": "P12",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 2",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/www/0004MGZWZZY25"
+    },
+    {
+      "claim_id": "P12-C03",
+      "paper_id": "https://doi.org/10.1145/3696410.3714733",
+      "paper_ref": "P12",
+      "kind": "code_repository",
+      "text": "Code candidate ysh-1998/EARec is classified possible with confidence 30",
+      "location": "https://github.com/ysh-1998/EARec",
+      "source_url": "https://dblp.org/rec/conf/www/0004MGZWZZY25"
+    },
+    {
+      "claim_id": "P13-C01",
+      "paper_id": "https://doi.org/10.1145/3773966.3777978",
+      "paper_ref": "P13",
+      "kind": "paper_summary",
+      "text": "SimDiffRec proposes a semantic similarity-guided diffusion model for contrastive sequential recommendation, which generates semantically consistent noise and selects augmentation positions based on confidence scores, outperforming baselines on five datasets.",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/wsdm/ChoiNP26"
+    },
+    {
+      "claim_id": "P13-C02",
+      "paper_id": "https://doi.org/10.1145/3773966.3777978",
+      "paper_ref": "P13",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/wsdm/ChoiNP26"
+    },
+    {
+      "claim_id": "P13-C03",
+      "paper_id": "https://doi.org/10.1145/3773966.3777978",
+      "paper_ref": "P13",
+      "kind": "code_repository",
+      "text": "Code candidate zingyon/SimDiffRec is classified official with confidence 100",
+      "location": "https://github.com/zingyon/SimDiffRec",
+      "source_url": "https://dblp.org/rec/conf/wsdm/ChoiNP26"
+    },
+    {
+      "claim_id": "P14-C01",
+      "paper_id": "2608.27413v1",
+      "paper_ref": "P14",
+      "kind": "paper_summary",
+      "text": "该论文提出了一种可扩展的图神经网络排序系统，通过多哈希用户嵌入和时间邻居采样，在数十亿边的社交图上实现了高效的好友推荐，并在在线A/B测试中显著提升了推荐效果。",
+      "location": "AI paper-level summary",
+      "source_url": "http://arxiv.org/abs/2608.27413v1"
+    },
+    {
+      "claim_id": "P14-C02",
+      "paper_id": "2608.27413v1",
+      "paper_ref": "P14",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "http://arxiv.org/abs/2608.27413v1"
+    },
+    {
+      "claim_id": "P14-C03",
+      "paper_id": "2608.27413v1",
+      "paper_ref": "P14",
+      "kind": "code_repository",
+      "text": "Code candidate makut/VK-GNN is classified possible with confidence 30",
+      "location": "https://github.com/makut/VK-GNN",
+      "source_url": "http://arxiv.org/abs/2608.27413v1"
+    },
+    {
+      "claim_id": "P15-C01",
+      "paper_id": "https://doi.org/10.1145/3705328.3759327",
+      "paper_ref": "P15",
+      "kind": "paper_summary",
+      "text": "This paper proposes TiSRec, a time interval-wise segmentation framework for sequential recommendation that dynamically divides user sequences into Local Preference Blocks to capture evolving preferences, outperforming state-of-the-art methods on four datasets.",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/recsys/KimKKSLC25a"
+    },
+    {
+      "claim_id": "P15-C02",
+      "paper_id": "https://doi.org/10.1145/3705328.3759327",
+      "paper_ref": "P15",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 0",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/recsys/KimKKSLC25a"
+    },
+    {
+      "claim_id": "P16-C01",
+      "paper_id": "https://doi.org/10.1145/3726302.3730022",
+      "paper_ref": "P16",
+      "kind": "paper_summary",
+      "text": "该论文提出一种知识拓扑感知的序列优化模型LIGHT，通过融合概念显式与隐式关系并优化学习路径序列，有效提升学习路径推荐的性能。",
+      "location": "AI paper-level summary",
+      "source_url": "https://dblp.org/rec/conf/sigir/0002Y0SMC025"
+    },
+    {
+      "claim_id": "P16-C02",
+      "paper_id": "https://doi.org/10.1145/3726302.3730022",
+      "paper_ref": "P16",
+      "kind": "metadata",
+      "text": "OpenAlex citation count: 4",
+      "location": "OpenAlex metadata",
+      "source_url": "https://dblp.org/rec/conf/sigir/0002Y0SMC025"
+    }
+  ]
+}
