@@ -6687,6 +6687,170 @@
     "2608.31038v1": {
       "title": "Type-Balanced Contextual Learning for Incremental Named Entity Recognition",
       "paper_id": "2608.31038v1"
+    },
+    "2609.01604v1": {
+      "title": "Beyond Scores: Understanding LLM-as-a-Judge Mechanisms in Summarization Evaluation",
+      "paper_id": "2609.01604v1"
+    },
+    "2609.01556v1": {
+      "title": "Retrieved but not ranked: surface-form bias in structural retrieval, from mathematics to agent trajectories",
+      "paper_id": "2609.01556v1"
+    },
+    "2609.01596v1": {
+      "title": "Facet-0: A Robotic Foundation Model for Contact-Rich Precise Manipulation",
+      "paper_id": "2609.01596v1"
+    },
+    "2609.01587v1": {
+      "title": "The Structure of Quantization Damage in LLMs: Why the Next Bit Should Be Spent Globally",
+      "paper_id": "2609.01587v1"
+    },
+    "2609.01573v1": {
+      "title": "Scaling Near-Optimal SFT-RL Annotation Budget Allocation from Small to Large LLMs",
+      "paper_id": "2609.01573v1"
+    },
+    "2609.01567v1": {
+      "title": "Selective Agent Guidance via Entropy: Learning Autonomous Policies from Imperfect VLM Teachers",
+      "paper_id": "2609.01567v1"
+    },
+    "2609.01558v1": {
+      "title": "Gradient-Update Mismatch: Rethinking Conflict-Free Training of Physics-Informed Neural Networks",
+      "paper_id": "2609.01558v1"
+    },
+    "2609.01552v1": {
+      "title": "Can LLMs Discover Scientific Laws in Real and Parallel Worlds?",
+      "paper_id": "2609.01552v1"
+    },
+    "2609.01550v1": {
+      "title": "A Mathematical Theory of Reusable Neural Bases for Network Compression",
+      "paper_id": "2609.01550v1"
+    },
+    "2609.01549v1": {
+      "title": "NashDreamer: Model-Based Reinforcement Learning for Zero-Sum Imperfect-Information Games",
+      "paper_id": "2609.01549v1"
+    },
+    "2609.01544v1": {
+      "title": "Variable Selection for Feature-Based Newsvendor",
+      "paper_id": "2609.01544v1"
+    },
+    "2609.01537v1": {
+      "title": "Quantum Sparse Autoencoders for Q-Matrix Estimation in Cognitive Diagnosis",
+      "paper_id": "2609.01537v1"
+    },
+    "2609.01528v1": {
+      "title": "Sierpiński--Knopp Wasserstein Distance for Persistence Diagrams and Applications to 2-Wasserstein Approximation",
+      "paper_id": "2609.01528v1"
+    },
+    "2609.01507v1": {
+      "title": "LatentPress: Context Compression Beyond Text and Vision",
+      "paper_id": "2609.01507v1"
+    },
+    "2609.01495v1": {
+      "title": "Optimizing Byzantine Node Placement in Decentralized Federated Learning",
+      "paper_id": "2609.01495v1"
+    },
+    "2609.01493v1": {
+      "title": "Rethinking Learnability in Offline Data-driven Optimization",
+      "paper_id": "2609.01493v1"
+    },
+    "2609.01603v1": {
+      "title": "Efficient SWE Agent Benchmarking via Trajectory-Aware Evaluation",
+      "paper_id": "2609.01603v1"
+    },
+    "2609.01601v1": {
+      "title": "Adaptive Critical Token-Aware Retrieval for Repository-Level Code Generation",
+      "paper_id": "2609.01601v1"
+    },
+    "2609.01600v1": {
+      "title": "CordisBench: Can Language Models Reason About Component Lifecycles in Dynamic Agent Harnesses?",
+      "paper_id": "2609.01600v1"
+    },
+    "2609.01597v1": {
+      "title": "The Rise of Verbal Reinforcement Learning",
+      "paper_id": "2609.01597v1"
+    },
+    "2609.01595v1": {
+      "title": "Mechanism Design for Alignment and Control",
+      "paper_id": "2609.01595v1"
+    },
+    "2609.01564v1": {
+      "title": "From Confusion to Clarity: Confusion-Aware Retrieval and Knowledge Injection for Text Classification",
+      "paper_id": "2609.01564v1"
+    },
+    "2609.01588v1": {
+      "title": "Designing Proactive Thought Partners for Writing",
+      "paper_id": "2609.01588v1"
+    },
+    "2609.01560v1": {
+      "title": "H3-World: Turning Language Understanding into World Control",
+      "paper_id": "2609.01560v1"
+    },
+    "2609.01554v1": {
+      "title": "BS: Take the Hint - Interactive Multitracer PET/CT Lesion Segmentation with a Scribble-Conditioned ResEnc U-Net",
+      "paper_id": "2609.01554v1"
+    },
+    "2609.01535v1": {
+      "title": "Can LLMs Design Video Coding Tools? A Case Study on Planar Mode",
+      "paper_id": "2609.01535v1"
+    },
+    "2609.01526v1": {
+      "title": "EvoSCM: Scientific Belief Revision Through Causal Model Evolution and Experimentation",
+      "paper_id": "2609.01526v1"
+    },
+    "2609.01525v1": {
+      "title": "Relational-Core Graph Analytics Querying graphs at SQL scale, and why the node/edge model is a performance tax, not a truer picture of connected data",
+      "paper_id": "2609.01525v1"
+    },
+    "2609.01519v1": {
+      "title": "When Guardrails Look Effective: Construct Validity Failures in LLM Agent Commerce Evaluation",
+      "paper_id": "2609.01519v1"
+    },
+    "2609.01515v1": {
+      "title": "TempCloze: Can Video-LLMs Identify the Missing Middle?",
+      "paper_id": "2609.01515v1"
+    },
+    "2609.01491v1": {
+      "title": "GlossoGen: Emergent Language in Complex Multi-Agent LLM Interactions",
+      "paper_id": "2609.01491v1"
+    },
+    "2609.01487v1": {
+      "title": "Defense-as-Skill: Evolving Runtime Guard Skill for Skill-Augmented Agents",
+      "paper_id": "2609.01487v1"
+    },
+    "2609.01481v1": {
+      "title": "Harness-of-Harness: Multi-Day Autonomous Software Development with Continual Improvement",
+      "paper_id": "2609.01481v1"
+    },
+    "2609.01466v1": {
+      "title": "Parsing the Stream: A Live Trace Model for Long-Horizon Agents and Their Observers",
+      "paper_id": "2609.01466v1"
+    },
+    "2609.01591v1": {
+      "title": "StudentSim: Training LLM-based Student Simulators",
+      "paper_id": "2609.01591v1"
+    },
+    "2609.01575v1": {
+      "title": "Closing Cost-Quality Gap in Document VLMs: Difficulty-Aware Data Curation and Quality-Adjusted Deployment Economics",
+      "paper_id": "2609.01575v1"
+    },
+    "2609.01572v1": {
+      "title": "From Production Traffic to Post-Training: Building a Self-Hosted LLM That Covers the Corporate Request Mix",
+      "paper_id": "2609.01572v1"
+    },
+    "2609.01563v1": {
+      "title": "A systematic Approach to constructing a Chance-and-Risk Matrix for Semiconductor Supply Chains",
+      "paper_id": "2609.01563v1"
+    },
+    "2609.01548v1": {
+      "title": "SDARE-Bench: Evaluating Large Language Models on Conversational Stigma Detection and Response in Dyadic and Group Dialogue",
+      "paper_id": "2609.01548v1"
+    },
+    "2609.01532v1": {
+      "title": "Knowledge Distillation During Mid-Training Favors Reasoning over Factual Recall",
+      "paper_id": "2609.01532v1"
+    },
+    "W7204748376": {
+      "title": "Algorithmic Publicity and the Right to a Fair Trial",
+      "paper_id": "https://doi.org/10.53300/001c.169193"
     }
   },
   "edges": [
