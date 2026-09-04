@@ -3,7 +3,7 @@ title: "Conf-GNNRec: Quantifying and Calibrating the Prediction Confidence for G
 paper_id: "https://doi.org/10.1145/3701716.3715475"
 source: "www"
 published: "2025-01-01T00:00:00"
-score: 30.0
+score: 0.0
 tags: ["paper", "recommender-systems", "Recommender Systems and Techniques", "Radiomics and Machine Learning in Medical Imaging", "Machine Learning in Healthcare"]
 ---
 
@@ -13,22 +13,15 @@ tags: ["paper", "recommender-systems", "Recommender Systems and Techniques", "Ra
 
 ## 一句话结论
 
-> 针对图神经网络推荐系统存在的过自信问题，提出Conf-GNNRec方法，通过评分校准和置信度损失函数量化并校准预测置信度，提升推荐性能。
+> 评分失败，无法生成摘要
 
 ## 论文信息
 
 - **作者**：Meng Yan, Cai Xu, Xujing Wang, Ziyu Guan, Wei Zhao, Yuhang Zhou
 - **来源**：WWW
 - **发布时间**：2025-01-01
-- **相关度评分**：30.0
+- **相关度评分**：0.0
 - **DOI**：[https://doi.org/10.1145/3701716.3715475](https://doi.org/10.1145/3701716.3715475)
-
-<details open>
-<summary><strong>中文摘要</strong></summary>
-
-基于图神经网络的推荐系统在评分与排序等任务中表现优异。然而，在真实推荐场景中，用户误操作与恶意广告等噪声会通过消息传播机制逐渐累积。尽管现有研究通过降低噪声传播权重来减轻其影响，但推荐系统严重的稀疏性仍会导致低权重噪声邻居被误判为有效信息，且基于受污染节点获得的预测结果并非完全可信。因此，在高噪声框架下衡量预测结果的置信度至关重要。此外，我们对现有代表性基于图神经网络的推荐方法进行评估后发现，其存在过度自信问题。基于上述考量，我们提出了一种量化与校准基于图神经网络的推荐预测置信度的新方法（Conf-GNNRec）。具体而言，我们提出了一种评分校准方法，该方法基于用户个性化动态调整过度评分以缓解过度自信；同时设计了一种置信度损失函数，以降低负样本的过度自信程度，从而有效提升推荐性能。在公开数据集上的实验验证了Conf-GNNRec在预测置信度与推荐性能方面的有效性。
-
-</details>
 
 <details>
 <summary><strong>英文摘要</strong></summary>
@@ -39,4 +32,4 @@ Recommender systems based on graph neural networks perform well in tasks such as
 
 ---
 
-_知识库更新时间：2026-07-13T06:43:12.875600_
+_知识库更新时间：2026-09-04T05:10:12.466156_
