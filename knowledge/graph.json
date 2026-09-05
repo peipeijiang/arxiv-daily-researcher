@@ -7175,6 +7175,14 @@
     "2609.04173v1": {
       "title": "Last Translation Benchmark",
       "paper_id": "2609.04173v1"
+    },
+    "W4409671070": {
+      "title": "Does Weighting Improve Matrix Factorization for Recommender Systems?",
+      "paper_id": "https://doi.org/10.1145/3696410.3714680"
+    },
+    "W4410636770": {
+      "title": "Retrieval Augmented Multi-agent Recommender",
+      "paper_id": "https://doi.org/10.1145/3701716.3719231"
     }
   },
   "edges": [
@@ -44051,6 +44059,296 @@
     {
       "from": "W4410636845",
       "to": "W2386000789",
+      "type": "related"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W398859631",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W578119892",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W1886704267",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W1974318090",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W1987431925",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W1992665562",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W2101409192",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W2124187902",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W2142144955",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W2150886314",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W2316564661",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W2912745432",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W2913754224",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W2957191877",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W2963085847",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W2998534896",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W3101708421",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W3105114834",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W3143496104",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W3164446158",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W3201591198",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W3211255867",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W4240964231",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W4251560691",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W4385849288",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W4403221462",
+      "type": "cites"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W2180954594",
+      "type": "related"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W2052835778",
+      "type": "related"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W2049003611",
+      "type": "related"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W4401051025",
+      "type": "related"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W2065296176",
+      "type": "related"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W1973739845",
+      "type": "related"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W119752240",
+      "type": "related"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W2910890956",
+      "type": "related"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W2069570686",
+      "type": "related"
+    },
+    {
+      "from": "W4409671070",
+      "to": "W4401009883",
+      "type": "related"
+    },
+    {
+      "from": "W4410636770",
+      "to": "W2028988057",
+      "type": "cites"
+    },
+    {
+      "from": "W4410636770",
+      "to": "W2064173066",
+      "type": "cites"
+    },
+    {
+      "from": "W4410636770",
+      "to": "W2893359107",
+      "type": "cites"
+    },
+    {
+      "from": "W4410636770",
+      "to": "W4297816431",
+      "type": "cites"
+    },
+    {
+      "from": "W4410636770",
+      "to": "W4386081001",
+      "type": "cites"
+    },
+    {
+      "from": "W4410636770",
+      "to": "W4391256002",
+      "type": "cites"
+    },
+    {
+      "from": "W4410636770",
+      "to": "W4394630438",
+      "type": "cites"
+    },
+    {
+      "from": "W4410636770",
+      "to": "W4396758674",
+      "type": "cites"
+    },
+    {
+      "from": "W4410636770",
+      "to": "W4398194449",
+      "type": "cites"
+    },
+    {
+      "from": "W4410636770",
+      "to": "W4400581058",
+      "type": "cites"
+    },
+    {
+      "from": "W4410636770",
+      "to": "W4401834466",
+      "type": "cites"
+    },
+    {
+      "from": "W4410636770",
+      "to": "W4403577893",
+      "type": "cites"
+    },
+    {
+      "from": "W4410636770",
+      "to": "W4391375266",
+      "type": "related"
+    },
+    {
+      "from": "W4410636770",
+      "to": "W2899084033",
+      "type": "related"
+    },
+    {
+      "from": "W4410636770",
+      "to": "W2748952813",
+      "type": "related"
+    },
+    {
+      "from": "W4410636770",
+      "to": "W4390273403",
+      "type": "related"
+    },
+    {
+      "from": "W4410636770",
+      "to": "W4386781444",
+      "type": "related"
+    },
+    {
+      "from": "W4410636770",
+      "to": "W2150182025",
+      "type": "related"
+    },
+    {
+      "from": "W4410636770",
+      "to": "W3092950680",
+      "type": "related"
+    },
+    {
+      "from": "W4410636770",
+      "to": "W3197542405",
+      "type": "related"
+    },
+    {
+      "from": "W4410636770",
+      "to": "W2056712470",
+      "type": "related"
+    },
+    {
+      "from": "W4410636770",
+      "to": "W3125580266",
       "type": "related"
     }
   ]
