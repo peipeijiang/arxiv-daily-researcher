@@ -7223,6 +7223,10 @@
     "W4409657234": {
       "title": "What&apos;s in a Query: Polarity-Aware Distribution-Based Fair Ranking",
       "paper_id": "https://doi.org/10.1145/3696410.3714660"
+    },
+    "W7210276965": {
+      "title": "Memory-Enhanced Collaborative Reasoning for Context-Aware Next POI Recommendation",
+      "paper_id": "https://doi.org/10.1007/978-3-032-37676-3_28"
     }
   },
   "edges": [
@@ -46215,6 +46219,136 @@
       "from": "W4409657234",
       "to": "W2153069032",
       "type": "related"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W2071702404",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W2073013176",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W2087692915",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W2110953678",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W2539781657",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W2788114581",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W2808425487",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W3013594674",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W3128267727",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W4205551258",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W4206511970",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W4284668299",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W4396758674",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W4396818449",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W4400524736",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W4400525295",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W4401110399",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W4408355121",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W4409581370",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W4409991400",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W4411119500",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W4411452953",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W4412377133",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W4415795362",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W4416016961",
+      "type": "cites"
+    },
+    {
+      "from": "W7210276965",
+      "to": "W4417283713",
+      "type": "cites"
     }
   ]
 }
