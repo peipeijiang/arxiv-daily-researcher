@@ -7227,6 +7227,170 @@
     "W7210276965": {
       "title": "Memory-Enhanced Collaborative Reasoning for Context-Aware Next POI Recommendation",
       "paper_id": "https://doi.org/10.1007/978-3-032-37676-3_28"
+    },
+    "2609.09152v1": {
+      "title": "Silver Rate Is (Almost) Optimal for Gradient Descent Acceleration",
+      "paper_id": "2609.09152v1"
+    },
+    "2609.09157v1": {
+      "title": "Learning Length-Extrapolatable Recurrent Models",
+      "paper_id": "2609.09157v1"
+    },
+    "2609.09135v1": {
+      "title": "Entropy-Regularized Rank-Masked Policy Optimization for Test-Time Reinforcement Learning in Code Generation",
+      "paper_id": "2609.09135v1"
+    },
+    "2609.09140v1": {
+      "title": "NOAH: Learning the Full Patient Journey. A Longitudinal Multimodal Time-Aware Model for Representation and Forecasting",
+      "paper_id": "2609.09140v1"
+    },
+    "2609.09126v1": {
+      "title": "A Generalization of Amari's Bayesian Duality",
+      "paper_id": "2609.09126v1"
+    },
+    "2609.09130v1": {
+      "title": "Nearly Tight Rademacher Bounds for Sparsely Activated Neural Networks",
+      "paper_id": "2609.09130v1"
+    },
+    "2609.09116v1": {
+      "title": "When Does Scale-Invariant Optimization Become Unstable? An Exact Schedule Law with Weight Decay",
+      "paper_id": "2609.09116v1"
+    },
+    "2609.09113v1": {
+      "title": "SAEScientist-Bench: Can AI Agents Conduct Autonomous SAE Interpretability Research?",
+      "paper_id": "2609.09113v1"
+    },
+    "2609.09099v1": {
+      "title": "Curriculum Learning as Transport: Understanding Curricula with Wasserstein Geodesics",
+      "paper_id": "2609.09099v1"
+    },
+    "2609.09075v1": {
+      "title": "ThinkPrior: Zero-Rollout Difficulty Priors for Cold-Start Prompt Selection in RLVR",
+      "paper_id": "2609.09075v1"
+    },
+    "2609.09062v1": {
+      "title": "Multi-Task Learning for Sparsely-Labeled Time Series: A Case Study on Cold-Hardiness Modeling",
+      "paper_id": "2609.09062v1"
+    },
+    "2609.09059v1": {
+      "title": "PlayTrain: An Efficient Reinforcement Learning Framework for LLM-Generated Adaptable JavaScript Games",
+      "paper_id": "2609.09059v1"
+    },
+    "2609.09054v1": {
+      "title": "Training-Free Task Vectors for LLM Behavioral Control",
+      "paper_id": "2609.09054v1"
+    },
+    "2609.09038v1": {
+      "title": "Do Reasoning Representations Help Humans Evaluate LLM Outputs?",
+      "paper_id": "2609.09038v1"
+    },
+    "2609.09030v1": {
+      "title": "Answer-Distribution Trajectories: A Stochastic-Dynamics View of LLM Reasoning",
+      "paper_id": "2609.09030v1"
+    },
+    "2609.09011v1": {
+      "title": "Closed-Form of the Local Galactic Potential and Stellar Distribution Function from Gaia DR3",
+      "paper_id": "2609.09011v1"
+    },
+    "2609.09009v1": {
+      "title": "Let It Go or Learn to Self-Correct: Continuous Diffusion for Constrained Discrete Tasks",
+      "paper_id": "2609.09009v1"
+    },
+    "2609.09004v1": {
+      "title": "Evaluation of Contextual Understanding in Large Language Models",
+      "paper_id": "2609.09004v1"
+    },
+    "2609.09158v1": {
+      "title": "TANGO: Humanoid Navigation in Cluttered Environments with a Whole-Body Vision-Language-Action Model",
+      "paper_id": "2609.09158v1"
+    },
+    "2609.09153v1": {
+      "title": "Procedural Graphs: Self-Evolving Execution Structures for LLM Agents",
+      "paper_id": "2609.09153v1"
+    },
+    "2609.09137v1": {
+      "title": "A Data-Driven Framework for Identifying and Prioritizing RPA Opportunities in Healthcare Processes",
+      "paper_id": "2609.09137v1"
+    },
+    "2609.09134v1": {
+      "title": "Co-Evolving Harnesses and Models: On-Policy Correction Helps Weaker Models Catch Up Where Imitation Fails",
+      "paper_id": "2609.09134v1"
+    },
+    "2609.09133v1": {
+      "title": "ExecCritic: Learn to Test, Test to Improve for Coding Agents",
+      "paper_id": "2609.09133v1"
+    },
+    "2609.09124v1": {
+      "title": "Canonical Color as a Lens into Concept Decodability in Vision Encoders and VLMs",
+      "paper_id": "2609.09124v1"
+    },
+    "2609.09119v1": {
+      "title": "DeCAL: Towards Physically-Grounded Dexterous Vision-Language-Action Models via Contact-Aware Latent Co-Imagination",
+      "paper_id": "2609.09119v1"
+    },
+    "2609.09115v1": {
+      "title": "MeClear: Cooperative Game-Theoretic Attribution and Risk-Aware Memory Clearance for Long-Horizon LLM Agents",
+      "paper_id": "2609.09115v1"
+    },
+    "2609.09094v1": {
+      "title": "The Surprising Effectiveness of Approximate Value Iteration in Self-Play",
+      "paper_id": "2609.09094v1"
+    },
+    "2609.09090v1": {
+      "title": "Measuring LLM Sycophancy under Sustained Multi-Turn Pressure",
+      "paper_id": "2609.09090v1"
+    },
+    "2609.09082v1": {
+      "title": "GoDeep: Annotation-Free Open-Vocabulary 3D Scene Understanding via Language-Space Lifting",
+      "paper_id": "2609.09082v1"
+    },
+    "2609.09081v1": {
+      "title": "Everything in Moderation: Per-Domain Coverage Optima and Alignment-Resistant Domain Gaps in Multi-Domain Mid-Training",
+      "paper_id": "2609.09081v1"
+    },
+    "2609.09070v1": {
+      "title": "Performance of Clinical AI System and Physicians and Frontier Language Models in primary care diagnostics",
+      "paper_id": "2609.09070v1"
+    },
+    "2609.09056v1": {
+      "title": "Time-Varying Data as Sheaves: an Invitation to Narratives",
+      "paper_id": "2609.09056v1"
+    },
+    "2609.09048v1": {
+      "title": "The Audit Decides the Verdict: Instrument Effects Rival Demographic Bias in LLM Decision Audits",
+      "paper_id": "2609.09048v1"
+    },
+    "2609.09022v1": {
+      "title": "It Is Not My Code Anymore",
+      "paper_id": "2609.09022v1"
+    },
+    "2609.09156v1": {
+      "title": "ReCite: Agentic Reasoning for Faithful Citation",
+      "paper_id": "2609.09156v1"
+    },
+    "2609.09150v1": {
+      "title": "Copying explains the collective behavior of AI agents in the wild",
+      "paper_id": "2609.09150v1"
+    },
+    "2609.09085v1": {
+      "title": "It's Not RoPE that Creates Sinks: The Role of Self-Concentration and Value-Non-Mixing in Attention",
+      "paper_id": "2609.09085v1"
+    },
+    "2609.09143v1": {
+      "title": "Studying Image Tokenizers as Visual Languages in Unified Multimodal Models",
+      "paper_id": "2609.09143v1"
+    },
+    "2609.09072v1": {
+      "title": "ToolLoop: Closed-Loop Tool-Use Data Synthesis via Decomposed Generation and Dynamic Self-Feedback",
+      "paper_id": "2609.09072v1"
+    },
+    "2609.09076v1": {
+      "title": "ActReview: Rebuttal-Guided Training Data and Rubric Rewards for Actionable Peer Review Generation",
+      "paper_id": "2609.09076v1"
+    },
+    "W7211877105": {
+      "title": "Privacy policy framing and trust in recommender systems: an experimental study",
+      "paper_id": "https://doi.org/10.1038/s41598-026-66241-6"
     }
   },
   "edges": [
