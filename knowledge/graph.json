@@ -7551,6 +7551,166 @@
     "2609.10321v1": {
       "title": "On-Policy Distillation for Vision-Language Model Adaptation, an Effective Paradigm on Low-Quality Multimodal Data",
       "paper_id": "2609.10321v1"
+    },
+    "2609.11808v1": {
+      "title": "Generative Late-Interaction Embeddings For Visual Document Retrieval",
+      "paper_id": "2609.11808v1"
+    },
+    "2609.11918v1": {
+      "title": "General Quantification of Covariate and Concept Shifts",
+      "paper_id": "2609.11918v1"
+    },
+    "2609.11915v1": {
+      "title": "Generative Marketing Mix Modeling: A Causal Inference Framework Linking GEO and GEM to Business Impact",
+      "paper_id": "2609.11915v1"
+    },
+    "2609.11917v1": {
+      "title": "Data Scarcity and Model Sparsity: Mixtures-of-Experts Overfit More to Repeated Data",
+      "paper_id": "2609.11917v1"
+    },
+    "2609.11904v1": {
+      "title": "TART: A Modular Tool for Technique-Aware Audio-to-Tablature Guitar Transcription",
+      "paper_id": "2609.11904v1"
+    },
+    "2609.11910v1": {
+      "title": "From Protocols to Evidence: Bounded Claims for AI in Service of the Common Good",
+      "paper_id": "2609.11910v1"
+    },
+    "2609.11897v1": {
+      "title": "CausalArena: Benchmarking Causal Discovery in the Foundation Model Era",
+      "paper_id": "2609.11897v1"
+    },
+    "2609.11894v1": {
+      "title": "3D Point Splatting for mmWave Radar Novel View Synthesis",
+      "paper_id": "2609.11894v1"
+    },
+    "2609.11884v1": {
+      "title": "CoRA-NAS: Coarse Ranking and Anchor-Residual Refinement for Neural Architecture Search",
+      "paper_id": "2609.11884v1"
+    },
+    "2609.11878v1": {
+      "title": "Domain-Specific Hallucination Detection in Large Language Models",
+      "paper_id": "2609.11878v1"
+    },
+    "2609.11873v1": {
+      "title": "The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement",
+      "paper_id": "2609.11873v1"
+    },
+    "2609.11872v1": {
+      "title": "Evaluating Time-Series Foundation Models and Multimodal Dietary Context for CGM Forecasting",
+      "paper_id": "2609.11872v1"
+    },
+    "2609.11867v1": {
+      "title": "AdamX: Cosine similarity meets gradient descent",
+      "paper_id": "2609.11867v1"
+    },
+    "2609.11860v1": {
+      "title": "Explainability Assistant: A Conversational XAI Interface for Interpreting Energy Consumption Models",
+      "paper_id": "2609.11860v1"
+    },
+    "2609.11842v1": {
+      "title": "Model-Aware Schedules Improve Generation via Fiberwise Optimal Transport",
+      "paper_id": "2609.11842v1"
+    },
+    "2609.11807v1": {
+      "title": "Near-Optimal Reinforcement Learning with Multi-Step Transition Lookahead",
+      "paper_id": "2609.11807v1"
+    },
+    "2609.11804v1": {
+      "title": "Logit Refiner: Improving Visual Autoregressive Models via Intra-Scale Dependency Modeling",
+      "paper_id": "2609.11804v1"
+    },
+    "2609.11801v1": {
+      "title": "Thinking with Looped Flows",
+      "paper_id": "2609.11801v1"
+    },
+    "2609.11790v1": {
+      "title": "Dynamic language model representations for multi-objective reaction optimisation",
+      "paper_id": "2609.11790v1"
+    },
+    "2609.11780v1": {
+      "title": "Predicting Privacy Leakage from Weight Spectral Density",
+      "paper_id": "2609.11780v1"
+    },
+    "2609.11777v1": {
+      "title": "Differentially Private EEG Feature Anonymization: A Privacy-Utility Case Study in Clinical Neurophysiology",
+      "paper_id": "2609.11777v1"
+    },
+    "2609.11923v1": {
+      "title": "GPU-CFR: 80x Faster Counterfactual Regret Minimization by Compiling the Game to Static Dataflow and CUDA Graph Replay",
+      "paper_id": "2609.11923v1"
+    },
+    "2609.11916v1": {
+      "title": "Can Edge-Deployable Vision-Language Models Identify Species?",
+      "paper_id": "2609.11916v1"
+    },
+    "2609.11911v1": {
+      "title": "Artificial Id: Drive and Persistent Alignment in Agentic AI",
+      "paper_id": "2609.11911v1"
+    },
+    "2609.11900v1": {
+      "title": "MindTopo: Can Foundation Models Reason in Topological Space?",
+      "paper_id": "2609.11900v1"
+    },
+    "2609.11877v1": {
+      "title": "Biology-in-the-loop: Amortized Adaptive Hit Discovery in CRISPR Screens",
+      "paper_id": "2609.11877v1"
+    },
+    "2609.11876v1": {
+      "title": "On the Regularization Landscape for the Linear Recommendation Models",
+      "paper_id": "2609.11876v1"
+    },
+    "2609.11864v1": {
+      "title": "RetroThinker: Enabling Retrospective Thinking in Speech LLMs",
+      "paper_id": "2609.11864v1"
+    },
+    "2609.11859v1": {
+      "title": "From Parameters to Answers: How LLMs Retrieve and Use Their Internal Knowledge",
+      "paper_id": "2609.11859v1"
+    },
+    "2609.11805v1": {
+      "title": "Understanding Operator Attitudes Toward AI-Supported Decision Making in Maritime Operations",
+      "paper_id": "2609.11805v1"
+    },
+    "2609.11786v1": {
+      "title": "Beyond Word Error Rate: A Switch Aware Evaluation of ASR and Audio Language Models on English Yoruba Code-Switched Speech",
+      "paper_id": "2609.11786v1"
+    },
+    "2609.11913v1": {
+      "title": "Distance generalization in transformers: why bother with positional encoding?",
+      "paper_id": "2609.11913v1"
+    },
+    "2609.11892v1": {
+      "title": "Nuha-Speech: Building General-Purpose Arabic Speech-LLMs",
+      "paper_id": "2609.11892v1"
+    },
+    "2609.11870v1": {
+      "title": "Augustinian BabyLM: What Ostensive Definition Can and Cannot Teach a Small Language Model",
+      "paper_id": "2609.11870v1"
+    },
+    "2609.11865v1": {
+      "title": "Epistemic orientation predicts legislative effectiveness among members of the US Congress",
+      "paper_id": "2609.11865v1"
+    },
+    "2609.11851v1": {
+      "title": "IndicTriMix: Developing Language Identification Datasets and Models for Tri-Language Code-Mixing",
+      "paper_id": "2609.11851v1"
+    },
+    "2609.11838v1": {
+      "title": "Target leakage, not model class, explains reported accuracy in survey-based cardiovascular screening: a leakage-tiered audit of glass-box and tabular foundation models",
+      "paper_id": "2609.11838v1"
+    },
+    "2609.11799v1": {
+      "title": "SpecGuard: Inference-Time Backdoor Detection For Free",
+      "paper_id": "2609.11799v1"
+    },
+    "2609.11772v1": {
+      "title": "Whisper-Based Speech Transcription from Videos Across Multiple Languages for Cross-Cultural Understanding",
+      "paper_id": "2609.11772v1"
+    },
+    "2609.11770v1": {
+      "title": "The widening evaluation gap in medical large language model research 2023 to 2026",
+      "paper_id": "2609.11770v1"
     }
   },
   "edges": [
