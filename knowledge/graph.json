@@ -7711,6 +7711,166 @@
     "2609.11770v1": {
       "title": "The widening evaluation gap in medical large language model research 2023 to 2026",
       "paper_id": "2609.11770v1"
+    },
+    "2609.17499v1": {
+      "title": "ENCP: Episode-Normalized Conformal Prediction for Vision-and-Language Navigation",
+      "paper_id": "2609.17499v1"
+    },
+    "2609.17366v1": {
+      "title": "Lexplorer: Navigating the Complexity of Legal Document Landscapes",
+      "paper_id": "2609.17366v1"
+    },
+    "2609.17483v1": {
+      "title": "Bridging the Gap Between Homogeneous and Heterogeneous Asynchronous Optimization Is Surprisingly Difficult",
+      "paper_id": "2609.17483v1"
+    },
+    "2609.17491v1": {
+      "title": "FreqSpaNet: Frequency and Spatial Learning of SFPF for Physical Layer Hardware Integrity Detection",
+      "paper_id": "2609.17491v1"
+    },
+    "2609.17477v1": {
+      "title": "Bias-Induced Crossover in Absolute Capacity of Dense Associative Memory",
+      "paper_id": "2609.17477v1"
+    },
+    "2609.17474v1": {
+      "title": "Coupled Calibration and Learning: Mitigating Teacher Bias in LLM Distillation without Target-Domain Reward Feedback",
+      "paper_id": "2609.17474v1"
+    },
+    "2609.17458v1": {
+      "title": "Tables Decoded: DELTA for Structure, TARQA for Understanding",
+      "paper_id": "2609.17458v1"
+    },
+    "2609.17440v1": {
+      "title": "Reduced-Space Multi-Fidelity Bayesian Optimization of Process Simulation Models",
+      "paper_id": "2609.17440v1"
+    },
+    "2609.17386v1": {
+      "title": "Bridging the Confidence Gap: Temperature Scaling for Calibrating Test-Time Prompt Tuning",
+      "paper_id": "2609.17386v1"
+    },
+    "2609.17429v1": {
+      "title": "Learning-Guided Planning in Large Dynamic Action Spaces: Budgeted Tree Search for One-to-Many Mobile Charging",
+      "paper_id": "2609.17429v1"
+    },
+    "2609.17376v1": {
+      "title": "Large Language Models Develop Belief State Geometry In-Context",
+      "paper_id": "2609.17376v1"
+    },
+    "2609.17380v1": {
+      "title": "OPEN-1B: A Fully Auditable Training Run",
+      "paper_id": "2609.17380v1"
+    },
+    "2609.17338v1": {
+      "title": "Type-IV Code Clone Detection via Layer-Wise Non-Contrastive Representation Learning",
+      "paper_id": "2609.17338v1"
+    },
+    "2609.17358v1": {
+      "title": "Hybrid Variational Quantum Circuits for Multivariate Regression and High-Dimensional Data Reconstruction",
+      "paper_id": "2609.17358v1"
+    },
+    "2609.17527v1": {
+      "title": "Agentic Societies Need a Social Harness",
+      "paper_id": "2609.17527v1"
+    },
+    "2609.17523v1": {
+      "title": "ScienceBuddy: Recursive-in-Recursive Self-Improvement for Interactive Scientific Agents",
+      "paper_id": "2609.17523v1"
+    },
+    "2609.17521v1": {
+      "title": "PhysStream: Streaming Physics-Grounded Video Generation with Structured Scene Memory and Fine-Grained Motion Control",
+      "paper_id": "2609.17521v1"
+    },
+    "2609.17516v1": {
+      "title": "When Should LLMs Abstain? Chain-of-Self-Questioning for Selective Risk Control",
+      "paper_id": "2609.17516v1"
+    },
+    "2609.17509v1": {
+      "title": "LACE: Layer-Wise Compression for Dynamic Frame Rate Codecs",
+      "paper_id": "2609.17509v1"
+    },
+    "2609.17496v1": {
+      "title": "Verifiable Social Reasoning for LLM Assistants",
+      "paper_id": "2609.17496v1"
+    },
+    "2609.17488v1": {
+      "title": "LimiX-2: A Contextual Mechanism Network Towards General Structured-Data Intelligence",
+      "paper_id": "2609.17488v1"
+    },
+    "2609.17479v1": {
+      "title": "Det-LIME: Detector-Aware, Multi-Instance Local Interpretable Model-Agnostic Explanations for Automated Marine Mammal Detection",
+      "paper_id": "2609.17479v1"
+    },
+    "2609.17475v1": {
+      "title": "JustFit: 200K-Token LLM Serving on a 24 GiB Laptop with Just-in-Time State Management",
+      "paper_id": "2609.17475v1"
+    },
+    "2609.17464v1": {
+      "title": "Decomposition Buys Integrity, Not Yield",
+      "paper_id": "2609.17464v1"
+    },
+    "2609.17439v1": {
+      "title": "Evaluating Verified Autonomy in Quantum Engineering",
+      "paper_id": "2609.17439v1"
+    },
+    "2609.17434v1": {
+      "title": "CareMirror: Bringing Caregiver Wellbeing into the Dementia Care Ecosystem",
+      "paper_id": "2609.17434v1"
+    },
+    "2609.17427v1": {
+      "title": "Tracking the Unseen: An Occlusion-Robust Framework for Target Tracking Under Full and Long-Term Occlusion",
+      "paper_id": "2609.17427v1"
+    },
+    "2609.17394v1": {
+      "title": "Coding Agents Have Converged: Why the SWE-bench Leaderboard Can No Longer Order Its Top Entries, and What to Measure Instead",
+      "paper_id": "2609.17394v1"
+    },
+    "2609.17391v1": {
+      "title": "FlashVector: Agent for Hierarchical Model Serving Stack Optimization",
+      "paper_id": "2609.17391v1"
+    },
+    "2609.17346v1": {
+      "title": "Where Should a Document Live: Context, Representations, or Parameters?",
+      "paper_id": "2609.17346v1"
+    },
+    "2609.17331v1": {
+      "title": "Self-Emergence Agent Architecture:Behavior-Inertia HMM, Reflexive Metacognition,and Social-Contrastive Self-Modeling",
+      "paper_id": "2609.17331v1"
+    },
+    "2609.17327v1": {
+      "title": "Vroom-Vroom at SHROOM-Visions: A Multi-Judge Committee for Detecting Hallucinated Spans in Vision-Language Outputs",
+      "paper_id": "2609.17327v1"
+    },
+    "2609.17326v1": {
+      "title": "From Transient Prompts to Persistent Control: Scientific Poster Generation via Recursive Semantic-Geometric Contracts",
+      "paper_id": "2609.17326v1"
+    },
+    "2609.17325v1": {
+      "title": "Intrinsic Motivation in Reinforcement Learning: A Research Agenda for Adaptive Self-Organisation",
+      "paper_id": "2609.17325v1"
+    },
+    "2609.17515v1": {
+      "title": "What Breaks Under Pruning in Smart Homes, and When? Evaluating LLM Degradation Across Architectures and Task Complexity",
+      "paper_id": "2609.17515v1"
+    },
+    "2609.17435v1": {
+      "title": "Right Tool, Right Job: Native-Language Evaluation, Tokenizer Sensitivity, and Methodological Findings from a French-Only BabyLM",
+      "paper_id": "2609.17435v1"
+    },
+    "2609.17398v1": {
+      "title": "Enhancing Accessibility of Medical Texts through Large Language Model-Driven Plain Language Adaptation",
+      "paper_id": "2609.17398v1"
+    },
+    "2609.17360v1": {
+      "title": "ECHO: A Matched-Contrast Benchmark for Context-Sensitive Turn-Taking in Full-Duplex Dialogue",
+      "paper_id": "2609.17360v1"
+    },
+    "2609.17310v1": {
+      "title": "Zero-shot narrative detection in social messaging",
+      "paper_id": "2609.17310v1"
+    },
+    "2609.17317v1": {
+      "title": "Towards Detecting AI-Assisted Responses in Online Surveys",
+      "paper_id": "2609.17317v1"
     }
   },
   "edges": [
