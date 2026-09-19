@@ -8207,6 +8207,10 @@
     "W7213462375": {
       "title": "DiffDGCL: diffusion model and dynamic graph contrastive learning for multimodal recommendation",
       "paper_id": "https://doi.org/10.1007/s00530-026-02669-0"
+    },
+    "W7213547027": {
+      "title": "A Hybrid Recommendation Framework Leveraging User Community Detection and Latent Feature Extraction for Improved Personalized Recommendations",
+      "paper_id": "https://doi.org/10.1007/s44196-026-01579-3"
     }
   },
   "edges": [
