@@ -8211,6 +8211,166 @@
     "W7213547027": {
       "title": "A Hybrid Recommendation Framework Leveraging User Community Detection and Latent Feature Extraction for Improved Personalized Recommendations",
       "paper_id": "https://doi.org/10.1007/s44196-026-01579-3"
+    },
+    "2609.24983v1": {
+      "title": "onPanda: Efficient Annotation of On-Policy Alignment Data for LLMs and Agents via Token-Level Correction",
+      "paper_id": "2609.24983v1"
+    },
+    "2609.24985v1": {
+      "title": "Critical-State RL: Diagnosing Trainable States for Multi-Turn Tool Use",
+      "paper_id": "2609.24985v1"
+    },
+    "2609.24972v1": {
+      "title": "RRSI: Regularized Recursive Self-Improvement of Agent Harnesses",
+      "paper_id": "2609.24972v1"
+    },
+    "2609.24979v1": {
+      "title": "LoRA-generating hypernetworks for efficient on-device LLM generative personalization",
+      "paper_id": "2609.24979v1"
+    },
+    "2609.24969v1": {
+      "title": "Rare Event Estimation via Iterative Unalignment",
+      "paper_id": "2609.24969v1"
+    },
+    "2609.24954v1": {
+      "title": "JAREX: An Acquisition Function for Multi-Objective Algorithmic Process Characterization",
+      "paper_id": "2609.24954v1"
+    },
+    "2609.24942v1": {
+      "title": "Exactness at Inference: A Representational Criterion for Out-of-Distribution Generalization",
+      "paper_id": "2609.24942v1"
+    },
+    "2609.24947v1": {
+      "title": "Learning Physics from an Imperfect Ancestor",
+      "paper_id": "2609.24947v1"
+    },
+    "2609.24929v1": {
+      "title": "Conformalized Quantile Regression and Minimax Limits of Fixed-Score Calibration under Known Covariate Shift",
+      "paper_id": "2609.24929v1"
+    },
+    "2609.24890v1": {
+      "title": "OSWorld-Pro: Process-based Evaluation for Computer Use Agents",
+      "paper_id": "2609.24890v1"
+    },
+    "2609.24882v1": {
+      "title": "Learning Prognostic Variables for AI Convective Parameterizations via Symbolic Distillation",
+      "paper_id": "2609.24882v1"
+    },
+    "2609.24862v1": {
+      "title": "When Tomorrow Becomes Today: Self-Evolving Policies for Agentic Time-Series Forecasting",
+      "paper_id": "2609.24862v1"
+    },
+    "2609.25001v1": {
+      "title": "GameHorizon Suite: Multi-Horizon Data and Evaluation in Gameplay",
+      "paper_id": "2609.25001v1"
+    },
+    "2609.24840v1": {
+      "title": "PredActor: Predictive Action Diffusion for Steerable Onboard Humanoid Control",
+      "paper_id": "2609.24840v1"
+    },
+    "2609.24984v1": {
+      "title": "WorldCrafter: Consistent Video World Model with Implicit 3D-aware Memory",
+      "paper_id": "2609.24984v1"
+    },
+    "2609.24976v1": {
+      "title": "DexTacWAM: A Visuo-Tactile World-Action Model for Dexterous Manipulation",
+      "paper_id": "2609.24976v1"
+    },
+    "2609.24974v1": {
+      "title": "Harness-Zero: Harness Distillation via Agent-as-Harness",
+      "paper_id": "2609.24974v1"
+    },
+    "2609.24971v1": {
+      "title": "DolphinBench: Mapping the Pareto Frontier of Agent Memory",
+      "paper_id": "2609.24971v1"
+    },
+    "2609.24967v1": {
+      "title": "Emergent Collusion in Long-Horizon LLM Agent Interaction",
+      "paper_id": "2609.24967v1"
+    },
+    "2609.24965v1": {
+      "title": "Jev for Scientific Decisions: Evaluating Semantic Choices and Their Consequences",
+      "paper_id": "2609.24965v1"
+    },
+    "2609.24955v1": {
+      "title": "Generative Tutorial: Towards Live Contextualized Visual Instructions for Physical Tasks",
+      "paper_id": "2609.24955v1"
+    },
+    "2609.24927v1": {
+      "title": "Et Tu, Brute? Economic Misalignment in Personal AI Agents",
+      "paper_id": "2609.24927v1"
+    },
+    "2609.24921v1": {
+      "title": "BackTrend: Evaluating Scientific Weak-Signal Prediction via Backward Reconstruction",
+      "paper_id": "2609.24921v1"
+    },
+    "2609.24906v1": {
+      "title": "Visuomotor Robotic Pruning in Planar Orchards Using Hybrid Reinforcement Learning",
+      "paper_id": "2609.24906v1"
+    },
+    "2609.24883v1": {
+      "title": "A Global Comparison of Schemas, Transparency, and Interoperability in Public-Sector AI Registers and Inventories",
+      "paper_id": "2609.24883v1"
+    },
+    "2609.24881v1": {
+      "title": "Pinocchio: Fast Uncertainty Estimates for Black-Box Language Models",
+      "paper_id": "2609.24881v1"
+    },
+    "2609.24876v1": {
+      "title": "Partner-Specific Affective Precision in Social Active Inference",
+      "paper_id": "2609.24876v1"
+    },
+    "2609.24864v1": {
+      "title": "SE(3) Neural Potential Fields for 6-DoF Trajectory Planning Directly from Images Without Explicit 3D Reconstruction",
+      "paper_id": "2609.24864v1"
+    },
+    "2609.24859v1": {
+      "title": "Small-world Networks of Agents Brainstorm AI Risks to Support Ideation",
+      "paper_id": "2609.24859v1"
+    },
+    "2609.24855v1": {
+      "title": "Extracting Arguments, Not Just Classifying Them: Instruction-Tuned LLMs for Generative Component Detection",
+      "paper_id": "2609.24855v1"
+    },
+    "2609.24847v1": {
+      "title": "SPECTRA: Adaptive Execution of Speculative Decoding on a Runtime-Reconfigurable Tiled Architecture",
+      "paper_id": "2609.24847v1"
+    },
+    "2609.24838v1": {
+      "title": "MedRSI: Recursive Self-Improvement for Medical Agents via Clinically Aligned Self-Evolution",
+      "paper_id": "2609.24838v1"
+    },
+    "2609.24831v1": {
+      "title": "GRUET: Quantifying Uncertainty of Agentic Reasoning-and-Acting Processes",
+      "paper_id": "2609.24831v1"
+    },
+    "2609.24932v1": {
+      "title": "Linguistic Features for Interpretable Textual Entailment",
+      "paper_id": "2609.24932v1"
+    },
+    "2609.24911v1": {
+      "title": "SocioVerse2: A Longitudinal Dynamic Social Simulation Framework under a Human-AI Co-evolutionary Paradigm",
+      "paper_id": "2609.24911v1"
+    },
+    "2609.24903v1": {
+      "title": "ToneCL: Contrastive Learning for Few-Shot Syllable-Level Tone Classification",
+      "paper_id": "2609.24903v1"
+    },
+    "2609.24895v1": {
+      "title": "Human-LLM Deliberation as Interactive Proof: Conditions for Verifiability Without Transparency",
+      "paper_id": "2609.24895v1"
+    },
+    "2609.24894v1": {
+      "title": "SLICEChat: Progressive In-Encoder Token Pruning for Whole-Slide Pathology Language Models",
+      "paper_id": "2609.24894v1"
+    },
+    "2609.24885v1": {
+      "title": "The Copy Ceiling: An Input-Exposure Control for Ontology-Grounded Generation over Curated Corpora",
+      "paper_id": "2609.24885v1"
+    },
+    "2609.24877v1": {
+      "title": "Decomposing Error and Style in Automated Clinical Coding",
+      "paper_id": "2609.24877v1"
     }
   },
   "edges": [
