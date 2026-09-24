@@ -8555,6 +8555,166 @@
     "W7213931947": {
       "title": "Hybrid Graph Retrieval-Augmented Language Agents for Collaborative Recommendation",
       "paper_id": "https://doi.org/10.3390/ai7090380"
+    },
+    "2609.28437v1": {
+      "title": "MultiVENT-Raw: A Benchmark for Retrieval and Reasoning over Raw Videos",
+      "paper_id": "2609.28437v1"
+    },
+    "2609.28383v1": {
+      "title": "Beyond a Scalar: Distributional Serving Interfaces for Watch-Time Prediction",
+      "paper_id": "2609.28383v1"
+    },
+    "2609.28349v1": {
+      "title": "Entangle: Uncovering Collaboration in the GitHub Quantum Software Ecosystem",
+      "paper_id": "2609.28349v1"
+    },
+    "2609.28473v1": {
+      "title": "On the Diffusibility of High-Dimensional Latents",
+      "paper_id": "2609.28473v1"
+    },
+    "2609.28471v1": {
+      "title": "Contrastive Learning for Authorship Verification",
+      "paper_id": "2609.28471v1"
+    },
+    "2609.28459v1": {
+      "title": "Even Sharper Bounds for Transductive Learning and Its Applications",
+      "paper_id": "2609.28459v1"
+    },
+    "2609.28448v1": {
+      "title": "Nonequilibrium Phases of Repulsive Self-Attention: Chaos, Attention Condensation, and Emergent Locality",
+      "paper_id": "2609.28448v1"
+    },
+    "2609.28442v1": {
+      "title": "Order-Invariant Answers, Order-Sensitive Representations in Mathematical Reasoning",
+      "paper_id": "2609.28442v1"
+    },
+    "2609.28438v1": {
+      "title": "Minimal-Norm Univariate Two-Layer ReLU Classification: Exact Solutions and Global Optimality with Skip Connections",
+      "paper_id": "2609.28438v1"
+    },
+    "2609.28427v1": {
+      "title": "Context-Continuous Preference Learning for Exoskeleton Personalization",
+      "paper_id": "2609.28427v1"
+    },
+    "2609.28425v1": {
+      "title": "Repairability of Inexact Solvers in Recursive State Estimation with Machine Learning",
+      "paper_id": "2609.28425v1"
+    },
+    "2609.28416v1": {
+      "title": "Agent-Editing World Model: Rethinking World Modeling for LLM Agents",
+      "paper_id": "2609.28416v1"
+    },
+    "2609.28409v1": {
+      "title": "Learning Holographic Reduced Representations with Clifford Variational Autoencoders",
+      "paper_id": "2609.28409v1"
+    },
+    "2609.28405v1": {
+      "title": "Learning Collective Dynamics with Differentiable Gaussian Representations",
+      "paper_id": "2609.28405v1"
+    },
+    "2609.28399v1": {
+      "title": "Memory Attention",
+      "paper_id": "2609.28399v1"
+    },
+    "2609.28395v1": {
+      "title": "Fine-Tuning LLMs for Translation: General Forgetting Mitigation Does Not Preserve MT-Specific Instruction Following",
+      "paper_id": "2609.28395v1"
+    },
+    "2609.28391v1": {
+      "title": "Quantum score matching with applications to learning thermal states",
+      "paper_id": "2609.28391v1"
+    },
+    "2609.28385v1": {
+      "title": "When and Where to Trust the Teacher: Unifying On-Policy Distillation and GRPO through Entropy-Calibrated Credit Assignment",
+      "paper_id": "2609.28385v1"
+    },
+    "2609.28378v1": {
+      "title": "ForgetMimic: Motion Unlearning for Reinforcement Learning Humanoid Control",
+      "paper_id": "2609.28378v1"
+    },
+    "2609.28338v1": {
+      "title": "Local Geometric Mixing via Dobrushin Contraction with Applications to Diffusion Path Monte Carlo and the Proximal Sampler",
+      "paper_id": "2609.28338v1"
+    },
+    "2609.28364v1": {
+      "title": "LEAP-CBF: A Safety Filter for Uncertain Systems with Least-Effort Adversarial Potentials",
+      "paper_id": "2609.28364v1"
+    },
+    "2609.28322v1": {
+      "title": "Learning the Cost of Reliable Inference",
+      "paper_id": "2609.28322v1"
+    },
+    "2609.28286v1": {
+      "title": "PBLH Estimation from Satellite Radiances via a Dual-Encoder Transformer",
+      "paper_id": "2609.28286v1"
+    },
+    "2609.28273v1": {
+      "title": "Non-Commutative State Tracking with Input-Dependent Low-Rank Updates in Mamba-3",
+      "paper_id": "2609.28273v1"
+    },
+    "2609.28270v1": {
+      "title": "Predicting Quantization Price for Selecting PTQ Configurations Before Deployment",
+      "paper_id": "2609.28270v1"
+    },
+    "2609.28263v1": {
+      "title": "Resource-Adaptive Stochastic Gradient Descent for Online Linear Programming without Re-solving",
+      "paper_id": "2609.28263v1"
+    },
+    "2609.28470v1": {
+      "title": "StudentBench: AI and human tutoring yield equivalent GRE learning gains",
+      "paper_id": "2609.28470v1"
+    },
+    "2609.28467v1": {
+      "title": "Where Should I Join? Robot Group Joining via Language-Guided Goal Prediction",
+      "paper_id": "2609.28467v1"
+    },
+    "2609.28449v1": {
+      "title": "Can LLMs Reason About Runtime Behavior? A Repository-Level Dynamic Benchmark",
+      "paper_id": "2609.28449v1"
+    },
+    "2609.28414v1": {
+      "title": "Frozen Flows Forget: Diagnosing and Restoring Lost Motion in a Latent-flow World Model",
+      "paper_id": "2609.28414v1"
+    },
+    "2609.28372v1": {
+      "title": "Shopping by algorithm: How agentic AI deploys human heuristics as a surrogate consumer",
+      "paper_id": "2609.28372v1"
+    },
+    "2609.28366v1": {
+      "title": "AnchorReasoning: A Visual Grounding and Causal Reasoning Dataset in Long-Tail Autonomous Driving Scenarios",
+      "paper_id": "2609.28366v1"
+    },
+    "2609.28358v1": {
+      "title": "MicroQonv: Reshaping Convolution Tensors for Efficient Microscaling in Training and Inference",
+      "paper_id": "2609.28358v1"
+    },
+    "2609.28335v1": {
+      "title": "An Open Pipeline and Dashboard for Systemic-Risk Evidence under the EU AI Act's Code of Practice",
+      "paper_id": "2609.28335v1"
+    },
+    "2609.28274v1": {
+      "title": "Shutdown Sabotage Propensities in Multi-Agent Systems",
+      "paper_id": "2609.28274v1"
+    },
+    "2609.28352v1": {
+      "title": "Digital diglossia: Arabic between X and Facebook",
+      "paper_id": "2609.28352v1"
+    },
+    "2609.28430v1": {
+      "title": "Cross-Scale Transfer Learning for Depression Severity Prediction: From PHQ-8 to HAMD-17 Across Languages and Clinical Paradigms",
+      "paper_id": "2609.28430v1"
+    },
+    "2609.28344v1": {
+      "title": "Mizar: A 159M-Parameter Audio-Language Model for Audio Understanding",
+      "paper_id": "2609.28344v1"
+    },
+    "2609.28290v1": {
+      "title": "Computation Over Geometry: Meaning Identity Is Computed, Not Shipped in the Embeddings",
+      "paper_id": "2609.28290v1"
+    },
+    "2609.28272v1": {
+      "title": "Towards Efficient Reasoning: Learning Causal Shortcuts for Diffusion Language Models",
+      "paper_id": "2609.28272v1"
     }
   },
   "edges": [
