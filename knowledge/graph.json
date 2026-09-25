@@ -8715,6 +8715,166 @@
     "2609.28272v1": {
       "title": "Towards Efficient Reasoning: Learning Causal Shortcuts for Diffusion Language Models",
       "paper_id": "2609.28272v1"
+    },
+    "2609.30258v1": {
+      "title": "Temporal Gradient Inversion for Private Trajectory Reconstruction in Embodied Reinforcement Learning",
+      "paper_id": "2609.30258v1"
+    },
+    "2609.30250v1": {
+      "title": "Agentic Detection of Online Conspiracies",
+      "paper_id": "2609.30250v1"
+    },
+    "2609.30227v1": {
+      "title": "To Trust or Not to Trust: Retrieval-Augmented Fact Checking in Speech",
+      "paper_id": "2609.30227v1"
+    },
+    "2609.30226v1": {
+      "title": "PoEM: Predicting RL Outcomes from Existing Policies",
+      "paper_id": "2609.30226v1"
+    },
+    "2609.30215v1": {
+      "title": "A Nearly Quadratic Lower Bound for Linear Optimization over Convex Bodies in the Membership Oracle Model",
+      "paper_id": "2609.30215v1"
+    },
+    "2609.30218v1": {
+      "title": "Minimally Invasive Steering of Language Models",
+      "paper_id": "2609.30218v1"
+    },
+    "2609.30212v1": {
+      "title": "Anchored Extra-Proximal Methods: Optimal Higher-Order Methods for Monotone Inclusion Problems",
+      "paper_id": "2609.30212v1"
+    },
+    "2609.30210v1": {
+      "title": "The Alignment Illusion in Multimodal Large Language Models",
+      "paper_id": "2609.30210v1"
+    },
+    "2609.30198v1": {
+      "title": "Beyond Compression: Training Latent Representations for Stable Long-Horizon Rollout in Neural Surrogate Solvers",
+      "paper_id": "2609.30198v1"
+    },
+    "2609.30185v1": {
+      "title": "Intrinsic-Extrinsic Coupling in Learning Dynamics",
+      "paper_id": "2609.30185v1"
+    },
+    "2609.30173v1": {
+      "title": "GridSFM: A Foundation Model for Solving AC Optimal Power Flow",
+      "paper_id": "2609.30173v1"
+    },
+    "2609.30167v1": {
+      "title": "Do Audio Language Models Hear and Read Distinctive Features Alike?",
+      "paper_id": "2609.30167v1"
+    },
+    "2609.30157v1": {
+      "title": "Learning and interpreting policies for simultaneous entanglement requests in quantum networks",
+      "paper_id": "2609.30157v1"
+    },
+    "2609.30151v1": {
+      "title": "Does a model's stated reason for rejecting a candidate do any work?",
+      "paper_id": "2609.30151v1"
+    },
+    "2609.30150v1": {
+      "title": "Graph-Based Inference and Topology-Aware Multi-Agent Reinforcement Learning for Large-Scale Railway Network Management",
+      "paper_id": "2609.30150v1"
+    },
+    "2609.30147v1": {
+      "title": "GRASP: Generating, Revising, and Assessing for Strategic Planning with Agentic AI",
+      "paper_id": "2609.30147v1"
+    },
+    "2609.30266v1": {
+      "title": "LLM Agents Can Easily Tamper With Their Own Traces",
+      "paper_id": "2609.30266v1"
+    },
+    "2609.30115v1": {
+      "title": "Orbital Error Dynamics: Self-Organized Criticality, Ephemeral Parameter Resonance, and Non-Linear Biological Ontologies in Zero-Storage Neural Synthesis",
+      "paper_id": "2609.30115v1"
+    },
+    "2609.30264v1": {
+      "title": "AD-WM: Action-Discriminative World Models for Counterfactual Model Predictive Control",
+      "paper_id": "2609.30264v1"
+    },
+    "2609.30249v1": {
+      "title": "RAPID: Robot Agentic Programming from Demonstrations",
+      "paper_id": "2609.30249v1"
+    },
+    "2609.30247v1": {
+      "title": "Rolling-WAM: World Action Models with Rolling Imagination",
+      "paper_id": "2609.30247v1"
+    },
+    "2609.30233v1": {
+      "title": "Coding Agents for Generalized Task and Motion Planning Problems",
+      "paper_id": "2609.30233v1"
+    },
+    "2609.30222v1": {
+      "title": "TrackEverything: Long Horizon Dense Tracking via De-Duplicating 3D Scene Representations",
+      "paper_id": "2609.30222v1"
+    },
+    "2609.30219v1": {
+      "title": "Requirement-Bound Verified Commissioning: A Frozen Four-Billion-Parameter Local Model as a Candidate Generator under an External Acceptance Layer with Verification and Release Authority",
+      "paper_id": "2609.30219v1"
+    },
+    "2609.30217v1": {
+      "title": "Instrumental Monitor Evasion Emerges Under Ordinary Task Pressure",
+      "paper_id": "2609.30217v1"
+    },
+    "2609.30214v1": {
+      "title": "Underwater C3-JEPA: An Object-Centric Cross-View World Model for ROV Salvage",
+      "paper_id": "2609.30214v1"
+    },
+    "2609.30205v1": {
+      "title": "A Living Benchmark for Information Retrieval from Electronic Health Records",
+      "paper_id": "2609.30205v1"
+    },
+    "2609.30199v1": {
+      "title": "ExplorationBench: Measuring AI Systems' Exploration in Verifiable Alien Worlds",
+      "paper_id": "2609.30199v1"
+    },
+    "2609.30192v1": {
+      "title": "SAGE: Mitigating Long-Horizon Reasoning Biases via Topological Guidance",
+      "paper_id": "2609.30192v1"
+    },
+    "2609.30186v1": {
+      "title": "Jev-Mobile: Jev as an Executor for Mobile GUI Agents",
+      "paper_id": "2609.30186v1"
+    },
+    "2609.30177v1": {
+      "title": "Search-Aware Reinforcement Learning for Multi-Component Query Understanding in Roblox Game Search",
+      "paper_id": "2609.30177v1"
+    },
+    "2609.30144v1": {
+      "title": "EnigmaForge: The Question Is Hidden in the Story",
+      "paper_id": "2609.30144v1"
+    },
+    "2609.30137v1": {
+      "title": "Screen Before You Serve: Simulation for Production Customer Experience AI Agents at 140M Scale",
+      "paper_id": "2609.30137v1"
+    },
+    "2609.30123v1": {
+      "title": "HEXIS: Compiling Skills into Extended Finite State Machines",
+      "paper_id": "2609.30123v1"
+    },
+    "2609.30243v1": {
+      "title": "JevOut: Natural Context Can Flip Decision Models",
+      "paper_id": "2609.30243v1"
+    },
+    "2609.30238v1": {
+      "title": "SemMSA: Latent Semantic-Aided Robust Multimodal Sentiment Analysis with Incomplete Data",
+      "paper_id": "2609.30238v1"
+    },
+    "2609.30184v1": {
+      "title": "ARGUS: Role-Aware Event Knowledge Graphs for U.S. Employment-Discrimination Complaints",
+      "paper_id": "2609.30184v1"
+    },
+    "2609.30160v1": {
+      "title": "A Training Criterion with Token-Level Tolerance to Transcription Ambiguity for Automatic Speech Recognition",
+      "paper_id": "2609.30160v1"
+    },
+    "2609.30130v1": {
+      "title": "Multimodal Thinking with Renderable Programs",
+      "paper_id": "2609.30130v1"
+    },
+    "2609.30121v1": {
+      "title": "What, When, and How: Audio Description as Constrained Global Optimization",
+      "paper_id": "2609.30121v1"
     }
   },
   "edges": [
