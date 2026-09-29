@@ -8887,6 +8887,170 @@
     "W7214349589": {
       "title": "CARE: Cross-Domain Agent-Routed Expert Recommendation via Multi-agent Collaboration",
       "paper_id": "https://doi.org/10.1007/978-981-92-5693-8_25"
+    },
+    "2609.35768v1": {
+      "title": "PDMD: Projected Distribution Matching Distillation for Video Diffusion Models",
+      "paper_id": "2609.35768v1"
+    },
+    "2609.35739v1": {
+      "title": "Rubric-Calibrated Preferences: Cross-Query Calibration of LLM Judgments via Item Response Theory",
+      "paper_id": "2609.35739v1"
+    },
+    "2609.35763v1": {
+      "title": "Unifying Distributional Training for One-Step Visual Generation",
+      "paper_id": "2609.35763v1"
+    },
+    "2609.35760v1": {
+      "title": "TokenCast: Forecasting Token Consumption During LLM Agent Execution",
+      "paper_id": "2609.35760v1"
+    },
+    "2609.35752v1": {
+      "title": "Neural Harmonic Measure Operator",
+      "paper_id": "2609.35752v1"
+    },
+    "2609.35758v1": {
+      "title": "Statistical Learning of Contractive Dynamical Representations for Composite Adaptive Control",
+      "paper_id": "2609.35758v1"
+    },
+    "2609.35751v1": {
+      "title": "How to Loop MoE: Flatten the Experts, Untie the Attention",
+      "paper_id": "2609.35751v1"
+    },
+    "2609.35750v1": {
+      "title": "KV-streams for Efficient Compaction in Agentic Reinforcement Learning",
+      "paper_id": "2609.35750v1"
+    },
+    "2609.35748v1": {
+      "title": "Improving Test-Time Scaling with Adaptive Looped Transformers",
+      "paper_id": "2609.35748v1"
+    },
+    "2609.35745v1": {
+      "title": "Copy the Same, Distill the Difference: Initializing Linear Vision Transformers",
+      "paper_id": "2609.35745v1"
+    },
+    "2609.35738v1": {
+      "title": "Harness Learning Enables Generalizable Test-Time Adaptation",
+      "paper_id": "2609.35738v1"
+    },
+    "2609.35715v1": {
+      "title": "X-Reset: Scaling Object-Centric Reinforcement Learning via Cross-Embodiment Resets",
+      "paper_id": "2609.35715v1"
+    },
+    "2609.35707v1": {
+      "title": "ScAn-Bench: Evaluating Scaling Analysis Methodology",
+      "paper_id": "2609.35707v1"
+    },
+    "2609.35703v1": {
+      "title": "A Unified Uncertainty Representation for Graph Neural Networks via Doubly-Spectral Stochastic Expansion",
+      "paper_id": "2609.35703v1"
+    },
+    "2609.35701v1": {
+      "title": "MeqMuon: Matrix-Equilibrating Muon for LLM Pretraining",
+      "paper_id": "2609.35701v1"
+    },
+    "2609.35699v1": {
+      "title": "Distillation Defenses Easily Break After Reinforcement Learning",
+      "paper_id": "2609.35699v1"
+    },
+    "2609.35698v1": {
+      "title": "Provable Benefits of Regularization: Fast Rates for Adversarial Imitation Learning",
+      "paper_id": "2609.35698v1"
+    },
+    "2609.35695v1": {
+      "title": "Rethinking Personalized Generation: Test-Time Alignment via Factorized Ranking Models",
+      "paper_id": "2609.35695v1"
+    },
+    "2609.35686v1": {
+      "title": "Rethinking Circuit Evaluation: Do Circuits Explain Model Errors?",
+      "paper_id": "2609.35686v1"
+    },
+    "2609.35684v1": {
+      "title": "The Hidden Perception Constraint in Task-Aware Compression",
+      "paper_id": "2609.35684v1"
+    },
+    "2609.35665v1": {
+      "title": "Learned Preconditioning for a Primal-Dual Interior-Point Method",
+      "paper_id": "2609.35665v1"
+    },
+    "2609.35770v1": {
+      "title": "FurE: Efficient Instance-Specific 3D Fur Reconstruction without Animal-Fur Datasets",
+      "paper_id": "2609.35770v1"
+    },
+    "2609.35769v1": {
+      "title": "Telescopic Language Models",
+      "paper_id": "2609.35769v1"
+    },
+    "2609.35767v1": {
+      "title": "Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning",
+      "paper_id": "2609.35767v1"
+    },
+    "2609.35744v1": {
+      "title": "FinAutoRubric: Expert-Guided Automatic Rubric Generation for Evaluating Financial Research Agents",
+      "paper_id": "2609.35744v1"
+    },
+    "2609.35741v1": {
+      "title": "Shockingly Simple Self-retrospection Improves Agentic Models Without RL",
+      "paper_id": "2609.35741v1"
+    },
+    "2609.35732v1": {
+      "title": "Failure-Transparent Agents: Benchmarking Post-Failure Reporting in Tool-Using Language Models",
+      "paper_id": "2609.35732v1"
+    },
+    "2609.35706v1": {
+      "title": "Reinforcing Agentic Creativity in Scientific Ideation with Night Science",
+      "paper_id": "2609.35706v1"
+    },
+    "2609.35694v1": {
+      "title": "Reasoning with Continuous Latent Diffusion",
+      "paper_id": "2609.35694v1"
+    },
+    "2609.35692v1": {
+      "title": "Report: Progressive Disclosure of Agent Skills",
+      "paper_id": "2609.35692v1"
+    },
+    "2609.35677v1": {
+      "title": "Verifier Errors in RLVR: Reward Hacking, Limits of Feedback, and Selective Control",
+      "paper_id": "2609.35677v1"
+    },
+    "2609.35671v1": {
+      "title": "PhoneCLI: From App Interfaces to Callable Commands for Mobile Agents",
+      "paper_id": "2609.35671v1"
+    },
+    "2609.35664v1": {
+      "title": "MS-GLA: Multi-Scale Gated Linear Attention for Addressing Representational Bottlenecks via Multi-Temporal Resolution",
+      "paper_id": "2609.35664v1"
+    },
+    "2609.35657v1": {
+      "title": "CMDO: A Cognitive Memory-Driven Optimization Algorithm for Adaptive Population-Based Search",
+      "paper_id": "2609.35657v1"
+    },
+    "2609.35765v1": {
+      "title": "Retrieving Biblical Intertextual References in Karen Blixen's Seven Gothic Tales",
+      "paper_id": "2609.35765v1"
+    },
+    "2609.35759v1": {
+      "title": "Scaling Long-Form Story Generation via Narrative State Tracking",
+      "paper_id": "2609.35759v1"
+    },
+    "2609.35749v1": {
+      "title": "Towards Communication-Efficient Social Intelligence in Language Agents",
+      "paper_id": "2609.35749v1"
+    },
+    "2609.35685v1": {
+      "title": "QuanReview: Offline, Auditable Reconciliation of Human and LLM Span Annotations",
+      "paper_id": "2609.35685v1"
+    },
+    "2609.35674v1": {
+      "title": "Tracing the Evolution of Oracle Bone Characters Across Three Millennia",
+      "paper_id": "2609.35674v1"
+    },
+    "2609.35663v1": {
+      "title": "Late Attention Layers Alone Can Copy Entity Tokens, but Not Without Attending to Their Context",
+      "paper_id": "2609.35663v1"
+    },
+    "W7214545708": {
+      "title": "Meta-level based recommender system using knowledge graph-based neural collaborative filtering",
+      "paper_id": "https://doi.org/10.1007/s44163-026-02307-8"
     }
   },
   "edges": [
@@ -49558,6 +49722,266 @@
     {
       "from": "W7214349589",
       "to": "W7197019390",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W2283196293",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W2913560138",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W2945623882",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W3017153657",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W3040387698",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W3100408341",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W3127086631",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W3140581741",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W3153189161",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W3182641134",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W3183141536",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W3190638878",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W3209736714",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4206478923",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4207015948",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4213185761",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4226253567",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4291366356",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4295353196",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4315700713",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4317470276",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4322724043",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4323313622",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4366607195",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4372232578",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4378648268",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4380204660",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4382138562",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4386832492",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4389493348",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4390338708",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4391174974",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4391623164",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4392468376",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4392702339",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4395693581",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4396659724",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4401401631",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4403775905",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4403938043",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4404520780",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4405827631",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4406076717",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4406799674",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4406812025",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4407193739",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4407235953",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4407315377",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4407360694",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4412867431",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4416129516",
+      "type": "cites"
+    },
+    {
+      "from": "W7214545708",
+      "to": "W4417093348",
       "type": "cites"
     }
   ]
