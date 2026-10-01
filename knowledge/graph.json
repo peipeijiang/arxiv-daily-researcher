@@ -9211,6 +9211,174 @@
     "2609.38106v1": {
       "title": "Pruning for Efficiency, Paying in Fairness: Demographic Disparities in Pruned Speech-LLMs",
       "paper_id": "2609.38106v1"
+    },
+    "2609.40241v1": {
+      "title": "Decision-Oriented Recommendation Reranking: An Empirical Study of Jev",
+      "paper_id": "2609.40241v1"
+    },
+    "2609.40361v1": {
+      "title": "Ranking-Aware Prompt Optimization for Multimodal Clinical Diagnosis",
+      "paper_id": "2609.40361v1"
+    },
+    "2609.40360v1": {
+      "title": "Semifactual Credit-Augmented Policy Optimization",
+      "paper_id": "2609.40360v1"
+    },
+    "2609.40359v1": {
+      "title": "Removing Timing Shortcuts Improves Non-Invasive Brain-to-Text",
+      "paper_id": "2609.40359v1"
+    },
+    "2609.40335v1": {
+      "title": "Is Weight Tying Still Beneficial for Decoder-Only LLMs in Private Settings Under DP-SGD?",
+      "paper_id": "2609.40335v1"
+    },
+    "2609.40347v1": {
+      "title": "Image Classifiers are Efficient Self-Supervised Video Representation Learners",
+      "paper_id": "2609.40347v1"
+    },
+    "2609.40316v1": {
+      "title": "Scaling Laws for Looped Mixture of Experts",
+      "paper_id": "2609.40316v1"
+    },
+    "2609.40312v1": {
+      "title": "Compression Footprints as Security Signals for Model-Poisoning Defense in Federated Learning",
+      "paper_id": "2609.40312v1"
+    },
+    "2609.40305v1": {
+      "title": "Looped Diffusion Transformer",
+      "paper_id": "2609.40305v1"
+    },
+    "2609.40306v1": {
+      "title": "DynaHarness: A Dynamic Physical Harness for Self-Evolving Robot Agents",
+      "paper_id": "2609.40306v1"
+    },
+    "2609.40295v1": {
+      "title": "How Much Is an AI Token Worth? Scaling Laws for Wild AI-Generated Web Text",
+      "paper_id": "2609.40295v1"
+    },
+    "2609.40292v1": {
+      "title": "Disentangling Computation in Multi-Task Neural Networks with the Green's Operator",
+      "paper_id": "2609.40292v1"
+    },
+    "2609.40287v1": {
+      "title": "PMosFM: Preconditioned Manifold Matching for One-Step Physics-Constrained Generation",
+      "paper_id": "2609.40287v1"
+    },
+    "2609.40284v1": {
+      "title": "cua-speedrun: Standardized Benchmarking of the Speed of Computer-Use Agents",
+      "paper_id": "2609.40284v1"
+    },
+    "2609.40265v1": {
+      "title": "OpenTSLM TeeMoE: A Unified Time-Series Language Model for Forecasting, Contextual Prediction, and Reasoning",
+      "paper_id": "2609.40265v1"
+    },
+    "2609.40245v1": {
+      "title": "STARS: From Spatiotemporal Dynamics to Social Representations in Human-Robot Interaction",
+      "paper_id": "2609.40245v1"
+    },
+    "2609.40236v1": {
+      "title": "Comparison of techniques for fine-tuning open-weight models for entity extraction from radiology reports",
+      "paper_id": "2609.40236v1"
+    },
+    "2609.40235v1": {
+      "title": "Distribution Matching Distillation for Continuous Diffusion Language Models",
+      "paper_id": "2609.40235v1"
+    },
+    "2609.40221v1": {
+      "title": "PhantomEnvironments: Training LLM Agents in Fictional Worlds",
+      "paper_id": "2609.40221v1"
+    },
+    "2609.40193v1": {
+      "title": "Near-Linear Accuracy Bounds for Moreau--Yosida Unadjusted Langevin Sampling",
+      "paper_id": "2609.40193v1"
+    },
+    "2609.40190v1": {
+      "title": "Cheap to Draw, Expensive to Trust: Certifying Test-Time Scaling Curves",
+      "paper_id": "2609.40190v1"
+    },
+    "2609.40170v1": {
+      "title": "MANET-GNN: Learned Decentralized Optimization of Power Allocation in Multi-Channel MANETs",
+      "paper_id": "2609.40170v1"
+    },
+    "2609.40356v1": {
+      "title": "ViTeX-Bench: Benchmarking High-Fidelity Video Scene Text Editing",
+      "paper_id": "2609.40356v1"
+    },
+    "2609.40330v1": {
+      "title": "Turbo Harness: Instance-Adaptive Harness Optimization",
+      "paper_id": "2609.40330v1"
+    },
+    "2609.40325v1": {
+      "title": "WorldAuditBench: Interactive 3D World Auditing with Multimodal Agents",
+      "paper_id": "2609.40325v1"
+    },
+    "2609.40324v1": {
+      "title": "Cogentic: Multi-Agent Orchestration for Automated Proof Discovery",
+      "paper_id": "2609.40324v1"
+    },
+    "2609.40322v1": {
+      "title": "MatLoom: Layered Text-to-Material Generation in a Compact Program Space",
+      "paper_id": "2609.40322v1"
+    },
+    "2609.40303v1": {
+      "title": "How Much of a Harness Does a Strong Agent Need for Autonomous ML Engineering?",
+      "paper_id": "2609.40303v1"
+    },
+    "2609.40290v1": {
+      "title": "CAS II: Symmetric Partitions as Kolmogorov Models",
+      "paper_id": "2609.40290v1"
+    },
+    "2609.40286v1": {
+      "title": "Linguistic Loopholes in LLM Unlearning: From a 174-Language Benchmark to Coverage-Aware Unlearning",
+      "paper_id": "2609.40286v1"
+    },
+    "2609.40285v1": {
+      "title": "PivotOPD: Learning to Recover from Pivotal Mistakes in Multi-Turn Agents",
+      "paper_id": "2609.40285v1"
+    },
+    "2609.40269v1": {
+      "title": "Belief-Aware Multi-Agent Path Finding under Map Uncertainty",
+      "paper_id": "2609.40269v1"
+    },
+    "2609.40253v1": {
+      "title": "ComputerSD: Online Self-Distillation from Real-Time Feedback for Computer-Use Agents",
+      "paper_id": "2609.40253v1"
+    },
+    "2609.40230v1": {
+      "title": "EviRover: Reinforcing Agentic Perception Beyond a Glance",
+      "paper_id": "2609.40230v1"
+    },
+    "2609.40219v1": {
+      "title": "Learning Skills from Historical Action Trajectories: Action Experience Dictionary for World Action Models",
+      "paper_id": "2609.40219v1"
+    },
+    "2609.40198v1": {
+      "title": "SCB: SpeechConversationBench for Evaluating Multi-Turn Reasoning in Speech-to-Speech Models",
+      "paper_id": "2609.40198v1"
+    },
+    "2609.40195v1": {
+      "title": "MemLife: Curating and Reasoning over Long-Term Egocentric Video Memories",
+      "paper_id": "2609.40195v1"
+    },
+    "2609.40340v1": {
+      "title": "EvoDuet: Bilevel Co-Evolution of Web Searching and Task Solving for Scientific Discovery",
+      "paper_id": "2609.40340v1"
+    },
+    "2609.40185v1": {
+      "title": "Provably Tractable NFA-Constrained Language Generation via HMMs",
+      "paper_id": "2609.40185v1"
+    },
+    "2609.40181v1": {
+      "title": "Index-Translate: A Multilingual Translation Model Family -- Text, Speech, Controlled Dubbing, and Long-Document Translation",
+      "paper_id": "2609.40181v1"
+    },
+    "W7214236990": {
+      "title": "Bibliometric Analysis and Co-word Mapping: The Field of Knowledge Graphs",
+      "paper_id": "https://doi.org/10.22070/rsci.2025.20795.1838"
+    },
+    "W7203962654": {
+      "title": "Content Moderation, the UK Online Safety Act, and the European Convention on Human Rights",
+      "paper_id": "openalex:W7203962654"
     }
   },
   "edges": [
