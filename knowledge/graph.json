@@ -9379,6 +9379,166 @@
     "W7203962654": {
       "title": "Content Moderation, the UK Online Safety Act, and the European Convention on Human Rights",
       "paper_id": "openalex:W7203962654"
+    },
+    "2610.02207v1": {
+      "title": "One Basis to Animate Them All: Gaussian Blendshape Distillation for Real-Time Avatars",
+      "paper_id": "2610.02207v1"
+    },
+    "2610.02202v1": {
+      "title": "ScholarCatalyst: A Benchmark for Retrieving Papers That Inspire New Research",
+      "paper_id": "2610.02202v1"
+    },
+    "2610.02203v1": {
+      "title": "Embedding Prediction Helps Image Generation",
+      "paper_id": "2610.02203v1"
+    },
+    "2610.02201v1": {
+      "title": "SILSA: Sliding-Window Slice Latents for Topology-Preserving High-Resolution 3D Generation",
+      "paper_id": "2610.02201v1"
+    },
+    "2610.02199v1": {
+      "title": "TACO: Ternary Absolute-max Column-wise One-sparse Optimizer for LLM Fine-Tuning",
+      "paper_id": "2610.02199v1"
+    },
+    "2610.02198v1": {
+      "title": "FERPO: Forward Entropy-Regularized Policy Optimization",
+      "paper_id": "2610.02198v1"
+    },
+    "2610.02195v1": {
+      "title": "Cost-augmented Schrödinger bridges on graphs are exactly solvable: a Feynman-Kac tilt replaces learned control",
+      "paper_id": "2610.02195v1"
+    },
+    "2610.02193v1": {
+      "title": "Hierarchical Continuous Diffusion Language Models",
+      "paper_id": "2610.02193v1"
+    },
+    "2610.02191v1": {
+      "title": "The Missing Primitive: Diagnosing and Repairing Mathematical Reasoning in Large Language Models",
+      "paper_id": "2610.02191v1"
+    },
+    "2610.02190v1": {
+      "title": "Trust the Direction, Search the Step: Zero-and-First-Order Methods for LLM Fine-Tuning",
+      "paper_id": "2610.02190v1"
+    },
+    "2610.02189v1": {
+      "title": "Generative modeling of intrinsically disordered protein regions by reinforcing sparse autoencoder features",
+      "paper_id": "2610.02189v1"
+    },
+    "2610.02186v1": {
+      "title": "Higher-Order Molecular Grammars for Generative and Foundation Models in Chemistry",
+      "paper_id": "2610.02186v1"
+    },
+    "2610.02185v1": {
+      "title": "Decoding Looped Transformers Better for (Almost) Free",
+      "paper_id": "2610.02185v1"
+    },
+    "2610.02182v1": {
+      "title": "SoftServe: A Scalable Quasi-Newton Method for Deep Learning",
+      "paper_id": "2610.02182v1"
+    },
+    "2610.02179v1": {
+      "title": "From Gradients to Capabilities: Understanding Multi-Teacher On-Policy Distillation",
+      "paper_id": "2610.02179v1"
+    },
+    "2610.02175v1": {
+      "title": "Effective Resistance and Graph Neural Network Reliability in Tissue-Specific Interactomes",
+      "paper_id": "2610.02175v1"
+    },
+    "2610.02173v1": {
+      "title": "Every Ablation Is a Dose: Counterweights and the Semblance of Self-Repair",
+      "paper_id": "2610.02173v1"
+    },
+    "2610.02159v1": {
+      "title": "When Do Intrinsic Rewards Lead to Exploration?",
+      "paper_id": "2610.02159v1"
+    },
+    "2610.02158v1": {
+      "title": "Muon meets Tamed Langevin: Momentum Preconditioning beyond Convex and gradient-Lipschitz Potentials",
+      "paper_id": "2610.02158v1"
+    },
+    "2610.02150v1": {
+      "title": "From Knowledge Access to Source Learning: Developing Source-Specific Competence",
+      "paper_id": "2610.02150v1"
+    },
+    "2610.02144v1": {
+      "title": "Faynt: Scaling and Optimizing Policies for Competitive Melee",
+      "paper_id": "2610.02144v1"
+    },
+    "2610.02140v1": {
+      "title": "Finetuning with Sampling: SFT Learns Better Than You Think",
+      "paper_id": "2610.02140v1"
+    },
+    "2610.02131v1": {
+      "title": "Linear Programming Representations and Strongly Polynomial Algorithms for Robust Markov Decision Processes",
+      "paper_id": "2610.02131v1"
+    },
+    "2610.02128v1": {
+      "title": "Sample complexity bounds for categorical Markov random fields via Discrete Diffusions",
+      "paper_id": "2610.02128v1"
+    },
+    "2610.02126v1": {
+      "title": "Local Support Learning",
+      "paper_id": "2610.02126v1"
+    },
+    "2610.02117v1": {
+      "title": "Where-OPD: Spatially Guided On-Policy Self-Distillation of MLLMs with Synthetic Scenes",
+      "paper_id": "2610.02117v1"
+    },
+    "2610.02098v1": {
+      "title": "Are We Recovering Mechanisms? Objective-Level Recovery Gaps in Mechanistic Interpretability",
+      "paper_id": "2610.02098v1"
+    },
+    "2610.02092v1": {
+      "title": "Scalable, Transferable Meta-network for Data Selection Requires a Different Loss (and Why the Obvious Choice is Problematic)",
+      "paper_id": "2610.02092v1"
+    },
+    "2610.02206v1": {
+      "title": "KaliBench: A Fine-Grained Benchmark for Cybersecurity Tool Use on Kali Linux with Runtime-Free Verifiable Rewards",
+      "paper_id": "2610.02206v1"
+    },
+    "2610.02204v1": {
+      "title": "Reconstruct, Practice, Go Real: Guided Self-Improvement for Embodied Agents",
+      "paper_id": "2610.02204v1"
+    },
+    "2610.02200v1": {
+      "title": "VISTA: A Visual Harness for Reasoning in an Interactive World",
+      "paper_id": "2610.02200v1"
+    },
+    "2610.02188v1": {
+      "title": "DMAD: Distribution Matching as Adversarial Distillation for Fast Visual Generation",
+      "paper_id": "2610.02188v1"
+    },
+    "2610.02180v1": {
+      "title": "Generative Cinematographer: Composing Camera and Object Motion in 3D",
+      "paper_id": "2610.02180v1"
+    },
+    "2610.02170v1": {
+      "title": "Watch, Infer, Coordinate: Inferring Robot Partner Constraints for Zero-Shot Coordination",
+      "paper_id": "2610.02170v1"
+    },
+    "2610.02161v1": {
+      "title": "DuoMind: Enabling Distributed Multi-Robot Coordination with Semantic Communication",
+      "paper_id": "2610.02161v1"
+    },
+    "2610.02136v1": {
+      "title": "MIRTO: a registration-gated, multiverse-tested evaluation protocol for unsupervised anomaly segmentation in brain MRI",
+      "paper_id": "2610.02136v1"
+    },
+    "2610.02122v1": {
+      "title": "Argo-Bench: Evaluating Data Agents on Enterprise-Scale Workflows",
+      "paper_id": "2610.02122v1"
+    },
+    "2610.02116v1": {
+      "title": "A Comparative Explainability Framework for DeBERTa-v3 in Zero-Shot Medical Abstract Classification",
+      "paper_id": "2610.02116v1"
+    },
+    "2610.02163v1": {
+      "title": "AutoCompact: Learning When to Compact Context in Long-Horizon Coding Agents",
+      "paper_id": "2610.02163v1"
+    },
+    "2610.02142v1": {
+      "title": "Keyword Harnesses Fail Open: A Cheap Diagnostic Ladder for Tool-Use Claims in Small Language Models",
+      "paper_id": "2610.02142v1"
     }
   },
   "edges": [
