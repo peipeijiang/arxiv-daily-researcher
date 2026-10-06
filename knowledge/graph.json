@@ -9539,6 +9539,166 @@
     "2610.02142v1": {
       "title": "Keyword Harnesses Fail Open: A Cheap Diagnostic Ladder for Tool-Use Claims in Small Language Models",
       "paper_id": "2610.02142v1"
+    },
+    "2610.06851v1": {
+      "title": "Base Models Can Reason By Taking a Cue From Training Data",
+      "paper_id": "2610.06851v1"
+    },
+    "2610.06844v1": {
+      "title": "Learning to Read the Contextual Tokens in Diffusion Transformers",
+      "paper_id": "2610.06844v1"
+    },
+    "2610.06834v1": {
+      "title": "Direct Intermediate Initialization for Tilted Diffusion Samplers",
+      "paper_id": "2610.06834v1"
+    },
+    "2610.06833v1": {
+      "title": "Towards Looped Models Done Right, Part II: Rethinking at Fixed Points",
+      "paper_id": "2610.06833v1"
+    },
+    "2610.06830v1": {
+      "title": "MemPilot: Orchestrating On-Demand Multimodal Memory Curation for LLM Agents",
+      "paper_id": "2610.06830v1"
+    },
+    "2610.06829v1": {
+      "title": "CLIFT: Conformal Self-Verification for Web Agent Training and Test-Time Scaling",
+      "paper_id": "2610.06829v1"
+    },
+    "2610.06823v1": {
+      "title": "Deep Learning for Sleep Heart Rate Estimation from Accelerometers: Toward Population-Scale Cardiac Insight Without Optical Sensors",
+      "paper_id": "2610.06823v1"
+    },
+    "2610.06822v1": {
+      "title": "Private online learning and prediction for Littlestone classes",
+      "paper_id": "2610.06822v1"
+    },
+    "2610.06817v1": {
+      "title": "Paradee: Distilling Kokoro-82M into an 8M-Parameter Single-Voice Text-to-Speech Model",
+      "paper_id": "2610.06817v1"
+    },
+    "2610.06810v1": {
+      "title": "Finding Gaussian Structure in Bosonic States",
+      "paper_id": "2610.06810v1"
+    },
+    "2610.06809v1": {
+      "title": "Block Disentanglement in CRL: Bridging Identifiability and Visual State Estimation",
+      "paper_id": "2610.06809v1"
+    },
+    "2610.06805v1": {
+      "title": "H-JEPA: End-to-End Learning of Hierarchical World Models for Visual Planning",
+      "paper_id": "2610.06805v1"
+    },
+    "2610.06804v1": {
+      "title": "Sharpen Without Search: On-Policy Distillation of Sequence-Level Power Distribution",
+      "paper_id": "2610.06804v1"
+    },
+    "2610.06798v1": {
+      "title": "A Response Theory Probe for Learned Stochastic AI Simulators, Tested on Lorenz-63",
+      "paper_id": "2610.06798v1"
+    },
+    "2610.06795v1": {
+      "title": "Round-Trip KNN Clustering: multiscale hierarchical cluster detection on directed nearest-neighbour graphs",
+      "paper_id": "2610.06795v1"
+    },
+    "2610.06784v1": {
+      "title": "How to scale your HEP ML models: A recipe for robust architecture comparisons at scale",
+      "paper_id": "2610.06784v1"
+    },
+    "2610.06778v1": {
+      "title": "IdeaLens: Detecting AI Ideas in Long-form Writing",
+      "paper_id": "2610.06778v1"
+    },
+    "2610.06777v1": {
+      "title": "On Learning Optimal Corners in Orthogonal Partially Observable Cooperative Guard Art Galleries",
+      "paper_id": "2610.06777v1"
+    },
+    "2610.06770v1": {
+      "title": "Singular parameters and missing limits in neural PDE solvers",
+      "paper_id": "2610.06770v1"
+    },
+    "2610.06751v1": {
+      "title": "MatrixFormer: A Foundation Model for Matrix Completion",
+      "paper_id": "2610.06751v1"
+    },
+    "2610.06748v1": {
+      "title": "BazaarBench: Delegation Safety in Decentralized C2C Marketplaces Run by LLM Agents",
+      "paper_id": "2610.06748v1"
+    },
+    "2610.06745v1": {
+      "title": "Hyperbolic Graph Representation Learning: Embed in One Metric, Optimize with Another",
+      "paper_id": "2610.06745v1"
+    },
+    "2610.06744v1": {
+      "title": "ufakzeka-karar: An Open Turkish Typed-Decision Model with Order-Invariant Option Scoring",
+      "paper_id": "2610.06744v1"
+    },
+    "2610.06726v1": {
+      "title": "Decoupling Time and Space: A Temporally Conditioned Refinement for EEG Source Imaging",
+      "paper_id": "2610.06726v1"
+    },
+    "2610.06709v1": {
+      "title": "Out-of-control Hamiltonian Learning",
+      "paper_id": "2610.06709v1"
+    },
+    "2610.06725v1": {
+      "title": "BRANCH-MoE: Balance-Aware Tree Routing for Large Embedding Models",
+      "paper_id": "2610.06725v1"
+    },
+    "2610.06846v1": {
+      "title": "BiasFlow: Geometric Monitoring and Backbone Regularization for Spurious Feature Reliance",
+      "paper_id": "2610.06846v1"
+    },
+    "2610.06852v1": {
+      "title": "One Figure, Every Canvas: Editable Flowchart Relayout via Agentic Pipeline",
+      "paper_id": "2610.06852v1"
+    },
+    "2610.06843v1": {
+      "title": "Recursive Video In-Context Learning for Agentic Robot",
+      "paper_id": "2610.06843v1"
+    },
+    "2610.06831v1": {
+      "title": "UniSlider: Perceptually Uniform Sliders for Continuous Image Editing",
+      "paper_id": "2610.06831v1"
+    },
+    "2610.06814v1": {
+      "title": "TAPDreamer: Transferable Adversarial Patches for World Action Models",
+      "paper_id": "2610.06814v1"
+    },
+    "2610.06824v1": {
+      "title": "TasteVal: Measuring the Experimental Research Taste of AI Systems Against Human Experts",
+      "paper_id": "2610.06824v1"
+    },
+    "2610.06801v1": {
+      "title": "MC-Sparse: Deconstructing and Closing the Dense-Sparse Attention Gap in Diffusion Transformers",
+      "paper_id": "2610.06801v1"
+    },
+    "2610.06790v1": {
+      "title": "Back to the Future: Rethinking EDA Infrastructure for Agentic Systems in Chip Design Verification",
+      "paper_id": "2610.06790v1"
+    },
+    "2610.06750v1": {
+      "title": "Balancing Memory Pathways: Analyzing and Improving Memory Utilization in Hybrid LMs",
+      "paper_id": "2610.06750v1"
+    },
+    "2610.06765v1": {
+      "title": "Conditional Rank Allocation for Taxonomy-Aware Medical Language Model Adaptation",
+      "paper_id": "2610.06765v1"
+    },
+    "2610.06782v1": {
+      "title": "T-Search: An Open Agentic Retriever and Playground for Hard Multi-Step Search",
+      "paper_id": "2610.06782v1"
+    },
+    "2610.06825v1": {
+      "title": "PlotGround: Grounding Plot Digitization in Real Scientific Figures and Their Source Data",
+      "paper_id": "2610.06825v1"
+    },
+    "2610.06729v1": {
+      "title": "Improving Diversity in LLM Short Story Generation",
+      "paper_id": "2610.06729v1"
+    },
+    "2610.06715v1": {
+      "title": "Domain adaptation of Russian ModernBERT for long legal documents",
+      "paper_id": "2610.06715v1"
     }
   },
   "edges": [
