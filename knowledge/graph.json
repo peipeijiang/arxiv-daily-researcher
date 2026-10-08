@@ -9863,6 +9863,166 @@
     "W7220370105": {
       "title": "Agentic AI in der Unternehmenspraxis: Vom Werkzeug zum Akteur",
       "paper_id": "https://doi.org/10.1365/s40702-026-01331-7"
+    },
+    "2610.10441v1": {
+      "title": "CrossWeave: Bridging Perspectives Across Online Communities with a Dual-Pane Design",
+      "paper_id": "2610.10441v1"
+    },
+    "2610.10483v1": {
+      "title": "Two-Level Softmax Sampling Done Right: Correcting Bias from Size Imbalance and Dispersion",
+      "paper_id": "2610.10483v1"
+    },
+    "2610.10536v1": {
+      "title": "Decoupling Exploration from Optimization in RLVR",
+      "paper_id": "2610.10536v1"
+    },
+    "2610.10527v1": {
+      "title": "Decentralized SGD under Heavy-Tailed Noise: Optimal Convergence Rates and the Role of Gradient Clipping",
+      "paper_id": "2610.10527v1"
+    },
+    "2610.10526v1": {
+      "title": "Rephrase Before You Act: Characterizing and Mitigating Language Sensitivity in Vision-Language-Action Models",
+      "paper_id": "2610.10526v1"
+    },
+    "2610.10520v1": {
+      "title": "Distilling Graph Geometry: Knowledge Gap from GNNs to MLPs",
+      "paper_id": "2610.10520v1"
+    },
+    "2610.10519v1": {
+      "title": "Why Forget-Only Unlearning Needs Memorization",
+      "paper_id": "2610.10519v1"
+    },
+    "2610.10513v1": {
+      "title": "SciExam for ENSO: Can AI Agents Build Climate Models?",
+      "paper_id": "2610.10513v1"
+    },
+    "2610.10499v1": {
+      "title": "Oracle-Efficient and Parameter-Free Agnostic Smoothed Online Learning",
+      "paper_id": "2610.10499v1"
+    },
+    "2610.10496v1": {
+      "title": "Evolutionary Architecture Search for Chlorophyll-$a$ Prediction in Lakes using Sentinel-2",
+      "paper_id": "2610.10496v1"
+    },
+    "2610.10488v1": {
+      "title": "Best Arm Identification for Bandits with Shifting Means",
+      "paper_id": "2610.10488v1"
+    },
+    "2610.10460v1": {
+      "title": "Composing What Each Teacher Learned: Multi-Teacher On-Policy Distillation through Teacher-Relative Shifts",
+      "paper_id": "2610.10460v1"
+    },
+    "2610.10459v1": {
+      "title": "NeuralBES: A Differentiable, Control-Aware Emulator for Scalable Building Energy Modeling",
+      "paper_id": "2610.10459v1"
+    },
+    "2610.10447v1": {
+      "title": "A Good Self-Teacher Meets the Student Where They Are: Joint On-Policy Learning and Teaching",
+      "paper_id": "2610.10447v1"
+    },
+    "2610.10440v1": {
+      "title": "Seq-Flow: Efficient Probabilistic Forecasting with Self-Rollout Error Control",
+      "paper_id": "2610.10440v1"
+    },
+    "2610.10437v1": {
+      "title": "Q-Learning with Scalar Adjoint Matching",
+      "paper_id": "2610.10437v1"
+    },
+    "2610.10430v1": {
+      "title": "Conditional Flow Matching for Generation of 3D Multi-variable Instantaneous Urban Microclimate Fields",
+      "paper_id": "2610.10430v1"
+    },
+    "2610.10428v1": {
+      "title": "Derivative Gaussian Processes on a Two-Direction Budget",
+      "paper_id": "2610.10428v1"
+    },
+    "2610.10422v1": {
+      "title": "Which Rollout Taught It That? BehaviorTrace and the Limits of Training-Data Attribution in Online RL",
+      "paper_id": "2610.10422v1"
+    },
+    "2610.10415v1": {
+      "title": "Steerspeech: Activation Steering For Emotion Control In Generated Speech",
+      "paper_id": "2610.10415v1"
+    },
+    "2610.10411v1": {
+      "title": "Training Parallel Speculative Draft Models by Directly Minimizing Expected Decoding Rounds",
+      "paper_id": "2610.10411v1"
+    },
+    "2610.10409v1": {
+      "title": "RobotWorld: Benchmarking Multimodal Agents for Robot Use Across Diverse Tasks and Embodiments",
+      "paper_id": "2610.10409v1"
+    },
+    "2610.10408v1": {
+      "title": "Rubix: Global Correspondence-Free Point Set Alignment through Assignment Geometry",
+      "paper_id": "2610.10408v1"
+    },
+    "2610.10407v1": {
+      "title": "SOTA: Stock Options Trading Agents Guided by Option-Implied Return Distributions",
+      "paper_id": "2610.10407v1"
+    },
+    "2610.10538v1": {
+      "title": "Never Look Back: Understanding Persistence in 3D Object Memory from Egocentric Videos",
+      "paper_id": "2610.10538v1"
+    },
+    "2610.10528v1": {
+      "title": "Long-WAM: Scaling the Context of World-Action Models",
+      "paper_id": "2610.10528v1"
+    },
+    "2610.10515v1": {
+      "title": "RoboJEPA: Scaling Robotic Latent World Models",
+      "paper_id": "2610.10515v1"
+    },
+    "2610.10507v1": {
+      "title": "RECAST: Learning to Compute the Right Context through Adaptive Evidence Routing",
+      "paper_id": "2610.10507v1"
+    },
+    "2610.10506v1": {
+      "title": "Validity Without Ground Truth: What Stated-Preference Economics Offers the Evaluation of Language Models",
+      "paper_id": "2610.10506v1"
+    },
+    "2610.10498v1": {
+      "title": "EmbodiedRSI: Active Continual Robot Learning Through Hypothesis-Guided Co-Evolution",
+      "paper_id": "2610.10498v1"
+    },
+    "2610.10478v1": {
+      "title": "Before They Can Solve: Predicting Post-Training Coding-Agent Performance from Base Models",
+      "paper_id": "2610.10478v1"
+    },
+    "2610.10468v1": {
+      "title": "A Society of Researchers: Designing Institutions for Populations of Autonomous Research Agents",
+      "paper_id": "2610.10468v1"
+    },
+    "2610.10463v1": {
+      "title": "How assigned AI use before class shapes active student engagement in class",
+      "paper_id": "2610.10463v1"
+    },
+    "2610.10462v1": {
+      "title": "FoldBack: Self-Correcting Masked Generative Policy for Long-Horizon Garment Folding",
+      "paper_id": "2610.10462v1"
+    },
+    "2610.10455v1": {
+      "title": "PHRBench: A Behavioral Evaluation of Post-Hallucination Reasoning in LLMs",
+      "paper_id": "2610.10455v1"
+    },
+    "2610.10444v1": {
+      "title": "RunningTab: Direct Workspace Interaction with Environment-Side Tabs",
+      "paper_id": "2610.10444v1"
+    },
+    "2610.10405v1": {
+      "title": "Reasoning-Token Spikes Under Prompted Untruthful Responding in Large Language Models",
+      "paper_id": "2610.10405v1"
+    },
+    "2610.10533v1": {
+      "title": "EngramEdit: Decoupled Knowledge Updates in LLMs through Conditional Memory",
+      "paper_id": "2610.10533v1"
+    },
+    "2610.10508v1": {
+      "title": "Your Prompt Should Do More: Effects of Retrieval Instructions in Embedding Models",
+      "paper_id": "2610.10508v1"
+    },
+    "2610.10426v1": {
+      "title": "CoTrace: Data Recipes for Training Terminal Agents with Harness-Model Co-Evolution",
+      "paper_id": "2610.10426v1"
     }
   },
   "edges": [
