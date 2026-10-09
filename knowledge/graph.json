@@ -10023,6 +10023,166 @@
     "2610.10426v1": {
       "title": "CoTrace: Data Recipes for Training Terminal Agents with Harness-Model Co-Evolution",
       "paper_id": "2610.10426v1"
+    },
+    "2610.12467v1": {
+      "title": "CSF: Contextual Safety Filtering for Motion Generators",
+      "paper_id": "2610.12467v1"
+    },
+    "2610.12465v1": {
+      "title": "A Balanced Data Diet: Addressing the Exploration Bottleneck in Mega-Scale RL for Robot Control",
+      "paper_id": "2610.12465v1"
+    },
+    "2610.12449v1": {
+      "title": "Bi-FORK: Generative Modeling of High-Dimensional Bifurcating Systems",
+      "paper_id": "2610.12449v1"
+    },
+    "2610.12448v1": {
+      "title": "One Block, Multiple Depths: Recurrent Vision Transformers with Depth-Programmed Experts",
+      "paper_id": "2610.12448v1"
+    },
+    "2610.12445v1": {
+      "title": "Caught in the Act: Probes Effectively Detect Sabotage and Catch Unverbalized Deception",
+      "paper_id": "2610.12445v1"
+    },
+    "2610.12444v1": {
+      "title": "Rounding in Preconditioner Space: Redesigning 4-bit AdamW Optimizer-State Quantization",
+      "paper_id": "2610.12444v1"
+    },
+    "2610.12437v1": {
+      "title": "Density Ratio Estimation with Stein Displacement Fields",
+      "paper_id": "2610.12437v1"
+    },
+    "2610.12435v1": {
+      "title": "VioLA: Learning Generalist Humanoid Control Policies from Human Data",
+      "paper_id": "2610.12435v1"
+    },
+    "2610.12432v1": {
+      "title": "FAITH: Feasibility-Aware Safety-Filtered RL for High-Dimensional Systems",
+      "paper_id": "2610.12432v1"
+    },
+    "2610.12428v1": {
+      "title": "Toward Joint Optimization of Circuit Depth and Training Data Size in Adaptively Grown Quantum Classifiers",
+      "paper_id": "2610.12428v1"
+    },
+    "2610.12421v1": {
+      "title": "Beyond Spatio-Temporal Priors: A Generalizable Approach for Dense Correspondence Matching",
+      "paper_id": "2610.12421v1"
+    },
+    "2610.12420v1": {
+      "title": "A Unified Bellman Operator for Safety-Critical Reinforcement Learning",
+      "paper_id": "2610.12420v1"
+    },
+    "2610.12417v1": {
+      "title": "WOVEN: Weaving Visual World Modeling into Multimodal LLMs",
+      "paper_id": "2610.12417v1"
+    },
+    "2610.12410v1": {
+      "title": "Predicting Alignment Generalization with Value Representations",
+      "paper_id": "2610.12410v1"
+    },
+    "2610.12401v1": {
+      "title": "Learning Kilometer-Scale Weather Prediction with Global-Regional Alignment",
+      "paper_id": "2610.12401v1"
+    },
+    "2610.12397v1": {
+      "title": "Prospective Prediction of OOD Degradation from Source-Side Training Dynamics",
+      "paper_id": "2610.12397v1"
+    },
+    "2610.12393v1": {
+      "title": "HRIL: Learning Multimodal Synergy via Higher-Order Tensor Modeling",
+      "paper_id": "2610.12393v1"
+    },
+    "2610.12390v1": {
+      "title": "Long Text to Predictive Features: LLM-Guided Blockwise Feature Engineering via Executable Program Search",
+      "paper_id": "2610.12390v1"
+    },
+    "2610.12379v1": {
+      "title": "Marformer: A Transformer for Predicting Missing Data Distributions",
+      "paper_id": "2610.12379v1"
+    },
+    "2610.12375v1": {
+      "title": "OnTrack: Real-Time Monitoring and Intervention in LLM Agent Trajectories via Streaming Structure-Aware Optimal Transport",
+      "paper_id": "2610.12375v1"
+    },
+    "2610.12370v1": {
+      "title": "Bilevel optimization for data-driven learning of Koopman embeddings using kernel-based autoencoders",
+      "paper_id": "2610.12370v1"
+    },
+    "2610.12362v1": {
+      "title": "Closing the Horizon Gap in Policy Optimization for Adversarial MDPs",
+      "paper_id": "2610.12362v1"
+    },
+    "2610.12466v1": {
+      "title": "On the estimation and validity of AI time horizons---a statistical look at the METR plot",
+      "paper_id": "2610.12466v1"
+    },
+    "2610.12463v1": {
+      "title": "From Reactive Containment to Proactive Assurance: Lessons from OpenAI, Anthropic, and Google Agent Security Incidents",
+      "paper_id": "2610.12463v1"
+    },
+    "2610.12452v1": {
+      "title": "BrickBench: Evaluating Agentic Brick Design",
+      "paper_id": "2610.12452v1"
+    },
+    "2610.12436v1": {
+      "title": "Ecology of AI Agents: Collaboration Creates a Population Threshold for Takeoff",
+      "paper_id": "2610.12436v1"
+    },
+    "2610.12424v1": {
+      "title": "RoboRSI: Stable, efficient, and reusable robot self-evolution in complex real-world environments",
+      "paper_id": "2610.12424v1"
+    },
+    "2610.12416v1": {
+      "title": "MAMHOI: Factorizing Scene-Aware Human-Object Interaction through Affordances",
+      "paper_id": "2610.12416v1"
+    },
+    "2610.12409v1": {
+      "title": "Searching for \"Harmful Refusal\": A Psychometric Audit of an AI Safety Benchmark",
+      "paper_id": "2610.12409v1"
+    },
+    "2610.12407v1": {
+      "title": "LeWAM: A JEPA World Action Model with Diffusion-Steering-Based MPC",
+      "paper_id": "2610.12407v1"
+    },
+    "2610.12399v1": {
+      "title": "SpaceFlow: Locally Controllable 3D Generation",
+      "paper_id": "2610.12399v1"
+    },
+    "2610.12391v1": {
+      "title": "GeoReform: Reflective Formalization Evolution for Multimodal Geometry Problem Solving",
+      "paper_id": "2610.12391v1"
+    },
+    "2610.12386v1": {
+      "title": "ARC: A Reasoning Recipe for Robot Foundation Models",
+      "paper_id": "2610.12386v1"
+    },
+    "2610.12363v1": {
+      "title": "HANS: A Handwritten Answer Sheet Dataset for Noisy Hybrid Document Parsing",
+      "paper_id": "2610.12363v1"
+    },
+    "2610.12361v1": {
+      "title": "Cited but Not Consulted: A Counterfactual Audit of Legal Chain-of-Thought Faithfulness",
+      "paper_id": "2610.12361v1"
+    },
+    "2610.12427v1": {
+      "title": "FastBench: Can Streaming VLMs Perceive High-Dynamic Real-World Streams?",
+      "paper_id": "2610.12427v1"
+    },
+    "2610.12403v1": {
+      "title": "ViSkill: Reinforcing VLM Agents with Evolving Visual-Native Skills",
+      "paper_id": "2610.12403v1"
+    },
+    "2610.12402v1": {
+      "title": "SpaceCast-Bench: Evaluating Predictive Spatial Reasoning in Vision-Language Models",
+      "paper_id": "2610.12402v1"
+    },
+    "2610.12376v1": {
+      "title": "Latent Core Tokenizer: Compress, but Meaningfully",
+      "paper_id": "2610.12376v1"
+    },
+    "2610.12367v1": {
+      "title": "Which Skill to Distill? SGUID: Selecting a Compact Skill Bank for Model-Skill Co-Evolution",
+      "paper_id": "2610.12367v1"
     }
   },
   "edges": [
