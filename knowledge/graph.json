@@ -10183,6 +10183,10 @@
     "2610.12367v1": {
       "title": "Which Skill to Distill? SGUID: Selecting a Compact Skill Bank for Model-Skill Co-Evolution",
       "paper_id": "2610.12367v1"
+    },
+    "W7221363609": {
+      "title": "Enhancing session-based recommendation via large language models: A counterfactual method",
+      "paper_id": "https://doi.org/10.1016/j.knosys.2026.117166"
     }
   },
   "edges": [
@@ -51449,6 +51453,221 @@
     {
       "from": "W7220370105",
       "to": "W7171451486",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W1978108654",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W2899457523",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W2945827670",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W2963367478",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W3045200674",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W3089238887",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W3094452565",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W3152876231",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W3155368131",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W3161460925",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W3164548985",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W3175529606",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W3177772862",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4224308683",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4224313077",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4283324387",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4290944002",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4290945676",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4290945693",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4293569092",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4312271813",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4365211555",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4367047145",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4384625782",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4385572267",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4386728933",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4386729281",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4389523765",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4392367398",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4392384703",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4393156838",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4396758674",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4400525295",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4401834466",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4403220611",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4404059023",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4404838526",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4405624091",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4405643789",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4406200006",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4407025723",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W4412837265",
+      "type": "cites"
+    },
+    {
+      "from": "W7221363609",
+      "to": "W7118689658",
       "type": "cites"
     }
   ]
