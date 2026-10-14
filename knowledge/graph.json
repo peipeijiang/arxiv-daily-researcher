@@ -10187,6 +10187,170 @@
     "W7221363609": {
       "title": "Enhancing session-based recommendation via large language models: A counterfactual method",
       "paper_id": "https://doi.org/10.1016/j.knosys.2026.117166"
+    },
+    "2610.18622v1": {
+      "title": "Structural Segmentation for Brazilian Legal Document Retrieval",
+      "paper_id": "2610.18622v1"
+    },
+    "2610.18654v1": {
+      "title": "Kwai Summary Attention V2 Technical Report",
+      "paper_id": "2610.18654v1"
+    },
+    "2610.18616v1": {
+      "title": "Knowledge Graphs as Files: An Agent Harness Where Tool Creation and Tool Use Co-Evolve",
+      "paper_id": "2610.18616v1"
+    },
+    "2610.18526v1": {
+      "title": "Retrieval Disagreement as a Signal: Diagnosing and Steering Multilingual Dense Embedders",
+      "paper_id": "2610.18526v1"
+    },
+    "2610.18514v1": {
+      "title": "Approximating Optimal Policies in Heterogeneous Asynchronous Multi-player Bandits",
+      "paper_id": "2610.18514v1"
+    },
+    "2610.18516v1": {
+      "title": "Two For The Price Of One: Curvature-Aware Pruning Preserves Influence Functions Too",
+      "paper_id": "2610.18516v1"
+    },
+    "2610.18504v1": {
+      "title": "How Low Can You Go: Fine-Tuning LLMs with Bayesian Optimization (LlMBO)",
+      "paper_id": "2610.18504v1"
+    },
+    "2610.18508v1": {
+      "title": "Towards Safe Autonomy for Computer Use",
+      "paper_id": "2610.18508v1"
+    },
+    "2610.18495v1": {
+      "title": "Steering the Fidelity in State Preparation on Noisy Bosonic Systems with Risk-Seeking Optimization",
+      "paper_id": "2610.18495v1"
+    },
+    "2610.18488v1": {
+      "title": "Recalibrating Many Questions with Few Labels: Minimax Rates and Identification Limits",
+      "paper_id": "2610.18488v1"
+    },
+    "2610.18486v1": {
+      "title": "SoK: Rethinking Membership Inference in Tabular Machine Learning",
+      "paper_id": "2610.18486v1"
+    },
+    "2610.18484v1": {
+      "title": "ReTerm: Recovery Training for Self-Improving Terminal Agents",
+      "paper_id": "2610.18484v1"
+    },
+    "2610.18482v1": {
+      "title": "Lifting: Quantum State Discrimination Framework for Mid-Circuit Measurements",
+      "paper_id": "2610.18482v1"
+    },
+    "2610.18481v1": {
+      "title": "ProTok: Unified Protein Tokenization via Modular Multi-Codebook Quantization",
+      "paper_id": "2610.18481v1"
+    },
+    "2610.18472v1": {
+      "title": "Simplifying and Improving On-Policy Distillation for Few-Step Diffusion",
+      "paper_id": "2610.18472v1"
+    },
+    "2610.18471v1": {
+      "title": "Graph Metanetworks for Transformer Based Language Models",
+      "paper_id": "2610.18471v1"
+    },
+    "2610.18462v1": {
+      "title": "Readout Scaling Shapes Sparse Feature Recovery",
+      "paper_id": "2610.18462v1"
+    },
+    "2610.18459v1": {
+      "title": "Teacher-Guided Tool Learning for Small Language Models via Bidirectional KL Constraints",
+      "paper_id": "2610.18459v1"
+    },
+    "2610.18457v1": {
+      "title": "Kairos: Transactional Security Enforcement at the System Boundary for LLM Agents",
+      "paper_id": "2610.18457v1"
+    },
+    "2610.18456v1": {
+      "title": "Learning Perturbation-Specific Representations through Conditional Energy Prior for Cellular Response Prediction",
+      "paper_id": "2610.18456v1"
+    },
+    "2610.18451v1": {
+      "title": "FastEEP: Fast Intra-Instance Elastic Scaling for Expert-Parallel MoE Serving",
+      "paper_id": "2610.18451v1"
+    },
+    "2610.18523v1": {
+      "title": "APTree: Extended Behavior Trees for Adaptive and Scalable Automated Robotic Task Planning in Construction",
+      "paper_id": "2610.18523v1"
+    },
+    "2610.18522v1": {
+      "title": "Lost in Implicit Routing: How LLM Agents Fail to Load Relevant Skills at Scale",
+      "paper_id": "2610.18522v1"
+    },
+    "2610.18520v1": {
+      "title": "The Geometry of Language Model Logits: Generic Structure and Learned Departures",
+      "paper_id": "2610.18520v1"
+    },
+    "2610.18515v1": {
+      "title": "A Global View of How LLMs Value Human Time",
+      "paper_id": "2610.18515v1"
+    },
+    "2610.18511v1": {
+      "title": "The Smart Buildings Challenge: Learning Foundation Models for Real-World Optimization at Scale",
+      "paper_id": "2610.18511v1"
+    },
+    "2610.18499v1": {
+      "title": "EgoOmniWorld: Unifying Egocentric Understanding via Ego-Action-World Interactions",
+      "paper_id": "2610.18499v1"
+    },
+    "2610.18498v1": {
+      "title": "Aligning Faithfulness for Theory-Scale Autoformalization",
+      "paper_id": "2610.18498v1"
+    },
+    "2610.18497v1": {
+      "title": "Judges Follow the Reference: The Derivation Gap in Verifying Tool-Call Arguments",
+      "paper_id": "2610.18497v1"
+    },
+    "2610.18494v1": {
+      "title": "Task-evoked eye movements as candidate digital biomarkers of depression severity in adolescents and young adults",
+      "paper_id": "2610.18494v1"
+    },
+    "2610.18478v1": {
+      "title": "MemoryVLN: From Ego-Aware Memory Representation to Cross-Context Memory Reuse in Vision-Language Navigation",
+      "paper_id": "2610.18478v1"
+    },
+    "2610.18449v1": {
+      "title": "Autonomous Science Bench: Evaluating AI Agents for Autonomous Scientific Discovery",
+      "paper_id": "2610.18449v1"
+    },
+    "2610.18447v1": {
+      "title": "Thinker-WM: A Unified World Model with Shared Multimodal Representations for Embodied Intelligence",
+      "paper_id": "2610.18447v1"
+    },
+    "2610.18445v1": {
+      "title": "The Singularity Has a Distribution: Exact Timing Laws and Detection Limits for a Stochastic Intelligence Explosion",
+      "paper_id": "2610.18445v1"
+    },
+    "2610.18438v1": {
+      "title": "STAMP as a topology-aware molecular language for fragment-level learning and editing",
+      "paper_id": "2610.18438v1"
+    },
+    "2610.18517v1": {
+      "title": "Imprinting: Knowledge Distillation Can Shift Student Behavior",
+      "paper_id": "2610.18517v1"
+    },
+    "2610.18507v1": {
+      "title": "The Last Mile of Coding Agents for Long-Document Tasks: An Empirical Study on Clinical Trial Protocol Digitization",
+      "paper_id": "2610.18507v1"
+    },
+    "2610.18465v1": {
+      "title": "How Safe Is ChatGPT Health Advice? Evidence from Real User Conversations in Four Global South Countries",
+      "paper_id": "2610.18465v1"
+    },
+    "2610.18442v1": {
+      "title": "Copying Is Not Grounding: Training Faithful Long-Form RAG with Authored-Sentence Credit",
+      "paper_id": "2610.18442v1"
+    },
+    "2610.18439v1": {
+      "title": "Estimating Surprisal from the Speech Signal",
+      "paper_id": "2610.18439v1"
+    },
+    "W7221519308": {
+      "title": "Simulating Users to Evaluate LLM-Generated Explanations in Recommender Systems: A Unified Agentic Framework and Empirical Study with Preliminary Results",
+      "paper_id": "https://doi.org/10.3390/electronics15204640"
     }
   },
   "edges": [
@@ -51668,6 +51832,201 @@
     {
       "from": "W7221363609",
       "to": "W7118689658",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W1832221731",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W1966553486",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W1994389483",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W2042281163",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W2049670925",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W2057763140",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W2145360759",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W2155106456",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W2159094788",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W2168359464",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W2443960221",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W2475334473",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W2548570154",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W2605350416",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W2725606191",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W2910577570",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W2957191877",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W2962712142",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W2963323306",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W3081170586",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W3088444111",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W3094497946",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W3208227120",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W3208543775",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W4232980324",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W4291213652",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W4387321091",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W4396758674",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W4399391136",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W4400525295",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W4401042817",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W4407810726",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W4409365132",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W4412396342",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W4412954214",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W4414597576",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W4416034626",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W7140088105",
+      "type": "cites"
+    },
+    {
+      "from": "W7221519308",
+      "to": "W7197019390",
       "type": "cites"
     }
   ]
